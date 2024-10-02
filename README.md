@@ -68,3 +68,12 @@ Code Cleanup
 ### Future Plans
 A complete Overhaul of Vehicle Weapons. ACE already did an excellent job but I’m certain my nitpicky self will find many values to adjust and tinker with
 RHS and CUP (Big Maybe) Support. Probably as a separate mod.
+
+# Credits
+While this is a one-man project, I still would like to credit those whose resources I have used to turn this mod into a reality:
+The CBA_A3 Team - Whose Shared Classes allow my Magazine and Attachment Changes to work throughout the Armaverse.
+The ACE3 Team - For their vast and useful Documentation that made it possible for me to create my own Calibres and so much more.
+All Contributors to the Arma Wiki - Without whom I would've missed countless useful game trivia that assisted my artistic direction.
+Drebin052 - For uploading an Icon for the Osprey 45 to the Wiki that I am unable to find myself.
+
+[![20241002042741-1.jpg](https://i.postimg.cc/yY4JkKtR/20241002042741-1.jpg)](https://postimg.cc/mhjZ5vbZ)
