@@ -1,6 +1,7 @@
 [![A3-RO-Header.png](https://i.postimg.cc/Z5QVdCSH/A3-RO-Header.png)](https://postimg.cc/TKrV82h5)
 
-Arma 3 Realism Overhaul, 'A3RO' for short, aims to achieve realism in aspects not covered by other modifications as well as improving on existing ones, all the while maintaining the highest possible level of backwards compatibility, featuring native ACE3 and ACEAX Support.
+Arma 3 Realism Overhaul, 'A3RO' for short, aims to achieve realism in aspects not covered by other modifications as well as improving on existing ones, all the while maintaining the highest possible level of backwards compatibility, featuring native [ACE3](https://github.com/acemod/ACE3) and [ACEAX](https://github.com/jetelain/AceArsenalExtended) Support.  
+A3RO Uses [CBA_A3](https://github.com/CBATeam/CBA_A3) for Compatibility.
 
 You can find A3RO available on the Steam Workshop here (Link Follows)
 
@@ -35,13 +36,15 @@ All Changes are made in a way to affect the entire game. I went so far as to edi
 ...and countless other small fixes I forgot to mention.
 
 # Dependencies
-### Soft Dependency System
-All core content can be played with only CBA_A3 loaded alongside.
-Loading ACE will add all patches to related content from ACE such as ACE Magazines, Weapon Stats and Calibers, while in turn adding said ACE Settings to my own Calibres and new Weapons. Additional Attachment variants are enabled or replaced by my own.
-Loading ACE3 Arsenal Extended will sort all new content accordingly. I also made some changes to Vanilla Items while I was at it.
-
 ### Hard Dependencies
-A3RO is dependent on CBA_A3 to allow maximum Magazine Compatibility between it and other Mods.
+A3RO is dependent on [CBA_A3](https://steamcommunity.com/workshop/filedetails/?id=450814997) to allow maximum Magazine Compatibility between it and other Mods.
+
+### Soft Dependency System
+All core content can be played with only CBA_A3 loaded alongside.  
+
+Loading [ACE3](https://steamcommunity.com/workshop/filedetails/?id=463939057) will add all patches to related content from ACE such as ACE Magazines, Weapon Stats and Calibers, while in turn adding said ACE Settings to my own Calibres and new Weapons. Additional Attachment variants are enabled or replaced by my own.  
+
+Loading [ACE3 Arsenal Extended](https://steamcommunity.com/workshop/filedetails/?id=2522638637) will sort all new content accordingly. I also made some changes to Vanilla Items while I was at it.
 
 # Planned Updates
 A lot of features I want to implement had to be cut from release due to time constraints. I will continue development at a slower pace.
