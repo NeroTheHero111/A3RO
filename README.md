@@ -3,7 +3,7 @@
 Arma 3 Realism Overhaul, 'A3RO' for short, aims to achieve realism in aspects not covered by other modifications as well as improving on existing ones, all the while maintaining the highest possible level of backwards compatibility, featuring native [ACE3](https://github.com/acemod/ACE3) and [ACEAX](https://github.com/jetelain/AceArsenalExtended) Support.  
 A3RO Uses [CBA_A3](https://github.com/CBATeam/CBA_A3) for Compatibility.
 
-You can find A3RO available on the Steam Workshop here (Link Follows)
+You can also find A3RO available on the [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?edit=true&id=3341786920)
 
 # Core Features
 ### Complete Overhaul of every single Primary, Sidearm and Launcher
