@@ -558,3 +558,12 @@ class ACE_5Rnd_127x99_AMAX_Mag : 5Rnd_127x108_Mag
 descriptionShort = "Calibre: 12.7x99mm NATO<br />Rounds: 5<br />Used in: GM6 Lynx 12.7x99";
 displayName = "12.7x99 mm 5Rnd AMAX Mag";
 };
+
+
+// Adjusting Mass of ACE NLAW and Magazine to be in line with new Vanilla NLAW Mass
+
+class CA_LauncherMagazine;
+class NLAW_F : CA_LauncherMagazine
+{
+mass = 80.5778;
+};

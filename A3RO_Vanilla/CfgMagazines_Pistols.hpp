@@ -303,17 +303,17 @@ descriptionShort = "Calibre: 10mm Signal Flares<br />Rounds: 6<br />Used in: Sta
 // Zubr. Changing: Name. Description. Calibre to .40SW 
 class 6Rnd_45ACP_Cylinder : 11Rnd_45ACP_Mag
 {
-ammo = "B_40SW_Ball_Green";	
-descriptionShort = "Calibre: .40 Smith & Wesson<br />Rounds: 6<br />Used in: Rhino 60DS .40";
-displayName = ".40 6Rnd Clip";
-initSpeed = 309.6768;
-mass = 1.41;
+ammo = "B_357M_Ball_Yellow";	
+descriptionShort = "Calibre: .357 Magnum<br />Rounds: 6<br />Used in: Rhino 60DS .357";
+displayName = ".357 6Rnd Clip";
+initSpeed = 405.9936;
+mass = 1.05;
 };
 
 // Creating Tracer Clip
 class 6Rnd_45ACP_Cylinder_Tracer : 6Rnd_45ACP_Cylinder
 {
-displayName = ".40 6Rnd Tracer (Green) Clip";
+displayName = ".357 6Rnd Tracer (Green) Clip";
 displayNameShort = "Tracer";
 tracersEvery = 1;
 };
@@ -335,18 +335,18 @@ displayNameShort = "Tracer";
 tracersEvery = 1;
 };
 
-// Creating 6Rnd .357 Magnum Clips
-class 6Rnd_357M_Cylinder : 6Rnd_9x19_Cylinder
+// Creating 6Rnd .40SW Clips
+class 6Rnd_40SW_Cylinder : 6Rnd_9x19_Cylinder
 {
-ammo = "B_357M_Ball_Yellow";		
-descriptionShort = "Calibre: .357 Magnum<br />Rounds: 6<br />Used in: Rhino 60DS .357";
-displayName = ".357 6Rnd Clip";
-initSpeed = 405.9936;
-mass = 1.05;
+ammo = "B_40SW_Ball_Green";		
+descriptionShort = "Calibre: .40 Smith & Wesson<br />Rounds: 6<br />Used in: Rhino 60DS .40";
+displayName = ".40 6Rnd Clip";
+initSpeed = 309.6768;
+mass = 1.41;
 };
-class 6Rnd_357M_Cylinder_Tracer : 6Rnd_357M_Cylinder
+class 6Rnd_40SW_Cylinder_Tracer : 6Rnd_40SW_Cylinder
 {
-displayName = ".357 6Rnd Tracer (Yellow) Clip";
+displayName = ".40 6Rnd Tracer (Green) Clip";
 displayNameShort = "Tracer";
 tracersEvery = 1;
 };

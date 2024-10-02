@@ -47,7 +47,7 @@ class 30Rnd_65x39_caseless_mag : CA_Magazine
 ammo = "B_65x39_Case";			
 descriptionShort = "Calibre: 6.5x39mm<br />Rounds: 30<br />Used in: ACR Entry Carbine/Carbine/SPR/HB";	
 displayName = "6.5 mm 30Rnd Reload Tracer (Red) Mag";
-initSpeed = 859.2312;
+initSpeed = 781.812;
 lastRoundsTracer = 4;
 tracersEvery = 0;
 };

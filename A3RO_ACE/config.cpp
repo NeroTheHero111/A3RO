@@ -5,7 +5,7 @@ class CfgPatches
     name = "Arma 3 Realism Overhaul - ACE Compat #1";
     author = "NeroTheHero111";
     url = "";
-    version="2.0.0";
+    version="1.0";
 	requiredAddons[] = 
 	{
 	"ace_advanced_ballistics",

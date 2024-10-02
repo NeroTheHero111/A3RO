@@ -322,15 +322,6 @@ vehicleClass = "WeaponsPrimary";
 class Weapon_hgun_Pistol_heavy_02_F : Pistol_Base_F
 {
 displayname = "Rhino 60DS .357";
-	class TransportMagazines
-	{
-		delete 6Rnd_45ACP_Cylinder;
-		class 6Rnd_357M_Cylinder
-		{
-		magazine = "6Rnd_357M_Cylinder";
-		count = 1;
-		};
-	};	
 };
 
 // Creating Rhino 60DS .40
@@ -351,9 +342,9 @@ vehicleClass = "WeaponsPrimary";
 	};
 	class TransportMagazines
 	{
-		class 6Rnd_45ACP_Cylinder
+		class 6Rnd_40SW_Cylinder
 		{
-		magazine = "6Rnd_45ACP_Cylinder";
+		magazine = "6Rnd_40SW_Cylinder";
 		count = 1;
 		};
 	};	

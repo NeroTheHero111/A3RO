@@ -205,3 +205,11 @@ displayName = "7.62 mm 10Rnd Tracer (IR-DIM) VS-121 Mag";
 };
 
 // No IR-DIM T4 as they are all 10 Rounds max
+
+// This shows up in Vest Magazines in Arsenal if you have the XRG Equipped. I think the fuck not.
+// Its only present for the User that has the weapon equipped. Weird. Only in ACE Arsenal.
+/*class ESD_01_DummyMagazine_base;
+class ESD_01_DummyMagazine_1 : ESD_01_DummyMagazine_base
+{
+scopeArsenal = 0;
+};*/

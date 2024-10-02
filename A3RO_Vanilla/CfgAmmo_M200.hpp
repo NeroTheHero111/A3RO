@@ -82,9 +82,9 @@ tracerEndTime = 2.15957;
 };
 
 // Creating 12.7x99 and IR-DIM Ammo
-class B_127x99_Ball : BulletBase
+class B_127x99_Ball : BulletBase // 700 Gr Barnes
 {
-typicalSpeed = 900;
+typicalSpeed = 801.1741;
 };
 class B_127x99_Ball_IR : B_127x99_Ball
 {

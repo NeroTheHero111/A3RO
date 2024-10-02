@@ -1,6 +1,7 @@
 // 4-Five. Changing: Name.
 class hgun_Pistol_heavy_01_F : Pistol_Base_F
 {
+descriptionShort = "Handgun<br />Calibre: .45 ACP";
 displayname = "FNX-45 Tactical";
 initSpeed = 384.6336;
 };
@@ -12,22 +13,10 @@ displayname = "FNX-45 Tactical (Green)";
 // ACP-C2. Changing: Name
 class hgun_ACPC2_F : Pistol_Base_F
 {
+descriptionShort = "Handgun<br />Calibre: .45 ACP";
 displayname = "Custom TLE/RL II .45 (Sand)";
 initSpeed = 364.5408;
 };
-
-// Creating Custom TLE/RL II 10mm Auto
-class hgun_ACPC2_10mmA_F : hgun_ACPC2_F
-{	
-_generalMacro = "hgun_ACPC2_10mmA_F";
-baseWeapon = "hgun_ACPC2_10mmA_F";	
-descriptionShort = "Handgun<br />Calibre: 10mm Auto";
-displayname = "Custom TLE/RL II 10x25 (Sand)";
-initSpeed = 325.8312;
-magazines[] = {"8Rnd_10mmA_Mag"};
-magazineWell[] = {"ACPC2_10mmA"};	
-};
-
 // Creating Black Patterns of both Custom TLE/RL II Variants using hidden Texture
 class hgun_ACPC2_blk_F : hgun_ACPC2_F
 {
@@ -36,6 +25,18 @@ baseWeapon = "hgun_ACPC2_blk_F";
 displayname = "Custom TLE/RL II .45";
 hiddenSelectionsTextures[] = {"A3RO_Vanilla\Textures\Acpc2_black_2_co.paa"};
 picture = "A3RO_Vanilla\Textures\gear_Acpc2_lazy_X_CA.paa";
+};
+
+// Creating Custom TLE/RL II 10mm Auto
+class hgun_ACPC2_10mmA_F : hgun_ACPC2_F
+{	
+_generalMacro = "hgun_ACPC2_10mmA_F";
+baseWeapon = "hgun_ACPC2_10mmA_F";
+descriptionShort = "Handgun<br />Calibre: 10mm Auto";
+displayname = "Custom TLE/RL II 10x25 (Sand)";
+initSpeed = 325.8312;
+magazines[] = {"8Rnd_10mmA_Mag"};
+magazineWell[] = {"ACPC2_10mmA"};
 };
 class hgun_ACPC2_10mmA_blk_F : hgun_ACPC2_10mmA_F
 {
@@ -70,11 +71,11 @@ displayname = "P99 9x19";
 class hgun_P99_9x21_F : hgun_P07_F
 {
 _generalMacro = "hgun_P07_9x21_F";
-baseWeapon = "hgun_P07_9x21_F";	
+baseWeapon = "hgun_P07_9x21_F";
 descriptionShort = "Handgun<br />Calibre: 9x21mm IMI";
 displayname = "P99 9x21 (Sand)";
 magazines[] = {"15Rnd_P99_9x21_Mag"};
-magazineWell[] = {"P99_9x21"};	
+magazineWell[] = {"P99_9x21"};
 };
 class hgun_P99_9x21_khk_F : hgun_P99_9x21_F
 {
@@ -97,12 +98,13 @@ picture = "\A3\Weapons_F_Exp\Pistols\P07\Data\UI\icon_hgun_P07_blk_F_X_CA.paa";
 class hgun_P99_40SW_F : hgun_P07_F
 {
 _generalMacro = "hgun_P99_40SW_F";
-baseWeapon = "hgun_P99_40SW_F";	
+baseWeapon = "hgun_P99_40SW_F";
 descriptionShort = "Handgun<br />Calibre: .40 Smith & Wesson";
 displayname = "P99 .40 (Sand)";
 initSpeed = 344;
 magazines[] = {"12Rnd_P99_40SW_Mag"};
-magazineWell[] = {"P99_40SW"};	
+magazineWell[] = {"P99_40SW"};
+scope = 2;
 };
 class hgun_P99_40SW_khk_F : hgun_P99_40SW_F
 {
@@ -167,8 +169,8 @@ class hgun_Pistol_heavy_02_F : Pistol_Base_F
 descriptionShort = "Handgun<br />Calibre: .357 Magnum";	
 displayname = "Rhino 60DS .357";
 initSpeed = 386.7912;
-magazines[] = {"6Rnd_357M_Cylinder"};
-magazineWell[] = {"CBA_357_6rnds"};
+magazines[] = {"6Rnd_45ACP_Cylinder"};
+magazineWell[] = {"Cylinder_45ACP"};
 };
 
 // Creating Rhino 60DS 9x19
@@ -191,8 +193,8 @@ baseWeapon = "hgun_Pistol_heavy_02_40SW_F";
 descriptionShort = "Handgun<br />Calibre: .40 Smith & Wesson";	
 displayname = "Rhino 60DS .40";
 initSpeed = 329.4888;
-magazines[] = {"6Rnd_45ACP_Cylinder"};
-magazineWell[] = {"Cylinder_45ACP"};
+magazines[] = {"6Rnd_40SW_Cylinder"};
+magazineWell[] = {"CBA_40SW_6rnds"};
 };
 
 // Creating Judge Magnum .45 Colt / .410 bore

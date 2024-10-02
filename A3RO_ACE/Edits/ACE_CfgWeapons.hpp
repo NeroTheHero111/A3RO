@@ -901,10 +901,14 @@ ACE_barrelTwist = 178;
 };
 
 // XRG-20
-class DMR_02_Railgun_base_F : DMR_02_base_F
+class DMR_02_Railgun_base_F : Rifle_Long_Base_F
 {
-ACE_barrelLength = 508;	
-}
+ACE_barrelLength = 508;
+ACE_barrelTwist = 254;
+ACE_IronSightBaseAngle = 0.01547;
+ace_overheating_closedBolt = 1;
+ACE_RailHeightAboveBore = 3.43913; 
+};
 
 // Custom TLE/RL II is perfect (.45 and 10mm)
 
@@ -936,6 +940,7 @@ ACE_barrelLength = 102;
 class hgun_P99_40SW_F : hgun_P07_F
 {
 ACE_barrelLength = 106;
+ACE_barrelTwist = 254;
 };
 
 // PM and IJ-70
@@ -956,4 +961,151 @@ class hgun_Pistol_Judge_F : hgun_Pistol_heavy_02_F
 {
 ACE_barrelLength = 76.2;
 ACE_barrelTwist = 304.8;
+};
+
+// Changing name of NVG Goggles.
+class Binocular;
+class NVGoggles : Binocular
+{
+displayName = "NV Goggles (Gen3, Sand)";
+};
+class NVGoggles_INDEP : NVGoggles
+{
+displayName = "NV Goggles (Gen3, Olive)";
+};
+class NVGoggles_OPFOR : NVGoggles
+{
+displayName = "NV Goggles (Gen3)";
+};
+class ACE_NVG_Gen1_Brown : NVGoggles
+{
+displayName = "NV Goggles (Gen1, Sand)";
+};
+class ACE_NVG_Gen1_Green : NVGoggles_INDEP
+{
+displayName = "NV Goggles (Gen1, Olive)";
+};
+class ACE_NVG_Gen1 :NVGoggles_OPFOR
+{
+displayName = "NV Goggles (Gen1)";
+};
+class ACE_NVG_Gen2_Brown : NVGoggles
+{
+displayName = "NV Goggles (Gen2, Sand)";
+};
+class ACE_NVG_Gen2 : NVGoggles_INDEP
+{
+displayName = "NV Goggles (Gen2, Olive)";
+};
+class ACE_NVG_Gen2_Black : NVGoggles_OPFOR
+{
+displayName = "NV Goggles (Gen2)";
+};
+class ACE_NVGoggles_WP : NVGoggles
+{
+displayName = "NV Goggles (Gen3, Sand, WP)";
+};
+class ACE_NVGoggles_INDEP_WP : NVGoggles_INDEP
+{
+displayName = "NV Goggles (Gen3, Olive, WP)";
+};
+class ACE_NVGoggles_OPFOR_WP : NVGoggles_OPFOR
+{
+displayName = "NV Goggles (Gen3, WP)";
+};
+class ACE_NVG_Gen4 : NVGoggles
+{
+displayName = "NV Goggles (Gen4, Sand)";
+};
+class ACE_NVG_Gen4_Green : NVGoggles_INDEP
+{
+displayName = "NV Goggles (Gen4, Olive)";
+};
+class ACE_NVG_Gen4_Black : NVGoggles_OPFOR
+{
+displayName = "NV Goggles (Gen4)";
+};
+class ACE_NVG_Gen4_WP : ACE_NVG_Gen4
+{
+displayName = "NV Goggles (Gen4, Sand, WP)";
+};
+class ACE_NVG_Gen4_Green_WP : ACE_NVG_Gen4_Green
+{
+displayName = "NV Goggles (Gen4, Olive, WP)";
+};
+class ACE_NVG_Gen4_Black_WP : ACE_NVG_Gen4_Black
+{
+displayName = "NV Goggles (Gen4, WP)";
+};
+class ACE_NVG_Wide : NVGoggles
+{
+displayName = "NV Goggles (Wide, Sand)";
+};
+class ACE_NVG_Wide_Green : NVGoggles_INDEP
+{
+displayName = "NV Goggles (Wide, Olive)";
+};
+class ACE_NVG_Wide_Black : NVGoggles_OPFOR
+{
+displayName = "NV Goggles (Wide)";
+};
+class ACE_NVG_Wide_WP : ACE_NVG_Wide
+{
+displayName = "NV Goggles (Wide, Sand, WP)";
+};
+class ACE_NVG_Wide_Green_WP : ACE_NVG_Wide_Green
+{
+displayName = "NV Goggles (Wide, Olive, WP)";
+};
+class ACE_NVG_Wide_Black_WP : ACE_NVG_Wide_Black
+{
+displayName = "NV Goggles (Wide, WP)";
+};
+
+// Creating Tropic Variants of ACE NV Goggles
+class NVGoggles_tna_F : NVGoggles
+{
+displayName = "NV Goggles (Gen3, Tropic)";
+};
+class ACE_NVG_Gen1_tna : NVGoggles_tna_F
+{
+ace_nightvision_generation = 1;
+author = "ACE-Team";
+displayName = "NV Goggles (Gen1, Tropic)";
+};
+class ACE_NVG_Gen2_tna : NVGoggles_tna_F
+{
+ace_nightvision_generation = 2;
+author = "ACE-Team";
+displayName = "NV Goggles (Gen2, Tropic)";
+};
+class ACE_NVGoggles_tna_WP : NVGoggles_tna_F
+{
+ace_nightvision_colorPreset[] = {0,{0,0,0,0},{1.1,0.8,1.9,0.9},{1,1,6,0}};
+descriptionShort = "Night Vision Goggles, White Phosphor";
+displayName = "NV Goggles (Gen3, Tropic, WP)";
+};
+class ACE_NVG_Gen4_tna : NVGoggles_tna_F
+{
+ace_nightvision_generation = 4;
+author = "ACE-Team";
+displayName = "NV Goggles (Gen4, Tropic)";
+};
+class ACE_NVG_Gen4_tna_WP : ACE_NVG_Gen4_tna
+{
+ace_nightvision_colorPreset[] = {0,{0,0,0,0},{1.1,0.8,1.9,0.9},{1,1,6,0}};
+descriptionShort = "Night Vision Goggles, White Phosphor";
+displayName = "NV Goggles (Gen4, Tropic, WP)";
+};
+class ACE_NVG_Wide_tna : NVGoggles_tna_F
+{
+ace_nightvision_generation = 4;
+author = "ACE-Team";
+displayName = "NV Goggles (Wide, Tropic)";
+};
+class ACE_NVG_Wide_tna_WP : ACE_NVG_Wide_tna
+{
+ace_nightvision_colorPreset[] = {0,{0,0,0,0},{1.1,0.8,1.9,0.9},{1,1,6,0}};
+descriptionShort = "Night Vision Goggles, White Phosphor";
+displayName = "NV Goggles (Wide, Tropic, WP)";
 };

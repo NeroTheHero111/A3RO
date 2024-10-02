@@ -977,32 +977,68 @@ class srifle_DMR_02_F : DMR_02_base_F
 };
 
 // Creating XRG-20 Mk. II
-class DMR_02_Railgun_base_F : DMR_02_base_F
+class DMR_02_Railgun_base_F : Rifle_Long_Base_F
 {
 maxRange = 2000;
-modes[] = {"player"};
-	class player : Mode_SemiAuto
+modes[] = {"Single","medium_optic2","far_optic1","far_optic2"}; // Revelation: AI cant fire if you dont give them firemodes.
+	class Single : Mode_SemiAuto
 	{
-	aiRateOfFire = 1;
-	aiRateOfFireDistance = 10;
-	autoFire = 0;
-	autoReload = 0;
-	dispersion = 0.00436332; // From 0.0057. To encourage use of the T.U.B.E.
-	magazineReloadTime = 3;
-	maxRange = 2;
-	maxRangeProbab = 0.01;
-	midRange = 1;
-	midRangeProbab = 0.01;
-	minRange = 0;
-	minRangeProbab = 0.01;
+	aiRateOfFire = 5;
+	aiRateOfFireDistance = 500;
+	dispersion = 0.0029 // From 0.0057. To encourage use of the T.U.B.E.
+	maxRange = 450;
+	maxRangeProbab = 0.3;
+	midRange = 150;
+	midRangeProbab = 0.7;
+	minRange = 2;
+	minRangeProbab = 0.5;
+	recoil = "recoil_single_gm6";
+	recoilProne = "recoil_single_prone_gm6";
 	reloadTime = 4.5;
-	showToPlayer = 1;
 	soundContinuous = 0;
 	sounds[] = {"StandardSound"};
 		class StandardSound
 		{
 		soundSetShot[] = {"railgun_01_Discharge_01_SoundSet","railgun_01_Tail_SoundSet"};
 		};
+	};
+	class medium_optic2 : Single
+	{
+	aiRateOfFire = 7;
+	aiRateOfFireDistance = 1000;
+	maxRange = 1000;
+	maxRangeProbab = 0.4;
+	midRange = 750;
+	midRangeProbab = 0.7;
+	minRange = 250;
+	minRangeProbab = 0.2;
+	requiredOpticType = 2;
+	showToPlayer = 0;
+	};
+	class far_optic1 : Single
+	{
+	aiRateOfFire = 5;
+	aiRateOfFireDistance = 500;
+	maxRange = 1500;
+	maxRangeProbab = 0.4;
+	midRange = 500;
+	midRangeProbab = 0.7;
+	minRange = 150;
+	minRangeProbab = 0.2;
+	requiredOpticType = 1;
+	showToPlayer = 0;
+	};
+	class far_optic2 : far_optic1
+	{
+	aiRateOfFire = 7;
+	aiRateOfFireDistance = 1000;
+	maxRange = 2100;
+	maxRangeProbab = 0.3;
+	midRange = 1200;
+	midRangeProbab = 0.7;
+	minRange = 500;
+	minRangeProbab = 0.2;
+	requiredOpticType = 2;
 	};
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{

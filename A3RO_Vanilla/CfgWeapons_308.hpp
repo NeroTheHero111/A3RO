@@ -81,7 +81,7 @@ magazineWell[] = {"MR308_308WIN","CBA_762x51_MkI_EMR","CBA_762x51_M14_L","CBA_76
 initSpeed = 750;
 };
 
-// SPAR-17 Patterns. Changing: Name. Hiding from Arsenal. Calibre not Changing on this Class to maximize Compatibility for Modded Factions that I cannot take into account.
+// SPAR-17 Patterns. Changing: Name.
 class arifle_SPAR_03_blk_F : arifle_SPAR_03_base_F
 {
 _generalMacro = "arifle_SPAR_03_blk_F";

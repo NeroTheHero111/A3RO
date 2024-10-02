@@ -404,10 +404,10 @@ vehicleClass = "WeaponsPrimary";
 	};	
 };
 
-// Creating F/S2000 Opfor Reskin Items
-class Weapon_arifle_Mk20C_OPFOR_F : Weapon_Base_F
+// Creating F/S2000 CSAT Reskin Items
+class Weapon_arifle_Mk20C_CSAT_F : Weapon_Base_F
 {
-displayName = "F2000 Tactical TR (Opfor)";
+displayName = "F2000 Tactical TR (CSAT)";
 scope = 2;
 scopeCurator = 2;
 vehicleClass = "WeaponsPrimary";
@@ -421,16 +421,16 @@ vehicleClass = "WeaponsPrimary";
 	};	
 	class TransportWeapons
 	{
-		class arifle_Mk20C_OPFOR_F
+		class arifle_Mk20C_CSAT_F
 		{
-		weapon = "arifle_Mk20C_OPFOR_F";
+		weapon = "arifle_Mk20C_CSAT_F";
 		count = 1;
 		};
 	};	
 };
-class Weapon_arifle_Mk20_GL_OPFOR_F : Weapon_Base_F
+class Weapon_arifle_Mk20_GL_CSAT_F : Weapon_Base_F
 {
-displayName = "F2000 Tactical GL1 (Opfor)";
+displayName = "F2000 Tactical GL1 (CSAT)";
 scope = 2;
 scopeCurator = 2;
 vehicleClass = "WeaponsPrimary";
@@ -444,16 +444,16 @@ vehicleClass = "WeaponsPrimary";
 	};	
 	class TransportWeapons
 	{
-		class arifle_Mk20_GL_OPFOR_F
+		class arifle_Mk20_GL_CSAT_F
 		{
-		weapon = "arifle_Mk20_GL_OPFOR_F";
+		weapon = "arifle_Mk20_GL_CSAT_F";
 		count = 1;
 		};
 	};	
 };
-class Weapon_arifle_Mk20_OPFOR_F : Weapon_Base_F
+class Weapon_arifle_Mk20_CSAT_F : Weapon_Base_F
 {
-displayName = "FS2000 Tactical TR (Opfor)";
+displayName = "FS2000 Tactical TR (CSAT)";
 scope = 2;
 scopeCurator = 2;
 vehicleClass = "WeaponsPrimary";
@@ -467,9 +467,9 @@ vehicleClass = "WeaponsPrimary";
 	};	
 	class TransportWeapons
 	{
-		class arifle_Mk20_OPFOR_F
+		class arifle_Mk20_CSAT_F
 		{
-		weapon = "arifle_Mk20_OPFOR_F";
+		weapon = "arifle_Mk20_CSAT_F";
 		count = 1;
 		};
 	};	

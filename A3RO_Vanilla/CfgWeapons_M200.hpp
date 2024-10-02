@@ -40,10 +40,7 @@ displayName = "M200 Intervention® .375";
 initSpeed = 938.784;
 magazines[] = {"7Rnd_375_Mag"};
 magazineWell[] = {"M320_375"};
-model = "\A3\Weapons_F\LongRangeRifles\M320\M320_F.p3d";
-picture = "\A3\Weapons_F\LongRangeRifles\M320\Data\UI\gear_M320_LRR_X_CA.paa";
 scope = 2;
-UiPicture = "\A3\weapons_f\data\UI\icon_sniper_CA.paa";
 };
 class srifle_LRR_375_camo_F : srifle_LRR_375_F
 {

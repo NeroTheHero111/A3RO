@@ -182,10 +182,18 @@ class B_410bore_Slug : B_12Gauge_Slug_NoCartridge
 caliber = 0.5984;
 };
 
+class B_545x39_Ball_F : BulletBase // 7N6 FMJ
+{
+ACE_bulletLength = 25.03; 
+ACE_bulletMass = 3.49914;
+ACE_muzzleVelocities[] = {559, 611, 666, 689, 738, 791, 843, 867, 917, 966, 1018};
+ACE_barrelLengths[] = {118, 142, 174, 190, 230, 286, 355, 394, 489, 612, 782};
+};
+
 class B_556x45_Ball : BulletBase // Winchester 62 Gr M855 
 {
 ACE_caliber = 5.7;
-ACE_ballisticCoefficients[] = {0.304};
+ACE_ballisticCoefficients[] = {0.168};
 ACE_bulletLength = 23.4; 
 ACE_bulletMass = 4.01753;
 ACE_muzzleVelocities[] = {595.884 650.748, 699.8208, 732.4344, 758.6472, 786.0792, 806.5008,  821.1312, 855.8784, 911.9616, 905.8656, 930.2496, 932.688, 943.9656, 950.0616, 962.5584, 965.9112, 971.7024, 984.1992, 999.744};
@@ -208,9 +216,21 @@ ACE_barrelLengths[] = {152.4, 177.8, 203.2, 228.6, 254, 279.4, 304.8, 330.2, 355
 };
 
 class B_65x39_Caseless;
-class B_65x39_Case : B_65x39_Caseless // Hornady 120 Gr A-MAX
+class B_65x39_Case : B_65x39_Caseless // Lapua 123 Gr Scenar
 {
-ACE_bulletMass = 7.77587;
+ACE_caliber = 6.7056;
+ACE_bulletLength = 33.9598;
+ACE_bulletMass = 7.97027;
+ACE_muzzleVelocities[] = {730,733.044,755.904,781.812,788,798.576,810,806.196,830}; // Combining Default ACE with findings as new values are not enough to fully replace ACE
+ACE_barrelLengths[] = {254,368.3,406.4,495.3,508,609.6,660.4,711.2,762};
+};
+
+class B_762x39_Ball_F : BulletBase // M43 FMJ
+{
+ACE_bulletLength = 25.2476; 
+ACE_bulletMass = 7.97027;
+ACE_muzzleVelocities[] = {701.3448, 702.2592, 703.4784, 706.8312, 719.6328, 724.5096, 732.7392, 747.9792, 730.9104};
+ACE_barrelLengths[] = {419.1, 431.8, 457.2, 482.6, 508, 533.4, 558.8, 584.2, 609.6}; 
 };
 
 class B_762x51_Ball : BulletBase // IMI Samson 150 Gr M80 FMJ
@@ -290,6 +310,17 @@ ACE_barrelLengths[] = {736.6};
 airFriction = -0.00046249;
 };
 
+
+class B_127x99_Ball : BulletBase
+{
+ACE_caliber = 12.98;
+ACE_ballisticCoefficients[] = {0.62};
+ACE_bulletLength = 61.8668;
+ACE_bulletMass = 45.3592;
+ACE_muzzleVelocities[] = {681.5328, 692.2008, 702.8688, 713.5368, 724.2048, 734.8728, 745.5408, 756.2088, 766.8768, 777.5448, 788.2128, 798.8808, 809.5488, 815.9496, 822.3504, 828.7512, 835.152, 841.5528, 847.9536, 854.3544, 860.7552, 867.156, 873.5568};
+ACE_barrelLengths[] = {431.8, 457.2, 482.6, 508, 533.4, 558.8, 584.2, 609.6, 635, 660.4, 685.8, 711.2, 736.6, 762, 787.4, 812.8, 838.2, 863.6, 889, 914.4, 939.8, 965.2, 990.6};
+};
+
 class B_127x108_Ball;
 class B_127x108_APDS : B_127x108_Ball // Changing to 681 Gr 
 {
@@ -304,12 +335,16 @@ ACE_caliber = 20.02;
 ACE_ballisticCoefficients[] = {1.652};
 ACE_bulletLength = 80; 
 ACE_bulletMass = 200;
+ACE_damageType = "bullet";
 ACE_ammoTempMuzzleVelocityShifts[] = {-26.55,-25.47,-22.85,-20.12,-16.98,-12.8,-7.64,-1.53,5.96,15.17,26.19}; // Using 7.62 ACE Default
 ACE_velocityBoundaries[] = {};
 ACE_standardAtmosphere = "ICAO";
 ACE_dragModel = 7;
 ACE_muzzleVelocities[] = {2058};
+ACE_muzzleVelocityVariationSD = 0.2;
 ACE_barrelLengths[] = {508};
+ACE_transonicStabilityCoef = 1;
+ace_vehicle_damage_incendiary = 0.3;
 airFriction = -0.00089373;
 };
 

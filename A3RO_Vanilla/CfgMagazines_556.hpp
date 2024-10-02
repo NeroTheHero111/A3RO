@@ -191,6 +191,7 @@ descriptionShort = "Calibre: 5.56x45mm NATO<br />Rounds: 30<br />Used in: MSBS G
 displayName = "5.56 mm 30Rnd Reload Tracer (Yellow) PMAG Mag";
 initSpeed = 943.9656;
 modelSpecial = "a3\weapons_f_enoch\magazineproxies\mag_556x45_msbs_30rnd.p3d";
+mass = 8;
 };
 class 30Rnd_65x39_caseless_msbs_mag_Tracer : 30Rnd_65x39_caseless_msbs_mag
 {

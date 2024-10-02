@@ -62,7 +62,7 @@ class CBA_380ACP_PM
 {
 A3RO_Magazines[] += {"8Rnd_380Auto_Mag","8Rnd_380Auto_Mag_Tracer"};	
 };
-// Adding 6Rnd .40 S&W Tracer to Magwell.
+// Adding 6Rnd .357M Tracer to Magwell.
 class Cylinder_45ACP
 {
 A3RO_Magazines[] += {"6Rnd_45ACP_Cylinder_Tracer"};
@@ -74,10 +74,10 @@ class Cylinder_9x19
 A3RO_Magazines[] += {"6Rnd_9x19_Cylinder","6Rnd_9x19_Cylinder_Tracer"};
 };
 
-// Adding 6Rnd .357 Clips to Magwell
-class CBA_357_6rnds
+// Adding 6Rnd .40 Clips to Magwell
+class CBA_40SW_6rnds
 {
-A3RO_Magazines[] += {"6Rnd_357M_Cylinder","6Rnd_357M_Cylinder_Tracer"};
+A3RO_Magazines[] += {"6Rnd_40SW_Cylinder","6Rnd_40SW_Cylinder_Tracer"};
 };
 
 // Creating .45 Colt Magwell and Adding Clip to it

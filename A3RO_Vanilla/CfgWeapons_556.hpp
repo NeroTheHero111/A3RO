@@ -62,29 +62,29 @@ class arifle_Mk20C_plain_F : arifle_Mk20C_F
 displayName = "F2000 Tactical TR";
 };
 
-// Creating Opfor Patterns
-class arifle_Mk20C_OPFOR_F : arifle_Mk20C_F
+// Creating CSAT Patterns
+class arifle_Mk20C_CSAT_F : arifle_Mk20C_F
 {
-_generalMacro = "arifle_Mk20C_OPFOR_F";
-baseWeapon = "arifle_Mk20C_OPFOR_F";
-displayName = "F2000 Tactical TR (Opfor)";	
+_generalMacro = "arifle_Mk20C_CSAT_F";
+baseWeapon = "arifle_Mk20C_CSAT_F";
+displayName = "F2000 Tactical TR (CSAT)";	
 hiddenSelections[] = {"camo","camo2"};
 hiddenSelectionsTextures[] = {"A3\Weapons_F_Beta\Rifles\MK20\Data\TEST_mk20_camoOPFOR_co.paa","A3\Weapons_F_Beta\Rifles\MK20\Data\mk20_utilities_CO.paa"};
 picture = "\a3\Weapons_F_Beta\Rifles\MK20\Data\UI\gear_mk20_c_CA.paa";
 };
-class arifle_Mk20_GL_OPFOR_F : arifle_Mk20_GL_F
+class arifle_Mk20_GL_CSAT_F : arifle_Mk20_GL_F
 {
-_generalMacro = "arifle_Mk20_GL_OPFOR_F";
-baseWeapon = "arifle_Mk20_GL_OPFOR_F";
-displayName = "F2000 Tactical GL1 (Opfor)";	
+_generalMacro = "arifle_Mk20_GL_CSAT_F";
+baseWeapon = "arifle_Mk20_GL_CSAT_F";
+displayName = "F2000 Tactical GL1 (CSAT)";	
 hiddenSelectionsTextures[] = {"A3\Weapons_F_Beta\Rifles\MK20\Data\TEST_mk20_camoOPFOR_co.paa","A3\Weapons_F_Beta\Rifles\MK20\Data\mk20_utilities_CO.paa"};
 picture = "\A3\Weapons_F_Beta\Rifles\MK20\Data\UI\gear_mk20_gl_X_CA.paa";
 };
-class arifle_Mk20_OPFOR_F : arifle_Mk20_F
+class arifle_Mk20_CSAT_F : arifle_Mk20_F
 {
-_generalMacro = "arifle_Mk20_OPFOR_F";
-baseWeapon = "arifle_Mk20_OPFOR_F";
-displayName = "FS2000 Tactical TR (Opfor)";	
+_generalMacro = "arifle_Mk20_CSAT_F";
+baseWeapon = "arifle_Mk20_CSAT_F";
+displayName = "FS2000 Tactical TR (CSAT)";	
 hiddenSelectionsTextures[] = {"A3RO_Vanilla\Textures\TEST_mk20_camoOPFOR_Semi_co.paa","A3\Weapons_F_Beta\Rifles\MK20\Data\mk20_utilities_CO.paa"};
 picture = "\A3\Weapons_F_Beta\Rifles\MK20\Data\UI\gear_mk20_CA.paa";
 };

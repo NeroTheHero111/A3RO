@@ -6,7 +6,7 @@ class 100Rnd_65x39_caseless_mag : CA_Magazine
 ammo = "B_65x39_Case";	
 descriptionShort = "Calibre: 6.5x39mm<br />Rounds: 100<br />Used in: ACR Entry Carbine/Carbine/SPR/HB";	
 displayName = "6.5 mm 100Rnd Reload Tracer (Red) Mag";
-initSpeed = 859.2312;
+initSpeed = 781.812;
 tracersEvery = 0;
 };
 class 100Rnd_65x39_caseless_black_mag : 100Rnd_65x39_caseless_mag

@@ -96,6 +96,7 @@ class srifle_DMR_02_F : DMR_02_base_F
 {
 descriptionShort = "Marksman Rifle<br />Calibre: .338 Lapua Magnum";
 displayName = "''Bad News'' LVOA® 16'' .338 LM";
+initSpeed = 765.6576;
 magazineWell[] = {"CBA_338LM_AI","MAR10_338"};
 };
 class srifle_DMR_02_camo_F : srifle_DMR_02_F
@@ -152,23 +153,48 @@ scope = 2;
 };
 
 // Creating XRG-20 Mk. II
-class DMR_02_Railgun_base_F : DMR_02_base_F
+class DMR_02_Railgun_base_F : Rifle_Long_Base_F
 {
-	class EventHandlers
-	{
-	fired = "_this execVM '\A3RO_Vanilla\A3RO_Railgun.sqf'";	
-	};
 _generalMacro = "DMR_02_Railgun_base_F";
+aiDispersionCoefX = 2;
+aiDispersionCoefY = 3;
+aimTransitionSpeed = 0.7;
+author = "Bohemia Interactive";
+bullet1[] = {"A3\sounds_f\weapons\shells\7_62\metal_762_01",0.630957,1,15};
+bullet10[] = {"A3\sounds_f\weapons\shells\7_62\grass_762_02",0.630957,1,15};
+bullet11[] = {"A3\sounds_f\weapons\shells\7_62\grass_762_03",0.630957,1,15};
+bullet12[] = {"A3\sounds_f\weapons\shells\7_62\grass_762_04",0.630957,1,15};
+bullet2[] = {"A3\sounds_f\weapons\shells\7_62\metal_762_02",0.630957,1,15};
+bullet3[] = {"A3\sounds_f\weapons\shells\7_62\metal_762_03",0.630957,1,15};
+bullet4[] = {"A3\sounds_f\weapons\shells\7_62\metal_762_04",0.630957,1,15};
+bullet5[] = {"A3\sounds_f\weapons\shells\7_62\dirt_762_01",0.630957,1,15};
+bullet6[] = {"A3\sounds_f\weapons\shells\7_62\dirt_762_02",0.630957,1,15};
+bullet7[] = {"A3\sounds_f\weapons\shells\7_62\dirt_762_03",0.630957,1,15};
+bullet8[] = {"A3\sounds_f\weapons\shells\7_62\dirt_762_04",0.630957,1,15};
+bullet9[] = {"A3\sounds_f\weapons\shells\7_62\grass_762_01",0.630957,1,15};
 caseless[] = {"",1,1,1};
 cursor = "EmptyCursor";
 cursoraim = "coil";
 descriptionShort = "Fictional Railgun Prototype<br />Calibre: 20x82mm Slug";
+dexterity = 1.68;
 displayName = "XRG-20 Mk. II Base Class";
-dispersion = 29;
+distanceZoomMax = 500;
+distanceZoomMin = 500;
+DLC = "Mark";
+drySound[] = {"A3\Sounds_F_Mark\arsenal\weapons\LongRangeRifles\DMR_02_MAR10\DMR_02_Dry_01",0.251189,1,20}; 
+handAnim[] = {"OFP2_ManSkeleton","\A3\Weapons_F_Mark\LongRangeRifles\DMR_02\data\Anim\DMR_02.rtm"}; 
+hiddenSelections[] = {"Camo1","Camo2"};
+hiddenSelectionsTextures[] = {"\A3RO_Vanilla\Textures\DMR_02_01_railgun_CO.paa","\A3RO_Vanilla\Textures\DMR_02_02_railgun_CO.paa"};
+inertia = 0.9;
 initSpeed = 2058;
 magazines[] = {"5Rnd_20mm_RailGun_Mag"};
 magazineWell[] = {"XRG_20MM"}; // For some Reason I can equip MX Magazines if this is not defined.
+overviewPicture = "\A3\Data_F_Mark\Images\watermarkInfo_page06_ca.paa"; 
 recoil = "recoil_gm6";
+reloadAction = "GestureReloadDMR02";
+reloadMagazineSound[] = {"A3\Sounds_F_Mark\arsenal\weapons\LongRangeRifles\DMR_02_MAR10\DMR_02_reload",1,1,10}; 
+soundBullet[] = {"bullet1",0.083,"bullet2",0.083,"bullet3",0.083,"bullet4",0.083,"bullet5",0.083,"bullet6",0.083,"bullet7",0.083,"bullet8",0.083,"bullet9",0.083,"bullet10",0.083,"bullet11",0.083,"bullet12",0.083}; 
+UiPicture = "\A3\weapons_f\data\UI\icon_regular_CA.paa"; 
 };
 
 class srifle_DMR_02_Railgun_F : DMR_02_Railgun_base_F
@@ -179,7 +205,6 @@ displayName = "XRG-20 Mk. II";
 model = "\A3\Weapons_F_Mark\LongRangeRifles\DMR_02\DMR_02_F.p3d";
 picture = "\A3\Weapons_F_Mark\LongRangeRifles\DMR_02\Data\UI\gear_DMR_02_X_CA.paa";
 scope = 2;
-UiPicture = "\A3\weapons_f\data\UI\icon_regular_CA.paa"; 
 	class LinkedItems
 	{
 		class LinkedItemsMuzzle

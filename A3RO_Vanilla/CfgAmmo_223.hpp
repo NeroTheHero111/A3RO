@@ -67,17 +67,17 @@ nvgOnly = 1;
 
 // Creating 6.5 Grendel IR-DIM Ammo
 class B_65x39_Caseless;
-class B_65x39_Case : B_65x39_Caseless
+class B_65x39_Case : B_65x39_Caseless // Lapua 123 Gr Scenar
 {
-typicalSpeed = 859.2312;
+typicalSpeed = 781.812;
 };
 class B_65x39_Case_IR : B_65x39_Case
 {
 nvgOnly = 1;	
 };
 
-// Creating 5.45 IR-DIM Ammo
-class B_545x39_Ball_F : BulletBase
+// Creating 5.45 IR-DIM Ammo 
+class B_545x39_Ball_F : BulletBase // 7N6 FMJ
 {
 typicalSpeed = 890;
 };
@@ -87,7 +87,7 @@ nvgOnly = 1;
 };
 
 // Creating 7.62 IR-DIM Ammo
-class B_762x39_Ball_F : BulletBase
+class B_762x39_Ball_F : BulletBase // M43 FMJ
 {
 typicalSpeed = 715;		
 };

@@ -5,7 +5,7 @@ class CfgPatches
     name = "Arma 3 Realism Overhaul - Vanilla";
     author = "NeroTheHero111";
     url = "";
-    version="2.0.0";
+    version="1.0";
 	requiredAddons[] = 
 	{
 	"cba_main",		
