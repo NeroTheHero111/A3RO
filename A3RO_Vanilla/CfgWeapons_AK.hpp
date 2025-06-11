@@ -3,23 +3,17 @@ class arifle_AK12_base_F : Rifle_Base_F
 {
 descriptionShort = "Assault Rifle<br />Calibre: 7.62x39mm";
 displayName = "AK-15 Base Class";
-initSpeed = 715;
+initSpeed = 718;
 };
 class arifle_AK12_GL_base_F : arifle_AK12_base_F
 {
 descriptionShort = "Assault Rifle<br />Calibre: 7.62x39mm<br />Underbarrel Grenade Launcher<br />Calibre: 40mmCL";	
 displayName = "AK-15 GP-25 Base Class";
-	class EGLM : UGL_F
-	{
-	descriptionShort = "Underbarrel Grenade Launcher<br />Calibre: 40mmCL";
-	discreteDistanceInitIndex = 0; 
-	displayName = "GP-25";
-	};
 };
 class arifle_AK12U_base_F : arifle_AK12_base_F
 {
-displayName = "AK-15K Base Class";
-initSpeed = 670;
+displayName = "AK-15C Base Class";
+initSpeed = 665;
 };
 
 // Vanilla AK-12. Changing: Name (TLDR AK-15 = 7.62, AK-12 = 5.45)
@@ -53,15 +47,15 @@ displayName = "AK-15 GP-25 (Lush)";
 // Vanilla AKU-12. Changing: Name
 class arifle_AK12U_F : arifle_AK12U_base_F
 {
-displayName = "AK-15K";
+displayName = "AK-15C";
 };
 class arifle_AK12U_arid_F : arifle_AK12U_base_F
 {
-displayName = "AK-15K (Arid)";
+displayName = "AK-15C (Arid)";
 };
 class arifle_AK12U_lush_F : arifle_AK12U_base_F
 {
-displayName = "AK-15K (Lush)";
+displayName = "AK-15C (Lush)";
 };
 
 // AKM Base Class. Changing: Name
@@ -69,7 +63,7 @@ class arifle_AKM_base_F : Rifle_Base_F
 {
 descriptionShort = "Assault Rifle<br />Calibre: 7.62x39mm";
 displayName = "AKM Base Class";	
-initSpeed = 715;
+initSpeed = 718;
 magazines[] = {"30Rnd_762x39_Mag_F"};
 };
 
@@ -77,6 +71,29 @@ magazines[] = {"30Rnd_762x39_Mag_F"};
 class arifle_AKM_F : arifle_AKM_base_F
 {
 displayName = "AKM";
+class FullAuto;
+class Single;
+};
+
+// Creating Rusty AKM
+class arifle_AKM_Rusty_F : arifle_AKM_F
+{
+baseWeapon = "arifle_AKM_Rusty_F";
+displayName = "AKM (Weathered)";
+hiddenSelectionsTextures[] = {"A3RO_Vanilla\Textures\akm_rust_co.paa","\A3\Weapons_F_Exp\Rifles\AKM\Data\akm_wood_co.paa","\A3\Weapons_F_Exp\Rifles\AKM\Data\akm_steel_mag_co.paa"};
+magazines[] = {"30Rnd_762x39_Mag_worn_RT_lxWS"};
+	class FullAuto : FullAuto // 5.5 from 4.5 MOA
+	{
+	dispersion = 0.001599884;
+	};
+	class FullAuto_medium : FullAuto
+	{
+	dispersion = 0.001599884;
+	};
+	class Single : Single
+	{
+	dispersion = 0.001599884;
+	};
 };
 
 // AKS Base Class. Changing: Name
@@ -127,8 +144,8 @@ class arifle_AK12_545_base_F : arifle_AK12_base_F
 _generalMacro = "arifle_AK12_545_base_F";
 descriptionShort = "Assault Rifle<br />Calibre: 5.45x39mm";
 displayName = "AK-12 Base Class";
-initSpeed = 890;
-magazines[] = {"30Rnd_545x39_Mag_F"};
+initSpeed = 900;
+magazines[] = {"30Rnd_545x39_Mag_Green_F"};
 magazineWell[] = {"AK_545x39","CBA_545x39_AK","CBA_545x39_RPK"};
 };
 
@@ -138,21 +155,21 @@ class arifle_AK12_GL_545_base_F : arifle_AK12_GL_base_F
 _generalMacro = "arifle_AK12_GL_545_base_F";
 descriptionShort = "Assault Rifle<br />Calibre: 5.45x39mm<br />Underbarrel Grenade Launcher<br />Calibre: 40mmCL";
 displayName = "AK-12 GP-25 Base Class";
-initSpeed = 890;
-magazines[] = {"30Rnd_545x39_Mag_F"};
+initSpeed = 900;
+magazines[] = {"30Rnd_545x39_Mag_Green_F"};
 magazineWell[] = {"AK_545x39","CBA_545x39_AK","CBA_545x39_RPK"};
 picture = "\A3\Weapons_F_Exp\Rifles\AK12\Data\UI\icon_arifle_AK12_GL_F_X_CA.paa";	
 };	
 
-// Creating A3RO AK-12K Base Class
+// Creating A3RO AK-12C Base Class
 class arifle_AK12U_545_base_F : arifle_AK12U_base_F
 {
 _generalMacro = "arifle_AK12U_545_base_F";
 descriptionShort = "Assault Rifle<br />Calibre: 5.45x39mm";
-displayName = "AK-12K Base Class";
+displayName = "AK-12C Base Class";
 DLC = "Enoch";
-initSpeed = 840;
-magazines[] = {"30Rnd_545x39_Mag_F"};
+initSpeed = 850; // Given that AK-12 has 900 (above average Vel. for that Barrel Length), I will apply a higher Value here too.
+magazines[] = {"30Rnd_545x39_Mag_Green_F"};
 magazineWell[] = {"AK_545x39","CBA_545x39_AK","CBA_545x39_RPK"};
 picture = "a3\Weapons_F_Enoch\Rifles\AK12\Data\UI\icon_arifle_AK12U_F_CA.paa";	
 };
@@ -163,8 +180,8 @@ class arifle_RPK16_base_F : arifle_RPK12_base_F
 _generalMacro = "arifle_RPK16_base_F";
 descriptionShort = "Light Machine Gun<br />Calibre: 5.45x39mm";
 displayName = "RPK-16 Base Class";
-initSpeed = 894.9152;
-magazines[] = {"95rnd_545x39_RPK16_Mag_T4_F"};
+initSpeed = 958.80;
+magazines[] = {"95Rnd_545x39_RPK16_Mag_T4_F"};
 magazineWell[] = {"AK_545x39","CBA_545x39_AK","CBA_545x39_RPK"};
 };
 
@@ -234,12 +251,12 @@ picture = "a3\Weapons_F_Enoch\Rifles\AK12\Data\UI\icon_arifle_AK12_GL_lush_F_CA.
 scope = 2;
 };
 
-// A3RO AK-12K Patterns
+// A3RO AK-12C Patterns
 class arifle_AK12U_545_F : arifle_AK12U_545_base_F
 {
 _generalMacro = "arifle_AK12U_545_F";
 baseWeapon = "arifle_AK12U_545_F";
-displayName = "AK-12K";
+displayName = "AK-12C";
 DLC = "Enoch";
 hiddenSelectionsMaterials[] = {"a3\Weapons_F_Exp\Rifles\AK12\Data\AK12_F_1.rvmat","a3\Weapons_F_Exp\Rifles\AK12\Data\AK12_F_2.rvmat","a3\Weapons_F_Enoch\Rifles\AK12\Data\AK12_RPK12.rvmat"};
 hiddenSelectionsTextures[] = {"a3\Weapons_F_Exp\Rifles\AK12\Data\AK12_ak12_1_co.paa","a3\Weapons_F_Exp\Rifles\AK12\Data\AK12_ak12_2_co.paa","a3\Weapons_F_Enoch\Rifles\AK12\Data\AKU12_RPK12_parts_CO.paa"};
@@ -250,7 +267,7 @@ class arifle_AK12U_545_arid_F : arifle_AK12U_545_base_F
 {
 _generalMacro = "arifle_AK12U_545_arid_F";	
 baseWeapon = "arifle_AK12U_545_arid_F";
-displayName = "AK-12K (Arid)";
+displayName = "AK-12C (Arid)";
 DLC = "Enoch";
 hiddenSelectionsMaterials[] = {"a3\Weapons_F_Enoch\Rifles\AK12\Data\AK12_F_1_camo.rvmat","a3\Weapons_F_Enoch\Rifles\AK12\Data\AK12_F_2_camo.rvmat","a3\Weapons_F_Enoch\Rifles\AK12\Data\AK12_RPK12_camo.rvmat"};
 hiddenSelectionsTextures[] = {"a3\Weapons_F_Enoch\Rifles\AK12\Data\AK12_ak12_1_camo_co.paa","a3\Weapons_F_Enoch\Rifles\AK12\Data\AK12_ak12_2_camo_co.paa","a3\Weapons_F_Enoch\Rifles\AK12\Data\AKU12_RPK12_parts_camo_CO.paa"};
@@ -261,7 +278,7 @@ class arifle_AK12U_545_lush_F : arifle_AK12U_545_base_F
 {
 _generalMacro = "arifle_AK12U_545_lush_F";	
 baseWeapon = "arifle_AK12U_545_lush_F";
-displayName = "AK-12K (Lush)";
+displayName = "AK-12C (Lush)";
 DLC = "Enoch";
 hiddenSelectionsMaterials[] = {"a3\Weapons_F_Enoch\Rifles\AK12\Data\AK12_F_1_khaki.rvmat","a3\Weapons_F_Enoch\Rifles\AK12\Data\AK12_F_2_khaki.rvmat","a3\Weapons_F_Enoch\Rifles\AK12\Data\AK12_RPK12_camo.rvmat"};
 hiddenSelectionsTextures[] = {"a3\Weapons_F_Enoch\Rifles\AK12\Data\AK12_ak12_1_khaki_co.paa","a3\Weapons_F_Enoch\Rifles\AK12\Data\AK12_ak12_2_khaki_co.paa","a3\Weapons_F_Enoch\Rifles\AK12\Data\AKU12_RPK12_parts_khaki_CO.paa"};
@@ -289,7 +306,7 @@ displayName = "RPK-16 (Arid)";
 DLC = "Enoch";
 hiddenSelectionsMaterials[] = {"A3RO_Vanilla\Textures\AK12_F_1_308_camo.rvmat","a3\Weapons_F_Enoch\Rifles\AK12\Data\AK12_F_2_camo.rvmat","a3\Weapons_F_Enoch\Rifles\AK12\Data\AK12_RPK12_camo.rvmat"};
 hiddenSelectionsTextures[] = {"A3RO_Vanilla\Textures\AK12_ak12_1_308_camo_CO.paa","a3\Weapons_F_Enoch\Rifles\AK12\Data\AK12_ak12_2_camo_co.paa","a3\Weapons_F_Enoch\Rifles\AK12\Data\AKU12_RPK12_parts_camo_CO.paa"};
-magazines[] = {"95rnd_545x39_RPK16_Arid_Mag_T4_F"};
+magazines[] = {"95Rnd_545x39_RPK16_Arid_Mag_T4_F"};
 picture = "a3\Weapons_F_Enoch\Rifles\AK12\Data\UI\icon_arifle_RPK12_arid_F_CA.paa";
 scope = 2;		
 };
@@ -301,7 +318,7 @@ displayName = "RPK-16 (Lush)";
 DLC = "Enoch";
 hiddenSelectionsMaterials[] = {"A3RO_Vanilla\Textures\AK12_F_1_308_khaki.rvmat","a3\Weapons_F_Enoch\Rifles\AK12\Data\AK12_F_2_khaki.rvmat","a3\Weapons_F_Enoch\Rifles\AK12\Data\AK12_RPK12_camo.rvmat"};
 hiddenSelectionsTextures[] = {"A3RO_Vanilla\Textures\AK12_ak12_1_308_khaki_CO.paa","a3\Weapons_F_Enoch\Rifles\AK12\Data\AK12_ak12_2_khaki_co.paa","a3\Weapons_F_Enoch\Rifles\AK12\Data\AKU12_RPK12_parts_khaki_CO.paa"};
-magazines[] = {"95rnd_545x39_RPK16_Lush_Mag_T4_F"};
+magazines[] = {"95Rnd_545x39_RPK16_Lush_Mag_T4_F"};
 picture = "a3\Weapons_F_Enoch\Rifles\AK12\Data\UI\icon_arifle_RPK12_lush_F_CA.paa";
 scope = 2;		
 };
@@ -380,7 +397,7 @@ descriptionShort = "Assault Rifle<br />Calibre: 5.56x45mm NATO";
 displayName = "AK-19 Base Class";
 initSpeed = 910;
 magazines[] = {"30Rnd_556x45_AK_Mag_RT_F"};
-magazineWell[] = {"CBA_556x45_AK","TR3_223Rem"};
+magazineWell[] = {"CBA_556x45_AK","TR3_223REM"};
 };
 
 // AK-19 Patterns
@@ -424,7 +441,7 @@ descriptionShort = "Assault Rifle<br />Calibre: 5.56x45mm NATO<br />Underbarrel 
 displayName = "AK-19 GP-25 Base Class";
 initSpeed = 910;
 magazines[] = {"30Rnd_556x45_AK_Mag_RT_F"};
-magazineWell[] = {"CBA_556x45_AK","TR3_223Rem"};
+magazineWell[] = {"CBA_556x45_AK","TR3_223REM"};
 };
 
 // AK-19 GP-25 Patterns
@@ -464,10 +481,10 @@ scope = 2;
 class arifle_AK308_base_F : arifle_AK12_base_F
 {
 _generalMacro = "arifle_AK308_base_F";
-descriptionShort = "Assault Rifle<br />Calibre: 7.62x51mm NATO";
+descriptionShort = "Battle Rifle<br />Calibre: 7.62x51mm NATO";
 displayName = "AK-308 Base Class";
-initSpeed = 780.5928;
-magazines[] = {"20Rnd_762x51_AK_Mag_NT_F"};
+initSpeed = 760;
+magazines[] = {"20Rnd_762x51_AK_Mag_RT_F"};
 magazineWell[] = {"AK308_762x51","AK308_308WIN"};
 };
 
@@ -506,12 +523,12 @@ scope = 2;
 };
 
 // Creating TR3 Base Class
-class arifle_TR3_base_F : arifle_AK308_F
+class arifle_TR3_base_F : arifle_AK308_base_F
 {
 _generalMacro = "arifle_TR3_base_F";
 descriptionShort = "Sporting Rifle<br />Calibre: 5.45x39 / .223 Remington / 7.62x39";
 displayName = "TR3 Base Class";
-initSpeed = 960.4248;
+initSpeed = 910;
 magazines[] = {""};
 magazineWell[] = {""};
 };
@@ -525,7 +542,7 @@ descriptionShort = "Sporting Rifle<br />Calibre: 5.45x39mm";
 displayName = "TR3 5.45x39";
 hiddenSelectionsMaterials[] = {"\A3RO_Vanilla\Textures\AK12_F_1_TR3.rvmat","\A3\Weapons_F_Exp\Rifles\AK12\Data\AK12_F_2.rvmat"};
 hiddenSelectionsTextures[] = {"\A3RO_Vanilla\Textures\AK12_ak12_1_TR3_co.paa","\A3\Weapons_F_Exp\Rifles\AK12\Data\AK12_ak12_2_co.paa"};
-initSpeed = 890;
+initSpeed = 900;
 magazines[] = {"30Rnd_545x39_Mag_NT_F"};
 magazineWell[] = {"AK_545x39","CBA_545x39_AK","CBA_545x39_RPK"};
 picture = "\A3\Weapons_F_Exp\Rifles\AK12\Data\UI\icon_arifle_AK12_F_X_CA.paa";
@@ -555,23 +572,23 @@ scope = 2;
 };
 
 // TR3 .223 Remington Patterns
-class arifle_TR3_223Rem_F : arifle_TR3_base_F
+class arifle_TR3_223REM_F : arifle_TR3_base_F
 {
-_generalMacro = "arifle_TR3_223Rem_F";
-baseWeapon = "arifle_TR3_223Rem_F";
+_generalMacro = "arifle_TR3_223REM_F";
+baseWeapon = "arifle_TR3_223REM_F";
 descriptionShort = "Sporting Rifle<br />Calibre: .223 Remington";
 displayName = "TR3 .223";
 hiddenSelectionsMaterials[] = {"\A3RO_Vanilla\Textures\AK12_F_1_TR3.rvmat","\A3\Weapons_F_Exp\Rifles\AK12\Data\AK12_F_2.rvmat"};
 hiddenSelectionsTextures[] = {"\A3RO_Vanilla\Textures\AK12_ak12_1_TR3_co.paa","\A3\Weapons_F_Exp\Rifles\AK12\Data\AK12_ak12_2_co.paa"};
 picture = "\A3\Weapons_F_Exp\Rifles\AK12\Data\UI\icon_arifle_AK12_F_X_CA.paa";
-magazines[] = {"30Rnd_223Rem_AK_Mag_NT_F"};
-magazineWell[] = {"TR3_223Rem"};
+magazines[] = {"30Rnd_223REM_AK_Mag_NT_F"};
+magazineWell[] = {"TR3_223REM"};
 scope = 2;	
 };
-class arifle_TR3_223Rem_arid_F : arifle_TR3_223Rem_F
+class arifle_TR3_223REM_arid_F : arifle_TR3_223REM_F
 {
-_generalMacro = "arifle_TR3_223Rem_arid_F";	
-baseWeapon = "arifle_TR3_223Rem_arid_F";
+_generalMacro = "arifle_TR3_223REM_arid_F";	
+baseWeapon = "arifle_TR3_223REM_arid_F";
 displayName = "TR3 .223 (Arid)";	
 DLC = "Enoch";
 hiddenSelectionsMaterials[] = {"\A3RO_Vanilla\Textures\AK12_F_1_TR3_camo.rvmat","a3\Weapons_F_Enoch\Rifles\AK12\Data\AK12_F_2_camo.rvmat"};
@@ -579,10 +596,10 @@ hiddenSelectionsTextures[] = {"\A3RO_Vanilla\Textures\AK12_ak12_1_TR3_camo_CO.pa
 picture = "a3\Weapons_F_Enoch\Rifles\AK12\Data\UI\icon_arifle_AK12_arid_F_CA.paa";
 scope = 2;	
 };
-class arifle_TR3_223Rem_lush_F : arifle_TR3_223Rem_F
+class arifle_TR3_223REM_lush_F : arifle_TR3_223REM_F
 {
-_generalMacro = "arifle_TR3_223Rem_lush_F";	
-baseWeapon = "arifle_TR3_223Rem_lush_F";
+_generalMacro = "arifle_TR3_223REM_lush_F";	
+baseWeapon = "arifle_TR3_223REM_lush_F";
 displayName = "TR3 .223 (Lush)";	
 DLC = "Enoch";
 hiddenSelectionsMaterials[] = {"\A3RO_Vanilla\Textures\AK12_F_1_TR3_khaki.rvmat","a3\Weapons_F_Enoch\Rifles\AK12\Data\AK12_F_2_khaki.rvmat"};
@@ -600,7 +617,7 @@ descriptionShort = "Sporting Rifle<br />Calibre: 7.62x39mm";
 displayName = "TR3 7.62x39";
 hiddenSelectionsMaterials[] = {"\A3RO_Vanilla\Textures\AK12_F_1_TR3.rvmat","\A3\Weapons_F_Exp\Rifles\AK12\Data\AK12_F_2.rvmat"};
 hiddenSelectionsTextures[] = {"\A3RO_Vanilla\Textures\AK12_ak12_1_TR3_co.paa","\A3\Weapons_F_Exp\Rifles\AK12\Data\AK12_ak12_2_co.paa"};
-initSpeed = 715;
+initSpeed = 718;
 magazines[] = {"30Rnd_762x39_AK12_NT_Mag_F"};
 magazineWell[] = {"AK_762x39","CBA_762x39_AK","CBA_762x39_RPK"};
 picture = "\A3\Weapons_F_Exp\Rifles\AK12\Data\UI\icon_arifle_AK12_F_X_CA.paa";
@@ -614,7 +631,7 @@ displayName = "TR3 7.62x39 (Arid)";
 DLC = "Enoch";
 hiddenSelectionsMaterials[] = {"\A3RO_Vanilla\Textures\AK12_F_1_TR3_camo.rvmat","a3\Weapons_F_Enoch\Rifles\AK12\Data\AK12_F_2_camo.rvmat"};
 hiddenSelectionsTextures[] = {"\A3RO_Vanilla\Textures\AK12_ak12_1_TR3_camo_CO.paa","a3\Weapons_F_Enoch\Rifles\AK12\Data\AK12_ak12_2_camo_co.paa"};
-magazines[] = {"30rnd_762x39_AK12_NT_Arid_Mag_F"};
+magazines[] = {"30Rnd_762x39_AK12_NT_Arid_Mag_F"};
 picture = "a3\Weapons_F_Enoch\Rifles\AK12\Data\UI\icon_arifle_AK12_arid_F_CA.paa";
 scope = 2;	
 };
@@ -626,7 +643,7 @@ displayName = "TR3 7.62x39 (Lush)";
 DLC = "Enoch";
 hiddenSelectionsMaterials[] = {"\A3RO_Vanilla\Textures\AK12_F_1_TR3_khaki.rvmat","a3\Weapons_F_Enoch\Rifles\AK12\Data\AK12_F_2_khaki.rvmat"};
 hiddenSelectionsTextures[] = {"\A3RO_Vanilla\Textures\AK12_ak12_1_TR3_khaki_CO.paa","a3\Weapons_F_Enoch\Rifles\AK12\Data\AK12_ak12_2_khaki_co.paa"};
-magazines[] = {"30rnd_762x39_AK12_NT_Lush_Mag_F"};
+magazines[] = {"30Rnd_762x39_AK12_NT_Lush_Mag_F"};
 picture = "a3\Weapons_F_Enoch\Rifles\AK12\Data\UI\icon_arifle_AK12_lush_F_CA.paa";
 scope = 2;
 };
@@ -658,7 +675,7 @@ _generalMacro = "arifle_WASR_545_F";
 baseWeapon = "arifle_WASR_545_F";
 descriptionShort = "Sporting Rifle<br />Calibre: 5.45x39mm";
 displayName = "WASR-2";
-initSpeed = 890;
+initSpeed = 900;
 magazines[] = {"30Rnd_545x39_Mag_NT_F"};
 magazineWell[] = {"AK_545x39","CBA_545x39_AK","CBA_545x39_RPK"};
 scope = 2;
@@ -673,7 +690,7 @@ descriptionShort = "Sporting Rifle<br />Calibre: 5.56x45mm NATO";
 displayName = "WASR-3";
 initSpeed = 910;
 magazines[] = {"30Rnd_556x45_AK_Mag_NT_F"};
-magazineWell[] = {"CBA_556x45_AK","TR3_223Rem"};
+magazineWell[] = {"CBA_556x45_AK","TR3_223REM"};
 scope = 2;	
 };
 

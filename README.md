@@ -1,83 +1,107 @@
 [![A3-RO-Header.png](https://i.postimg.cc/Z5QVdCSH/A3-RO-Header.png)](https://postimg.cc/TKrV82h5)
 
-Arma 3 Realism Overhaul, 'A3RO' for short, aims to achieve realism in aspects not covered by other modifications as well as improving on existing ones, all the while maintaining the highest possible level of backwards compatibility, featuring native [ACE3](https://github.com/acemod/ACE3) and [ACEAX](https://github.com/jetelain/AceArsenalExtended) Support.  
-A3RO Uses [CBA_A3](https://github.com/CBATeam/CBA_A3) for Compatibility.
+Arma 3 Realism Overhaul, 'A3RO' for short, aims to achieve realism in aspects not covered by other modifications as well as improving on existing ones, all the while maintaining the highest possible level of backwards compatibility, featuring native support for CDLC and other Modifications.
 
-You can find A3RO available on the Steam Workshop here (Link Follows)
+A3RO is also available for download on the [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?edit=true&id=3341786920).
 
 # Core Features
-### Complete Overhaul of every single Primary, Sidearm and Launcher
-An absurd amount of research went into making sure that Weapons now have the correct Name, Weight, Firemodes, Rate of Fire, Accuracy, Range, Impact, Muzzle Velocity, Zeroing Range and most importantly, Calibre. These changes are applied from the Ammo Config Level throughout the Magazines and finally on the Weapons themselves. Some weapons are unfortunately guesswork as the information is classified or unavailable (to me). Rest assured I did my best to find reasonable values. Firemodes are reflected in the Weapon Texture.
+[![A3-RO-Overhauled-Compressed.gif](https://i.postimg.cc/tgQ4gms9/A3-RO-Overhauled-Compressed.gif)](https://postimg.cc/4YPgLPv0)
+### Ammo Overhaul
+Every Ammo Type used ingame has been re-evalued, with a new, standardized configuration applied across the board.
+Air Friction, Calibre, Hit Values, Audible and Visible Distance ranges, Projectile Lifetime and more.
+With ACE loaded, Ballistics Simulation is taken to the next level. Every Ammo Type has received updates to its ACE Config where possible.
 
-### Complete Overhaul of every single Attachment
-The same amount of focus was directed at making sure every single Optic in the game now has the correct Name, Weight, Magnification and/or Zoom-Levels, with new Zeroing Increments added based on Magnification. Zeroing is standardised to 100m by default. Other Rail attachments were also given attention in a similar manner.
+### Tracers Overhaul
+Tracers Ignite and Extinguish just when they would in real life. Every single Ammo Type has been checked for this.
+Tracer Size Scaling has also been standardized. You will see the difference of being shot at by 5.45x39 or 12.7x108 as clearly as night and day. 
 
-### New Weapons and Calibres
-Civilian Variants (i.e Semi-Auto) and/or Variants in a different Calibre are added where they exist. From High-Powered Rifles like the ‘Bad News’ in .300 WM or the GM6 in .50 BMG, you now also have Rifles like the MR223 or TR3, perfect for equipping Civilian Oriented Factions.
+### Explosives Overhaul
+Underbarrel Grenade Launchers have been rebuilt from the ground up. Different Calibre Launchers have different Grenades available to them.
+Increased Lethality, Grenade Selection. Launcher Missile and Rockets, Warheads and Projectiles.
+Hand Grenades will be Overhauled in 1.2
 
-### New Attachments
-Throughout my research, I discovered tons of hidden content thanks to the invaluable information present on the Arma 3 Wiki. I also found some interesting assets on my own. You now have access to the silly DCL120, a fully working SIMCOM Adapter, Flash suppressors and more. (Check the MP5K-PDW ;) )
+### Magazines Overhaul
+Every Calibre where Tracer Ammo exists now has Magazines with them made available. Depending on the Magazines' Capacity, this can be just before Reload, every Round or on every 4th Round.
+In turn, missing tracerless Magazines have also been created for a consistent experience throughout the Game.
+Thus a few hundred new Magazines have been created to fill the gaps throughout the Game.
+Over 600 Icons have been created to help differentiate between the various Magazine Variants with their respective Tracers load.
+Every Magazine features a Description, aswell as an Abbreviation to be displayed in the UI where required. You will know what you are using.
+Every Round, Every empty Magazine, Every Belt Link, Every Pouch. Everything was taken into account to achieve the closest approximation of Magazine Weights yet. Belts. Are. Heavy.
 
-### Magazine Tracer Overhaul
-A few hundred Magazines in new and existing Calibres (I stopped counting) have been added and assigned to their respective Weapons. Now, instead of only some weapons possessing Magazines without Tracers, every single weapon can fire Tracerless, Tracer or IR-DIM Ammo. Depending on Magazine size the Options Full Tracer, Tracer Every 4 or Reload Tracer are available. This was more of a Big Brush Operation. Please let me know if a particular constellation of Calibre and Tracer should or should not exist.
+### Weapons Overhaul
+Every conceivable aspect of Infantry Weapons has been analyzed, researched and adjusted to achieve the most accurate representation possible.
+Name, Description, Mass, Rate of Fire, Accuracy, Muzzle Velocity, Barrel Twist and Length, Compatible Calibres and Attachments, Zeroing.
+Countless Inconsistencies and incorrect Attachment Slots have been fixed, replaced, and hidden ones added.
+Few Settings Remain yet to be touched upon. But they will be, in 1.2
 
-### Weapon Attachment Slot Overhaul
-In line with the adjustment of Weapon Calibres, many buggy Slots have been removed, while hidden Slots have been enabled where they make sense, with the additional Audio Configuration set up where required. For example, the M200 Intervention or the Negev NG7 can now mount Suppressors.
+### Attachments Overhaul
+In the same manner, every type of Weapon Attachment has been reconfigured to represent its real life counterpart.
+Name, Mass, Magnification, Descriptions that provide useful Information on Ranging, Zeroing based on Magnification.
+There is more work to be done. Attachments will receive a massive Overhaul in 1.2
 
-### Attachment UI Overhaul
-Each Weapon has their Weapon Attachment Positions and Scale adjusted in the Inventory to where the Attachment actually is on the Weapon as opposed to being either slightly off, too big or just hovering above it (This took way too long).
+### Weapon UI Overhaul
+The Position and Scale of Attachments displayed on any weapon in the Inventory is now accurate.
+The ROI is marginal. And yet it was done.
 
-### Inventory Description Overhaul
-The Descriptions (and Short Description of Tracer Magazines) have been Revised and added to Weapons, Magazines or Optics that lacked them for consistency. The Optic Descriptions are especially useful as they give information about compatible Calibres.
+### Backpacks Overhaul
+With increased burden, existing Backpack capacities would not do. They were too limiting anyway.
+All Load Bearing Backpacks have had their capacity increased, and their Weight set to the real value.
+Statics Backpacks and some other functional Backpacks have also been modified.
+While currently a hasty addition, a proper revision will follow in 1.2
+
+### New Content
+With everything in place, the stage was set to create derivative content, and so it was. 
+Civilian Sporting Weapons based on existing Gear, Weapon Families created, Weapons and Attachments hidden in the gamefiles revealed and re-configured.
+Meticulous care was placed on Texture work. You will not find a Semi-Automatic Rifle with a Selective Fire Switch.
 
 ### Maximum Compatibility
-All Changes are made in a way to affect the entire game. I went so far as to edit certain Mission Configs to ensure there would be no clashes between the old and revised weapons. Where Game Limitations prevent a full replacement, a new class was created and the old one hidden to prevent potential Errors when loading older scenarios. This ensures that any modded Faction that I cannot take into account should still work if it uses affected Content (We’re talking of about 4 Assets total)
-
-...and countless other small fixes I forgot to mention.
+No stone left unturned. A3RO is intended to apply all changes across the entire game. That means: No missing Magazines in Units, no missing Editor Objects, no Errors or Bugs in any Vanilla Scenario.
+Where Class Inheritance prevents a full replacement, new classes were created and applied throughout. 
 
 # Dependencies
 ### Hard Dependencies
-A3RO is dependent on [CBA_A3](https://steamcommunity.com/workshop/filedetails/?id=450814997) to allow maximum Magazine Compatibility between it and other Mods.
+The only Mod required to play A3RO is [CBA_A3](https://github.com/CBATeam/CBA_A3).
+CBA_A3 provides vital functionality and intercompatibility options that allow A3RO to be easily applied onto other Addons.
 
 ### Soft Dependency System
-All core content can be played with only CBA_A3 loaded alongside.  
+As of Version 1.1, native compatibility has been achieved with [ACE3](https://github.com/acemod/ACE3), [ACEAX](https://github.com/jetelain/AceArsenalExtended), [ACE_Tracers](https://github.com/acemod/ACE3/tree/master/optionals/tracers), [Western Sahara CDLC](https://store.steampowered.com/app/1681170/Arma_3_Creator_DLC_Western_Sahara/) and [Real Engine](https://steamcommunity.com/sharedfiles/filedetails/?id=2127693591).
 
-Loading [ACE3](https://steamcommunity.com/workshop/filedetails/?id=463939057) will add all patches to related content from ACE such as ACE Magazines, Weapon Stats and Calibers, while in turn adding said ACE Settings to my own Calibres and new Weapons. Additional Attachment variants are enabled or replaced by my own.  
+#### ACE 3
+Loading ACE3 will apply all A3RO patches onto ACE Calibers, Magazines and Items. In turn, ACE Configuration is applied to all classes edited by A3RO where possible in order to create the most realistic version of Arma 3 yet.
 
-Loading [ACE3 Arsenal Extended](https://steamcommunity.com/workshop/filedetails/?id=2522638637) will sort all new content accordingly. I also made some changes to Vanilla Items while I was at it.
+#### ACEAX
+Loading ACEAX will enable A3ROs custom categorization of all Weapons. Other ACEAX for supported Addons can be run alongside to sort content unaffected by A3RO.
+
+#### ACE_Tracers
+Loading ACE_Tracers will apply ACE Tracer Models to all Calibres added by A3RO. Furthermore, ACE_Tracers benefits from A3ROs Tracer Scale Standardization.
+
+#### Western Sahara CDLC
+Loading the Western Sahara CDLC will apply all A3RO adjustments to the DLC content where possible. Derivative Content becomes available.
+
+#### Real Engine
+Loading Real Engine will cause it to be overwritten by A3RO in aspects wherein RE and A3RO clash. The result is a seamless integration of both Mods.
 
 # Planned Updates
-A lot of features I want to implement had to be cut from release due to time constraints. I will continue development at a slower pace.
 
-### Update 1.1 (Q4 2024)
-Creator DLC Compatibility
-With A3RO loaded, CDLC such as WS or RF will already benefit from some of its changes. Full Support with all of my QOL adjustments applied will follow and are my #1 Priority.
+#### Full Creator DLC Compatibility
+Reaction Forces and Expeditonary Forces Compatibility will come.
 
-Magazines / Grenades / Crates Rework
-The weight of newly added Magazines is currently adjusted to Vanilla Values. A full revision of Magazines, Belts, Throwables and Items is planned, mainly addressing weights, taking into account Ammo and Magazine type. All Changes will be reflected in Arsenal, Crates, Missions and Vehicle Inventories. Right now only necessary changes were made. There will also be a distinction between UGL Ammo between the factions.
+#### Crates Rework
+Left out of 1.1 due to their low relevance, compatiblity is in order nontheless.
 
-Bug Fixes
-I am sure I missed a few things in my delirious state making this over the past 2.5 months. Please report any bugs in the Bug Reports Discussion Post or in the Comments.
+#### Feature Requests
+Community requests like ACE_Tracers and Real Engine Compatibility were just the beginning.
+There are many more mods that deserve attention.
 
-### Update 1.2 (Q1 2025)
-Subsonic Ammo types
-Tracer Rework (Timing, Scale, Replacing Unit Magazines)
-Weapon Handling Rework (Dexterity and Inertia of all Weapons and Attachments)
-Implementing further hidden Vanilla Content I found
-Launcher Penetration and Damage Check
-Review of Calibres I left mostly untouched
-Code Cleanup
-
-### Future Plans
-A complete Overhaul of Vehicle Weapons. ACE already did an excellent job but I’m certain my nitpicky self will find many values to adjust and tinker with
-RHS and CUP (Big Maybe) Support. Probably as a separate mod.
+#### Ideas Backlog
+For every Feature added in 1.1, two more had to be postponed for later, lest the update would never arrive.
+There are many great ideas that simply weren't a priority. Work will continue. But now it is time for a break.
 
 # Credits
 While this is a one-man project, I still would like to credit those whose resources I have used to turn this mod into a reality:
 
 The CBA_A3 Team - Whose Shared Classes allow my Magazine and Attachment Changes to work throughout the Armaverse.  
-The ACE3 Team - For their vast and useful Documentation that made it possible for me to create my own Calibres and so much more.    
+The ACE3 Team - For their vast and useful Documentation that made it possible for me to create my own Calibres and so much more.
 All Contributors to the Arma Wiki - Without whom I would've missed countless useful game trivia that assisted my artistic direction.  
-Drebin052 - For uploading an Icon for the Osprey 45 to the Wiki that I am unable to find myself.
 
 [![20241002042741-1.jpg](https://i.postimg.cc/yY4JkKtR/20241002042741-1.jpg)](https://postimg.cc/mhjZ5vbZ)

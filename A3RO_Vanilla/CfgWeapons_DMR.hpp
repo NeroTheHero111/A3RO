@@ -11,6 +11,7 @@ class srifle_DMR_04_F: DMR_04_base_F
 {
 descriptionShort = "Fictional Marksman Rifle<br />Calibre: 12.7x55mm";
 displayName = "ASP-1 Kir";
+initSpeed = 300;
 };
 class srifle_DMR_04_Tan_F : srifle_DMR_04_F
 {
@@ -22,7 +23,7 @@ class DMR_07_base_F : Rifle_Long_Base_F
 {
 displayName = "QBU-88 Base Class";
 descriptionShort = "Marksman Rifle<br />Calibre: 5.8x42mm";
-initSpeed = 950;
+initSpeed = 895;
 magazines[] = {"20Rnd_650x39_Cased_Mag_F"};
 magazineWell[] = {"CTAR_580x42_DMR"};
 };
@@ -69,6 +70,7 @@ displayName = "SVDK Magpul";
 descriptionShort = "Marksman Rifle<br />Calibre: 9.3x64mm Brenneke";
 hiddenSelectionsMaterials[] = {"A3RO_Vanilla\Textures\DMR_05_01.rvmat","\A3\Weapons_F_Mark\LongRangeRifles\DMR_05\Data\DMR_05_02.rvmat"};
 hiddenSelectionsTextures[] = {"A3RO_Vanilla\Textures\DMR_05_01_CO.paa","\A3\Weapons_F_Mark\LongRangeRifles\DMR_05\Data\DMR_05_02_CO.paa"};
+initSpeed = 780;
 };
 class srifle_DMR_05_hex_F : srifle_DMR_05_blk_F
 {
@@ -88,7 +90,7 @@ class DMR_02_base_F : Rifle_Long_Base_F
 {
 displayName = "Bad News LVOA® 16'' .338 LM Base Class";
 descriptionShort = "Marksman Rifle<br />Calibre: .338 Lapua Magnum";
-initSpeed = 765.6576;
+initSpeed = 759.56; // Calculated for 16'' Barrel.
 };
 
 // MAR-10. Changing: Name
@@ -96,7 +98,7 @@ class srifle_DMR_02_F : DMR_02_base_F
 {
 descriptionShort = "Marksman Rifle<br />Calibre: .338 Lapua Magnum";
 displayName = "''Bad News'' LVOA® 16'' .338 LM";
-initSpeed = 765.6576;
+initSpeed = 759.56;
 magazineWell[] = {"CBA_338LM_AI","MAR10_338"};
 };
 class srifle_DMR_02_camo_F : srifle_DMR_02_F
@@ -108,16 +110,16 @@ class srifle_DMR_02_sniper_F : srifle_DMR_02_F
 displayName = "''Bad News'' LVOA® 16'' .338 LM (Sand)";
 };
 
-// Creating ULR .300 WM Base Class
+// Creating ULR .300 WM  Base Class
 class DMR_02_300WM_base_F : DMR_02_base_F
 {
 _generalMacro = "DMR_02_300WM_base_F";
 aimTransitionSpeed = 0.7;
 dexterity = 1.68;
-displayName = "Bad News LVOA® 16'' .300 WM Base Class";
+displayName = "Bad News LVOA® 16'' .300 WM  Base Class";
 descriptionShort = "Marksman Rifle<br />Calibre: .300 Winchester Magnum";
 inertia = 0.9;
-initSpeed = 784.86;
+initSpeed = 779.9;
 magazines[] = {"10Rnd_300WM_Ball"};
 magazineWell[] = {"CBA_300WM_BadNews"};
 model = "\A3\Weapons_F_Mark\LongRangeRifles\DMR_02\DMR_02_F.p3d";
@@ -125,7 +127,7 @@ picture = "\A3\Weapons_F_Mark\LongRangeRifles\DMR_02\Data\UI\gear_DMR_02_X_CA.pa
 UiPicture = "\A3\weapons_f\data\UI\icon_regular_CA.paa"; 
 };
 
-// ULR .300 WM
+// ULR .300 WM 
 class srifle_DMR_300WM_02_F : DMR_02_300WM_base_F
 {
 _generalMacro = "srifle_DMR_300WM_02_F";	
@@ -137,7 +139,7 @@ class srifle_DMR_300WM_02_camo_F : srifle_DMR_300WM_02_F
 {
 _generalMacro = "srifle_DMR_300WM_02_camo_F";	
 baseWeapon = "srifle_DMR_300WM_02_camo_F";	
-displayName = "''Bad News'' LVOA® 16'' .300 WM (Camo)";
+displayName = "''Bad News'' LVOA® 16'' .300 WM  (Camo)";
 hiddenSelectionsTextures[] = {"\A3\Weapons_F_Mark\LongRangeRifles\DMR_02\Data\DMR_02_01_dazzle_CO.paa","\A3\Weapons_F_Mark\LongRangeRifles\DMR_02\Data\DMR_02_02_dazzle_CO.paa"};
 picture = "\A3\Weapons_F_Mark\LongRangeRifles\DMR_02\Data\UI\gear_DMR_02_camo_X_CA.paa";
 scope = 2;
@@ -146,13 +148,13 @@ class srifle_DMR_300WM_02_sniper_F : srifle_DMR_300WM_02_F
 {
 _generalMacro = "srifle_DMR_300WM_02_sniper_F";	
 baseWeapon = "srifle_DMR_300WM_02_sniper_F";	
-displayName = "''Bad News'' LVOA® 16'' .300 WM (Sand)";
+displayName = "''Bad News'' LVOA® 16'' .300 WM  (Sand)";
 hiddenSelectionsTextures[] = {"\A3\Weapons_F_Mark\LongRangeRifles\DMR_02\Data\DMR_02_01_tan_CO.paa","\A3\Weapons_F_Mark\LongRangeRifles\DMR_02\Data\DMR_02_02_tan_CO.paa"};
 picture = "\A3\Weapons_F_Mark\LongRangeRifles\DMR_02\Data\UI\gear_DMR_02_sniper_X_CA.paa";
 scope = 2;
 };
 
-// Creating XRG-20 Mk. II
+// Creating ZRG-20 Mk. I
 class DMR_02_Railgun_base_F : Rifle_Long_Base_F
 {
 _generalMacro = "DMR_02_Railgun_base_F";
@@ -177,7 +179,7 @@ cursor = "EmptyCursor";
 cursoraim = "coil";
 descriptionShort = "Fictional Railgun Prototype<br />Calibre: 20x82mm Slug";
 dexterity = 1.68;
-displayName = "XRG-20 Mk. II Base Class";
+displayName = "ZRG-20 Mk. I Base Class";
 distanceZoomMax = 500;
 distanceZoomMin = 500;
 DLC = "Mark";
@@ -188,7 +190,7 @@ hiddenSelectionsTextures[] = {"\A3RO_Vanilla\Textures\DMR_02_01_railgun_CO.paa",
 inertia = 0.9;
 initSpeed = 2058;
 magazines[] = {"5Rnd_20mm_RailGun_Mag"};
-magazineWell[] = {"XRG_20MM"}; // For some Reason I can equip MX Magazines if this is not defined.
+magazineWell[] = {"ZRG_20MM"}; // For some Reason I can equip MX Magazines if this is not defined.
 overviewPicture = "\A3\Data_F_Mark\Images\watermarkInfo_page06_ca.paa"; 
 recoil = "recoil_gm6";
 reloadAction = "GestureReloadDMR02";
@@ -201,7 +203,7 @@ class srifle_DMR_02_Railgun_F : DMR_02_Railgun_base_F
 {
 _generalMacro = "srifle_DMR_02_Railgun_F";
 baseWeapon = "srifle_DMR_02_Railgun_F";
-displayName = "XRG-20 Mk. II";
+displayName = "ZRG-20 Mk. I";
 model = "\A3\Weapons_F_Mark\LongRangeRifles\DMR_02\DMR_02_F.p3d";
 picture = "\A3\Weapons_F_Mark\LongRangeRifles\DMR_02\Data\UI\gear_DMR_02_X_CA.paa";
 scope = 2;
@@ -228,6 +230,7 @@ class srifle_DMR_01_F : DMR_01_base_F
 {
 descriptionShort = "Prototype Marksman Rifle <br/>Calibre: 7.62x54mmR";
 displayName = "VS-121";
+initSpeed = 830;
 };
 
 // Mk-I Base Class. Changing Name. Description. Magwell. Fixing Mode Order
@@ -235,6 +238,7 @@ class DMR_03_base_F : Rifle_Long_Base_F
 {
 displayName = "MK-I EMR Base Class";
 descriptionShort = "Fictional Marksman Rifle<br />Calibre: 7.62x51mm NATO";	
+initSpeed = 916.22;
 magazineWell[] = {"CBA_762x51_MkI_EMR"};
 };
 // Mk-I EMR. Changing: Name. Magwell
@@ -242,6 +246,7 @@ class srifle_DMR_03_F : DMR_03_base_F
 {
 displayName = "MK-I EMR";
 descriptionShort = "Fictional Marksman Rifle<br />Calibre: 7.62x51mm NATO";
+initSpeed = 916.22;
 magazineWell[] = {"CBA_762x51_MkI_EMR"};
 scope = 1;
 };
@@ -273,10 +278,10 @@ _generalMacro = "DMR_SIG556_base_F";
 aimTransitionSpeed = 0.7;
 descriptionShort = "Sporting Rifle<br />Calibre: .223 Remington";
 dexterity = 1.68;
-displayName = "SIG 556 DMR 21'' Base Class";
+displayName = "SIG 556 DMR 18'' Base Class";
 inertia = 0.8;
-initSpeed = 916.2288;
-magazines[] = {"20Rnd_223Rem_Mag_NT_F"};
+initSpeed = 916.22;
+magazines[] = {"20Rnd_223REM_Mag_NT_F"};
 magazineWell[] = {"SIG556_223R"};
 model = "\A3\Weapons_F_Mark\LongRangeRifles\DMR_03\DMR_03_F.p3d";
 UiPicture = "\A3\weapons_f\data\UI\icon_regular_CA.paa"; 
@@ -287,7 +292,7 @@ class srifle_DMR_SIG556_F : DMR_SIG556_base_F
 {
 _generalMacro = "srifle_DMR_SIG556_F";
 baseWeapon = "srifle_DMR_SIG556_F";
-displayName = "SIG 556 DMR 21''";
+displayName = "SIG 556 DMR 18''";
 hiddenSelections[] = {"Camo1","Camo2"};
 hiddenSelectionsMaterials[] = {"\A3RO_Vanilla\Textures\DMR_03_01.rvmat","\A3\Weapons_F_Mark\LongRangeRifles\DMR_03\Data\DMR_03_02.rvmat"};
 hiddenSelectionsTextures[] = {"\A3RO_Vanilla\Textures\DMR_03_01_CO.paa","\A3\Weapons_F_Mark\LongRangeRifles\DMR_03\Data\DMR_03_02_CO.paa"};
@@ -298,7 +303,7 @@ class srifle_DMR_SIG556_multicam_F : srifle_DMR_SIG556_F
 {
 _generalMacro = "srifle_DMR_SIG556_multicam_F";
 baseWeapon = "srifle_DMR_SIG556_multicam_F";	
-displayName = "SIG 556 DMR 21'' (Camo)";
+displayName = "SIG 556 DMR 18'' (Camo)";
 hiddenSelections[] = {"Camo1","Camo2"};
 hiddenSelectionsMaterials[] = {"\A3RO_Vanilla\Textures\DMR_03_01_woodland.rvmat","\A3\Weapons_F_Mark\LongRangeRifles\DMR_03\Data\DMR_03_02_woodland.rvmat"};
 hiddenSelectionsTextures[] = {"\A3RO_Vanilla\Textures\DMR_03_01_multicam_CO.paa","\A3\Weapons_F_Mark\LongRangeRifles\DMR_03\Data\DMR_03_02_multicam_CO.paa"};
@@ -308,7 +313,7 @@ class srifle_DMR_SIG556_khaki_F : srifle_DMR_SIG556_F
 {
 _generalMacro = "srifle_DMR_SIG556_khaki_F";
 baseWeapon = "srifle_DMR_SIG556_khaki_F";	
-displayName = "SIG 556 DMR 21'' (Khaki)";
+displayName = "SIG 556 DMR 18'' (Khaki)";
 hiddenSelections[] = {"Camo1","Camo2"};
 hiddenSelectionsMaterials[] = {"\A3RO_Vanilla\Textures\DMR_03_01.rvmat","\A3\Weapons_F_Mark\LongRangeRifles\DMR_03\Data\DMR_03_02.rvmat"};
 hiddenSelectionsTextures[] = {"\A3RO_Vanilla\Textures\DMR_03_01_khaki_CO.paa","\A3\Weapons_F_Mark\LongRangeRifles\DMR_03\Data\DMR_03_02_khaki_CO.paa"};
@@ -318,7 +323,7 @@ class srifle_DMR_SIG556_tan_F : srifle_DMR_SIG556_F
 {
 _generalMacro = "srifle_DMR_SIG556_tan_F";
 baseWeapon = "srifle_DMR_SIG556_tan_F";	
-displayName = "SIG 556 DMR 21'' (Sand)";
+displayName = "SIG 556 DMR 18'' (Sand)";
 hiddenSelections[] = {"Camo1","Camo2"};
 hiddenSelectionsMaterials[] = {"\A3RO_Vanilla\Textures\DMR_03_01_woodland.rvmat","\A3\Weapons_F_Mark\LongRangeRifles\DMR_03\Data\DMR_03_02_woodland.rvmat"};
 hiddenSelectionsTextures[] = {"\A3RO_Vanilla\Textures\DMR_03_01_tan_CO.paa","\A3\Weapons_F_Mark\LongRangeRifles\DMR_03\Data\DMR_03_02_tan_CO.paa"};
@@ -328,7 +333,7 @@ class srifle_DMR_SIG556_woodland_F : srifle_DMR_SIG556_F
 {
 _generalMacro = "srifle_DMR_SIG556_woodland_F";
 baseWeapon = "srifle_DMR_SIG556_woodland_F";	
-displayName = "SIG 556 DMR 21'' (Woodland)";
+displayName = "SIG 556 DMR 18'' (Woodland)";
 hiddenSelections[] = {"Camo1","Camo2"};
 hiddenSelectionsMaterials[] = {"\A3RO_Vanilla\Textures\DMR_03_01_woodland.rvmat","\A3\Weapons_F_Mark\LongRangeRifles\DMR_03\Data\DMR_03_02_woodland.rvmat"};
 hiddenSelectionsTextures[] = {"\A3RO_Vanilla\Textures\DMR_03_01_woodland_CO.paa","\A3\Weapons_F_Mark\LongRangeRifles\DMR_03\Data\DMR_03_02_woodland_CO.paa"};
@@ -366,9 +371,9 @@ class DMR_KBU97A_base_F : DMR_07_base_F
 _generalMacro = "DMR_KBU97A_base_F";
 descriptionShort = "Marksman Rifle<br />Calibre: 5.56x45mm NATO";
 displayName = "KBU-97A Base Class";
-initSpeed = 1044.245;
+initSpeed = 987.3;
 magazines[] = {"10Rnd_556x45_KBU_NT_Mag_F"};
-magazineWell[] = {"KBU97A_556x45","KBU97A_223Rem"};
+magazineWell[] = {"KBU97A_556x45","KBU97A_223REM"};
 };
 class srifle_DMR_KBU97A_blk_F : DMR_KBU97A_base_F
 {

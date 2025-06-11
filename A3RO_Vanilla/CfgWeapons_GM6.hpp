@@ -8,12 +8,13 @@ magazines[] = {"5Rnd_127x108_Mag"};
 magazineWell[] = {"GM6_127x108"};
 };
 
-// GM6 Lynx. Changing: Name. Description. Adding GM6 12.7x108 Magwell. Adjusted Mass for Uniformity with 12.7x99 mm Variant.
+// GM6 Lynx. Changing: Name. Description. Adding GM6 12.7x108 Magwell. Adjusted Mass for Uniformity with 12.7x99  Variant.
 class srifle_GM6_F : GM6_base_F
 {
 descriptionShort = "Sniper Rifle<br />Calibre: 12.7x108mm";
 displayName = "GM6 Lynx 12.7x108";
 magazineWell[] = {"GM6_127x108"};
+initSpeed = 780;
 };
 class srifle_GM6_ghex_F : srifle_GM6_F
 {

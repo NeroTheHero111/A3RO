@@ -99,41 +99,14 @@ displayName = "MG5 A2";
 class Weapon_MMG_02_camo_F : Weapon_Base_F
 {
 displayName = "RM338 (MTP)";
-	class TransportMagazines
-	{
-		delete 130Rnd_338_Mag;
-		class 130Rnd_338_Mag_T4
-		{
-		count = 1;	
-		magazine = "130Rnd_338_Mag_T4";
-		};
-	};	
 };
 class Weapon_MMG_02_black_F : Weapon_Base_F
 {
 displayName = "RM338";
-	class TransportMagazines
-	{
-		delete 130Rnd_338_Mag;
-		class 130Rnd_338_Mag_T4
-		{
-		count = 1;	
-		magazine = "130Rnd_338_Mag_T4";
-		};
-	};	
 };
 class Weapon_MMG_02_sand_F : Weapon_Base_F
 {
 displayName = "RM338 (Sand)";
-	class TransportMagazines
-	{
-		delete 130Rnd_338_Mag;
-		class 130Rnd_338_Mag_T4
-		{
-		count = 1;	
-		magazine = "130Rnd_338_Mag_T4";
-		};
-	};	
 };
 
 // Zafir. Changing: Name
@@ -143,10 +116,10 @@ displayName = "Negev NG-7 SF";
 	class TransportMagazines
 	{
 		delete 150Rnd_762x54_Box;
-		class 150Rnd_762x54_Box_T4
+		class 100Rnd_762x51_NG7_Box_GT4
 		{
 		count = 1;	
-		magazine = "150Rnd_762x54_Box_T4";
+		magazine = "100Rnd_762x51_NG7_Box_GT4";
 		};
 	};	
 };

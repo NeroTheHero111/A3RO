@@ -3,15 +3,59 @@ class B_762x51_Ball : BulletBase // IMI Samson 150 Gr M80 FMJ
 {
 audibleFire = 44.63;
 hit = 11.50;	
-tracerEndTime = 2.15957;
+timeToLive = 11.5;
+tracerEndTime = 3;
+tracerScale = 1.3771;
+tracerStartTime = 0.099;
 typicalSpeed = 843.0768;
+};
+
+// Creating 7.62 IR-DIM Ammo
+class B_762x51_Ball_IR : B_762x51_Ball
+{
+nvgOnly = 1;	
+};
+
+class B_762x51_Minigun_Tracer_Red : SubmunitionBullet // From Regular 7.62
+{
+airFriction = -0.001;
+audibleFire = 44.63;
+caliber = 1.6;
+hit = 11.50;	
+timeToLive = 23; // 2x Helicopter Ammo
+tracerEndTime = 3;
+tracerScale = 1.3771;
+tracerStartTime = 0.099;
+typicalSpeed = 843.0768;
+};
+class B_762x51_Minigun_Tracer_Red_splash : B_762x51_Ball
+{
+caliber = 1.6;
+hit = 11.50;	
 };
 
 // Adjusting 7.62x54mmR Config to use Green Tracer. Typicalspeed.
 class B_762x54_Ball : B_762x51_Ball
 {
+airFriction = -0.00100891;
+audibleFire = 43.67;
+caliber = 1.7358;
+hit = 11.25;
 model = "\A3\Weapons_f\Data\bullettracer\tracer_green";
-typicalSpeed = 800;
+timeToLive = 11.5;
+tracerEndTime = 1.7;
+tracerScale = 1.3894;
+tracerStartTime = 0.1375;
+typicalSpeed = 825;
+};
+
+// Creating 7.62x54R 7N14 Ammo to distinguish MG and Sniper loads
+class B_762x54_Tracer_Green;
+class B_762x54_7N14_Ball : B_762x54_Tracer_Green
+{
+audibleFire = 43.94;
+hit = 11.32;
+typicalSpeed = 830;
 };
 
 // Creating .308 Winchester Ammo. Values based off of 7.62x51 NATO
@@ -26,13 +70,13 @@ cost = 1.2;
 dangerRadiusBulletClose = 8;
 dangerRadiusHit = 12;
 hit = 12.10;
-model = "\A3\Weapons_f\Data\bullettracer\tracer_red";
+model = "\A3\Weapons_f\Data\bullettracer\tracer_yellow";
 suppressionRadiusBulletClose = 6;
 suppressionRadiusHit = 8;
-timeToLive = 6;
-tracerEndTime = 2.15957;
-tracerScale = 0.6;
-tracerStartTime = 0.075;
+timeToLive = 11;
+tracerEndTime = 3;
+tracerScale = 1.3771;
+tracerStartTime = 0.099;
 typicalSpeed = 886.6632;
 visibleFire = 3;
 visibleFireTime = 2;
@@ -84,25 +128,25 @@ typicalSpeed = 2058;
 };
 
 // Creating .300 Winchester Magnum. Values based off of 308
-class B_300WM_Ball : BulletBase // Federal 190 Gr Gold Medal Sierra MatchKing
+class B_300WM_Ball : BulletBase // Federal 180 Gr Power-Shok
 {
 airFriction = -0.00055615;
 airLock = 1;
-audibleFire = 80.02;
+audibleFire = 81.9;
 caliber = 1.8147;
 cartridge = "";
 cost = 1.2;
 dangerRadiusBulletClose = 8;
 dangerRadiusHit = 12;
-hit = 16;
+hit = 16.38;
 model = "\A3\Weapons_f\Data\bullettracer\tracer_yellow";
 suppressionRadiusBulletClose = 6;
 suppressionRadiusHit = 8;
-timeToLive = 6;
-tracerEndTime = 2.15957;
-tracerScale = 1.2;
-tracerStartTime = 0.073;
-typicalSpeed = 881.4816;
+timeToLive = 12;
+tracerEndTime = 3; // No Tracer known. Copying over incase.
+tracerScale = 1.3771;
+tracerStartTime = 0.099;
+typicalSpeed = 902.208;
 visibleFire = 3;
 visibleFireTime = 2;
 	class CamShakeExplode
@@ -135,73 +179,56 @@ visibleFireTime = 2;
 	};
 };
 
-// Creating .300 WM IR-DIM Ammo
-class B_300WM_Ball_IR : B_300WM_Ball
-{
-nvgOnly = 1;
-};
-
 // Tracer Value taken from ACE 7.62x51
 class B_338_Ball : BulletBase // Sierra 250 Gr MatchKing
 {
-tracerEndTime = 2.15957;
-tracerScale = 1.2;
-tracerStartTime = 0.073;
+tracerEndTime = 3; // No Tracer known.
+tracerScale = 1.5105;
+tracerStartTime = 0.099;
+timeToLive = 12.5;
 typicalSpeed = 881.1768;
 };
 
-// Creating .338 LM IR-DIM Ammo
-class B_338_Ball_IR : B_338_Ball
-{
-nvgOnly = 1;	
-};
-
-// Creating .308 Winchester IR-DIM Ammo
-class B_308WIN_Ball_IR : B_308WIN_Ball
-{
-nvgOnly = 1;	
-};
-
-// Creating 7.62 IR-DIM Ammo
-class B_762x51_Ball_IR : B_762x51_Ball
-{
-nvgOnly = 1;	
-};
-
-// Creating 12.7x55 IR-DIM Ammo
-class B_127x54_Ball : BulletBase
-{
-tracerStartTime = 0.073;
-typicalSpeed = 300;
-};
-class B_127x54_Ball_IR : B_127x54_Ball
-{
-nvgOnly = 1;
-};
-
-// Creating .338 Norma Magnum IR-DIM Ammo
-class B_338_NM_Ball;
-class B_338_NM_Ball_IR : B_338_NM_Ball
-{
-nvgOnly = 1;
-};
-
 // Adjusting 9.3 Brenneke
-class B_93x64_Ball : BulletBase
+class B_93x64_Ball : BulletBase // 7N33
 {
-tracerEndTime = 2.15957;	
-tracerStartTime = 0.073;
+airFriction = -0.00065888;
+audibleFire = 70.81;
+caliber = 1.8310;
+hit = 14.16;
+timeToLive = 11.6;
+tracerEndTime = 1.75; // No Tracer
+tracerScale = 1.6315;
+tracerStartTime = 0.127;
 typicalSpeed = 780;
 };
 
-// Creating 9.3 IR-DIM Ammo
-class B_93x64_Ball_IR : B_93x64_Ball
+// Adjusting 338 NM
+class B_338_NM_Ball : BulletBase
 {
-nvgOnly = 1;
+airFriction = -0.00060929;
+audibleFire = 74.71;
+caliber = 2;
+hit = 14.94;
+timeToLive = 13;
+tracerEndTime = 3;	// No Tracer, using 308
+tracerScale = 1.5087;
+tracerStartTime = 0.099;
+typicalSpeed = 823;
 };
 
-// 7.62 Russian
-class B_762x54_Ball_IR : B_762x54_Ball
+// Adjusting 12.7x55 Ammo
+class B_127x54_Ball : BulletBase // STs-130VPS
 {
-nvgOnly = 1;
+airFriction = -0.00058079;
+audibleFire = 11.07; // Using Calc of Rifle
+caliber = 2.0218;
+hit = 12.2093; // Anti-Materiel Calc
+timeToLive = 9;
+tracerEndTime = 1.75; // No Tracer, using 12.7x108 incase
+tracerScale = 2.2824;
+tracerStartTime = 0.127;
+typicalSpeed = 300;
+visibleFire = 1;
+visibleFireTime = 2;
 };

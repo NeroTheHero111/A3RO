@@ -3,7 +3,7 @@ class mk20_base_F : Rifle_Base_F
 {
 descriptionShort = "Assault rifle<br/>Calibre: 5.56x45mm NATO";
 displayName = "FS2000 Base Class";
-initSpeed = 910;
+initSpeed = 895.13;
 magazines[] = {"30Rnd_556x45_Stanag"};
 magazineWell[] = {"STANAG_556x45","CBA_556x45_STANAG","CBA_556x45_STANAG_2D","MR223_223R"};
 };
@@ -16,7 +16,7 @@ displayName = "FS2000 Tactical TR (Camo)";
 hiddenSelections[] = {"camo","camo2"};
 hiddenSelectionsMaterials[] = {"\A3RO_Vanilla\Textures\mk20.rvmat","\A3\Weapons_F_Beta\Rifles\MK20\Data\mk20_utilities.rvmat"};
 hiddenSelectionsTextures[] = {"A3RO_Vanilla\Textures\mk20_INDP_Semi_CO.paa","A3\Weapons_F_Beta\Rifles\MK20\Data\mk20_utilities_CO.paa"};
-initSpeed = 910;
+initSpeed = 916.61;
 magazines[] = {"30Rnd_556x45_Stanag_NT"};
 };
 class arifle_Mk20_plain_F : arifle_Mk20_F
@@ -28,22 +28,9 @@ hiddenSelectionsTextures[] = {"A3RO_Vanilla\Textures\mk20_Semi_co.paa","A3\Weapo
 // Mk20 EGLM. Changing: Name. Description. Grenade Launcher Name
 class arifle_Mk20_GL_F : mk20_base_F
 {
-descriptionShort = "Assault Rifle<br />Calibre: 5.56x45mm NATO";
+descriptionShort = "Assault Rifle<br />Calibre: 5.56x45mm NATO<br />Underbarrel Grenade Launcher<br />Calibre: 40x46mm LV";
 displayName = "F2000 Tactical GL1 (Camo)";
-initSpeed = 900;
-	class EGLM : UGL_F // For some reason I have to redeclare the entire class for the Launcher to work properly if all I want to do is change the name.
-	{
-	cameraDir = "OP_look";
-	descriptionShort = "Underbarrel Grenade Launcher<br />Calibre: 40x46mm LV";
-	discreteDistance[] = {50,75,100,150,200,250,300,350,400};
-	discreteDistanceCameraPoint[] = {"OP_eye_50","OP_eye_75","OP_eye_100","OP_eye_150","OP_eye_200","OP_eye_250","OP_eye_300","OP_eye_350","OP_eye_400"};
-	discreteDistanceInitIndex = 0;
-	displayName = "GL1";
-	reloadAction = "GestureReloadMk20UGL";
-	reloadMagazineSound[] = {"A3\Sounds_F\arsenal\weapons\Rifles\Mk20\MK20_UGL_reload",0.794328,1,10};
-	useExternalOptic = 0;
-	useModelOptics = 0;
-	};
+initSpeed = 895.13;
 };
 class arifle_Mk20_GL_plain_F : arifle_Mk20_GL_F
 {
@@ -55,7 +42,7 @@ class arifle_Mk20C_F : mk20_base_F
 {
 descriptionShort = "Assault Rifle<br />Calibre: 5.56x45mm NATO";
 displayName = "F2000 Tactical TR (Camo)";
-initSpeed = 900;
+initSpeed = 895.13;
 };
 class arifle_Mk20C_plain_F : arifle_Mk20C_F
 {
@@ -138,7 +125,7 @@ class arifle_MSBS65_base_F : Rifle_Base_F
 descriptionShort = "Assault Rifle<br />Calibre: 5.56x45mm NATO";
 displayName = "MSBS Grot B16 Base Class";
 initSpeed = 890;
-magazineWell[] = {"MX_65x39_MSBS","CBA_556x45_STANAG","CBA_556x45_STANAG_2D","STANAG_556x45","PMAG_223Rem","MR223_223R"};
+magazineWell[] = {"MX_65x39_MSBS","CBA_556x45_STANAG","CBA_556x45_STANAG_2D","STANAG_556x45","PMAG_223REM","MR223_223R"};
 };
 
 // Promet GL Base Class. Changing: Description. Grenade Launcher Name
@@ -146,18 +133,13 @@ class arifle_MSBS65_GL_base_F : arifle_MSBS65_base_F
 {
 descriptionShort = "Assault Rifle<br />Calibre: 5.56x45mm NATO<br />Underbarrel Grenade Launcher<br />Calibre: 40x46mm LV";
 displayName = "MSBS Grot B16 GP Base Class";
-	class UGL : UGL_F
-	{
-	descriptionShort = "Underbarrel Grenade Launcher<br />Calibre: 40x46mm LV";
-	discreteDistanceInitIndex = 0; 
-	displayName = "GP";	
-	};
 };
 
 // Promet MR Base Class. Changing: Name. Preventing ACE from adding Magazines.
 class arifle_MSBS65_Mark_base_F : arifle_MSBS65_base_F
 {
 displayName = "MSBS Grot B26 Base Class";
+initSpeed = 999.74;
 magazines[] = {"30Rnd_65x39_caseless_msbs_mag"};
 };
 
@@ -165,11 +147,10 @@ magazines[] = {"30Rnd_65x39_caseless_msbs_mag"};
 class arifle_MSBS65_UBS_base_F : arifle_MSBS65_base_F
 {
 displayName = "MSBS Grot B16 SIX12 Base Class";	
-descriptionShort = "Assault Rifle<br />Calibre: 5.56x45mm NATO<br />Underbarrel Shotgun<br />Calibre: 12 Gauge";
+descriptionShort = "Assault Rifle<br />Calibre: 5.56x45mm NATO<br />Underbarrel Shotgun<br />Gauge: 12";
 	class UBS_F : Rifle_Base_F
 	{
-	descriptionShort = "Underbarrel Shotgun<br />Gauge: 12";
-	displayName = "SIX12";	
+	initSpeed = -0.9078; // This apparently doesn't work?
 	};
 };
 
@@ -294,53 +275,47 @@ hiddenSelectionsTextures[] = {"A3RO_Vanilla\Textures\MSBS_01_sand_CO.paa","A3\We
 class arifle_SPAR_01_base_F : Rifle_Base_F
 {
 descriptionShort = "Assault Rifle<br />Calibre: 5.56x45mm NATO";
-displayName = "HK416A5 11'' Base Class";
+displayName = "HK416 A5 11'' Base Class";
 initSpeed = 790;	
 magazines[] = {"30Rnd_556x45_Stanag_red"};
 magazineWell[] = {"STANAG_556x45","STANAG_556x45_Large","CBA_556x45_STANAG","CBA_556x45_STANAG_L","CBA_556x45_STANAG_XL","CBA_556x45_STANAG_2D","CBA_556x45_STANAG_2D_XL","MR223_223R","MR223_223R_Large"};
-	class EGLM : UGL_F
-	{
-	descriptionShort = "Underbarrel Grenade Launcher<br />Calibre: 40x46mm LV";
-	discreteDistanceInitIndex = 0; 
-	displayName = "GLM";	
-	};
 };
 
 // SPAR-16 Patterns. Changing: Name
 class arifle_SPAR_01_blk_F : arifle_SPAR_01_base_F
 {
-displayName = "HK416A5 11''";
+displayName = "HK416 A5 11''";
 };
 class arifle_SPAR_01_khk_F : arifle_SPAR_01_base_F
 {
-displayName = "HK416A5 11'' (Khaki)";
+displayName = "HK416 A5 11'' (Khaki)";
 };
 class arifle_SPAR_01_snd_F : arifle_SPAR_01_base_F
 {
-displayName = "HK416A5 11'' (Sand)";
+displayName = "HK416 A5 11'' (Sand)";
 magazines[] = {"30Rnd_556x45_Stanag_Sand_red"};
 };
 
 // SPAR-16 GL Base Class. Changing: Name. Description
 class arifle_SPAR_01_GL_base_F : arifle_SPAR_01_base_F
 {
-descriptionShort = "Assault Rifle<br />Calibre: 5.56x45mm NATO";
-displayName = "HK416A5 11'' GLM Base Class";
+descriptionShort = "Assault Rifle<br />Calibre: 5.56x45mm NATO<br />Underbarrel Grenade Launcher<br />Calibre: 40x46mm LV";
+displayName = "HK416 A5 11'' GLM Base Class";
 magazines[] = {"30Rnd_556x45_Stanag_red"};
 };
 
 // SPAR-16 GL Patterns. Changing: Name
 class arifle_SPAR_01_GL_blk_F : arifle_SPAR_01_GL_base_F
 {
-displayName = "HK416A5 11'' GLM";
+displayName = "HK416 A5 11'' GLM";
 };
 class arifle_SPAR_01_GL_khk_F : arifle_SPAR_01_GL_base_F
 {
-displayName = "HK416A5 11'' GLM (Khaki)";
+displayName = "HK416 A5 11'' GLM (Khaki)";
 };
 class arifle_SPAR_01_GL_snd_F : arifle_SPAR_01_GL_base_F
 {
-displayName = "HK416A5 11'' GLM (Sand)";
+displayName = "HK416 A5 11'' GLM (Sand)";
 magazines[] = {"30Rnd_556x45_Stanag_Sand_red"};
 };
 
@@ -348,7 +323,7 @@ magazines[] = {"30Rnd_556x45_Stanag_Sand_red"};
 class arifle_SPAR_02_base_F : Rifle_Base_F
 {
 descriptionShort = "Assault Rifle<br />Calibre: 5.56x45mm NATO";
-displayName = "HK416A5 14.5'' Base Class";
+displayName = "HK416 A5 14.5'' Base Class";
 initSpeed = 852;
 magazines[] = {"30Rnd_556x45_Stanag_red"};
 magazineWell[] = {"STANAG_556x45","STANAG_556x45_Large","CBA_556x45_STANAG","CBA_556x45_STANAG_L","CBA_556x45_STANAG_XL","CBA_556x45_STANAG_2D","CBA_556x45_STANAG_2D_XL","MR223_223R","MR223_223R_Large"};
@@ -357,7 +332,7 @@ magazineWell[] = {"STANAG_556x45","STANAG_556x45_Large","CBA_556x45_STANAG","CBA
 // SPAR-16S Patterns. Changing: Name. Fixed Sand Mag. Removed Linked Bipod.
 class arifle_SPAR_02_blk_F : arifle_SPAR_02_base_F
 {
-displayName = "HK416A5 14.5''";
+displayName = "HK416 A5 14.5''";
 	class LinkedItems
 	{
 	delete LinkedItemsUnder;
@@ -365,7 +340,7 @@ displayName = "HK416A5 14.5''";
 };
 class arifle_SPAR_02_khk_F : arifle_SPAR_02_base_F
 {
-displayName = "HK416A5 14.5'' (Khaki)";
+displayName = "HK416 A5 14.5'' (Khaki)";
 	class LinkedItems
 	{
 	delete LinkedItemsUnder;
@@ -373,7 +348,7 @@ displayName = "HK416A5 14.5'' (Khaki)";
 };
 class arifle_SPAR_02_snd_F : arifle_SPAR_02_base_F
 {
-displayName = "HK416A5 14.5'' (Sand)";
+displayName = "HK416 A5 14.5'' (Sand)";
 magazines[] = {"30Rnd_556x45_Stanag_Sand_red"};
 	class LinkedItems
 	{
@@ -381,27 +356,14 @@ magazines[] = {"30Rnd_556x45_Stanag_Sand_red"};
 	};
 };
 
-// Tavor Base Class. Changing: Name. Description. Fixing Mode Order
+// Tavor Base Class. Changing: Name. Description.
 class Tavor_base_F : Rifle_Base_F
 {
 descriptionShort = "Assault rifle<br/>Calibre: 5.56x45mm NATO";
 displayName = "TAR-21 Base Class";
-initSpeed = 910;
+initSpeed = 920;
 magazines[] = {"30Rnd_65x39_caseless_msbs_mag"};
-magazineWell[] = {"MX_65x39_MSBS","STANAG_556x45","CBA_556x45_STANAG","CBA_556x45_STANAG_2D","PMAG_223Rem","MR223_223R"};
-	class EGLM : UGL_F
-	{
-	cameraDir = "OP_look";	
-	descriptionShort = "Underbarrel Grenade Launcher<br />Calibre: 40x46mm LV";
-	discreteDistance[] = {50,75,100,150,200,250,300,350,400};
-	discreteDistanceCameraPoint[] = {"OP_eye_50","OP_eye_75","OP_eye_100","OP_eye_150","OP_eye_200","OP_eye_250","OP_eye_300","OP_eye_350","OP_eye_400"};
-	discreteDistanceInitIndex = 0; 
-	displayName = "MK 13 EGLM";
-	reloadAction = "GestureReloadTrgUGL";
-	reloadMagazineSound[] = {"A3\Sounds_F\arsenal\weapons\Rifles\TRG20\TRG20_UGL_reload",0.794328,1,10};
-	useExternalOptic = 0;
-	useModelOptics = 0;
-	};
+magazineWell[] = {"MX_65x39_MSBS","STANAG_556x45","CBA_556x45_STANAG","CBA_556x45_STANAG_2D","PMAG_223REM","MR223_223R"};
 };
 
 // Tavor Variants. Changing: Name. Description. Grenade Launcher Name.
@@ -410,20 +372,20 @@ class arifle_TRG20_F : Tavor_base_F
 descriptionShort = "Assault Rifle<br/>Calibre: 5.56x45mm NATO";
 displayName = "CTAR-21";
 initSpeed = 890;
-magazineWell[] = {"MX_65x39_MSBS","STANAG_556x45","CBA_556x45_STANAG","CBA_556x45_STANAG_2D","PMAG_223Rem","MR223_223R"};
+magazineWell[] = {"MX_65x39_MSBS","STANAG_556x45","CBA_556x45_STANAG","CBA_556x45_STANAG_2D","PMAG_223REM","MR223_223R"};
 };
 class arifle_TRG21_F : Tavor_base_F
 {
 descriptionShort = "Assault Rifle<br/>Calibre: 5.56x45mm NATO";
 displayName = "TAR-21";
-initSpeed = 910;
-magazineWell[] = {"MX_65x39_MSBS","STANAG_556x45","CBA_556x45_STANAG","CBA_556x45_STANAG_2D"};
+initSpeed = 920;
+magazineWell[] = {"MX_65x39_MSBS","STANAG_556x45","CBA_556x45_STANAG","CBA_556x45_STANAG_2D","PMAG_223REM","MR223_223R"};
 };
 class arifle_TRG21_GL_F : arifle_TRG21_F
 {
 descriptionShort = "Assault Rifle<br />Calibre: 5.56x45mm NATO<br />Underbarrel Grenade Launcher<br />Calibre: 40x46mm LV";
-displayName = "GTAR-21 MK 13 EGLM";
-initSpeed = 910;
+displayName = "GTAR-21 FN40GL®";
+initSpeed = 920;
 };
 
 // Creating MR223 A3 11'' Base Class
@@ -431,8 +393,8 @@ class arifle_MR223_01_base_F : arifle_SPAR_01_base_F
 {
 descriptionShort = "Sporting Rifle<br />Calibre: .223 Remington";
 displayName = "MR223 A3 11'' Base Class";
-initSpeed = 845;
-magazines[] = {"30Rnd_223Rem_Mag_NT_F"};
+initSpeed = 786.07;
+magazines[] = {"30Rnd_223REM_Mag_NT_F"};
 magazineWell[] = {"MR223_223R","MR223_223R_Large"};
 };
 
@@ -461,7 +423,7 @@ _generalMacro = "arifle_MR223_01_snd_F";
 baseWeapon = "arifle_MR223_01_snd_F"; 	
 displayName = "MR223 11'' (Sand)";
 hiddenSelectionsTextures[] = {"\A3RO_Vanilla\Textures\arifle_SPAR_01_snd_F_01_Semi_co.paa","\A3\Weapons_F_Exp\Rifles\SPAR_01\Data\arifle_SPAR_01_snd_F_02_co.paa"};
-magazines[] = {"30Rnd_223Rem_Mag_Sand_NT_F"};
+magazines[] = {"30Rnd_223REM_Mag_Sand_NT_F"};
 picture = "\A3\Weapons_F_Exp\Rifles\SPAR_01\Data\UI\arifle_SPAR_01_snd_F_X_CA.paa";
 scope = 2;
 };
@@ -471,8 +433,8 @@ class arifle_MR223_02_base_F : arifle_SPAR_02_base_F
 {
 descriptionShort = "Sporting Rifle<br />Calibre: .223 Remington";
 displayName = "MR223 A3 14'' Base Class";
-initSpeed = 890;
-magazines[] = {"30Rnd_223Rem_Mag_NT_F"};
+initSpeed = 872.13;
+magazines[] = {"30Rnd_223REM_Mag_NT_F"};
 magazineWell[] = {"MR223_223R","MR223_223R_Large"};
 };
 
@@ -501,7 +463,7 @@ _generalMacro = "arifle_MR223_02_snd_F";
 baseWeapon = "arifle_MR223_02_snd_F"; 	
 displayName = "MR223 14.5'' (Sand)";
 hiddenSelectionsTextures[] = {"\A3RO_Vanilla\Textures\arifle_SPAR_01_snd_F_01_co.paa","\A3\Weapons_F_Exp\Rifles\SPAR_01\Data\arifle_SPAR_01_snd_F_02_co.paa"};
-magazines[] = {"30Rnd_223Rem_Mag_Sand_NT_F"};
+magazines[] = {"30Rnd_223REM_Mag_Sand_NT_F"};
 picture = "\A3\Weapons_F_Exp\Rifles\SPAR_02\Data\UI\arifle_SPAR_02_snd_F_X_CA.paa";
 scope = 2;
 };

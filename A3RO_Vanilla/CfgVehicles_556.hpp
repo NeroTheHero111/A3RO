@@ -101,7 +101,7 @@ displayName = "MSBS Grot B16 SIX12 (Sand)";
 // SPAR-16. Changing: Name
 class Weapon_arifle_SPAR_01_blk_F : Weapon_Base_F
 {
-displayName = "HK416A5 11''";
+displayName = "HK416 A5 11''";
 	class TransportMagazines
 	{
 		delete 30Rnd_556x45_Stanag;
@@ -114,7 +114,7 @@ displayName = "HK416A5 11''";
 };
 class Weapon_arifle_SPAR_01_khk_F : Weapon_Base_F
 {
-displayName = "HK416A5 11'' (Khaki)";
+displayName = "HK416 A5 11'' (Khaki)";
 	class TransportMagazines
 	{
 		delete 30Rnd_556x45_Stanag;
@@ -127,7 +127,7 @@ displayName = "HK416A5 11'' (Khaki)";
 };
 class Weapon_arifle_SPAR_01_snd_F : Weapon_Base_F
 {
-displayName = "HK416A5 11'' (Sand)";
+displayName = "HK416 A5 11'' (Sand)";
 	class TransportMagazines
 	{
 		delete 30Rnd_556x45_Stanag_Sand;
@@ -142,7 +142,7 @@ displayName = "HK416A5 11'' (Sand)";
 // SPAR-16 GL. Changing: Name
 class Weapon_arifle_SPAR_01_GL_blk_F : Weapon_Base_F
 {
-displayName = "HK416A5 11'' GLM";
+displayName = "HK416 A5 11'' GLM";
 	class TransportMagazines
 	{
 		delete 30Rnd_556x45_Stanag;
@@ -155,7 +155,7 @@ displayName = "HK416A5 11'' GLM";
 };
 class Weapon_arifle_SPAR_01_GL_khk_F : Weapon_Base_F
 {
-displayName = "HK416A5 11'' GLM (Khaki)";
+displayName = "HK416 A5 11'' GLM (Khaki)";
 	class TransportMagazines
 	{
 		delete 30Rnd_556x45_Stanag;
@@ -168,7 +168,7 @@ displayName = "HK416A5 11'' GLM (Khaki)";
 };
 class Weapon_arifle_SPAR_01_GL_snd_F : Weapon_Base_F
 {
-displayName = "HK416A5 11'' GLM (Sand)";
+displayName = "HK416 A5 11'' GLM (Sand)";
 	class TransportMagazines
 	{
 		delete 30Rnd_556x45_Stanag_Sand;
@@ -183,7 +183,7 @@ displayName = "HK416A5 11'' GLM (Sand)";
 // SPAR-16S. Changing: Name. Magazines to 30Rnd.
 class Weapon_arifle_SPAR_02_blk_F : Weapon_Base_F
 {
-displayName = "HK416A5 14.5''";
+displayName = "HK416 A5 14.5''";
 	class TransportMagazines
 	{
 		delete 150Rnd_556x45_Drum_Mag_F;
@@ -196,7 +196,7 @@ displayName = "HK416A5 14.5''";
 };
 class Weapon_arifle_SPAR_02_khk_F : Weapon_Base_F
 {
-displayName = "HK416A5 14.5'' (Khaki)";
+displayName = "HK416 A5 14.5'' (Khaki)";
 	class TransportMagazines
 	{
 		delete 150Rnd_556x45_Drum_Green_Mag_F;
@@ -209,7 +209,7 @@ displayName = "HK416A5 14.5'' (Khaki)";
 };
 class Weapon_arifle_SPAR_02_snd_F : Weapon_Base_F
 {
-displayName = "HK416A5 14.5'' (Sand)";
+displayName = "HK416 A5 14.5'' (Sand)";
 	class TransportMagazines
 	{
 		delete 150Rnd_556x45_Drum_Sand_Mag_F;
@@ -250,7 +250,7 @@ displayName = "TAR-21";
 };
 class Weapon_arifle_TRG21_GL_F : Weapon_Base_F
 {
-displayName = "GTAR-21 EGLM";
+displayName = "GTAR-21 FN40GL®";
 	class TransportMagazines
 	{
 		delete 30Rnd_556x45_Stanag;
@@ -271,9 +271,9 @@ scopeCurator = 2;
 vehicleClass = "WeaponsPrimary";
 	class TransportMagazines
 	{
-		class 30Rnd_223Rem_Mag_NT_F
+		class 30Rnd_223REM_Mag_NT_F
 		{
-		magazine = "30Rnd_223Rem_Mag_NT_F";
+		magazine = "30Rnd_223REM_Mag_NT_F";
 		count = 1;
 		};
 	};	
@@ -294,9 +294,9 @@ scopeCurator = 2;
 vehicleClass = "WeaponsPrimary";
 	class TransportMagazines
 	{
-		class 30Rnd_223Rem_Mag_NT_F
+		class 30Rnd_223REM_Mag_NT_F
 		{
-		magazine = "30Rnd_223Rem_Mag_NT_F";
+		magazine = "30Rnd_223REM_Mag_NT_F";
 		count = 1;
 		};
 	};	
@@ -317,9 +317,9 @@ scopeCurator = 2;
 vehicleClass = "WeaponsPrimary";
 	class TransportMagazines
 	{
-		class 30Rnd_223Rem_Mag_Sand_NT_F
+		class 30Rnd_223REM_Mag_Sand_NT_F
 		{
-		magazine = "30Rnd_223Rem_Mag_Sand_NT_F";
+		magazine = "30Rnd_223REM_Mag_Sand_NT_F";
 		count = 1;
 		};
 	};	
@@ -342,9 +342,9 @@ scopeCurator = 2;
 vehicleClass = "WeaponsPrimary";
 	class TransportMagazines
 	{
-		class 30Rnd_223Rem_Mag_NT_F
+		class 30Rnd_223REM_Mag_NT_F
 		{
-		magazine = "30Rnd_223Rem_Mag_NT_F";
+		magazine = "30Rnd_223REM_Mag_NT_F";
 		count = 1;
 		};
 	};	
@@ -365,9 +365,9 @@ scopeCurator = 2;
 vehicleClass = "WeaponsPrimary";
 	class TransportMagazines
 	{
-		class 30Rnd_223Rem_Mag_NT_F
+		class 30Rnd_223REM_Mag_NT_F
 		{
-		magazine = "30Rnd_223Rem_Mag_NT_F";
+		magazine = "30Rnd_223REM_Mag_NT_F";
 		count = 1;
 		};
 	};	
@@ -388,9 +388,9 @@ scopeCurator = 2;
 vehicleClass = "WeaponsPrimary";
 	class TransportMagazines
 	{
-		class 30Rnd_223Rem_Mag_Sand_NT_F
+		class 30Rnd_223REM_Mag_Sand_NT_F
 		{
-		magazine = "30Rnd_223Rem_Mag_Sand_NT_F";
+		magazine = "30Rnd_223REM_Mag_Sand_NT_F";
 		count = 1;
 		};
 	};	

@@ -7,20 +7,7 @@ displayName = "KH-2002 Base Class";
 hiddenSelectionsMaterials[] = {"\A3RO_Vanilla\Textures\Khaybar_01.rvmat","A3\Weapons_F\Rifles\Khaybar\data\Khaybar_02.rvmat"};
 hiddenSelectionsTextures[] = {"\A3RO_Vanilla\Textures\Khaybar_01_CO.paa","A3\Weapons_F\Rifles\Khaybar\data\Khaybar_02_CO.paa"};
 magazines[] = {"30Rnd_65x39_caseless_green"};
-magazineWell[] = {"Katiba_65x39","KH2002_223Rem"};
-	class EGLM : UGL_F
-	{
-	cameraDir = "OP_look";
-	descriptionShort = "Underbarrel Grenade Launcher<br />Calibre: 40x46mm LV";
-	discreteDistance[] = {50,75,100,150,200,250,300,350,400};
-	discreteDistanceCameraPoint[] = {"OP_eye_50","OP_eye_75","OP_eye_100","OP_eye_150","OP_eye_200","OP_eye_250","OP_eye_300","OP_eye_350","OP_eye_400"};
-	discreteDistanceInitIndex = 0; 
-	displayName = "ML40 mk1";	
-	reloadAction = "GestureReloadKatibaUGL";
-	reloadMagazineSound[] = {"A3\Sounds_F\arsenal\weapons\Rifles\Katiba\Katiba_UGL_reload",0.794328,1,10};
-	useExternalOptic = 0;
-	useModelOptics = 0;
-	};
+magazineWell[] = {"Katiba_65x39","KH2002_223REM"};
 };
 
 // Katiba Variants. Changing: Name. Description. Grenade Launcher Name
@@ -28,7 +15,7 @@ class arifle_Katiba_F : arifle_Katiba_Base_F
 {
 descriptionShort = "Assault Rifle<br />Calibre: 5.56x45mm NATO";
 displayName = "KH-2002";
-initSpeed = 950;
+initSpeed = 925;
 };
 class arifle_Katiba_C_F : arifle_Katiba_Base_F
 {
@@ -48,11 +35,8 @@ class arifle_ARX_base_F : Rifle_Base_F
 {	
 descriptionShort = "Fictional Assault Rifle<br />Calibre: 5.56x45mm NATO / .50 Beowulf";
 magazines[] = {"30Rnd_65x39_caseless_green"};
-magazineWell[] = {"Katiba_65x39","KH2002_223Rem"};
-	class Secondary : Rifle_Base_F
-	{
-	magazineWell[] = {"Type115_50BW"};
-	};
+magazineWell[] = {"Katiba_65x39","KH2002_223REM"};
+class Secondary;
 };
 
 // Type 115 Patterns. Changing: Name. Underbarrel Name

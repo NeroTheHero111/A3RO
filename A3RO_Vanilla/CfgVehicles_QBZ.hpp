@@ -305,9 +305,9 @@ vehicleClass = "WeaponsPrimary";
 	};
 	class TransportMagazines
 	{
-		class 30Rnd_223Rem_NT_QBZ_Mag_F
+		class 30Rnd_223REM_NT_QBZ_Mag_F
 		{
-		magazine = "30Rnd_223Rem_NT_QBZ_Mag_F";
+		magazine = "30Rnd_223REM_NT_QBZ_Mag_F";
 		count = 1;
 		};
 	};	
@@ -328,9 +328,9 @@ vehicleClass = "WeaponsPrimary";
 	};
 	class TransportMagazines
 	{
-		class 30Rnd_223Rem_NT_QBZ_Mag_F
+		class 30Rnd_223REM_NT_QBZ_Mag_F
 		{
-		magazine = "30Rnd_223Rem_NT_QBZ_Mag_F";
+		magazine = "30Rnd_223REM_NT_QBZ_Mag_F";
 		count = 1;
 		};
 	};	
@@ -351,9 +351,9 @@ vehicleClass = "WeaponsPrimary";
 	};
 	class TransportMagazines
 	{
-		class 30Rnd_223Rem_NT_QBZ_Mag_F
+		class 30Rnd_223REM_NT_QBZ_Mag_F
 		{
-		magazine = "30Rnd_223Rem_NT_QBZ_Mag_F";
+		magazine = "30Rnd_223REM_NT_QBZ_Mag_F";
 		count = 1;
 		};
 	};	

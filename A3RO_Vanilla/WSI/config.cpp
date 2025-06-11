@@ -5,14 +5,14 @@ class CfgPatches
     name = "Arma 3 Realism Overhaul - Vanilla Weapon Slots Info";
     author = "NeroTheHero111";
     url = "";
-    version="1.0";
+    version="1.1";
 	requiredAddons[] = 
 	{
-	"A3RO_Vanilla",	
+	"A3RO_Vanilla",
 	};
     units[] = {};
     weapons[] = {};
-	skipWhenMissingDependencies = 0;
+	skipWhenMissingDependencies = 1;
     };
 };
 

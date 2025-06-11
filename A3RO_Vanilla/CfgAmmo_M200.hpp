@@ -6,9 +6,13 @@ audibleFire = 109.72;
 dangerRadiusBulletClose = 11;
 dangerRadiusHit = 15;
 hit = 21.94;
+model = "\A3\Weapons_f\Data\bullettracer\tracer_yellow";
 suppressionRadiusBulletClose = 8;
 suppressionRadiusHit = 11;
-tracerScale = 1.3;
+timeToLive = 15;
+tracerEndTime = 4.35; // No Tracer, using 12.7x99
+tracerScale = 1.6701;
+tracerStartTime = 0.137;
 typicalSpeed = 832.104;
 };
 
@@ -24,13 +28,13 @@ cost = 7;
 dangerRadiusBulletClose = 11;
 dangerRadiusHit = 15;
 hit = 24.75;
-model = "\A3\Weapons_f\Data\bullettracer\tracer_green";
+model = "\A3\Weapons_f\Data\bullettracer\tracer_yellow";
 suppressionRadiusBulletClose = 8;
 suppressionRadiusHit = 11;
-timeToLive = 10;
-tracerEndTime = 2.15957;
-tracerScale = 1.3;
-tracerStartTime = 0.075;
+timeToLive = 14;
+tracerEndTime = 4.35;
+tracerScale = 1.6701;
+tracerStartTime = 0.137;
 typicalSpeed = 938.784;
 visibleFire = 5;
 visibleFireTime = 3;
@@ -64,42 +68,59 @@ visibleFireTime = 3;
 	};
 };
 
-// Editing 12.7x108
-class B_127x108_Ball : BulletBase
+// Adjusting 12.7x108. Turning it into MG Ammo
+class B_127x108_Ball : BulletBase // 745 Gr 57-BZ-542 API
 {
+airFriction = -0.00086;
+audibleFire = 116.58; // Of HMG
+caliber = 2.7703;
+timeToLive = 12.5;
 typicalSpeed = 860;
+tracerEndTime = 3.027; // Min 2.9s so
+tracerScale = 2.2771;
+tracerStartTime = 0.127;
+visibleFire = 8;
 };
-class B_127x108_APDS : B_127x108_Ball // Changing to 681 Gr 
+class B_127x108_APDS : B_127x108_Ball // Changing to 680 Gr Tulammo Hunting 
 {
+airFriction = -0.00060138; // Of Sniper
+audibleFire = 113.4; // Of Sniper
+caliber = 3.0649;
+cost = 5;
+hit = 37.56; // Of Anti-Mat
+tracerEndTime = 1.75;
 typicalSpeed = 923;
 };
-
-// Creating IR-DIM Ammo
-class B_127x108_Ball_IR : B_127x108_Ball
+// Creating new 12.7x108 Sniper Ammo
+class B_127x108_7N34_Ball : B_127x108_APDS // 914 Gr 7N34
 {
-nvgOnly = 1;
-tracerEndTime = 2.15957;
+audibleFire = 103.51;
+hit = 31.94;
+typicalSpeed = 785;
 };
 
-// Creating 12.7x99 and IR-DIM Ammo
-class B_127x99_Ball : BulletBase // 700 Gr Barnes
+// Adjusting 12.7x99
+class B_127x99_Ball : BulletBase // 706.7 Gr M33
 {
-typicalSpeed = 801.1741;
+hit = 36.09;
+timeToLive = 12.5;
+tracerEndTime = 4.35;
+tracerScale = 2.2771;
+tracerStartTime = 0.137;
+typicalSpeed = 887;
+visibleFireTime = 3;
 };
+class B_127x99_SLAP : B_127x99_Ball
+{
+airFriction = -0.00050486;
+audibleFire = 165.28;
+hit = 49.61;
+tracerScale = 1.3368; // Tungsten Penetrator Type Beat
+typicalSpeed = 1219.2; // Caliber Left at 3.4 as its a Penetrator so my regular Calculations don't apply
+};
+
+// Creating IR Ammo
 class B_127x99_Ball_IR : B_127x99_Ball
-{
-nvgOnly = 1;
-tracerEndTime = 2.15957;	
-};
-
-// Creating .375 IR-DIM Ammo
-class B_375_Ball_IR : B_375_Ball
-{
-nvgOnly = 1;
-};
-
-// Creating .408 IR-DIM Ammo
-class B_408_Ball_IR : B_408_Ball
 {
 nvgOnly = 1;
 };

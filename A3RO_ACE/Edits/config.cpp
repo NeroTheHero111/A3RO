@@ -5,19 +5,34 @@ class CfgPatches
     name = "Arma 3 Realism Overhaul - ACE Compat #3";
     author = "NeroTheHero111";
     url = "";
-    version="1.0";
+    version="1.1";
 	requiredAddons[] = 
 	{
 	"ace_advanced_ballistics",
 	"ace_common",
+	"ace_csw",
+//	"ace_dagr",
+	"ace_disposable",
+	"ace_dragon",
+	"ace_explosives",
 	"ace_flashlights",
-	"ace_ai",
 	"ace_flashsuppressors",
+	"ace_grenades",
+//	"ace_hellfire",
+//	"ace_hot",
+	"ace_huntir",
+	"ace_javelin",
+//	"ace_maverick",
+	"ace_metis",
+	"ace_ai",
+	"ace_nightvision",
+//	"ace_overheating",
 	"ace_realisticnames",
 	"ace_realisticweights",
 	"ace_scopes",
 	"ace_smallarms",
 	"ace_optics",
+	"A3RO_Vanilla_WSI",
 	"A3RO_ACE_Overwrite",
 	"A3RO_ACE_Overwrite_WSI",
 	};
@@ -37,18 +52,18 @@ class asdg_OpticRail1913: asdg_OpticRail
 	ACE_optic_Arco_blk_2D = 1;
 	ACE_optic_Arco_ghex_2D = 1;
 	ACE_optic_Arco_lush_2D = 1;
-	ACE_optic_Arco_arid_PIP = 1;
+	ACE_optic_Hamr_khk_2D = 1;
+	ACE_optic_LRPS_ghex_2D = 1;
+	ACE_optic_LRPS_tna_2D = 1;
+	ACE_optic_SOS_khk_2D = 1;
+	/*ACE_optic_Arco_arid_PIP = 1;
 	ACE_optic_Arco_blk_PIP = 1;
 	ACE_optic_Arco_ghex_PIP = 1;
 	ACE_optic_Arco_lush_PIP = 1;
-	ACE_optic_Hamr_khk_2D = 1;
 	ACE_optic_Hamr_khk_PIP = 1;
-	ACE_optic_LRPS_ghex_2D = 1;
-	ACE_optic_LRPS_tna_2D = 1;
 	ACE_optic_LRPS_ghex_PIP = 1;
 	ACE_optic_LRPS_tna_PIP = 1;
-	ACE_optic_SOS_khk_2D = 1;
-	ACE_optic_SOS_khk_PIP = 1;
+	ACE_optic_SOS_khk_PIP = 1;*/
 	};
 };
 
@@ -61,18 +76,18 @@ class CowsSlot_Rail: CowsSlot
 	ACE_optic_Arco_blk_2D = 1;
 	ACE_optic_Arco_ghex_2D = 1;
 	ACE_optic_Arco_lush_2D = 1;
-	ACE_optic_Arco_arid_PIP = 1;
+	ACE_optic_Hamr_khk_2D = 1;
+	ACE_optic_LRPS_ghex_2D = 1;
+	ACE_optic_LRPS_tna_2D = 1;
+	ACE_optic_SOS_khk_2D = 1;
+	/*ACE_optic_Arco_arid_PIP = 1;
 	ACE_optic_Arco_blk_PIP = 1;
 	ACE_optic_Arco_ghex_PIP = 1;
 	ACE_optic_Arco_lush_PIP = 1;
-	ACE_optic_Hamr_khk_2D = 1;
 	ACE_optic_Hamr_khk_PIP = 1;
-	ACE_optic_LRPS_ghex_2D = 1;
-	ACE_optic_LRPS_tna_2D = 1;
 	ACE_optic_LRPS_ghex_PIP = 1;
 	ACE_optic_LRPS_tna_PIP = 1;
-	ACE_optic_SOS_khk_2D = 1;
-	ACE_optic_SOS_khk_PIP = 1;
+	ACE_optic_SOS_khk_PIP = 1;*/
 	};
 };
 
@@ -182,15 +197,78 @@ class asdg_FrontSideRail;
 class asdg_PistolUnderRail;
 class InventoryFlashLightItem_Base_F;
 class InventoryOpticsItem_Base_F;
+class ace_missileguidance_type_Metis;
+class ace_missileguidance_type_Javelin;
 
 class CfgAmmo
 {
-class BulletBase;	
+class BulletBase;
+class MissileBase;
+class SubmunitionBase;
+class RocketBase;
+class M_70mm_SAAMI;
+class SubmunitionBullet;
+class B_762x54_Tracer_Green;
 #include "ACE_CfgAmmo.hpp"
 };
 
 class CfgMagazines
 {
+class CA_Magazine;
+class 2Rnd_12Gauge_Pellets;
+class 5Rnd_127x108_Mag;
+class 6Rnd_12Gauge_Pellets;
+class 7Rnd_408_Mag;
+class 10Rnd_338_Mag;
+class 10Rnd_556x45_KBU_NT_Mag_F;
+class 10Rnd_Mk14_762x51_Mag;
+class 20Rnd_650x39_Cased_Mag_F;
+class 20Rnd_762x51_slr_lxWS; // Name is deliberate in order to be overwritten
+class 20Rnd_762x51_Mag;
+class 20Rnd_762x51_HK_Mag;
+class 20Rnd_556x45_Katiba_NT_Mag;
+class 20Rnd_762x51_AK_Mag_NT_F;
+class 30Rnd_556x45_AK_Mag_NT_F;
+class 30Rnd_556x45_NT_QBZ_Mag_F;
+class 30Rnd_65x39_caseless_msbs_mag_NT;
+class 30Rnd_556x45_Stanag_NT;
+class 30Rnd_556x45_Stanag_Sand_NT;
+class 75Rnd_556x45_NT_QBZ_Mag_F;
+class 75Rnd_556x45_NT_Hex_QBZ_Mag_F;
+class 75Rnd_556x45_NT_Ghex_QBZ_Mag_F;
+class 90Rnd_556x45_AK_Mag_NT_F;
+class 90Rnd_556x45_AK_Green_Mag_NT_F;
+class 100Rnd_65x39_caseless_mag_Tracer;
+class 100Rnd_762x51_NG7_Box_NT;
+class 150Rnd_556x45_Drum_Green_Mag_NT_F;
+class 150Rnd_556x45_Drum_Sand_Mag_NT_F;
+class 150Rnd_556x45_Drum_Mag_NT_F;
+class 150Rnd_93x64_Mag_NT;
+class 200Rnd_65x39_cased_Box;
+class 200Rnd_65x39_cased_Box_NT;
+class 200Rnd_556x45_Box_NT_F;
+class 1Rnd_HE_Grenade_shell;
+class UGL_FlareWhite_F;
+class 1Rnd_GAA_missiles;
+class Titan_AA;
+class 16Rnd_9x21_Mag;
+class 10Rnd_762x54_Mag;
+class 30Rnd_65x39_caseless_mag;
+class 30Rnd_65x39_caseless_black_mag;
+class 30Rnd_65x39_caseless_khaki_mag;
+class 30Rnd_65x39_caseless_msbs_mag;
+class 30Rnd_65x39_caseless_green_mag_Tracer;
+class 30Rnd_65x39_caseless_mag_Tracer;
+class 50Rnd_127x108_Ball;
+class 100Rnd_127x99_mag;
+class 100Rnd_127x99_mag_Tracer_Green;
+class 100Rnd_127x99_mag_Tracer_Red;
+class 100Rnd_127x99_mag_Tracer_Yellow;
+class 40Rnd_20mm_G_belt;
+class 8Rnd_82mm_Mo_guided;
+class 8Rnd_82mm_Mo_LG;
+class 8Rnd_82mm_Mo_Flare_white;
+class 8Rnd_82mm_Mo_Smoke_white;
 #include "ACE_CfgMagazines.hpp"	
 };
 
@@ -202,6 +280,7 @@ class CfgMagazineWells
 class CfgVehicles
 {
 class Item_Base_F;
+class Bag_Base;
 #include "ACE_CfgVehicles.hpp"
 };
 

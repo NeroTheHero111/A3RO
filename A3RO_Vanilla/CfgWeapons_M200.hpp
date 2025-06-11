@@ -3,7 +3,7 @@ class LRR_base_F : Rifle_Long_Base_F
 {
 displayName = "M200 Intervention® Base Class";
 descriptionShort = "Sniper Rifle<br />Calibre: .408 Cheyenne Tactical";
-initSpeed = 832.104;
+initSpeed = 832.1;
 magazines[] = {"7Rnd_408_Mag",};
 magazineWell[] = {"CBA_408CT_Inter","M320_408"};
 };
@@ -37,7 +37,7 @@ _generalMacro = "srifle_LRR_375_F";
 baseWeapon = "srifle_LRR_375_F";
 descriptionShort = "Sniper Rifle<br />Calibre: .375 Cheyenne Tactical";
 displayName = "M200 Intervention® .375";
-initSpeed = 938.784;
+initSpeed = 877.82;
 magazines[] = {"7Rnd_375_Mag"};
 magazineWell[] = {"M320_375"};
 scope = 2;

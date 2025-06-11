@@ -9,7 +9,7 @@ displayName = "Mk 14 Mod 0 EBR";
 // Mk-I EMR. Changing: Name. Editor Category. Replacing Weapon and Magazine
 class Weapon_srifle_DMR_03_F : Weapon_Base_F
 {
-displayName = "SIG 556 DMR 21''";
+displayName = "SIG 556 DMR 18''";
 editorSubcategory = "EdSubcat_SniperRifles";
 	class TransportWeapons
 	{
@@ -23,16 +23,16 @@ editorSubcategory = "EdSubcat_SniperRifles";
 	class TransportMagazines
 	{
 		delete 20Rnd_762x51_Mag;
-		class 20Rnd_223Rem_Mag_NT_F
+		class 20Rnd_223REM_Mag_NT_F
 		{
-		magazine = "20Rnd_223Rem_Mag_NT_F";
+		magazine = "20Rnd_223REM_Mag_NT_F";
 		count = 1;
 		};
 	};	
 };
 class Weapon_srifle_DMR_03_multicam_F : Weapon_Base_F
 {
-displayName = "SIG 556 DMR 21'' (Camo)";
+displayName = "SIG 556 DMR 18'' (Camo)";
 editorSubcategory = "EdSubcat_SniperRifles";
 	class TransportWeapons
 	{
@@ -46,16 +46,16 @@ editorSubcategory = "EdSubcat_SniperRifles";
 	class TransportMagazines
 	{
 		delete 20Rnd_762x51_Mag;
-		class 20Rnd_223Rem_Mag_NT_F
+		class 20Rnd_223REM_Mag_NT_F
 		{
-		magazine = "20Rnd_223Rem_Mag_NT_F";
+		magazine = "20Rnd_223REM_Mag_NT_F";
 		count = 1;
 		};
 	};	
 };
 class Weapon_srifle_DMR_03_khaki_F : Weapon_Base_F
 {
-displayName = "SIG 556 DMR 21'' (Khaki)";
+displayName = "SIG 556 DMR 18'' (Khaki)";
 editorSubcategory = "EdSubcat_SniperRifles";
 	class TransportWeapons
 	{
@@ -69,16 +69,16 @@ editorSubcategory = "EdSubcat_SniperRifles";
 	class TransportMagazines
 	{
 		delete 20Rnd_762x51_Mag;
-		class 20Rnd_223Rem_Mag_NT_F
+		class 20Rnd_223REM_Mag_NT_F
 		{
-		magazine = "20Rnd_223Rem_Mag_NT_F";
+		magazine = "20Rnd_223REM_Mag_NT_F";
 		count = 1;
 		};
 	};	
 };
 class Weapon_srifle_DMR_03_tan_F : Weapon_Base_F
 {
-displayName = "SIG 556 DMR 21'' (Sand)";
+displayName = "SIG 556 DMR 18'' (Sand)";
 editorSubcategory = "EdSubcat_SniperRifles";
 	class TransportWeapons
 	{
@@ -92,16 +92,16 @@ editorSubcategory = "EdSubcat_SniperRifles";
 	class TransportMagazines
 	{
 		delete 20Rnd_762x51_Mag;
-		class 20Rnd_223Rem_Mag_NT_F
+		class 20Rnd_223REM_Mag_NT_F
 		{
-		magazine = "20Rnd_223Rem_Mag_NT_F";
+		magazine = "20Rnd_223REM_Mag_NT_F";
 		count = 1;
 		};
 	};	
 };
 class Weapon_srifle_DMR_03_woodland_F : Weapon_Base_F
 {
-displayName = "SIG 556 DMR 21'' (Woodland)";
+displayName = "SIG 556 DMR 18'' (Woodland)";
 editorSubcategory = "EdSubcat_SniperRifles";
 	class TransportWeapons
 	{
@@ -115,9 +115,9 @@ editorSubcategory = "EdSubcat_SniperRifles";
 	class TransportMagazines
 	{
 		delete 20Rnd_762x51_Mag;
-		class 20Rnd_223Rem_Mag_NT_F
+		class 20Rnd_223REM_Mag_NT_F
 		{
-		magazine = "20Rnd_223Rem_Mag_NT_F";
+		magazine = "20Rnd_223REM_Mag_NT_F";
 		count = 1;
 		};
 	};	

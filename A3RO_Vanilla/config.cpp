@@ -5,10 +5,10 @@ class CfgPatches
     name = "Arma 3 Realism Overhaul - Vanilla";
     author = "NeroTheHero111";
     url = "";
-    version="1.0";
+    version="1.1";
 	requiredAddons[] = 
 	{
-	"cba_main",		
+	"cba_main",
 	"A3_Characters_F",
 	"A3_Characters_F_Enoch",
 	"A3_Characters_F_Exp",
@@ -19,6 +19,7 @@ class CfgPatches
 	"A3_Sounds_F_Mark",
     "A3_Weapons_F",
 	"A3_Weapons_F_Acc",
+	"A3_Weapons_F_Ammoboxes",
 	"A3_Weapons_F_Enoch",
 	"A3_Weapons_F_Exp",
 	"A3_Weapons_F_Kart",
@@ -364,9 +365,186 @@ class MuzzleSlot_375 : MuzzleSlot
 	};	
 };
 
-class CfgAmmo
+// Creating new Effect Congiguration Classes.
+class CfgCloudlets
 {
-#include "\A3RO_Vanilla\Vanilla_CfgAmmo.hpp"
+// Practice Dye
+	class SmokeShellOrangeUW;
+	class SmokeShellPracticeUW : SmokeShellOrangeUW // Not really sure this is different in behaviour than the regular Orange but I already made it now.
+	{
+	lifeTime = 0.23;
+	lifeTimeVar = 0.03;
+	MoveVelocityVar[] = {0.075,0.075,0.075};
+	};
+	class SmokeShellPractice2UW : SmokeShellPracticeUW
+	{
+	postEffects = "SmokeShellOrangeWater";
+	};
+// Thermobaric Explosion
+	class HeavyBombExp1;
+	class ThermobaricGrenadeExp1 : HeavyBombExp1
+	{
+	animationSpeed[] = {0.75};
+	lifeTime = 0.1;
+	lifeTimeVar = 0.02;
+	moveVelocity[] = {0,15,0};
+	MoveVelocityVar[] = {3,3,3};
+	positionVar[] = {1,1,1};
+	size[] = {9,10};
+	};
+	class GrenadeSmoke1;
+	class ThermobaricGrenadeSmoke1 : GrenadeSmoke1
+	{
+	size[] = {"0.013 * intensity + 4","0.0125 * intensity + 7","0.013 * intensity + 9","0.013 * intensity + 11"};
+	};
+// Instant Smoke
+	class WPCloud;
+	class SmokeScreenUGL1 : WPCloud
+	{
+	moveVelocity[] = {0,-1,0}; // Somehow its x z y?
+	moveVelocityVar[] = {0.333,-0.333,0};
+	rotationVelocity = 4;
+	rotationVelocityVar = 2;
+	weight = 12.764;
+	volume = 10;
+	rubbing = 0.2;
+	size[] = {0.001,12,15,17,18,19,0.002};
+	sizeVar = 0.001;
+	position[] = {0,0,0};
+	positionVar[] = {0.5,0,0};
+	randomDirectionPeriod = 0.333;
+	};
+// Smoke Trail
+	class WPTrailEffect;
+	class TrackingGrenadeTrailEffect: WPTrailEffect
+	{
+	interval = 0.02;
+	lifeTime = 10;
+	weight = 10.075;
+	rubbing = 0.1;
+	//size[] = {0.75,1.75};
+	color[] =
+		{
+				{0.9883,0.8606,0.0719,0},
+				{0.9883,0.8606,0.0719,0.8},
+				{0.9883,0.8606,0.0719,0.6},
+				{0.9883,0.8606,0.0719,0.5},
+				{0.9883,0.8606,0.0719,0.3},
+				{0.9883,0.8606,0.0719,0.1},
+				{0.9883,0.8606,0.0719,0}
+		};
+	lifeTimeVar = 0.5;
+	sizeVar = 0.33;
+	};
+};
+
+class CfgLights
+{
+	class GrenadeExploLight;
+	class ThermobaricGrenadeExpLight : GrenadeExploLight
+	{
+	brightness = 100;
+	};
+};
+
+// Creating corresponding Effect Classes
+// Practice Round Poof Effect
+class SmokeShellWhiteEffect
+{
+class SmokeShell;
+class SmokeShell2;
+class SmokeShell2UW;
+class SmokeShellUW;
+};
+class SmokeShellPracticeEffect : SmokeShellWhiteEffect
+{
+	class SmokeShell : SmokeShell // For new Smoke Effects, SmokeShel and SmokeShell2 MUST BE INHERITED from the above class
+	{
+	intensity = 1;
+	interval = 1;
+	position[] = {0,0,0};
+	simulation = "particles";
+	type = "SmokeShellWhite";
+	};
+	class SmokeShell2 : SmokeShell2UW // Otherwise, even with identical values, no Smoke will be visible. AAAAAAAAAAAAAH
+	{
+	intensity = 1;
+	interval = 1;
+	position[] = {0,0,0};
+	simulation = "particles";
+	type = "SmokeShellWhite2";
+	};
+	class SmokeShell2UW
+	{
+	intensity = 1;
+	interval = 1;
+	position[] = {0,0,0};
+	simulation = "particles";
+	type = "SmokeShellPractice2UW";
+	};
+	class SmokeShellUW
+	{
+	intensity = 1;
+	interval = 1;
+	position[] = {0,0,0};
+	simulation = "particles";
+	type = "SmokeShellPracticeUW";
+	};
+};
+// Thermobaric Expansion effect
+class ThermobaricExplosion // Based off HeavyBombExplosion (Cruise Missile)
+{
+	class ThermobaricGrenadeExp1
+	{
+	intensity = 1;
+	interval = 1;
+	lifeTime = 0.1;
+	position[] = {0,0,0};
+	simulation = "particles"; //CfgCloudlets
+	type = "ThermobaricGrenadeExp1";
+	};
+	class ThermobaricGrenadeSmoke1
+	{
+	intensity = 1;
+	interval = 1;
+	lifeTime = 5;
+	position[] = {0,0,0};
+	simulation = "particles";
+	type = "ThermobaricGrenadeSmoke1";
+	};
+	class ThermobaricGrenadeExpLight
+	{
+	intensity = 0.1;
+	interval = 1;
+	lifeTime = 0.5;
+	position[] = {0,0,0};
+	simulation = "light"; // CfgLights
+	type = "ThermobaricGrenadeExpLight";
+	};
+};
+// Smoke Screen
+class SmokeScreenUGLExplosion // Based off HeavyBombExplosion (Cruise Missile)
+{
+	class SmokeScreenUGL1
+	{
+	intensity = 1;
+	interval = 1;
+	position[] = {0,0,0};
+	simulation = "particles";
+	type = "SmokeScreenUGL1";
+	};
+};
+// Smoke Screen
+class TrackingGrenadeTrail // Based off HeavyBombExplosion (Cruise Missile)
+{
+	class TrackingGrenadeTrailEffect
+	{
+	intensity = 1;
+	interval = 1;
+	position[] = {0,0,0};
+	simulation = "particles";
+	type = "TrackingGrenadeTrailEffect";
+	};
 };
 
 class CfgEditorSubcategories
@@ -386,6 +564,14 @@ class CfgEditorSubcategories
 	{
 	displayName = "Scopes";
 	};
+};
+
+// Mini-Spike Sensor Inheritance
+class SensorTemplateIR;
+
+class CfgAmmo
+{
+#include "\A3RO_Vanilla\Vanilla_CfgAmmo.hpp"
 };
 
 class CfgMagazines

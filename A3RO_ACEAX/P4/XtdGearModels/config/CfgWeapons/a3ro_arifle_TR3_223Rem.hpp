@@ -1,4 +1,4 @@
-class a3ro_arifle_TR3_223Rem
+class a3ro_arifle_TR3_223REM
 {
     options[] = { "camo" }; // Always computed, do not edit
     label="TR3 .223";

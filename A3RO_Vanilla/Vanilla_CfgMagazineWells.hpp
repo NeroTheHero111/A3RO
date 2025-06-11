@@ -8,6 +8,8 @@
 
 #include "\A3RO_Vanilla\CfgMagazineWells_DMR.hpp"
 
+#include "\A3RO_Vanilla\CfgMagazineWells_Explosives.hpp"
+
 #include "\A3RO_Vanilla\CfgMagazineWells_GM6.hpp"
 
 #include "\A3RO_Vanilla\CfgMagazineWells_CSAT.hpp"

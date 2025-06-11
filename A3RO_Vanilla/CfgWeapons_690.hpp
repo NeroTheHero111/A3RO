@@ -1,11 +1,11 @@
 // Kozlice Base Class. Changing: Name. Adding CBA Magwell. Adding Description. InitSpeed to Typicalspeed
 class sgun_HunterShotgun_01_base_F : Rifle_Long_Base_F
 {
-descriptionShort = "Over-Under Shotgun<br />Calibre: 12 Gauge";
+descriptionShort = "Over-Under Shotgun<br />Gauge: 12";
 displayName = "690 Field Base Class";
 initSpeed = -1;
 magazines[] = {"2Rnd_12Gauge_Pellets"};
-magazineWell[] = {"CBA_12g_2rnds","HunterShotgun_01_12GA"};
+	magazineWell[] = {"HunterShotgun_01_12GA","CBA_12g_2rnds","CBA_12g_1rnd"};
 };
 
 // Kozlice. Changing: Name.
@@ -18,7 +18,7 @@ displayName = "690 Field 28''";
 class sgun_HunterShotgun_01_sawedoff_base_F : sgun_HunterShotgun_01_base_F
 {
 displayName = "690 Field (Sawed-Off) Base Class";
-initSpeed = -0.5;
+initSpeed = -0.9303; // New and improved Calculations. Wowzers!
 };
 
 // Kozlice Sawed-Off. Changing: Name

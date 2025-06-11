@@ -216,11 +216,11 @@ displayName = "MOS 2.5-5x32 (Khaki)";
 };
 class Item_optic_tws : Item_Base_F
 {
-displayName = "LILY-S TWS 2-12x24";
+displayName = "LILY-S TWS 3-6x24";
 };
 class Item_optic_tws_mg : Item_Base_F
 {
-displayName = "LILY-M TWS 4-16x24";
+displayName = "LILY-M TWS 6-12x24";
 };
 class Item_optic_Yorris : Item_Base_F
 {
@@ -265,7 +265,6 @@ vehicleClass = "WeaponAccessories";
 
 
 // Rail Attachments 
-
 class Item_acc_flashlight_pistol : Item_Base_F
 {
 displayName = "TLR-3®";
@@ -300,7 +299,6 @@ displayName = "DBAL-A2 (IR)";
 
 
 // Muzzle Attachments
-
 class Item_muzzle_antenna_01_f : Item_Base_F
 {
 displayName = "Transceiver Antenna (78-89 MHz)";
@@ -697,7 +695,6 @@ vehicleClass = "WeaponAccessories";
 
 
 // Bipods
-
 class Item_bipod_01_F_blk : Item_Base_F
 {
 displayName = "BPARS";

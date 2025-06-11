@@ -26,6 +26,7 @@ class cannon_railgun : CannonCore
 {
 class player;
 }
+class UGL_F;
 // Fixing Attachment Icon Positioning. Adjusting Mass, Rate of Fire. Adding and Removing Attachment Slots where necessary.
 
 // 690 Field Base Class
@@ -35,7 +36,7 @@ maxZeroing = 200;
 	class Single : Mode_SemiAuto
 	{
 	dispersion = 0.0014544400;
-	reloadTime = 0.1;
+	reloadTime = "60/600";
 	};
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
@@ -50,7 +51,7 @@ maxZeroing = 200;
 	class Single : Single
 	{
 	dispersion = 0.0029088800;
-	reloadTime = 0.1;
+	reloadTime = "60/600";
 	};
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
@@ -62,20 +63,54 @@ maxZeroing = 200;
 class arifle_MX_Base_F : Rifle_Base_F
 {
 discreteDistance[] = {300};
-maxZeroing = 1800;
+maxZeroing = 1200;
 	class FullAuto : Mode_FullAuto
 	{
 	dispersion = 0.0007853976;
-	reloadTime = 0.08888;
+	reloadTime = "60/675";
 	};
 	class fullauto_medium;
 	class Single : Mode_SemiAuto
 	{
 	dispersion = 0.0007853976;	
-	reloadTime = 0.08888;
+	reloadTime = "60/675";
 	};
 	class single_medium_optics1;
 	class single_far_optics2;
+	class GL_3GL_F : UGL_F // Editing it here is better. Still have to re-define the lower classes though.
+	{
+	descriptionShort = "Underbarrel Grenade Launcher<br />Calibre: 40x46mm LV";
+	discreteDistanceInitIndex = 0;
+	displayName = "3GL";
+	initSpeed = 77; // Spitballing due to length. EGLM is 76, GLM is 75
+	magazines[] = {"3Rnd_HE_Grenade_shell"};
+	magazineWell[] = {"3UGL_40x36","CBA_40mm_3GL"}; // 3GL uses custom Grenades with Induction coils to fire. The Shells are superimposed, they slide into eachother along the tube from the back. There are no shells left once they are fired. All of this leads me to believe only proprietary Metal Storm Grenades will allow the weapon to function. As such, Im creating seperate 2 and 1Rnd 3GL versions so that I can use the vanilla 1Rnd Vanilla for the GLM etc.
+		class Single : Mode_SemiAuto
+		{
+		dispersion = 0.000581776; // Adjusting Dispersion for all UGLs. Up from 0.68 MOA to 2 MOA. Just to not have it laserbeam (curve?) that hard.
+		maxRange = 400;
+		maxRangeProbab = 0.05;
+		midRange = 200;
+		midRangeProbab = 0.7;
+		minRange = 30;
+		minRangeProbab = 0.1;
+		recoil = "M240Recoil";
+		recoilProne = "M240Recoil";
+		sounds[] = {"StandardSound"};
+			class BaseSoundModeType
+			{
+			closure1[] = {"A3\Sounds_F\arsenal\weapons\UGL\Closure_UGL",1,1,10};
+			soundClosure[] = {"closure1",1};		
+			};
+			class StandardSound : BaseSoundModeType
+			{
+			begin1[] = {"A3\Sounds_F\arsenal\weapons\UGL\UGL_01",0.707946,1,200};
+			begin2[] = {"A3\Sounds_F\arsenal\weapons\UGL\UGL_02",0.707946,1,200};
+			soundBegin[] = {"begin1",0.5,"begin2",0.5};		
+			soundSetShot[] = {"UGL_shot_SoundSet","UGL_Tail_SoundSet","UGL_InteriorTail_SoundSet"};
+			};
+		};
+	};
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
 	mass = 78.75;
@@ -135,26 +170,26 @@ class arifle_MX_GL_F : arifle_MX_Base_F
 // ACR Entry Carbine
 class arifle_MXC_F : arifle_MX_Base_F
 {
-maxZeroing = 1200;
+maxZeroing = 800;
 	class FullAuto : FullAuto
 	{
 	dispersion = 0.0010471968;
-	reloadTime = 0.09230;	
+	reloadTime = "60/650";	
 	};
 	class fullauto_medium : fullauto_medium
 	{
 	dispersion = 0.0010471968;
-	reloadTime = 0.09230;	
+	reloadTime = "60/650";	
 	};
 	class Single : Single
 	{
 	dispersion = 0.0010471968;
-	reloadTime = 0.09230;	 
+	reloadTime = "60/650";	 
 	};
 	class single_medium_optics1 : single_medium_optics1
 	{
 	dispersion = 0.0010471968;		
-	reloadTime = 0.09230;	
+	reloadTime = "60/650";	
 	};
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
@@ -179,39 +214,39 @@ maxZeroing = 1200;
 // ACR HB
 class arifle_MX_SW_F : arifle_MX_Base_F
 {
-maxZeroing = 1800;	
+maxZeroing = 2000;	
 	class FullAuto : FullAuto
 	{
 	dispersion = 0.0006690424;
-	reloadTime = 0.08759;
+	reloadTime = "60/685";
 	showToPlayer = 0; // modes[] uses manual, so I will use manual.
 	};
 	class manual : FullAuto
 	{
 	dispersion = 0.0006690424;
-	reloadTime = 0.08759;
+	reloadTime = "60/685";
 	showToPlayer = 1;
 	};
 	class fullauto_medium : FullAuto
 	{
 	dispersion = 0.0006690424;
-	reloadTime = 0.08759;
+	reloadTime = "60/685";
 	};
 	class Single : Mode_SemiAuto
 	{
 	dispersion = 0.0006690424;
-	reloadTime = 0.08759;	
+	reloadTime = "60/685";	
 	};
 	class single_medium_optics1 : Single
 	{
 	dispersion = 0.0006690424;
-	reloadTime = 0.08759;
+	reloadTime = "60/685";
 	showToPlayer = 0;
 	};
 	class single_far_optics1 : single_medium_optics1
 	{
 	dispersion = 0.0006690424;
-	reloadTime = 0.08759;	
+	reloadTime = "60/685";	
 	};
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
@@ -245,27 +280,27 @@ maxZeroing = 2400;
 	class FullAuto : FullAuto
 	{
 	dispersion = 0.0005817760;
-	reloadTime = 0.08571;	
+	reloadTime = "60/700";	
 	};
 	class fullauto_medium : fullauto_medium
 	{
 	dispersion = 0.0005817760;	
-	reloadTime = 0.08571;	
+	reloadTime = "60/700";	
 	};
 	class Single : Single
 	{
 	dispersion = 0.0005817760;	
-	reloadTime = 0.08571;	
+	reloadTime = "60/700";	
 	};
 	class single_medium_optics1 : single_medium_optics1
 	{
 	dispersion = 0.0005817760;	
-	reloadTime = 0.08571;	
+	reloadTime = "60/700";	
 	};
 	class single_far_optics2 : single_far_optics2
 	{
 	dispersion = 0.0005817760;
-	reloadTime = 0.08571;	
+	reloadTime = "60/700";	
 	};
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
@@ -302,26 +337,26 @@ maxZeroing = 1800;
 	class FullAuto : Mode_FullAuto
 	{
 	dispersion = 0.0006417872;
-	reloadTime = 0.08571;	
+	reloadTime = "60/700";	
 	};
 	class Burst : Mode_Burst
 	{
 	dispersion = 0.0006417872;	
-	reloadTime = 0.06;	
+	reloadTime = "60/1000";	
 	};
 	class Single : Mode_SemiAuto
 	{
 	dispersion = 0.0006417872;		
-	reloadTime = 0.08571;	
+	reloadTime = "60/700";	
 	};
 	class single_medium_optics1 : Single
 	{
 	dispersion = 0.0006417872;
-	reloadTime = 0.08571;	
+	reloadTime = "60/700";	
 	};
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
-	mass = 78.2641;	
+	mass = 77.38225;
 		class CowsSlot : asdg_OpticRail1913
 		{
 		iconPosition[] = {0.5,0.27};
@@ -383,9 +418,43 @@ class arifle_AK12_lush_F : arifle_AK12_base_F
 // AK-15 GP-25 Base Class
 class arifle_AK12_GL_base_F : arifle_AK12_base_F
 {
+	class EGLM : UGL_F
+	{
+	descriptionShort = "Underbarrel Grenade Launcher<br />Calibre: 40mmCL";
+	discreteDistanceInitIndex = 0; 
+	displayName = "GP-25";
+	initSpeed = 76.5;
+	magazines[] = {"1Rnd_GP25_VOG25M_Grenade"};
+	magazineWell[] = {"CBA_40mm_GP"};
+		class Single : Mode_SemiAuto
+		{
+		dispersion = 0.000581776;
+		maxRange = 400;
+		maxRangeProbab = 0.05;
+		midRange = 200;
+		midRangeProbab = 0.7;
+		minRange = 30;
+		minRangeProbab = 0.1;
+		recoil = "M240Recoil";
+		recoilProne = "M240Recoil";
+		sounds[] = {"StandardSound"};
+			class BaseSoundModeType
+			{
+			closure1[] = {"A3\Sounds_F\arsenal\weapons\UGL\Closure_UGL",1,1,10};
+			soundClosure[] = {"closure1",1};		
+			};
+			class StandardSound : BaseSoundModeType
+			{
+			begin1[] = {"A3\Sounds_F\arsenal\weapons\UGL\UGL_01",0.707946,1,200};
+			begin2[] = {"A3\Sounds_F\arsenal\weapons\UGL\UGL_02",0.707946,1,200};
+			soundBegin[] = {"begin1",0.5,"begin2",0.5};		
+			soundSetShot[] = {"UGL_shot_SoundSet","UGL_Tail_SoundSet","UGL_InteriorTail_SoundSet"};
+			};
+		};
+	};
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
-	mass = 111.3334;	
+	mass = 110.4516;
 		class CowsSlot : asdg_OpticRail1913
 		{
 		iconPosition[] = {0.5,0.27};
@@ -444,30 +513,30 @@ class arifle_AK12_GL_lush_F : arifle_AK12_GL_base_F
 	};
 };
 
-// AK-15K Base Class
+// AK-15C Base Class
 class arifle_AK12U_base_F : arifle_AK12_base_F
 {
 discreteDistance[] = {300,100,200,300,400,500,600,700,800};
 discreteDistanceInitIndex = 0;
-maxZeroing = 1200;
+maxZeroing = 800;
 	class FullAuto : FullAuto
 	{
 	dispersion = 0.0008529380;
-	reloadTime = 0.08888;	
+	reloadTime = "60/675";	
 	};
 	class Single : Single
 	{
 	dispersion = 0.0008529380;
-	reloadTime = 0.08888;	
+	reloadTime = "60/675";	
 	};
 	class single_medium_optics1 : Single
 	{
 	dispersion = 0.0008529380;	
-	reloadTime = 0.08888;	
+	reloadTime = "60/675";	
 	};
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
-	mass = 66.5244;		
+	mass = 69.666;		
 		class CowsSlot : asdg_OpticRail1913
 		{
 		iconPosition[] = {0.4125,0.24};
@@ -498,31 +567,31 @@ discreteDistance[] = {400,100,200,300,400,500,600,700,800};
 	class FullAuto : FullAuto
 	{
 	dispersion = 0.0006417872;
-	reloadTime = 0.096;	
+	reloadTime = "60/625";	
 	};
 	class Burst : Burst
 	{
 	dispersion = 0.0006417872;	
-	reloadTime = 0.06;	
+	reloadTime = "60/1000";	
 	};
 	class Single : Single
 	{
 	dispersion = 0.0006417872;		
-	reloadTime = 0.096;	
+	reloadTime = "60/625";	
 	};
 	class single_medium_optics1 : single_medium_optics1
 	{
 	dispersion = 0.0006417872;		
-	reloadTime = 0.096;
+	reloadTime = "60/625";
 	};
 	class single_medium_optics2 : single_medium_optics1
 	{
 	dispersion = 0.0006417872;		
-	reloadTime = 0.096;
+	reloadTime = "60/625";
 	};	
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
-	mass = 77.1617;	
+	mass = 76.8311;
 		class MuzzleSlot : asdg_MuzzleSlot_545R
 		{
 		iconPosition[] = {0.025,0.34};
@@ -538,32 +607,32 @@ discreteDistance[] = {400,100,200,300,400,500,600,700,800};
 	class FullAuto : FullAuto
 	{
 	dispersion = 0.0006417872;	
-	reloadTime = 0.096;	
+	reloadTime = "60/625";	
 	};
 	class Burst : Burst
 	{
 	dispersion = 0.0006417872;		
-	reloadTime = 0.06;	
+	reloadTime = "60/1000";	
 	};
 	class Single : Single
 	{
 	dispersion = 0.0006417872;		
-	reloadTime = 0.096;	
+	reloadTime = "60/625";	
 	};
 	class single_medium_optics1 : Single
 	{
 	dispersion = 0.0006417872;		
-	reloadTime = 0.096;
+	reloadTime = "60/625";
 	showToPlayer = 0;
 	};
 	class single_medium_optics2 : single_medium_optics1
 	{
 	dispersion = 0.0006417872;		
-	reloadTime = 0.096;	
+	reloadTime = "60/625";	
 	};
 	class WeaponSlotsInfo: WeaponSlotsInfo
 	{
-	mass = 110.2311;		
+	mass = 109.9004;
 		class MuzzleSlot : asdg_MuzzleSlot_545R
 		{
 		iconPosition[] = {0.025,0.34};
@@ -572,39 +641,44 @@ discreteDistance[] = {400,100,200,300,400,500,600,700,800};
 	};
 };	
 
-// AK-12K Base Class
-class arifle_AK12U_545_base_F : arifle_AK12U_base_F
+// AK-12C Base Class
+class arifle_AK12U_545_base_F : arifle_AK12U_base_F // I wrote K everywhere in the Config but Kalashnikovs own website has since changed the name I think? Its refered to as the AK-12/15C now
 {
 discreteDistance[] = {400,100,200,300,400,500,600,700,800};
 	class FullAuto : FullAuto
 	{
-	dispersion = 0.0008529380;		
-	reloadTime = 0.1;	
+	dispersion = 0.0008529380;
+	reloadTime = "60/600";	
 	};
 	class Burst : Burst
 	{
 	dispersion = 0.0008529380;				
-	reloadTime = 0.06315;	
+	reloadTime = "60/950";	
+	};
+	class Burst_medium : Burst
+	{
+	dispersion = 0.0008529380;				
+	reloadTime = "60/950";	
 	};
 	class Single : Single
 	{
 	dispersion = 0.0008529380;				
-	reloadTime = 0.1;	
+	reloadTime = "60/600";	
 	};
 	class single_medium_optics1 : Single
 	{
 	dispersion = 0.0008529380;				
-	reloadTime = 0.1;
+	reloadTime = "60/600";
 	showToPlayer = 0;
 	};
 	class single_medium_optics2 : single_medium_optics1
 	{
 	dispersion = 0.0008529380;				
-	reloadTime = 0.1;
+	reloadTime = "60/600";
 	};
 	class WeaponSlotsInfo: WeaponSlotsInfo
 	{	
-	mass = 65.5875;		
+	mass = 70.21723;		
 		class MuzzleSlot : asdg_MuzzleSlot_545R
 		{
 		iconPosition[] = {0.0212,0.34};
@@ -620,32 +694,32 @@ discreteDistance[] = {400,100,200,300,400,500,600,700,800};
 	class FullAuto : FullAuto
 	{
 	dispersion = 0.0006417872;		
-	reloadTime = 0.08571;
+	reloadTime = "60/700";
 	};
 	class Burst : Burst
 	{
 	dispersion = 0.0006417872;			
-	reloadTime = 0.06;
+	reloadTime = "60/1000";
 	};
 	class Single : Single
 	{
 	dispersion = 0.0006417872;			
-	reloadTime = 0.08571;	
+	reloadTime = "60/700";	
 	};
 	class single_medium_optics1 : Single
 	{
 	dispersion = 0.0006417872;		
-	reloadTime = 0.08571;
+	reloadTime = "60/700";
 	showToPlayer = 0;
 	};
 	class single_medium_optics2 : single_medium_optics1
 	{
 	dispersion = 0.0006417872;		
-	reloadTime = 0.08571;
+	reloadTime = "60/700";
 	};
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
-	mass = 83.33474;
+	mass = 78.9254;
 		class MuzzleSlot : asdg_MuzzleSlot_556
 		{
 		iconPosition[] = {0.025,0.34};
@@ -661,32 +735,32 @@ discreteDistance[] = {400,100,200,300,400,500,600,700,800};
 	class FullAuto : FullAuto
 	{
 	dispersion = 0.0006417872;
-	reloadTime = 0.08571;
+	reloadTime = "60/700";
 	};
 	class Burst : Burst
 	{
 	dispersion = 0.0006417872;	
-	reloadTime = 0.06;	
+	reloadTime = "60/1000";	
 	};
 	class Single : Single
 	{
 	dispersion = 0.0006417872;	
-	reloadTime = 0.08571;
+	reloadTime = "60/700";
 	};
 	class single_medium_optics1 : Single
 	{
 	dispersion = 0.0006417872;
-	reloadTime = 0.08571;
+	reloadTime = "60/700";
 	showToPlayer = 0;
 	};
 	class single_medium_optics2 : single_medium_optics1
 	{
 	dispersion = 0.0006417872;
-	reloadTime = 0.08571;
+	reloadTime = "60/700";
 	};
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
-	mass = 116.4041;
+	mass = 111.9948
 		class MuzzleSlot : asdg_MuzzleSlot_556
 		{
 		iconPosition[] = {0.025,0.34};
@@ -703,40 +777,40 @@ maxZeroing = 2400;
 	class FullAuto : FullAuto
 	{
 	dispersion = 0.0006417872;	
-	reloadTime = 0.08571;
+	reloadTime = "60/700";
 	};
 	class Burst : Burst
 	{
 	dispersion = 0.0006417872;		
 	autoFire = 1;
 	burst = 1;
-	reloadTime = 0.08571;
+	reloadTime = "60/700";
 	showToPlayer = 0;
 	};
 	class Burst_medium : Burst
 	{
 	dispersion = 0.0006417872;		
-	reloadTime = 0.08571;
+	reloadTime = "60/700";
 	};
 	class Single : Single
 	{
 	dispersion = 0.0006417872;
-	reloadTime = 0.08571;	
+	reloadTime = "60/700";	
 	};
 	class single_medium_optics1 : Single
 	{
 	dispersion = 0.0006417872;
-	reloadTime = 0.08571;
+	reloadTime = "60/700";
 	showToPlayer = 0;
 	};
 	class single_medium_optics2 : single_medium_optics1
 	{
 	dispersion = 0.0006417872;		
-	reloadTime = 0.08571;
+	reloadTime = "60/700";
 	};
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
-	mass = 94.3578;
+	mass = 89.2872;
 		class MuzzleSlot : asdg_MuzzleSlot_762
 		{
 		iconPosition[] = {0.025,0.34};
@@ -754,17 +828,17 @@ maxZeroing = 1800;
 	class FullAuto : Mode_FullAuto
 	{
 	dispersion = 0.0013030226;
-	reloadTime = 0.1;	
+	reloadTime = "60/600";	
 	};
 	class FullAuto_medium : FullAuto
 	{
 	dispersion = 0.0013030226;
-	reloadTime = 0.1;	
+	reloadTime = "60/600";	
 	};
 	class Single : Mode_SemiAuto
 	{
 	dispersion = 0.0013030226;	
-	reloadTime = 0.1;	
+	reloadTime = "60/600";	
 	};
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
@@ -791,17 +865,17 @@ maxZeroing = 800;
 	class FullAuto : Mode_FullAuto
 	{
 	dispersion = 0.0016642016;
-	reloadTime = 0.08571;	
+	reloadTime = "60/700";	
 	};
 	class FullAuto_medium : FullAuto
 	{
 	dispersion = 0.0016642016;
-	reloadTime = 0.08571;	
+	reloadTime = "60/700";	
 	};
 	class Single : Mode_SemiAuto
 	{
 	dispersion = 0.0016642016;
-	reloadTime = 0.08571;	
+	reloadTime = "60/700";	
 	};
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
@@ -829,7 +903,7 @@ discreteDistance[] = {300};
 	{
 	dispersion = 0.0016642016;
 	autoFire = 0;
-	reloadTime = 0.1;
+	reloadTime = "60/600";
 	showToPlayer = 0;
 	};
 	class FullAuto_medium : FullAuto_medium
@@ -837,12 +911,12 @@ discreteDistance[] = {300};
 	dispersion = 0.0016642016;	
 	autoFire = 0;
 	burst = 1;
-	reloadTime = 0.1;
+	reloadTime = "60/600";
 	};
 	class Single : Single
 	{
 	dispersion = 0.0016642016;
-	reloadTime = 0.1;	
+	reloadTime = "60/600";	
 	};
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
@@ -864,11 +938,11 @@ maxZeroing = 600;
 	class Single : Mode_SemiAuto
 	{
 	dispersion = 0.0004363320;		
-	reloadTime = 0.17142;	
+	reloadTime = "60/375";	
 	};
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
-	mass = 143.3005;		
+	mass = 147.4341;		
 		class CowsSlot : asdg_OpticRail1913
 		{
 		iconPosition[] = {0.535,0.39};
@@ -892,7 +966,7 @@ class srifle_DMR_04_F : DMR_04_base_F
 {
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
-	mass = 143.3005;	
+	mass = 147.4341;
 		class CowsSlot : asdg_OpticRail1913
 		{
 		iconPosition[] = {0.535,0.39};
@@ -919,11 +993,11 @@ maxZeroing = 2400;
 	class Single : Mode_SemiAuto
 	{
 	dispersion = 0.0001458607;	
-	reloadTime = 0.10909;	
+	reloadTime = "60/550";	
 	};
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
-	mass = 115;		
+	mass = 107.445;		
 		class CowsSlot : asdg_OpticRail1913_long 
 		{
 		iconPosition[] = {0.585,0.37};
@@ -952,7 +1026,7 @@ class srifle_DMR_02_F : DMR_02_base_F
 {
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
-	mass = 115;
+	mass = 107.445;
 		class CowsSlot : asdg_OpticRail1913_long 
 		{
 		iconPosition[] = {0.585,0.37};
@@ -976,16 +1050,19 @@ class srifle_DMR_02_F : DMR_02_base_F
 	};
 };
 
-// Creating XRG-20 Mk. II
+// Creating ZRG-20 Mk. II
 class DMR_02_Railgun_base_F : Rifle_Long_Base_F
 {
+discreteDistance[] = {300};
+discreteDistanceInitIndex = 0;
 maxRange = 2000;
+maxZeroing = 3600;
 modes[] = {"Single","medium_optic2","far_optic1","far_optic2"}; // Revelation: AI cant fire if you dont give them firemodes.
 	class Single : Mode_SemiAuto
 	{
 	aiRateOfFire = 5;
 	aiRateOfFireDistance = 500;
-	dispersion = 0.0029 // From 0.0057. To encourage use of the T.U.B.E.
+	dispersion = 0.0029; // From 0.0057. To encourage use of the T.U.B.E.
 	maxRange = 450;
 	maxRangeProbab = 0.3;
 	midRange = 150;
@@ -994,7 +1071,7 @@ modes[] = {"Single","medium_optic2","far_optic1","far_optic2"}; // Revelation: A
 	minRangeProbab = 0.5;
 	recoil = "recoil_single_gm6";
 	recoilProne = "recoil_single_prone_gm6";
-	reloadTime = 4.5;
+	reloadTime = "60/13.3333";
 	soundContinuous = 0;
 	sounds[] = {"StandardSound"};
 		class StandardSound
@@ -1043,6 +1120,11 @@ modes[] = {"Single","medium_optic2","far_optic1","far_optic2"}; // Revelation: A
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
 	mass = 230;
+		class CowsSlot : asdg_OpticRail1913_long
+		{
+		iconPosition[] = {0.585,0.37};
+		iconScale = 0.14;
+		};
 		class MuzzleSlot
 		{
 		compatibleItems[] = {"muzzle_railgun_03_f"};
@@ -1052,6 +1134,16 @@ modes[] = {"Single","medium_optic2","far_optic1","far_optic2"}; // Revelation: A
 		iconScale = 0.50;
 		linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
 		scope = 0;
+		};
+		class PointerSlot : asdg_FrontSideRail
+		{
+		iconPosition[] = {0.2,0.42};
+		iconScale = 0.19;
+		};
+		class UnderBarrelSlot : asdg_UnderSlot
+		{
+		iconPosition[] = {0.19,0.8};
+		iconScale = 0.3;
 		};
 	};
 };
@@ -1105,22 +1197,22 @@ discreteDistance[] = {50};
 	{
 	dispersion = 0.0009892744; 	
 	burst = 1;
-	reloadTime = 0.06;
+	reloadTime = "60/1000";
 	showToPlayer = 0;	
 	};
 	class FullAuto : FullAuto
 	{
 	dispersion = 0.0009892744; 		
-	reloadTime = 0.06;	
+	reloadTime = "60/1000";	
 	};
 	class Single : Single
 	{
 	dispersion = 0.0009892744; 		
-	reloadTime = 0.06;	
+	reloadTime = "60/1000";	
 	};
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
-	mass = 33.0694;
+	mass = 39.6; // AmmoTerra
 		class CowsSlot : asdg_OpticRail1913_short 
 		{
 		iconPosition[] = {0.38,0.34};
@@ -1166,16 +1258,49 @@ discreteDistance[] = {300};
 	class FullAuto : Mode_FullAuto
 	{
 	dispersion = 0.0006690424;
-	reloadTime = 0.07058;	
+	reloadTime = "60/875";	
 	};
 	class Single : Mode_SemiAuto
 	{
 	dispersion = 0.0006690424; 		
-	reloadTime = 0.07058;
+	reloadTime = "60/875";
+	};
+	class EGLM : UGL_F
+	{
+	descriptionShort = "Underbarrel Grenade Launcher<br />Calibre: 40x46mm LV";
+	discreteDistanceInitIndex = 0; 
+	displayName = "FN40GL®";
+	initSpeed = 75;
+	magazineWell[] = {"UGL_40x36","CBA_40mm_M203"}; // Pike doesn't fit
+		class Single : Mode_SemiAuto
+		{
+		dispersion = 0.000581776;
+		maxRange = 400;
+		maxRangeProbab = 0.05;
+		midRange = 200;
+		midRangeProbab = 0.7;
+		minRange = 30;
+		minRangeProbab = 0.1;
+		recoil = "M240Recoil";
+		recoilProne = "M240Recoil";
+		sounds[] = {"StandardSound"};
+			class BaseSoundModeType
+			{
+			closure1[] = {"A3\Sounds_F\arsenal\weapons\UGL\Closure_UGL",1,1,10};
+			soundClosure[] = {"closure1",1};		
+			};
+			class StandardSound : BaseSoundModeType
+			{
+			begin1[] = {"A3\Sounds_F\arsenal\weapons\UGL\UGL_01",0.707946,1,200};
+			begin2[] = {"A3\Sounds_F\arsenal\weapons\UGL\UGL_02",0.707946,1,200};
+			soundBegin[] = {"begin1",0.5,"begin2",0.5};		
+			soundSetShot[] = {"UGL_shot_SoundSet","UGL_Tail_SoundSet","UGL_InteriorTail_SoundSet"};
+			};
+		};
 	};
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
-	mass = 70.107;
+	mass = 79.3664;
 		class CowsSlot : asdg_OpticRail1913_short 
 		{
 		iconPosition[] = {0.44,0.255};
@@ -1201,33 +1326,33 @@ maxZeroing = 1200;
 	class FullAuto : FullAuto
 	{
 	dispersion = 0.0008024996; 	
-	reloadTime = 0.07272;	
+	reloadTime = "60/850";	
 	};
 	class fullauto_medium : FullAuto
 	{
 	dispersion = 0.0008024996; 		
-	reloadTime = 0.07272;
+	reloadTime = "60/850";
 	showToPlayer = 0;
 	};
 	class Single : Single
 	{
 	dispersion = 0.0008024996; 		
-	reloadTime = 0.07272;
+	reloadTime = "60/850";
 	};
 	class single_medium_optics1 : Single
 	{
 	dispersion = 0.0008024996;	
-	reloadTime = 0.07272;
+	reloadTime = "60/850";
 	showToPlayer = 0;
 	};
 	class single_medium_optics2 : single_medium_optics1
 	{
 	dispersion = 0.0008024996;	
-	reloadTime = 0.07272;
+	reloadTime = "60/850";
 	};
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
-	mass = 70.107;
+	mass = 77.1617;
 		class CowsSlot : asdg_OpticRail1913_short 
 		{
 		iconPosition[] = {0.44,0.255};
@@ -1254,18 +1379,51 @@ maxZeroing = 1800;
 	class FullAuto : Mode_FullAuto
 	{
 	dispersion = 0.0004832376;
-	reloadTime = 0.07058;
+	reloadTime = "60/850";
 	};
 	class Single : Mode_SemiAuto
 	{
 	dispersion = 0.0004832376;	
-	reloadTime = 0.07058;
+	reloadTime = "60/850";
 	};
 	class fullauto_medium;
 	class single_medium_optics1;
+	class EGLM : UGL_F
+	{
+	descriptionShort = "Underbarrel Grenade Launcher<br />Calibre: 40x46mm LV";
+	discreteDistanceInitIndex = 0; 
+	displayName = "GL1";
+	initSpeed = 75; // I guess
+	magazineWell[] = {"UGL_40x36","CBA_40mm_M203"}; // The Pike doesn't fit.
+		class Single : Mode_SemiAuto
+		{
+		dispersion = 0.000581776;
+		maxRange = 400;
+		maxRangeProbab = 0.05;
+		midRange = 200;
+		midRangeProbab = 0.7;
+		minRange = 30;
+		minRangeProbab = 0.1;
+		recoil = "M240Recoil";
+		recoilProne = "M240Recoil";
+		sounds[] = {"StandardSound"};
+			class BaseSoundModeType
+			{
+			closure1[] = {"A3\Sounds_F\arsenal\weapons\UGL\Closure_UGL",1,1,10};
+			soundClosure[] = {"closure1",1};		
+			};
+			class StandardSound : BaseSoundModeType
+			{
+			begin1[] = {"A3\Sounds_F\arsenal\weapons\UGL\UGL_01",0.707946,1,200};
+			begin2[] = {"A3\Sounds_F\arsenal\weapons\UGL\UGL_02",0.707946,1,200};
+			soundBegin[] = {"begin1",0.5,"begin2",0.5};		
+			soundSetShot[] = {"UGL_shot_SoundSet","UGL_Tail_SoundSet","UGL_InteriorTail_SoundSet"};
+			};
+		};
+	};
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
-	mass = 74.7367;	
+	mass = 76.0227;
 		class CowsSlot : asdg_OpticRail1913_short 
 		{
 		iconPosition[] = {0.455,0.25};
@@ -1291,34 +1449,34 @@ class arifle_Mk20_F : mk20_base_F
 	{
 	dispersion = 0.0004363320;	
 	autoFire = 0;
-	reloadTime = 0.1;
+	reloadTime = "60/600";
 	showToPlayer = 0;
 	};
 	class fullauto_medium : FullAuto
 	{
 	dispersion = 0.0004363320;	
 	burst = 1;	
-	reloadTime = 0.1;	
+	reloadTime = "60/600";	
 	};
 	class Single : Single
 	{
 	dispersion = 0.0004363320;
-	reloadTime = 0.1;
+	reloadTime = "60/600";
 	};
 	class single_medium_optics1 : Single
 	{
 	dispersion = 0.0004363320;
-	reloadTime = 0.1;
+	reloadTime = "60/600";
 	showToPlayer = 0;
 	};
 	class single_far_optics2 : single_medium_optics1
 	{
 	dispersion = 0.0004363320;	
-	reloadTime = 0.1;
+	reloadTime = "60/600";
 	};
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
-	mass = 75.8390;	
+	mass = 79.9227;
 		class CowsSlot : asdg_OpticRail1913_short 
 		{
 		iconPosition[] = {0.455,0.25};
@@ -1335,30 +1493,30 @@ class arifle_Mk20_F : mk20_base_F
 // F2000 Tactical
 class arifle_Mk20C_F : mk20_base_F
 {
-maxZeroing = 1800;
+maxZeroing = 1200;
 	class FullAuto : FullAuto
 	{
 	dispersion = 0.0004832376;
-	reloadTime = 0.07058;
+	reloadTime = "60/850";
 	};
 	class fullauto_medium : fullauto_medium
 	{
 	dispersion = 0.0004832376;
-	reloadTime = 0.07058;
+	reloadTime = "60/850";
 	};
 	class Single : Single
 	{
 	dispersion = 0.0004832376;
-	reloadTime = 0.07058;
+	reloadTime = "60/850";
 	};
 	class single_medium_optics1 : single_medium_optics1
 	{
 	dispersion = 0.0004832376;
-	reloadTime = 0.07058;
+	reloadTime = "60/850";
 	};
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
-	mass = 74.7367;	
+	mass = 76.0227;
 		class CowsSlot : asdg_OpticRail1913_short 
 		{
 		iconPosition[] = {0.455,0.25};
@@ -1380,30 +1538,30 @@ maxZeroing = 1800;
 // F2000 Tactical GL1
 class arifle_Mk20_GL_F : mk20_base_F
 {
-maxZeroing = 1800;
+maxZeroing = 1200;
 	class FullAuto : FullAuto
 	{
 	dispersion = 0.0004832376;
-	reloadTime = 0.07058;
+	reloadTime = "60/850";
 	};
 	class fullauto_medium : fullauto_medium
 	{
 	dispersion = 0.0004832376;
-	reloadTime = 0.07058;
+	reloadTime = "60/850";
 	};
 	class Single : Single
 	{
 	dispersion = 0.0004832376;
-	reloadTime = 0.07058;
+	reloadTime = "60/850";
 	};
 	class single_medium_optics1 : single_medium_optics1
 	{
 	dispersion = 0.0004832376;
-	reloadTime = 0.07058;
+	reloadTime = "60/850";
 	};
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
-	mass = 98.9875;		
+	mass = 105.6227;		
 		class CowsSlot : asdg_OpticRail1913_short 
 		{
 		iconPosition[] = {0.455,0.25};
@@ -1430,15 +1588,15 @@ maxZeroing = 3600;
 	class Single : Mode_SemiAuto
 	{
 	dispersion = 0.0002908880;	
-	reloadTime = 0.21818;
+	reloadTime = "60/275";
 	};
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
 	mass = 231.4854;
-		class CowsSlot : asdg_OpticRail1913_short 
+		class CowsSlot : asdg_OpticRail1913_long 
 		{
 		iconPosition[] = {0.61,0.31};
-		iconScale = 0.11;
+		iconScale = 0.106;
 		};
 		class PointerSlot{};
 	};
@@ -1449,29 +1607,85 @@ class srifle_GM6_F : GM6_base_F
 {
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
-	mass = 238.0992;
-		class CowsSlot : asdg_OpticRail1913_short 
+	mass = 231.4854;
+		class CowsSlot : asdg_OpticRail1913_long 
 		{
 		iconPosition[] = {0.61,0.31};
-		iconScale = 0.11;
+		iconScale = 0.106;
 		};
 	};
 };
 
-// HK416A5 11'' Base Class 
+// GM6 12.7x108 Patterns
+class srifle_GM6_camo_F : srifle_GM6_F
+{
+	class WeaponSlotsInfo : WeaponSlotsInfo
+	{
+		class CowsSlot : asdg_OpticRail1913_long 
+		{
+		iconPosition[] = {0.605,0.31};
+		iconScale = 0.119;
+		};
+	};
+};
+class srifle_GM6_ghex_F : srifle_GM6_F
+{
+	class WeaponSlotsInfo : WeaponSlotsInfo
+	{
+		class CowsSlot : asdg_OpticRail1913_long 
+		{
+		iconPosition[] = {0.585,0.315};
+		iconScale = 0.137;
+		};
+	};
+};
+
+// GM6 12.7x99 Patterns
+class GM6_50BMG_base_F : GM6_base_F
+{
+class WeaponSlotsInfo;
+};
+class srifle_GM6_50BMG_F : GM6_50BMG_base_F
+{
+class WeaponSlotsInfo : WeaponSlotsInfo{};
+};
+class srifle_GM6_50BMG_hex_F : srifle_GM6_50BMG_F
+{
+	class WeaponSlotsInfo : WeaponSlotsInfo
+	{
+		class CowsSlot : asdg_OpticRail1913_long 
+		{
+		iconPosition[] = {0.605,0.31};
+		iconScale = 0.119;
+		};
+	};
+};
+class srifle_GM6_50BMG_ghex_F : srifle_GM6_50BMG_F
+{
+	class WeaponSlotsInfo : WeaponSlotsInfo
+	{
+		class CowsSlot : asdg_OpticRail1913_long 
+		{
+		iconPosition[] = {0.585,0.315};
+		iconScale = 0.137;
+		};
+	};
+};
+
+// HK416 A5 11'' Base Class 
 class arifle_SPAR_01_base_F : Rifle_Base_F
 {
 discreteDistance[] = {300};
-maxZeroing = 1200;
+maxZeroing = 800;
 	class FullAuto : Mode_FullAuto
 	{
 	dispersion = 0.0002948052;
-	reloadTime = 0.07058;
+	reloadTime = "60/850";
 	};
 	class Single : Mode_SemiAuto
 	{
 	dispersion = 0.0002948052;	
-	reloadTime = 0.07058;
+	reloadTime = "60/850";
 	};
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
@@ -1499,7 +1713,7 @@ maxZeroing = 1200;
 	};	
 };
 
-// HK416A5 11''
+// HK416 A5 11''
 class arifle_SPAR_01_blk_F : arifle_SPAR_01_base_F
 {
 	class WeaponSlotsInfo : WeaponSlotsInfo
@@ -1534,9 +1748,41 @@ class arifle_SPAR_01_snd_F : arifle_SPAR_01_base_F
 	};
 };
 
-// HK416A5 11'' GLM Base Class 
+// HK416 A5 11'' GLM Base Class 
 class arifle_SPAR_01_GL_base_F : arifle_SPAR_01_base_F
 {
+	class EGLM : UGL_F
+	{
+	descriptionShort = "Underbarrel Grenade Launcher<br />Calibre: 40x46mm LV";
+	discreteDistanceInitIndex = 0; 
+	displayName = "GLM";
+	initSpeed = 75;
+		class Single : Mode_SemiAuto
+		{
+		dispersion = 0.000581776;
+		maxRange = 400;
+		maxRangeProbab = 0.05;
+		midRange = 200;
+		midRangeProbab = 0.7;
+		minRange = 30;
+		minRangeProbab = 0.1;
+		recoil = "M240Recoil";
+		recoilProne = "M240Recoil";
+		sounds[] = {"StandardSound"};
+			class BaseSoundModeType
+			{
+			closure1[] = {"A3\Sounds_F\arsenal\weapons\UGL\Closure_UGL",1,1,10};
+			soundClosure[] = {"closure1",1};		
+			};
+			class StandardSound : BaseSoundModeType
+			{
+			begin1[] = {"A3\Sounds_F\arsenal\weapons\UGL\UGL_01",0.707946,1,200};
+			begin2[] = {"A3\Sounds_F\arsenal\weapons\UGL\UGL_02",0.707946,1,200};
+			soundBegin[] = {"begin1",0.5,"begin2",0.5};		
+			soundSetShot[] = {"UGL_shot_SoundSet","UGL_Tail_SoundSet","UGL_InteriorTail_SoundSet"};
+			};
+		};
+	};
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
 	mass = 98.5466;
@@ -1548,20 +1794,20 @@ class arifle_SPAR_01_GL_base_F : arifle_SPAR_01_base_F
 	};
 };
 
-// HK416A5 14.5''Base Class 
+// HK416 A5 14.5''Base Class 
 class arifle_SPAR_02_base_F : Rifle_Base_F
 {
 discreteDistance[] = {300};
-maxZeroing = 1800;
+maxZeroing = 1200;
 	class FullAuto : Mode_FullAuto
 	{
 	dispersion = 0.0002479044;
-	reloadTime = 0.06857;
+	reloadTime = "60/875";
 	};
 	class Single : Mode_SemiAuto
 	{
 	dispersion = 0.0002479044;
-	reloadTime = 0.06857;
+	reloadTime = "60/875";
 	};
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
@@ -1598,7 +1844,7 @@ modes[] = {"Single","Burst","FullAuto","single_medium_optics1","single_far_optic
 	class FullAuto : Mode_FullAuto
 	{
 	dispersion = 0.0011635520;
-	reloadTime = 0.07272;
+	reloadTime = "60/825";
 	};
 	class fullauto_medium;
 	class Burst : FullAuto // If I declare Burst using Mode_Burst I am 99% certain Sound mods will not change the Burst sounds. Update: Yes.
@@ -1618,19 +1864,51 @@ modes[] = {"Single","Burst","FullAuto","single_medium_optics1","single_far_optic
 	minRangeProbab = 0.3;
 	recoil = "recoil_auto_primary_3outof10";
 	recoilProne = "recoil_auto_primary_prone_3outof10";
-	reloadTime = 0.06;	
+	reloadTime = "60/1000";	
 	soundLoop[] = {"sound",1};
 	textureType = "burst";
 	};
 	class Single : Mode_SemiAuto
 	{
 	dispersion = 0.0011635520;
-	reloadTime = 0.07272;
+	reloadTime = "60/825";
 	};
 	class single_medium_optics1;
+	class EGLM : UGL_F
+	{
+	descriptionShort = "Underbarrel Grenade Launcher<br />Calibre: 40x46mm LV";
+	discreteDistanceInitIndex = 0; 
+	displayName = "ML40 mk1";
+	initSpeed = 75;
+		class Single : Mode_SemiAuto
+		{
+		dispersion = 0.000581776;
+		maxRange = 400;
+		maxRangeProbab = 0.05;
+		midRange = 200;
+		midRangeProbab = 0.7;
+		minRange = 30;
+		minRangeProbab = 0.1;
+		recoil = "M240Recoil";
+		recoilProne = "M240Recoil";
+		sounds[] = {"StandardSound"};
+			class BaseSoundModeType
+			{
+			closure1[] = {"A3\Sounds_F\arsenal\weapons\UGL\Closure_UGL",1,1,10};
+			soundClosure[] = {"closure1",1};		
+			};
+			class StandardSound : BaseSoundModeType
+			{
+			begin1[] = {"A3\Sounds_F\arsenal\weapons\UGL\UGL_01",0.707946,1,200};
+			begin2[] = {"A3\Sounds_F\arsenal\weapons\UGL\UGL_02",0.707946,1,200};
+			soundBegin[] = {"begin1",0.5,"begin2",0.5};		
+			soundSetShot[] = {"UGL_shot_SoundSet","UGL_Tail_SoundSet","UGL_InteriorTail_SoundSet"};
+			};
+		};
+	};
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
-	mass = 78.0656;
+	mass = 75.7287;
 		class CowsSlot : asdg_OpticRail1913 
 		{
 		iconPosition[] = {0.484,0.3};
@@ -1654,7 +1932,7 @@ class arifle_Katiba_F : arifle_Katiba_Base_F
 {
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
-	mass = 78.0656;
+	mass = 75.7287;
 		class CowsSlot : asdg_OpticRail1913 
 		{
 		iconPosition[] = {0.484,0.3};
@@ -1673,7 +1951,7 @@ class arifle_Katiba_GL_F : arifle_Katiba_Base_F
 {
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
-	mass = 100.0017;
+	mass = 97.6647;
 		class CowsSlot : asdg_OpticRail1913 
 		{
 		iconPosition[] = {0.484,0.3};
@@ -1693,42 +1971,42 @@ class arifle_Katiba_C_F : arifle_Katiba_Base_F
 maxZeroing = 1800;
 	class FullAuto : FullAuto
 	{
-	dispersion = 0.0012432473;
-	reloadTime = 0.075;
+	dispersion = 0.0012905773;
+	reloadTime = "60/800";
 	};
 	class fullauto_medium : fullauto_medium
 	{
-	dispersion = 0.0012432473;
-	reloadTime = 0.075;
+	dispersion = 0.0012905773;
+	reloadTime = "60/800";
 	};
 	class Burst : Burst
 	{
-	dispersion = 0.0012432473;
-	reloadTime = 0.06;
+	dispersion = 0.0012905773;
+	reloadTime = "60/1000";
 	};
 	class Single : Single
 	{
-	dispersion = 0.0012432473;
-	reloadTime = 0.075;
+	dispersion = 0.0012905773;
+	reloadTime = "60/800";
 	};
 	class single_medium_optics1 : single_medium_optics1
 	{
-	dispersion = 0.0012432473;
-	reloadTime = 0.075;
+	dispersion = 0.0012905773;
+	reloadTime = "60/800";
 	};
 	class single_medium_optics2 : single_medium_optics1
 	{
-	dispersion = 0.0012432473;
-	reloadTime = 0.075;
+	dispersion = 0.0012905773;
+	reloadTime = "60/800";
 	};
 	class single_far_optics2 : single_medium_optics1
 	{
-	dispersion = 0.0012432473;	
-	reloadTime = 0.075;
+	dispersion = 0.0012905773;	
+	reloadTime = "60/800";
 	};
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
-	mass = 73.0614;
+	mass = 71.7287;
 		class CowsSlot : asdg_OpticRail1913 
 		{
 		iconPosition[] = {0.49,0.3};
@@ -1755,7 +2033,7 @@ maxZeroing = 3600;
 	class Single : Mode_SemiAuto
 	{
 	dispersion = 0.0000916838;
-	reloadTime = 1.8;
+	reloadTime = "60/33.3333";
 	sounds[] = {"StandardSound","SilencedSound"};
 		class BaseSoundModeType;
 		class SilencedSound : BaseSoundModeType
@@ -1821,17 +2099,17 @@ maxZeroing = 2400;
 	{
 	autoFire = 0;	
 	dispersion = 0.0001454440;
-	reloadTime = 0.1;
+	reloadTime = "60/600";
 	showToPlayer = 0;
 	};
 	class Single : Mode_SemiAuto
 	{
 	dispersion = 0.0001454440;
-	reloadTime = 0.1;
+	reloadTime = "60/600";
 	};
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
-	mass = 108.0265;
+	mass = 114.4741;
 		class CowsSlot : asdg_OpticRail1913_short 
 		{
 		iconPosition[] = {0.565,0.36};
@@ -1874,11 +2152,11 @@ class DMR_06_hunter_base_F : DMR_06_base_F
 	class Single : Single
 	{
 	dispersion = 0.0001454440;
-	reloadTime = 0.1;
+	reloadTime = "60/600";
 	};
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
-	mass = 112.6562;
+	mass = 120.4741;
 		class CowsSlot : asdg_OpticRail1913_short 
 		{
 		iconPosition[] = {0.558,0.345};
@@ -1920,17 +2198,17 @@ class LMG_03_base_F : Rifle_Long_Base_F
 {
 discreteDistance[] = {300,400,500,600,700,800,900,1000};
 discreteDistanceInitIndex = 0;
-maxZeroing = 1800;
+maxZeroing = 2000;
 modes[] = {"FullAutoSlow","FullAutoFast","close","short","medium","far_optic1","far_optic2"};
 	class FullAutoSlow : Mode_FullAuto
 	{
 	dispersion = 0.0011613293;
-	reloadTime = 0.07058;
+	reloadTime = "60/850";
 	};
 	class FullAutoFast : FullAutoSlow
 	{
 	dispersion = 0.0011613293;
-	reloadTime = 0.07058;
+	reloadTime = "60/850";
 	showToPlayer = 0;
 	};
 	class WeaponSlotsInfo : WeaponSlotsInfo
@@ -1986,13 +2264,13 @@ class LMG_03_Semi_F : LMG_03_F
 	{
 	dispersion = 0.0009697039;	
 	autoFire = 0;
-	reloadTime = 0.1;
+	reloadTime = "60/600";
 	};
 	class FullAutoSlow : FullAutoSlow
 	{
 	dispersion = 0.0009697039;	
 	autoFire = 0;
-	reloadTime = 0.1;
+	reloadTime = "60/600";
 	textureType = "semi";
 	};
 	class medium : FullAutoSlow
@@ -2000,7 +2278,7 @@ class LMG_03_Semi_F : LMG_03_F
 	dispersion = 0.0009697039;	
 	autoFire = 0;
 	burst = 1;
-	reloadTime = 0.1;
+	reloadTime = "60/600";
 	showToPlayer = 0;
 	};
 	class close : FullAutoFast
@@ -2008,21 +2286,21 @@ class LMG_03_Semi_F : LMG_03_F
 	dispersion = 0.0009697039;
 	autoFire = 0;
 	burst = 1;
-	reloadTime = 0.1;
+	reloadTime = "60/600";
 	};
 	class short : close
 	{
 	dispersion = 0.0009697039;
 	autoFire = 0;
 	burst = 1;
-	reloadTime = 0.1;
+	reloadTime = "60/600";
 	};
 	class far_optic1 : medium
 	{
 	dispersion = 0.0009697039;
 	autoFire = 0;
 	burst = 1;
-	reloadTime = 0.1;
+	reloadTime = "60/600";
 	showToPlayer = 0;
 	};
 	class far_optic2 : far_optic1
@@ -2030,7 +2308,7 @@ class LMG_03_Semi_F : LMG_03_F
 	dispersion = 0.0009697039;
 	autoFire = 0;
 	burst = 1;
-	reloadTime = 0.1;
+	reloadTime = "60/600";
 	showToPlayer = 0;
 	};
 	class WeaponSlotsInfo : WeaponSlotsInfo
@@ -2050,7 +2328,7 @@ modes[] = {"FullAutoFast","Burst","manual","close","short","medium","far_optic1"
 	{
 	dispersion = 0.0009914264;
 	displayName = "FullSlow";
-	reloadTime = 0.09375;
+	reloadTime = "60/640";
 	textureType = "burst";
 	};
 	class Burst : Mode_Burst
@@ -2064,7 +2342,7 @@ modes[] = {"FullAutoFast","Burst","manual","close","short","medium","far_optic1"
 	maxRange = 80;
 	midRange = 30;
 	minRangeProbab = 0.2;
-	reloadTime = 0.08333;
+	reloadTime = "60/720";
 	soundLoop[] = {};
 	textureType = "fullAuto";
 	};
@@ -2072,7 +2350,7 @@ modes[] = {"FullAutoFast","Burst","manual","close","short","medium","far_optic1"
 	{
 	dispersion = 0.0009914264;
 	displayName = "FullFast";
-	reloadTime = 0.075;
+	reloadTime = "60/800";
 	textureType = "fastAuto";
 	};
 	class WeaponSlotsInfo : WeaponSlotsInfo
@@ -2139,12 +2417,12 @@ modes[] = {"Single","FullAuto","single_close_optics1","single_medium_optics1","s
 	class FullAuto : Mode_FullAuto
 	{
 	dispersion = 0.000218166;
-	reloadTime = 0.08275;
+	reloadTime = "60/725";
 	};
 	class Single : Mode_SemiAuto
 	{
 	dispersion = 0.000218166;
-	reloadTime = 0.08275;
+	reloadTime = "60/725";
 	};
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
@@ -2203,30 +2481,30 @@ class srifle_M1A_ACLS_F : srifle_EBR_F
 {
 	class FullAuto : FullAuto
 	{
-	reloadTime = 0.1;
+	reloadTime = "60/600";
 	showToPlayer = 0;
 	};
 	class fullauto_medium : FullAuto
 	{
-	reloadTime = 0.1;
+	reloadTime = "60/600";
 	};
 	class Single : Single
 	{
-	reloadTime = 0.1;
+	reloadTime = "60/600";
 	};
 	class single_close_optics1 : Single
 	{
-	reloadTime = 0.1;
+	reloadTime = "60/600";
 	showToPlayer = 0;
 	};
 	class single_medium_optics1 : single_close_optics1
 	{
-	reloadTime = 0.1;
+	reloadTime = "60/600";
 	showToPlayer = 0;
 	};
 	class single_far_optics1 : single_medium_optics1
 	{
-	reloadTime = 0.1;
+	reloadTime = "60/600";
 	showToPlayer = 0;
 	};
 };
@@ -2237,11 +2515,11 @@ class DMR_03_base_F : Rifle_Long_Base_F
 discreteDistance[] = {300};
 	class FullAuto : Mode_FullAuto
 	{
-	reloadTime = 0.09230;
+	reloadTime = "60/650";
 	};
 	class Single : Mode_SemiAuto
 	{
-	reloadTime = 0.09230;
+	reloadTime = "60/650";
 	};	
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
@@ -2301,12 +2579,12 @@ maxZeroing = 600;
 	class FullAuto : Mode_FullAuto
 	{
 	dispersion = 0.0015156738;
-	reloadTime = 0.06666;
+	reloadTime = "60/900";
 	};
 	class Single : Mode_SemiAuto
 	{
 	dispersion = 0.0015156738;
-	reloadTime = 0.06666;
+	reloadTime = "60/900";
 	};
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
@@ -2335,31 +2613,31 @@ class arifle_MR223_01_base_F : arifle_SPAR_01_base_F
 	class FullAuto : FullAuto
 	{
 	autoFire = 0;
-	reloadTime = 0.1;
+	reloadTime = "60/600";
 	showToPlayer = 0;
 	};
 	class fullauto_medium : FullAuto
 	{
 	autoFire = 0;
 	burst = 1;
-	reloadTime = 0.1;
+	reloadTime = "60/600";
 	};
 	class Single : Single
 	{
-	reloadTime = 0.1;
+	reloadTime = "60/600";
 	};
 	class single_medium_optics1 : Single
 	{
-	reloadTime = 0.1;
+	reloadTime = "60/600";
 	showToPlayer = 0;
 	};
 	class single_medium_optics2 : single_medium_optics1
 	{
-	reloadTime = 0.1;
+	reloadTime = "60/600";
 	};
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
-	mass = 77.3822;
+	mass = 79.3664;
 	};	
 };
 
@@ -2370,31 +2648,31 @@ modes[] = {"Single","FullAuto","single_medium_optics1","single_medium_optics2","
 	class FullAuto : FullAuto
 	{
 	autoFire = 0;
-	reloadTime = 0.1;
+	reloadTime = "60/600";
 	showToPlayer = 0;
 	};
 	class fullauto_medium : FullAuto
 	{
 	autoFire = 0;
-	reloadTime = 0.1;
+	reloadTime = "60/600";
 	};
 	class Single : Single
 	{
-	reloadTime = 0.1;
+	reloadTime = "60/600";
 	};
 	class single_medium_optics1 : Single
 	{
-	reloadTime = 0.1;
+	reloadTime = "60/600";
 	showToPlayer = 0;
 	};
 	class single_medium_optics2 : single_medium_optics1
 	{
-	reloadTime = 0.1;
+	reloadTime = "60/600";
 	showToPlayer = 0;
 	};
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
-	mass = 82.3206;
+	mass = 81.571;
 		class CowsSlot : asdg_OpticRail1913 
 		{
 		iconPosition[] = {0.505,0.36};
@@ -2427,7 +2705,7 @@ maxZeroing = 2400;
 	{
 	dispersion = 0.0001886408;	
 	autoFire = 0;
-	reloadTime = 0.1;
+	reloadTime = "60/600";
 	showToPlayer = 0;
 	};
 	class fullauto_medium : FullAuto
@@ -2438,11 +2716,11 @@ maxZeroing = 2400;
 	class Single : Mode_SemiAuto
 	{
 	dispersion = 0.0001886408;
-	reloadTime = 0.1;
+	reloadTime = "60/600";
 	};
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
-	mass = 112.2153;
+	mass = 112.4358;
 		class CowsSlot : asdg_OpticRail1913_long
 		{
 		iconPosition[] = {0.575,0.345};
@@ -2528,7 +2806,7 @@ modes[] = {"Single","Burst","FullAuto","single_medium_optics1","single_medium_op
 	class FullAuto : Mode_FullAuto
 	{
 	dispersion = 0.0007380455;	
-	reloadTime = 0.075;
+	reloadTime = "60/800";
 	};
 	class Burst : FullAuto
 	{
@@ -2547,19 +2825,19 @@ modes[] = {"Single","Burst","FullAuto","single_medium_optics1","single_medium_op
 	minRangeProbab = 0.3;
 	recoil = "recoil_auto_primary_3outof10";
 	recoilProne = "recoil_auto_primary_prone_3outof10";
-	reloadTime = 0.06;
+	reloadTime = "60/1000";
 	soundLoop[] = {"sound",1};
 	textureType = "burst";	
 	};
 	class Single : Mode_SemiAuto
 	{
 	dispersion = 0.0007380455;	
-	reloadTime = 0.075;
+	reloadTime = "60/800";
 	};
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{	
 	mass = 82.6733;
-		class CowsSlot : CowsSlot_MSBS65
+		class CowsSlot : asdg_OpticRail1913_long
 		{
 		iconPosition[] = {0.375,0.26};
 		iconScale = 0.18;
@@ -2580,6 +2858,30 @@ modes[] = {"Single","Burst","FullAuto","single_medium_optics1","single_medium_op
 // MSBS Grot B16 GP Base Class
 class arifle_MSBS65_GL_base_F : arifle_MSBS65_base_F
 {
+	class UGL : UGL_F
+	{
+	descriptionShort = "Underbarrel Grenade Launcher<br />Calibre: 40x46mm LV";
+	discreteDistanceInitIndex = 0; 
+	displayName = "GP";
+	initSpeed = 75;
+		class Single : Mode_SemiAuto
+		{
+		dispersion = 0.000581776;
+		maxRange = 400; // Used Default Mode_SemiAuto Range Config. Huh.
+		maxRangeProbab = 0.05;
+		midRange = 200;
+		midRangeProbab = 0.7;
+		minRange = 30;
+		minRangeProbab = 0.1;
+		recoil = "M240Recoil";
+		recoilProne = "M240Recoil";
+		sounds[] = {"StandardSound"};
+			class StandardSound
+			{
+			soundSetShot[] = {"Msbs65_01_Ugl_Shot_SoundSet","Msbs65_01_Ugl_Tail_SoundSet","Msbs65_01_Ugl_InteriorTail_SoundSet"};		
+			};
+		};
+	};
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
 	mass = 113.5381;
@@ -2589,10 +2891,21 @@ class arifle_MSBS65_GL_base_F : arifle_MSBS65_base_F
 // MSBS Grot B16 SIX12 Base Class
 class arifle_MSBS65_UBS_base_F :  arifle_MSBS65_base_F
 {
+	class UBS_F : Rifle_Base_F
+	{
+	descriptionShort = "Underbarrel Shotgun<br />Gauge: 12";
+	displayName = "SIX12 UBS";
+	magazineWell[] = {"UBS_12GA","HunterShotgun_01_12GA","CBA_12g_6rnds","CBA_12g_5rnds","CBA_12g_4rnds","CBA_12g_3rnds","CBA_12g_2rnds","CBA_12g_1rnd"};
+		class Single : Mode_SemiAuto // For some reason I needn't redefine the subclasses here.
+		{
+		dispersion = 0.00290888; // Using Dispersion of the Sawn-Off (10 MOA)
+		reloadTime = "60/600"; // Increasing to my Semi Auto Default
+		};
+	};
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
 	mass = 127.6733;
-		class CowsSlot : CowsSlot_MSBS65
+		class CowsSlot : asdg_OpticRail1913_long
 		{
 		iconPosition[] = {0.455,0.295};
 		iconScale = 0.165;
@@ -2607,13 +2920,6 @@ class arifle_MSBS65_UBS_base_F :  arifle_MSBS65_base_F
 		iconPosition[] = {0.3,0.415};
 		iconScale = 0.2;
 		};
-		class UBS_F : Rifle_Base_F
-		{
-			class Single : Mode_SemiAuto
-			{
-			reloadTime = 0.1;
-			};
-		};
 	};	
 };
 
@@ -2624,17 +2930,17 @@ maxZeroing = 2400;
 	class FullAuto : FullAuto
 	{
 	dispersion = 0.0002767670;		
-	reloadTime = 0.07058;
+	reloadTime = "60/850";
 	};
 	class Single : Single
 	{
 	dispersion = 0.0002767670;
-	reloadTime = 0.07058;
+	reloadTime = "60/850";
 	};
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
 	mass = 93.6964;	
-		class CowsSlot : CowsSlot_MSBS65
+		class CowsSlot : asdg_OpticRail1913_long
 		{
 		iconPosition[] = {0.47,0.3};
 		iconScale = 0.16;
@@ -2662,12 +2968,12 @@ class LMG_Zafir_F : Rifle_Long_Base_F
 {
 discreteDistance[] = {300,400,500,600,700,800,900,1000};	
 discreteDistanceInitIndex = 0;
-maxZeroing = 1800;
+maxZeroing = 3000;
 modes[] = {"FullAuto","FullAutoFast","Single","close","short","medium","far_optic1","far_optic2"};
 	class FullAuto : Mode_FullAuto
 	{
 	dispersion = 0.0008215235;	
-	reloadTime = 0.1;
+	reloadTime = "60/600";
 	sounds[] = {"StandardSound","SilencedSound"};
 		class BaseSoundModeType;
 		class SilencedSound : BaseSoundModeType
@@ -2678,13 +2984,13 @@ modes[] = {"FullAuto","FullAutoFast","Single","close","short","medium","far_opti
 	class FullAutoFast : FullAuto
 	{
 	dispersion = 0.0008215235;
-	reloadTime = 0.08;
+	reloadTime = "60/750";
 	textureType = "fastAuto";
 	};
 	class Single : Mode_SemiAuto
 	{
 	dispersion = 0.0008215235;
-	reloadTime = 0.1;
+	reloadTime = "60/600";
 	sounds[] = {"StandardSound","SilencedSound"};
 		class BaseSoundModeType;
 		class SilencedSound : BaseSoundModeType
@@ -2717,16 +3023,16 @@ modes[] = {"FullAuto","FullAutoFast","Single","close","short","medium","far_opti
 class SMG_03_TR_BASE : Rifle_Base_F
 {
 discreteDistance[] = {100};
-maxZeroing = 600;
+maxZeroing = 800;
 	class FullAuto : Mode_FullAuto
 	{
 	dispersion = 0.0013752584;
-	reloadTime = 0.06666;
+	reloadTime = "60/900";
 	};
 	class Single : Mode_SemiAuto
 	{
 	dispersion = 0.0013752584;
-	reloadTime = 0.06666;
+	reloadTime = "60/900";
 	};
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
@@ -2752,18 +3058,18 @@ maxZeroing = 600;
 // PS90 Base Class
 class SMG_03_TR_BASE_SEMI : SMG_03_TR_BASE
 {
-maxZeroing = 800;
+maxZeroing = 1200;
 	class FullAuto : FullAuto
 	{
 	dispersion = 0.0010187099;
 	autoFire = 0;	
-	reloadTime = 0.1;
+	reloadTime = "60/600";
 	showToPlayer = 0;
 	};
 	class Single : Single
 	{
 	dispersion = 0.0010187099;
-	reloadTime = 0.1;
+	reloadTime = "60/600";
 	};	
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{	
@@ -2789,16 +3095,16 @@ maxZeroing = 800;
 // P90 Base Class
 class SMG_03C_BASE : SMG_03_TR_BASE
 {
-maxZeroing = 600;	
+maxZeroing = 800;	
 	class FullAuto : FullAuto
 	{
 	dispersion = 0.0013752584;	
-	reloadTime = 0.06666;
+	reloadTime = "60/900";
 	};
 	class Single : Single
 	{
 	dispersion = 0.0013752584;	
-	reloadTime = 0.06666;
+	reloadTime = "60/900";
 	};
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
@@ -2929,7 +3235,7 @@ maxZeroing = 2400;
 	class Single : Mode_SemiAuto
 	{
 	dispersion = 0.0004363320;
-	reloadTime = 0.1;
+	reloadTime = "60/600";
 	};
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
@@ -2972,16 +3278,16 @@ maxZeroing = 1800;
 	class FullAuto : Mode_FullAuto
 	{
 	dispersion = 0.0007909739;
-	reloadTime = 0.09230;
+	reloadTime = "60/650";
 	};
 	class Single : Mode_SemiAuto
 	{
 	dispersion = 0.0007909739;
-	reloadTime = 0.09230;
+	reloadTime = "60/650";
 	};
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
-	mass = 76.05948;	
+	mass = 71.31954;
 		class CowsSlot : asdg_OpticRail1913
 		{
 		iconPosition[] = {0.4,0.25};
@@ -3003,9 +3309,43 @@ maxZeroing = 1800;
 // QBZ-95-1 GL Base Class
 class arifle_CTAR_GL_base_F : arifle_CTAR_base_F
 {
+	class EGLM : UGL_F
+	{
+	descriptionShort = "Underbarrel Grenade Launcher<br />Calibre: 35mmCL";
+	discreteDistanceInitIndex = 0; 		
+	displayName = "QLG-10A";
+	initSpeed = 78;
+	magazines[] = {"1Rnd_QGL10A_DFS10_Grenade"};
+	magazineWell[] = {"CBA_35mm_Type10"};
+		class Single : Mode_SemiAuto
+		{
+		dispersion = 0.000581776;
+		maxRange = 400;
+		maxRangeProbab = 0.05;
+		midRange = 200;
+		midRangeProbab = 0.7;
+		minRange = 30;
+		minRangeProbab = 0.1;
+		recoil = "M240Recoil";
+		recoilProne = "M240Recoil";
+		sounds[] = {"StandardSound"};
+			class BaseSoundModeType
+			{
+			closure1[] = {"A3\Sounds_F\arsenal\weapons\UGL\Closure_UGL",1,1,10};
+			soundClosure[] = {"closure1",1};		
+			};
+			class StandardSound : BaseSoundModeType
+			{
+			begin1[] = {"A3\Sounds_F\arsenal\weapons\UGL\UGL_01",0.707946,1,200};
+			begin2[] = {"A3\Sounds_F\arsenal\weapons\UGL\UGL_02",0.707946,1,200};
+			soundBegin[] = {"begin1",0.5,"begin2",0.5};		
+			soundSetShot[] = {"UGL_shot_SoundSet","UGL_Tail_SoundSet","UGL_InteriorTail_SoundSet"};
+			};
+		};
+	};
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
-	mass = 108.0265;
+	mass = 103.2866;
 	};
 };
 
@@ -3014,7 +3354,7 @@ class arifle_QBZ97_base_F : arifle_CTAR_base_F
 {
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
-	mass = 76.05948;	
+	mass = 71.31954;	
 		class MuzzleSlot : asdg_MuzzleSlot_556
 		{			
 		iconPosition[] = {-0.005,0.405};
@@ -3042,20 +3382,20 @@ class arifle_CTARS_base_F : Rifle_Base_F
 {
 discreteDistance[] = {100,200,300,400,500,600};		
 discreteDistanceInitIndex = 2;
-maxZeroing = 1800;
+maxZeroing = 2000;
 	class FullAuto : Mode_FullAuto
 	{
 	dispersion = 0.0006591449;
-	reloadTime = 0.08888;
+	reloadTime = "60/675";
 	};
 	class Single : Mode_SemiAuto
 	{
 	dispersion = 0.0006591449;
-	reloadTime = 0.08888;
+	reloadTime = "60/675";
 	};
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
-	mass = 88.1849;
+	mass = 87.0825;
 		class CowsSlot : asdg_OpticRail1913
 		{
 		iconPosition[] = {0.46,0.285};
@@ -3079,7 +3419,7 @@ class arifle_QJB97_base_F : arifle_CTARS_base_F
 {
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
-	mass = 88.1849;
+	mass = 87.0825;
 		class MuzzleSlot : asdg_MuzzleSlot_556
 		{			
 		iconPosition[] = {-0.02,0.41};
@@ -3094,29 +3434,29 @@ class arifle_T97NSRA_base_F : arifle_QBZ97_base_F
 	class FullAuto : FullAuto
 	{
 	autoFire = 0;	
-	reloadTime = 0.1;
+	reloadTime = "60/600";
 	showToPlayer = 0;
 	};
 	class fullauto_medium : FullAuto
 	{
-	reloadTime = 0.1;
+	reloadTime = "60/600";
 	};
 	class Single : Single
 	{
-	reloadTime = 0.1;
+	reloadTime = "60/600";
 	};
 	class single_medium_optics1 : Single
 	{
-	reloadTime = 0.1;
+	reloadTime = "60/600";
 	showToPlayer = 0;
 	};
 	class single_far_optics2 : single_medium_optics1
 	{
-	reloadTime = 0.1;
+	reloadTime = "60/600";
 	};
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
-	mass = 76.05948;	
+	mass = 71.31954;
 		class MuzzleSlot : asdg_MuzzleSlot_556
 		{			
 		iconPosition[] = {-0.005,0.405};
@@ -3146,20 +3486,20 @@ maxZeroing = 2400;
 	{
 	dispersion = 0.0005817760;
 	burst = 1;	
-	reloadTime = 0.1;
+	reloadTime = "60/600";
 	showToPlayer = 0;
 	};	
 	class FullAuto : FullAuto
 	{
 	dispersion = 0.0005817760;
 	autoFire = 0;	
-	reloadTime = 0.1;
+	reloadTime = "60/600";
 	showToPlayer = 0;
 	};
 	class Single : Single
 	{
 	dispersion = 0.0005817760;
-	reloadTime = 0.1;
+	reloadTime = "60/600";
 	};	
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
@@ -3180,11 +3520,11 @@ maxZeroing = 3000;
 	class manual : Mode_FullAuto
 	{
 	dispersion = 0.0008726640;
-	reloadTime = 0.12;
+	reloadTime = "60/500";
 	};
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
-	mass = 238.0992;
+	mass = 240;
 		class CowsSlot : asdg_OpticRail1913_short_MG
 		{
 		iconPosition[] = {0.62,0.32};
@@ -3264,13 +3604,13 @@ discreteDistanceInitIndex = 0;
 // RPK-16 Base Class
 class arifle_RPK16_base_F : arifle_RPK12_base_F
 {
-maxZeroing = 1800;
+maxZeroing = 2000;
 	class Burst : Burst
 	{
 	dispersion = 0.0005754762;
 	autoFire = 1;
 	burst = 1;
-	reloadTime = 0.08571;
+	reloadTime = "60/700";
 	showToPlayer = 0;
 	};
 	class Burst_medium : Burst
@@ -3278,32 +3618,32 @@ maxZeroing = 1800;
 	dispersion = 0.0005754762;
 	autoFire = 1;
 	burst = 1;
-	reloadTime = 0.08571;
+	reloadTime = "60/700";
 	};
 	class FullAuto : FullAuto
 	{
 	dispersion = 0.0005754762;
-	reloadTime = 0.08571;
+	reloadTime = "60/700";
 	};
 	class Single : Single
 	{
 	dispersion = 0.0005754762;
-	reloadTime = 0.08571;
+	reloadTime = "60/700";
 	};	
 	class single_medium_optics1 : Single
 	{
 	dispersion = 0.0005754762;
-	reloadTime = 0.08571;
+	reloadTime = "60/700";
 	showToPlayer = 0;
 	};
 	class single_medium_optics2 : single_medium_optics1
 	{
 	dispersion = 0.0005754762;
-	reloadTime = 0.08571;
+	reloadTime = "60/700";
 	};
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
-	mass = 99.2080;
+	mass = 132.2774;
 		class CowsSlot : asdg_OpticRail1913
 		{
 		iconPosition[] = {0.565,0.32};
@@ -3379,21 +3719,21 @@ maxZeroing = 600;
 	class Burst : Burst
 	{
 	dispersion = 0.0012502349;	
-	reloadTime = 0.05217;
+	reloadTime = "60/1150";
 	};
 	class FullAuto : FullAuto
 	{
 	dispersion = 0.0012502349;	
-	reloadTime = 0.05217;
+	reloadTime = "60/1150";
 	};
 	class Single : Single
 	{
 	dispersion = 0.0012502349;	
-	reloadTime = 0.05217;
+	reloadTime = "60/1150";
 	};
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
-	mass = 57.3201;
+	mass = 56.2178;
 		class CowsSlot : asdg_OpticRail1913
 		{
 		iconPosition[] = {0.46,0.28};
@@ -3417,18 +3757,18 @@ class SMG_02_ParaB_Semi_F : SMG_02_ParaB_F
 	class Burst : Burst
 	{
 	burst = 1;
-	reloadTime = 0.1;
+	reloadTime = "60/600";
 	showToPlayer = 0;
 	};
 	class FullAuto : FullAuto
 	{
 	autoFire = 0;
-	reloadTime = 0.1;
+	reloadTime = "60/600";
 	showToPlayer = 0;
 	};
 	class Single : Single
 	{
-	reloadTime = 0.1;
+	reloadTime = "60/600";
 	};
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{	
@@ -3444,38 +3784,38 @@ maxZeroing = 2400;
 	{
 	dispersion = 0.0003490656;
 	autoFire = 0;
-	reloadTime = 0.1;
+	reloadTime = "60/600";
 	showToPlayer = 0;
 	};
 	class fullauto_medium : FullAuto
 	{
 	dispersion = 0.0003490656;
-	reloadTime = 0.1;
+	reloadTime = "60/600";
 	};	
 	class Single : Single
 	{
 	dispersion = 0.0003490656;
-	reloadTime = 0.1;
+	reloadTime = "60/600";
 	};	
 	class single_close_optics1 : Single
 	{
 	dispersion = 0.0003490656;
-	reloadTime = 0.1;
+	reloadTime = "60/600";
 	showToPlayer = 0;
 	};
 	class single_medium_optics1 : single_close_optics1
 	{
 	dispersion = 0.0003490656;	
-	reloadTime = 0.1;
+	reloadTime = "60/600";
 	};
 	class single_far_optics1 : single_medium_optics1
 	{
 	dispersion = 0.0003490656;	
-	reloadTime = 0.1;
+	reloadTime = "60/600";
 	};	
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
-	mass = 120;
+	mass = 95;
 		class MuzzleSlot : asdg_MuzzleSlot_556
 		{			
 		iconPosition[] = {0.037,0.44};
@@ -3495,16 +3835,16 @@ class SMG_05_ParaB_Semi_F : SMG_05_ParaB_F
 	class FullAuto : FullAuto
 	{
 	autoFire = 0;
-	reloadTime = 0.1;
+	reloadTime = "60/600";
 	showToPlayer = 0;
 	};
 	class Single : Single
 	{
-	reloadTime = 0.1;
+	reloadTime = "60/600";
 	};
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{	
-	mass = 49.6040;
+	mass = 45.1947;
 	};
 };
 
@@ -3512,16 +3852,16 @@ class SMG_05_ParaB_Semi_F : SMG_05_ParaB_F
 class LMG_Mk200_F : Rifle_Long_Base_F
 {
 discreteDistance[] = {300};
-maxZeroing = 1800;
+maxZeroing = 2000;
 	class manual : Mode_FullAuto
 	{
 	dispersion = 0.0009064750;	
-	reloadTime = 0.10434;
+	reloadTime = "60/575";
 	};
 	class Single : manual // Preventing ACE from enabling it
 	{
 	dispersion = 0.0009064750;		
-	reloadTime = 0.10434;
+	reloadTime = "60/575";
 	showToPlayer = 0;
 	};
 	class WeaponSlotsInfo : WeaponSlotsInfo
@@ -3559,7 +3899,7 @@ maxZeroing = 2400;
 	{
 	dispersion = 0.0005875937;
 	autoFire = 0;
-	reloadTime = 0.12;
+	reloadTime = "60/475";
 	showToPlayer = 0;
 	};
 	class fullauto_medium : FullAuto
@@ -3570,7 +3910,7 @@ maxZeroing = 2400;
 	class Single : Mode_SemiAuto
 	{
 	dispersion = 0.0005875937;	
-	reloadTime = 0.12;
+	reloadTime = "60/475";
 	};
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
@@ -3634,16 +3974,16 @@ maxZeroing = 1800;
 	class FullAuto : FullAuto
 	{
 	dispersion = 0.0006690424;	
-	reloadTime = 0.07058;	
+	reloadTime = "60/875";	
 	};
 	class Single : Single
 	{
 	dispersion = 0.0006690424;	
-	reloadTime = 0.07058;	
+	reloadTime = "60/875";	
 	};
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
-	mass = 72.0911;
+	mass = 79.3664;
 		class CowsSlot : asdg_OpticRail1913_short 
 		{
 		iconPosition[] = {0.44,0.255};
@@ -3668,7 +4008,7 @@ class arifle_TRG21_GL_F : arifle_TRG21_F
 maxZeroing = 1800;
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
-	mass = 101.6911;
+	mass = 108.9664;
 		class CowsSlot : asdg_OpticRail1913_short 
 		{
 		iconPosition[] = {0.44,0.255};
@@ -3694,35 +4034,35 @@ modes[] = {"Single","Burst","FullAuto","Burst_medium","single_medium_optics1","s
 	class FullAuto : FullAuto
 	{
 	autoFire = 0;
-	reloadTime = 0.1;
+	reloadTime = "60/600";
 	showToPlayer = 0;
 	};
 	class Burst : Burst
 	{
 	burst = 1;	
-	reloadTime = 0.1;
+	reloadTime = "60/600";
 	showToPlayer = 0;
 	};
 	class Burst_medium : Burst
 	{	
-	reloadTime = 0.1;
+	reloadTime = "60/600";
 	};
 	class Single : Single
 	{
-	reloadTime = 0.1;
+	reloadTime = "60/600";
 	};
 	class single_medium_optics1 : Single
 	{
-	reloadTime = 0.1;
+	reloadTime = "60/600";
 	showToPlayer = 0;
 	};
 	class single_medium_optics2 : single_medium_optics1
 	{
-	reloadTime = 0.1;
+	reloadTime = "60/600";
 	};
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
-	mass = 81.1301;
+	mass = 76.7208;
 	};
 };
 
@@ -3730,7 +4070,7 @@ class arifle_TR3_545_F : arifle_TR3_base_F
 {
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
-	mass = 83.3347;
+	mass = 79.0357;
 		class MuzzleSlot : asdg_MuzzleSlot_545R
 		{
 		iconPosition[] = {0.025,0.34};
@@ -3747,7 +4087,7 @@ class arifle_TR3_762_F : arifle_TR3_base_F
 discreteDistance[] = {300,100,200,300,400,500,600,700,800};	
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
-	mass = 83.3347;
+	mass = 78.4845;
 		class MuzzleSlot : asdg_MuzzleSlot_762
 		{
 		iconPosition[] = {0.025,0.34};
@@ -3764,19 +4104,21 @@ maxZeroing = 1800;
 	class FullAuto : Mode_FullAuto
 	{
 	dispersion = 0.0005817759;
-	reloadTime = 0.06666;
+	reloadTime = "60/900";
 	};
 	class Single : Mode_SemiAuto
 	{
 	dispersion = 0.0005817759;
-	reloadTime = 0.06666;
+	reloadTime = "60/900";
 	};
 	class Secondary : Rifle_Base_F
 	{
 	discreteDistance[] = {300};
+	displayName = "Integrated .50 BW";
+	magazineWell[] = {"Type115_50BW"};
 		class Single : Mode_SemiAuto
 		{
-		reloadTime = 0.17142;	
+		reloadTime = "60/375";	
 		};
 	};
 	class WeaponSlotsInfo : WeaponSlotsInfo
@@ -3813,17 +4155,17 @@ maxZeroing = 600;
 	class Burst : Mode_Burst
 	{
 	dispersion = 0.0012217296;
-	reloadTime = 0.05;
+	reloadTime = "60/1200";
 	};
 	class FullAuto : Mode_FullAuto
 	{
 	dispersion = 0.0012217296;
-	reloadTime = 0.05;
+	reloadTime = "60/1200";
 	};
 	class Single : Mode_SemiAuto
 	{
 	dispersion = 0.0012217296;
-	reloadTime = 0.05;
+	reloadTime = "60/1200";
 	};
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
@@ -3886,12 +4228,12 @@ maxZeroing = 2400;
 	class FullAuto : Mode_FullAuto
 	{
 	dispersion = 0.0003025235;
-	reloadTime = 0.09230;
+	reloadTime = "60/650";
 	};
 	class Single : Mode_SemiAuto
 	{
 	dispersion = 0.0003025235;
-	reloadTime = 0.09230;
+	reloadTime = "60/650";
 	};
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
@@ -3953,7 +4295,7 @@ modes[] = {"Single","FullAuto","FullAuto_medium"};
 	{
 	dispersion = 0.0007954272;
 	autoFire = 0;
-	reloadTime = 0.1;
+	reloadTime = "60/600";
 	showToPlayer = 0;
 	};
 	class FullAuto_medium : FullAuto_medium
@@ -3961,12 +4303,12 @@ modes[] = {"Single","FullAuto","FullAuto_medium"};
 	dispersion = 0.0007954272;	
 	autoFire = 0;
 	burst = 1;
-	reloadTime = 0.1;
+	reloadTime = "60/600";
 	};
 	class Single : Single
 	{
 	dispersion = 0.0007954272;	
-	reloadTime = 0.1;	
+	reloadTime = "60/600";	
 	};
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
@@ -4034,7 +4376,7 @@ maxZeroing = 100;
 	class Single : Mode_SemiAuto
 	{
 	dispersion = 0.0021115079;
-	reloadTime = 0.1;
+	reloadTime = "60/600";
 	};
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
@@ -4059,7 +4401,7 @@ maxZeroing = 100;
 	class Single : Mode_SemiAuto
 	{
 	dispersion = 0.0218166000;
-	reloadTime = 0.1;
+	reloadTime = "60/600";
 	};
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
@@ -4074,7 +4416,7 @@ maxZeroing = 100;
 	class Single : Mode_SemiAuto
 	{
 	dispersion = 0.0027782999;
-	reloadTime = 0.1;
+	reloadTime = "60/600";
 	};
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
@@ -4104,7 +4446,7 @@ maxZeroing = 100;
 	class Single : Mode_SemiAuto
 	{
 	dispersion = 0.0025004699;
-	reloadTime = 0.1;
+	reloadTime = "60/600";
 	};
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
@@ -4132,7 +4474,7 @@ maxZeroing = 100;
 	class Single : Single
 	{
 	dispersion = 0.0099224996;
-	reloadTime = 0.1;
+	reloadTime = "60/600";
 	};
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
@@ -4156,7 +4498,7 @@ maxZeroing = 100;
 	class Single : Mode_SemiAuto
 	{
 	dispersion = 0.0043633200;
-	reloadTime = 0.1;
+	reloadTime = "60/600";
 	};	
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
@@ -4176,7 +4518,7 @@ maxZeroing = 100;
 	class Single : Mode_SemiAuto
 	{
 	dispersion = 0.0018336779;
-	reloadTime = 0.1;
+	reloadTime = "60/600";
 	};
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
@@ -4224,11 +4566,11 @@ maxZeroing = 100;
 	class Single : Mode_SemiAuto
 	{
 	dispersion = 0.0074087997;
-	reloadTime = 0.1;
+	reloadTime = "60/600";
 	};
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
-	mass = 16.0937;	
+	mass = 16.7551;	
 	};
 };
 
@@ -4260,7 +4602,7 @@ class launch_Vorona_base_F : Launcher_Base_F
 {
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
-	mass = 224.8715;	
+	mass = 352.7396;	
 	};
 };
 
@@ -4269,7 +4611,7 @@ class launch_MRAWS_base_F : Launcher_Base_F
 {
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
-	mass = 149.9914;
+	mass = 185.6292;
 		class PointerSlot : asdg_FrontSideRail
 		{
 		iconPosition[] = {0.113,0.485};
@@ -4287,7 +4629,7 @@ class launch_MRAWS_olive_rail_F : launch_MRAWS_olive_F
 {
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
-	mass = 145.5051;
+	mass = 149.4734;
 	};
 };
 
@@ -4296,7 +4638,7 @@ class launch_NLAW_F : Launcher_Base_F
 {
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
-	mass = 275.5778;	
+	mass = 0; // All Mass is in the Ammo for Vanilla
 	};
 };
 
@@ -4305,7 +4647,7 @@ class launch_RPG32_F : Launcher_Base_F
 {
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
-	mass = 66.13868;	
+	mass = 93.69646;	
 	};
 };
 
@@ -4313,10 +4655,10 @@ class launch_RPG32_F : Launcher_Base_F
 class launch_RPG7_F : Launcher_Base_F
 {
 maxZeroing = 500;
-	// Optic is like that of a Grenade Launcher (Which it technically is) meaning I can't just plop different Zeroings into the config as its bound to the actual view angle.
+	// Optic is like that of a Grenade Launcher (Which it technically is) meaning I can't just plop different Zeroings into the config as it is bound to the actual view angle configured in the model.
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
-	mass = 145;
+	mass = 138.8912;
 		class CowsSlot : CowsSlot_Dovetail_RPG 
 		{
 		iconPosition[] = {0.51,0.44};
@@ -4328,8 +4670,17 @@ maxZeroing = 500;
 // Titan MPRL Base class
 class launch_Titan_base : Launcher_Base_F
 {
+modes[] = {"Single"};
+	class Single : Mode_SemiAuto
+	{
+	aiRateOfFireDistance = 4800;
+	maxRange = 4800;
+	midRange = 2400;
+	minRange = 161;
+	};
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
+	mass = 88.1849;
 		class PointerSlot : asdg_FrontSideRail
 		{
 		iconPosition[] = {0.245,0.53};
@@ -4341,9 +4692,10 @@ class launch_Titan_base : Launcher_Base_F
 // Mini-Spike Base Class
 class launch_Titan_short_base : launch_Titan_base
 {
+modes[] = {"Single","TopDown"};
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
-	mass = 176.3698;
+	mass = 88.1849;
 		class PointerSlot : asdg_FrontSideRail
 		{
 		iconPosition[] = {0.32,0.54};

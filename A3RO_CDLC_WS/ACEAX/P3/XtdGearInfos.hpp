@@ -1,0 +1,1 @@
+#include "XtdGearInfos\config\CfgWeapons\arifle_Galat_M372.hpp"

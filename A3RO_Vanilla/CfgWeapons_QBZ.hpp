@@ -1,6 +1,7 @@
 // CAR-95 Base Class. Changing: Name. Description. Fixing Mode Order
 class arifle_CTAR_base_F : Rifle_Base_F
 {
+initSpeed = 930;
 descriptionShort = "Assault Rifle<br />Calibre: 5.8x42mm";
 displayName = "QBZ-95-1 Base Class";
 magazines[] = {"30Rnd_580x42_Mag_F"};
@@ -48,14 +49,8 @@ magazines[] = {"100Rnd_580x42_hex_T4_Mag_F"};
 // CAR-95 GL Base Class. Changing: Name. Description. Grenade Launcher Name
 class arifle_CTAR_GL_base_F : arifle_CTAR_base_F
 {
-descriptionShort = "Assault Rifle<br />Calibre: 5.8x42mm<br />Underbarrel Grenade Launcher<br />Calibre: 35mmCL Type 10";
-displayName = "QBZ-95-1 FTU™ QLG-10A Base Class";	
-	class EGLM : UGL_F
-	{
-	descriptionShort = "Underbarrel Grenade Launcher<br />Calibre: 35mmCL Type 10";
-	discreteDistanceInitIndex = 0; 		
-	displayName = "QLG-10A";
-	};
+descriptionShort = "Assault Rifle<br />Calibre: 5.8x42mm<br />Underbarrel Grenade Launcher<br />Calibre: 35mmCL";
+displayName = "QBZ-95-1 FTU™ QLG-10A Base Class";
 };
 
 // CAR-95 GL. Changing: Name. Description.
@@ -78,7 +73,7 @@ class arifle_QBZ97_base_F : arifle_CTAR_base_F
 _generalMacro = "arifle_QBZ97_base_F";
 descriptionShort = "Assault Rifle<br />Calibre: 5.56x45mm NATO";
 displayName = "QBZ-97 FTU™ Base Class";
-initSpeed = 942.0506;
+initSpeed = 930.73;
 magazines[] = {"30Rnd_556x45_RT_QBZ_Mag_F"};
 magazineWell[] = {"QBZ97_556x45","QBZ97_556x45_Large","T97_223R","T97_223R_Large"};	
 };
@@ -116,7 +111,7 @@ scope = 2;
 class arifle_QBZ97_GL_base_F : arifle_CTAR_GL_base_F
 {
 _generalMacro = "arifle_QBZ97_GL_base_F";
-descriptionShort = "Assault Rifle<br />Calibre: 5.56x45mm NATO<br />Underbarrel Grenade Launcher<br />Calibre: 35mmCL Type 10";
+descriptionShort = "Assault Rifle<br />Calibre: 5.56x45mm NATO<br />Underbarrel Grenade Launcher<br />Calibre: 35mmCL";
 displayName = "QBZ-97 FTU™ QLG-10A Base Class";
 magazines[] = {"30Rnd_556x45_RT_QBZ_Mag_F"};
 magazineWell[] = {"QBZ97_556x45","QBZ97_556x45_Large","T97_223R","T97_223R_Large"};	
@@ -157,7 +152,7 @@ class arifle_QJB97_base_F : arifle_CTARS_base_F
 _generalMacro = "arifle_QJB97_base_F";
 descriptionShort = "Light Machine Gun<br />Calibre: 5.56x45mm NATO";
 displayName = "QJB-97 LSW Base Class";
-initSpeed = 992.03478;
+initSpeed = 969.38;
 magazines[] = {"75Rnd_556x45_T4_QBZ_Mag_F"};
 magazineWell[] = {"QBZ97_556x45","QBZ97_556x45_Large","T97_223R","T97_223R_Large"};	
 };
@@ -199,8 +194,7 @@ class arifle_T97NSRA_base_F : arifle_QBZ97_base_F
 _generalMacro = "arifle_T97NSRA_base_F";
 descriptionShort = "Sporting Rifle<br />Calibre: .223 Remington";
 displayName = "T97NSR-A Base Class";
-initSpeed = 988.3506;
-magazines[] = {"30Rnd_223Rem_NT_QBZ_Mag_F"};
+magazines[] = {"30Rnd_223REM_NT_QBZ_Mag_F"};
 magazineWell[] = {"T97_223R","T97_223R_Large"};
 };
 

@@ -4,10 +4,12 @@ class hgun_Pistol_heavy_01_F : Pistol_Base_F
 descriptionShort = "Handgun<br />Calibre: .45 ACP";
 displayname = "FNX-45 Tactical";
 initSpeed = 384.6336;
+picture = "\A3RO_Vanilla\Textures\UI\gear_Pistol_heavy_02_PosFix_X_CA.paa";
 };
 class hgun_Pistol_heavy_01_green_F : hgun_Pistol_heavy_01_F
 {
-displayname = "FNX-45 Tactical (Green)";	
+displayname = "FNX-45 Tactical (Green)";
+picture = "\A3RO_Vanilla\Textures\UI\gear_Pistol_heavy_02_PosFix_Khk_X_CA.paa";
 };
 
 // ACP-C2. Changing: Name
@@ -24,7 +26,7 @@ _generalMacro = "hgun_ACPC2_blk_F";
 baseWeapon = "hgun_ACPC2_blk_F";		
 displayname = "Custom TLE/RL II .45";
 hiddenSelectionsTextures[] = {"A3RO_Vanilla\Textures\Acpc2_black_2_co.paa"};
-picture = "A3RO_Vanilla\Textures\gear_Acpc2_lazy_X_CA.paa";
+picture = "\A3RO_Vanilla\Textures\UI\gear_Acpc2_lazy_X_CA.paa";
 };
 
 // Creating Custom TLE/RL II 10mm Auto
@@ -44,7 +46,7 @@ _generalMacro = "hgun_ACPC2_10mmA_blk_F";
 baseWeapon = "hgun_ACPC2_10mmA_blk_F";		
 displayname = "Custom TLE/RL II 10x25";
 hiddenSelectionsTextures[] = {"A3RO_Vanilla\Textures\Acpc2_black_2_co.paa"};
-picture = "A3RO_Vanilla\Textures\gear_Acpc2_lazy_X_CA.paa";
+picture = "\A3RO_Vanilla\Textures\UI\gear_Acpc2_lazy_X_CA.paa";
 };
 
 // P07. Changing: Name. Adding PointerSlot Proxy. Removing 30Rnd Magazines
@@ -99,7 +101,7 @@ class hgun_P99_40SW_F : hgun_P07_F
 {
 _generalMacro = "hgun_P99_40SW_F";
 baseWeapon = "hgun_P99_40SW_F";
-descriptionShort = "Handgun<br />Calibre: .40 Smith & Wesson";
+descriptionShort = "Handgun<br />Calibre: .40 Smith &amp; Wesson";
 displayname = "P99 .40 (Sand)";
 initSpeed = 344;
 magazines[] = {"12Rnd_P99_40SW_Mag"};
@@ -129,15 +131,15 @@ class hgun_Rook40_F : Pistol_Base_F
 descriptionShort = "Handgun<br />Calibre: 9x19mm Parabellum";
 displayname = "MP-443 Grach";
 initSpeed = 450;
-magazines[] = {"16Rnd_9x21_Mag"};
-magazineWell[] = {"CBA_9x19_MP443","Pistol_9x21"};
+magazines[] = {"17Rnd_9x19_MP433_Mag"};
+magazineWell[] = {"CBA_9x19_MP443"};
 };
 
 // PM. Changing: Name. Description. Adding Magwell
 class hgun_Pistol_01_F : Pistol_Base_F
 {	
 descriptionShort = "Handgun<br />Calibre: 9x18mm Makarov";
-displayname = "PM";
+displayname = "PMM";
 initSpeed = 315;
 magazines[] = {"10Rnd_9x21_Mag"};
 magazineWell[] = {"CBA_9x18_PM"};	
@@ -161,6 +163,7 @@ class hgun_Pistol_Signal_F : Pistol_Base_F
 descriptionShort = "Fictional Flaregun<br />Calibre: 10mm Signal Flares";	
 displayname = "Flare Pistol";
 initSpeed = 250;
+picture = "\A3RO_Vanilla\Textures\UI\gear_Pistol_Signal_01_Posfix_x_ca.paa";
 };
 
 // Zubr. Changing: Name. Description. Calibre to of 45 ACP 6Rnd to .40 S&W
@@ -190,7 +193,7 @@ class hgun_Pistol_heavy_02_40SW_F : hgun_Pistol_heavy_02_F
 {
 _generalMacro = "hgun_Pistol_heavy_02_40SW_F";
 baseWeapon = "hgun_Pistol_heavy_02_40SW_F";
-descriptionShort = "Handgun<br />Calibre: .40 Smith & Wesson";	
+descriptionShort = "Handgun<br />Calibre: .40 Smith &amp; Wesson";	
 displayname = "Rhino 60DS .40";
 initSpeed = 329.4888;
 magazines[] = {"6Rnd_40SW_Cylinder"};
@@ -222,7 +225,7 @@ initSpeed = 333.1464;
 magazines[] = {"6Rnd_45Colt_Clip"};
 magazineWell[] = {"Taurus_45Colt","Taurus_410bore"};	
 model = "\A3\Weapons_F_Kart\Pistols\Pistol_Signal_F\Pistol_Signal_01_F.p3d";
-picture = "\A3\Weapons_F_Kart\Pistols\Pistol_Signal_F\Data\UI\gear_Pistol_Signal_01_X_ca.paa";
+picture = "\A3RO_Vanilla\Textures\UI\gear_Pistol_Signal_01_Posfix_x_ca.paa";
 recoil = "recoil_pistol_zubr";
 reloadMagazineSound[] = {"A3\Sounds_F_Kart\Weapons\starting_pistol_reload",0.562341,1,30};
 soundBullet[] = {"bullet1",0.083,"bullet2",0.083,"bullet3",0.083,"bullet4",0.083,"bullet5",0.083,"bullet6",0.083,"bullet7",0.083,"bullet8",0.083,"bullet9",0.083,"bullet10",0.083,"bullet11",0.083,"bullet12",0.083}; 

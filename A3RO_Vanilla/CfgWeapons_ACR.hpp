@@ -5,12 +5,6 @@ displayName = "ACR Carbine Base Class";
 caseless[] = {"",0,0,0};
 descriptionShort = "Assault Rifle<br />Calibre: 6.5x39mm";
 initSpeed = 822.96;
-	class GL_3GL_F : UGL_F
-	{
-	descriptionShort = "Underbarrel Grenade Launcher<br />Calibre: 40x46mm LV";
-	discreteDistanceInitIndex = 0; 
-	displayName = "3GL";
-	};
 };
 
 // MX. Changing: Name
@@ -35,7 +29,7 @@ magazines[] = {"30Rnd_65x39_caseless_khaki_mag"};
 class arifle_MX_GL_F : arifle_MX_Base_F
 {		
 displayName = "ACR Carbine 3GL (Sand)";
-descriptionShort = "Assault Rifle<br />Calibre: 6.5x39mm";
+descriptionShort = "Assault Rifle<br />Calibre: 6.5x39mm<br />Underbarrel Grenade Launcher<br />Calibre: 40x46mm LV";
 initSpeed = 822.96;
 };
 class arifle_MX_GL_Black_F : arifle_MX_GL_F

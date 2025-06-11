@@ -5,7 +5,7 @@ class CfgPatches
     name = "Arma 3 Realism Overhaul - ACE3 Arsenal Extended - Vanilla and ACE Compat - Edits";
     author = "NeroTheHero111";
     url = "";
-    version="1.0";
+    version="1.1";
 	requiredAddons[] = 
 	{
 	"A3RO_ACE_Edits",
@@ -19,7 +19,7 @@ class CfgPatches
 };
 class XtdGearModels
 {
-	class CamoBase // Creating additinal Camo Backgrounds for consistency. Colour Values taken from ACEAX.
+	class CamoBase // Creating additional Camo Backgrounds for consistency. Colour Values taken from ACEAX.
 	{
 		class A3RO_M25_CAMO // Olive Colour
 		{
@@ -39,12 +39,27 @@ class XtdGearModels
 		class A3RO_CSAT // It uses a scrapped Alpha Texture so Ill just use HEX
 		{
 			label="CSAT";
-			image = "z\aceax\addons\gearinfo\data\camo\csat.paa";
+			image="z\aceax\addons\gearinfo\data\camo\csat.paa";
 		};
-		class A3RO_TAIGA
+		class A3RO_RPG_32_RUCAM
 		{
 			label="Camo";
-			image = "z\aceax\compats\ACEandBI\data\camo\rus_taiga.paa";
+			image="\A3RO_ACEAX\Edits\A3RO_RPG32_RUCAM.paa";
+		};
+		class A3RO_GREY // Grey but Colour
+		{
+			label="Grey";
+			image="#(rgb,8,8,3)color(0.5,0.5,0.5,1)";
+		};
+		class A3RO_CD_GREY
+		{
+			label="Cad. Grey";
+			image="#(rgb,8,8,3)color(0.56,0.64,0.69,1)";
+		};
+		class A3RO_BLUED
+		{
+			label="Blued";
+			image="\z\aceax\addons\gearinfo\data\camo\blk.paa";
 		};
 	};
 	class CfgWeapons // Changing Weapon Labels to the Names from A3RO_Vanilla. Adding new Camos to ACEAX Models
@@ -59,7 +74,7 @@ class XtdGearModels
 		};
 		class acebi_ak15k
 		{
-		label="AK-15K";
+		label="AK-15C";
 		};
 		class acebi_asp1kir
 		{
@@ -112,15 +127,15 @@ class XtdGearModels
 		};
 		class acebi_hk416a5_11
 		{
-		label="HK416A5 11''";
+		label="HK416 A5 11''";
 		};
 		class acebi_hk416a5_11_gl
 		{
-		label="HK416A5 11'' GLM";
+		label="HK416 A5 11'' GLM";
 		};
 		class acebi_hk416a5_14_5
 		{
-		label="HK416A5 14.5''";
+		label="HK416 A5 14.5''";
 		};
 		class acebi_hk417a2_20
 		{
@@ -264,7 +279,7 @@ class XtdGearModels
 		};
 		class acebi_sig556
 		{
-		label="SIG 556 DMR 21''";
+		label="SIG 556 DMR 18''";
 		};
 		class acebi_stoner99
 		{
@@ -321,7 +336,7 @@ class XtdGearModels
 				"GRN",
 				"HEX",
 				"GHEX",
-				"A3RO_TAIGA"
+				"A3RO_RPG_32_RUCAM"
 				};
 			};
 		};
@@ -332,6 +347,13 @@ class XtdGearModels
 		class acebi_titan_at
 		{
 		label="Mini-Spike";
+		};
+		class acebi_envg
+		{
+			class camo
+			{
+			values[] = {"BLK","OLI","A3RO_GREY"};
+			};
 		};
 		class acebi_compact_nvg
 		{
@@ -460,6 +482,24 @@ class XtdGearModels
 				alwaysSelectable=1;
 			};
 		};
+		class acebi_las_desig
+		{
+		label = "JIM Compact";
+			class camo
+			{
+			values[] = {"OD","KHKG","SND","A3RO_CD_GREY"};
+			};
+		};
+		class a3ro_mark_viie_las_desig
+		{
+		label = "Mark VIIE";
+		options[] = {"camo"};
+			class camo
+			{
+			alwaysSelectable = 1;
+			values[] = {"HEX","GHEX"};
+			};
+		};
 	};
 };
 class XtdGearInfos // Applying Camo Edits. Adding new Camo Classes to existing Items.
@@ -517,11 +557,16 @@ class XtdGearInfos // Applying Camo Edits. Adding new Camo Classes to existing I
 		class launch_RPG32_camo_F // New skin needs a model silly.
 		{
 		model="acebi_rpg32";
-		camo="A3RO_TAIGA";
+		camo="A3RO_RPG_32_RUCAM";
+		};
+		class NVGogglesB_gry_F // To Solid Colour
+		{
+		camo = "A3RO_GREY";
 		};
 		class O_NVGoggles_blk_F
 		{
 		camo="BLK";
+		model = "acebi_compact_nvg";
 		};
 		class O_NVGoggles_grn_F // Changing from Ranger Green to Green.
 		{
@@ -617,6 +662,36 @@ class XtdGearInfos // Applying Camo Edits. Adding new Camo Classes to existing I
 		{
 		model="a3ro_ACE_NVG_Wide_WP";
 		camo="Tropic";
+		};
+		class Laserdesignator_01_khk_F
+		{
+		model = "acebi_las_desig";
+		camo="OD";
+		};
+		class Laserdesignator_03
+		{
+		model = "acebi_las_desig";
+		camo="KHKG";
+		};
+		class Laserdesignator
+		{
+		model = "acebi_las_desig";
+		camo="SND";
+		};
+		class Laserdesignator_01_grey_F
+		{
+		model = "acebi_las_desig";
+		camo="A3RO_CD_GREY";
+		};
+		class Laserdesignator_02
+		{
+		model = "a3ro_mark_viie_las_desig";
+		camo="HEX";
+		};
+		class Laserdesignator_02_ghex_F
+		{
+		model = "a3ro_mark_viie_las_desig";
+		camo="GHEX";
 		};
 	};
 };

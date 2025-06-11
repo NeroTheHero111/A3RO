@@ -1,4 +1,4 @@
-// Vanilla Optics. Changing: Name, Description, Mass and Magnification
+// Vanilla Optics. Changing: Name. Description. Mass. Magnification
 class optic_ACO_grn : ItemCore
 {
 descriptionShort = "Red Dot Sight<br />Color: Green<br />Compatible Calibres: All";
@@ -393,7 +393,7 @@ descriptionShort = "Telescopic Sight with Backup Iron Sights<br />Magnification:
 displayName = "Helia 5 Base Class";	
 	class ItemInfo : InventoryOpticsItem_Base_F
 	{
-	mass = 26.45;		
+	mass = 26.45;
 		class OpticsModes
 		{
 			class Iron
@@ -527,7 +527,10 @@ displayName = "Nightstalker 4-10x30";
 			{
 			discreteDistance[] = {50,100,150,200,250,300,350,400,450,500,550,600,650,700,750,800,850,900,950,1000};
 			discreteDistanceInitIndex = 1;
+			thermalMode[] = {6};
 			visionMode[] = {"Normal","Ti"};
+			thermalNoise[] = {0.2,2,3,0.75,1,0,0,0.4};
+			thermalResolution[] = {0.0, -1, 1.0, 1024};
 			};
 		};
 	};
@@ -583,44 +586,52 @@ displayName = "MOS 2.5-5x32 (Khaki)";
 };
 class optic_tws : ItemCore
 {
-descriptionShort = "Telescopic Thermal Sight<br />Magnification: 2x - 12x<br />Maximum Zero: 1200m<br />Compatible Calibres: All";
-displayName = "LILY-S TWS 2-12x24";
+descriptionShort = "Telescopic Thermal Sight<br />Magnification: 3x<br />eZoom: 2x<br />Maximum Zero: 800m<br />Compatible Calibres: All";
+displayName = "LILY-S TWS 3-6x24";
 	class ItemInfo : InventoryOpticsItem_Base_F
 	{
-	mass = 22.04;				
+	mass = 44.09;				
 		class OpticsModes
 		{
 			class TWS
 			{
-			discreteDistance[] = {50,100,150,200,250,300,350,400,450,500,550,600,650,700,750,800,850,900,950,1000,1050,1100,1150,1200};	
+			discreteDistance[] = {50,100,150,200,250,300,350,400,450,500,550,600,650,700,750,800};	
 			discreteDistanceInitIndex = 1;
-			discretefov[] = {0.125,0.020833};
-			opticsZoomInit = 0.125;
-			opticsZoomMax = 0.125;
-			opticsZoomMin = 0.020833;
+			discretefov[] = {0.083333,0.041666};
+			opticsZoomInit = 0.083333;
+			opticsZoomMax = 0.083333;
+			opticsZoomMin = 0.041666;
+			thermalMode[] = {0};
+			visionMode[] = {"Ti"};
+			thermalNoise[] = {0.2,2,3,0.75,1,0,0,0.66};
+			thermalResolution[] = {0.0, 1200, 1.0, 600};
 			};
 		};
 	};	
 };
 class optic_tws_mg : ItemCore
 {
-descriptionShort = "Telescopic Thermal Sight<br />Magnification: 4x - 16x<br />Maximum Zero: 1600m<br />Compatible Calibres: All";
-displayName = "LILY-M TWS 4-16x24";
+descriptionShort = "Telescopic Thermal Sight<br />Magnification: 6x<br />eZoom: 2x<br />Maximum Zero: 1200m<br />Compatible Calibres: All";
+displayName = "LILY-M TWS 6-12x24";
 	class ItemInfo : InventoryOpticsItem_Base_F
 	{
-	mass = 22.04;	
+	mass = 55.12;	
 		class OpticsModes
 		{
 			class TWS
 			{
-			discreteDistance[] = {50,100,150,200,250,300,350,400,450,500,550,600,650,700,750,800,850,900,950,1000,1050,1100,1150,1200,1250,1300,1350,1400,1450,1500,1550,1600};
+			discreteDistance[] = {50,100,150,200,250,300,350,400,450,500,550,600,650,700,750,800,850,900,950,1000,1050,1100,1150,1200};
 			discreteDistanceInitIndex = 1;
-			discretefov[] = {0.0625,0.015625};
-			distanceZoomMax = 1000;
+			discretefov[] = {0.041666,0.020833};
+			distanceZoomMax = 1200;
 			distanceZoomMin = 100;
-			opticsZoomInit = 0.0625;
-			opticsZoomMax = 0.0625;
-			opticsZoomMin = 0.015625;
+			opticsZoomInit = 0.041666;
+			opticsZoomMax = 0.041666;
+			opticsZoomMin = 0.020833;
+			thermalMode[] = {0};
+			visionMode[] = {"Ti"};
+			thermalNoise[] = {0.2,2,3,0.75,1,0,0,0.66};
+			thermalResolution[] = {0.0, 1200, 1.0, 600};
 			};
 		};
 	};	
@@ -644,7 +655,7 @@ descriptionShort = "HMG Red Dot Sight<br />Color: Red<br />Compatible Calibres: 
 displayName = "DCL120 (3 MOA)";
 inertia = 0.2;
 model = "\A3\Weapons_F\Acc\acco_dcl_120_F.p3d";
-picture = "\A3\Weapons_F\Data\UI\gear_acco_dcl_120_CA.paa";
+picture = "\A3RO_Vanilla\Textures\UI\icon_optic_dcl120.paa";
 scope = 2;
 weaponInfoType = "RscWeaponZeroing";
 	class ItemInfo : InventoryOpticsItem_Base_F
@@ -685,9 +696,23 @@ descriptionShort = "Red Dot Sight<br />Color: Red<br />Compatible Calibres: All<
 displayName = "SRS (1.75 MOA)";
 inertia = 0.2;
 model = "\A3\Weapons_F\Acc\acco_SRS_F.p3d";
-picture = "\a3\Weapons_F\Data\UI\gear_acco_SRS_CA.paa";
+picture = "\A3RO_Vanilla\Textures\UI\icon_optic_srs_F.paa";
 scope = 2;
-weaponInfoType = "RscWeaponZeroing";
+// weaponInfoType = "RscWeaponZeroing";
+
+// Adding Custom Optic Texture to replace the ugly unfinished 3D Model
+	class CBA_ScriptedOptic 
+	{
+		opticsPPEffects[] = {"CBA_OpticsRadBlur3"};
+		reticleTexture = "\A3RO_Vanilla\Textures\srs_reticle_reddot_ca.paa";
+		reticleTextureNight = "\A3RO_Vanilla\Textures\srs_reticle_reddot_ca.paa";
+		reticleTextureSize = 8.04 / 25 * 4;
+		bodyTexture = "\A3RO_Vanilla\Textures\srs_body_ca.paa";
+		bodyTextureNight = "\A3RO_Vanilla\Textures\srs_body_night_ca.paa";
+		bodyTextureSize = 1.34; // reticle 6 is body 1
+		hideMagnification = 1;
+	};
+	weaponInfoType = "CBA_ScriptedOptic";
 	class ItemInfo : InventoryOpticsItem_Base_F
 	{
 	mass = 6.81;	
@@ -701,15 +726,15 @@ weaponInfoType = "RscWeaponZeroing";
 			distanceZoomMax = 100;
 			distanceZoomMin = 100;
 			memoryPointCamera = "eye";
-			opticsDisablePeripherialVision = 0;
-			opticsFlare = 0;
+			opticsDisablePeripherialVision = 1;
+			opticsFlare = 1;
 			opticsID = 1;
-			opticsPPEffects[] = {"Default"};
+			opticsPPEffects[] = {"CBA_OpticsRadBlur3"};
 			opticsZoomInit = 0.75;
-			opticsZoomMax = 1.25;
-			opticsZoomMin = 0.25;
-			useModelOptics = 0;
-			visionMode[] = {};	
+			opticsZoomMax = 0.75;
+			opticsZoomMin = 0.75;
+			useModelOptics = 1;
+			visionMode[] = {};
 			};
 		};
 	};
@@ -750,6 +775,15 @@ displayName = "DBAL-A2 (IR)";
 	class ItemInfo : InventoryFlashLightItem_Base_F
 	{
 	mass = 5.39;	
+	};
+};
+class acc_esd_01_flashlight : ItemCore
+{
+descriptionShort = "3300 Lumen Flashlight";
+displayName = "XT11GT Pro";
+	class ItemInfo : InventoryFlashLightItem_Base_F
+	{
+	mass = 3.814;	
 	};
 };
 
@@ -830,7 +864,7 @@ displayName = "65-SD™ Fast-Attach";
 };
 class muzzle_snds_M : muzzle_snds_H
 {
-descriptionShort = "Inconel Steel Sound Suppressor<br />Calibre: 5.56x45mm NATO";
+descriptionShort = "Inconel Sound Suppressor<br />Calibre: 5.56x45mm NATO";
 displayName = "QDSS NT4";
 	class ItemInfo : ItemInfo
 	{
@@ -944,10 +978,12 @@ displayName = "Omega 9K";
 class muzzle_snds_m_khk_F : muzzle_snds_M
 {
 displayName = "QDSS NT4 (Khaki)";
+	class ItemInfo;
 };
 class muzzle_snds_m_snd_F : muzzle_snds_M
 {
 displayName = "QDSS NT4 (Sand)";
+	class ItemInfo;
 };
 
 // Unhiding SIMCOM Adapter. Adding Description. Disabling Muzzle Flash and Damage
@@ -990,16 +1026,28 @@ class muzzle_snds_545 : muzzle_snds_M
 {
 _generalMacro = "muzzle_snds_M_545";	
 displayName = "Mini 4";
+	class ItemInfo : ItemInfo
+	{
+	mass = 8.438;	
+	};
 };
 class muzzle_snds_545_khk_F : muzzle_snds_m_khk_F
 {
 _generalMacro = "muzzle_snds_M_545_khk_F";	
 displayName = "Mini 4 (Khaki)";
+	class ItemInfo : ItemInfo
+	{
+	mass = 8.438;	
+	};
 };
 class muzzle_snds_545_snd_F : muzzle_snds_m_snd_F
 {
 _generalMacro = "muzzle_snds_M_545_snd_F";	
 displayName = "Mini 4 (Sand)";
+	class ItemInfo : ItemInfo
+	{
+	mass = 8.438;	
+	};
 };
 
 // Creating Flash Suppressors
@@ -1008,7 +1056,7 @@ class muzzle_mzls_H : ItemCore
 _generalMacro = "muzzle_mzls_H";
 afMax = 0;
 author = "Bohemia Interactive";
-descriptionShort = "Flash Suppressor<br />Calibre: 5.56x45 NATO to 7.62x51 NATO";
+descriptionShort = "Chromoly Steel Flash Suppressor<br />Calibre: 5.56x45 NATO to 7.62x51 NATO";
 displayName = "KX3";
 htMax = 600;
 htMin = 1;
@@ -1131,7 +1179,7 @@ inertia = 0.2;
 mFact = 1;
 mfMax = 0;
 model = "\A3\weapons_f\acc\acca_snds_osprey_F";
-picture = "\A3RO_Vanilla\Textures\Arma3_icon_osprey.paa";
+picture = "\A3RO_Vanilla\Textures\UI\icon_muzzle_snds_osprey_ca.paa";
 scope = 2;
 tBody = 100;
 	class ItemInfo : InventoryMuzzleItem_Base_F
@@ -1227,7 +1275,7 @@ tBody = 100;
 	};
 };
 
-// Creating XRG-20 Mk. II Muzzle Device
+// Creating ZRG-20 Mk. II Muzzle Device
 class muzzle_railgun_03_f : muzzle_antenna_03_f
 {
 _generalMacro = "muzzle_railgun_03_f";

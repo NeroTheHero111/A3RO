@@ -116,7 +116,7 @@ descriptionShort = "Submachine Gun<br/>Calibre: 9x19mm Parabellum";
 dexterity = 1.8;
 displayName = "CPW Base Class";
 inertia = 0.2;
-initSpeed = 358.9281;
+initSpeed = 370.45;
 magazines[] = {""};
 magazineWell[] = {""};
 model = "\A3\Weapons_F_gamma\Smgs\pdw2000\pdw2000_F.p3d";
@@ -142,7 +142,7 @@ _generalMacro = "hgun_cpw_FN_F";
 baseWeapon = "hgun_cpw_FN_F";	
 descriptionShort = "Personal Defense Weapon<br/>Calibre: FN 5.7x28mm NATO";
 displayName = "CPW 5.7x28";
-initSpeed = 713.5675;
+initSpeed = 656.75;
 magazines[] = {"30Rnd_570x28_RT_Red_Mag"};
 magazineWell[] = {"CPW_570x28"};
 scope = 2;
@@ -155,9 +155,9 @@ _generalMacro = "hgun_cpw_HK_F";
 baseWeapon = "hgun_cpw_HK_F";		
 descriptionShort = "Personal Defense Weapon<br/>Calibre: 4.6x30mm";
 displayName = "CPW 4.6x30";
-initSpeed = 681.2844;
-magazines[] = {"30Rnd_460x30_RT_Yellow_Mag"};
-magazineWell[] = {"CPW_460x30"};
+initSpeed = 680;
+magazines[] = {"30Rnd_460x30_Mag"};
+magazineWell[] = {"CBA_46x30_MP7"};
 scope = 2;
 };
 
@@ -198,8 +198,8 @@ baseWeapon = "SMG_05_ParaB_F";
 descriptionShort = "Submachine Gun<br />Calibre: 9x19mm Parabellum";
 displayName = "MP5K-PDW";
 initSpeed = 375;
-magazines[] = {"30Rnd_9x19_SMG_RT_Red_Mag"};
-magazineWell[] = {"CBA_9x19_MP5","SMG_9x19"};
+magazines[] = {"30Rnd_9x19_RRT_MP5_Mag"};
+magazineWell[] = {"CBA_9x19_MP5"};
 scope = 2;
 };
 
@@ -211,7 +211,8 @@ baseWeapon = "SMG_05_ParaB_Semi_F";
 displayName = "SP5K-PDW";
 hiddenSelectionsMaterials[] = {"A3RO_Vanilla\Textures\SMG_05_Semi_F.rvmat","\A3\Weapons_F_Exp\SMGs\SMG_05\Data\SMG_05_F_acc.rvmat"};
 hiddenSelectionsTextures[] = {"A3RO_Vanilla\Textures\SMG_05_Semi_F_co.paa","\A3\Weapons_F_Exp\SMGs\SMG_05\Data\SMG_05_F_acc_CO.paa"};
-magazines[] = {"30Rnd_9x19_SMG_Mag"};
+initSpeed = 315;
+magazines[] = {"30Rnd_9x19_MP5_Mag"};
 };
 
 // Sting Base Class. Fixing Mode Order
@@ -224,6 +225,7 @@ displayName = "Sting Base Class";
 // Hiding Sting
 class SMG_02_F : SMG_02_base_F
 {
+displayName = "Sting";
 scope = 1;
 };
 // Creating Scorpion EVO 3 A1
@@ -246,7 +248,7 @@ _generalMacro = "SMG_02_ParaB_F";
 baseWeapon = "SMG_02_ParaB_Semi_F";
 displayName = "Scorpion EVO 3 S1";
 hiddenSelectionsMaterials[] = {"\A3RO_Vanilla\Textures\smg_02_semi.rvmat","\A3\Weapons_F_Beta\SMGs\SMG_02\Data\smg_02_ammo.rvmat"};
-hiddenSelectionsTextures[] = {"\A3RO_Vanilla\Textures\smg_02_Semi_CO.paa","\A3\Weapons_F_Beta\SMGs\SMG_02\Data\smg_02_ammo_CA"};
+hiddenSelectionsTextures[] = {"\A3RO_Vanilla\Textures\smg_02_Semi_CO.paa","\A3\Weapons_F_Beta\SMGs\SMG_02\Data\smg_02_ammo_CA.paa"};
 magazines[] = {"30Rnd_9x19_SMG_Mag"};
 };
 
@@ -270,7 +272,7 @@ class SMG_01_Base : Rifle_Short_Base_F
 {
 descriptionShort = "Submachine Gun<br />Calibre: .45 ACP";
 displayName = "Vector SMG Gen I Base Class";	
-initSpeed = 400.9949;
+initSpeed = 400.994;
 magazines[] = {"30Rnd_45ACP_Mag_SMG_01"};
 };
 
@@ -278,7 +280,8 @@ magazines[] = {"30Rnd_45ACP_Mag_SMG_01"};
 class SMG_01_F : SMG_01_Base
 {
 descriptionShort = "Submachine Gun<br />Calibre: .45 ACP";	
-displayName = "Vector SMG Gen I .45";	
+displayName = "Vector SMG Gen I .45";
+initSpeed = 400.994;
 };
 
 // Creating Vector SMG Gen I 9x19
@@ -288,8 +291,8 @@ _generalMacro = "SMG_01_9x19_F";
 baseWeapon = "SMG_01_9x19_F";			
 descriptionShort = "Submachine Gun<br />Calibre: 9x19mm Parabellum";
 displayName = "Vector SMG Gen I 9x19";
-initSpeed = 373.8372;
-magazines[] = {"40Rnd_9x19_Vector_RT_Red_Mag"};
+initSpeed = 373.837;
+magazines[] = {"40Rnd_9x19_Vector_RT_Green_Mag"};
 magazineWell[] = {"Vermin_9x19"};
 scope = 2;
 };

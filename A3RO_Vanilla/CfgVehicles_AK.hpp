@@ -31,15 +31,15 @@ displayName = "AK-15 GP-25 (Lush)";
 // Vanilla AKU-12. Changing: Name
 class Weapon_arifle_AK12U_F: Weapon_Base_F
 {
-displayName = "AK-15K";
+displayName = "AK-15C";
 };
 class Weapon_arifle_AK12U_arid_F: Weapon_Base_F
 {
-displayName = "AK-15K (Arid)";
+displayName = "AK-15C (Arid)";
 };
 class Weapon_arifle_AK12U_lush_F: Weapon_Base_F
 {
-displayName = "AK-15K (Lush)";
+displayName = "AK-15C (Lush)";
 };
 
 // AKM. Changing: Name
@@ -71,9 +71,9 @@ editorSubcategory = "EdSubcat_MachineGuns";
 	class TransportMagazines
 	{
 		delete 75rnd_762x39_AK12_Mag_F;
-		class 95rnd_545x39_RPK16_Mag_T4_F
+		class 95Rnd_545x39_RPK16_Mag_T4_F
 		{
-		magazine = "95rnd_545x39_RPK16_Mag_T4_F";
+		magazine = "95Rnd_545x39_RPK16_Mag_T4_F";
 		count = 1;
 		};
 	};	
@@ -94,9 +94,9 @@ editorSubcategory = "EdSubcat_MachineGuns";
 	class TransportMagazines
 	{
 		delete 75rnd_762x39_AK12_arid_Mag_F;
-		class 95rnd_545x39_RPK16_Arid_Mag_T4_F
+		class 95Rnd_545x39_RPK16_Arid_Mag_T4_F
 		{
-		magazine = "95rnd_545x39_RPK16_Arid_Mag_T4_F";
+		magazine = "95Rnd_545x39_RPK16_Arid_Mag_T4_F";
 		count = 1;
 		};
 	};	
@@ -117,9 +117,9 @@ editorSubcategory = "EdSubcat_MachineGuns";
 	class TransportMagazines
 	{
 		delete 75rnd_762x39_AK12_lush_Mag_F;
-		class 95rnd_545x39_RPK16_Lush_Mag_T4_F
+		class 95Rnd_545x39_RPK16_Lush_Mag_T4_F
 		{
-		magazine = "95rnd_545x39_RPK16_Lush_Mag_T4_F";
+		magazine = "95Rnd_545x39_RPK16_Lush_Mag_T4_F";
 		count = 1;
 		};
 	};	
@@ -267,10 +267,10 @@ vehicleClass = "WeaponsPrimary";
 	};
 };
 
-// Creating A3RO AK-12K Items
+// Creating A3RO AK-12C Items
 class Weapon_arifle_AK12U_545_F: Weapon_Base_F
 {
-displayName = "AK-12K";
+displayName = "AK-12C";
 scope = 2;
 scopeCurator = 2;
 vehicleClass = "WeaponsPrimary";	
@@ -293,7 +293,7 @@ vehicleClass = "WeaponsPrimary";
 };
 class Weapon_arifle_AK12U_545_arid_F: Weapon_Base_F
 {
-displayName = "AK-12K (Arid)";
+displayName = "AK-12C (Arid)";
 scope = 2;
 scopeCurator = 2;
 vehicleClass = "WeaponsPrimary";
@@ -316,7 +316,7 @@ vehicleClass = "WeaponsPrimary";
 };
 class Weapon_arifle_AK12U_545_lush_F: Weapon_Base_F
 {
-displayName = "AK-12K (Lush)";
+displayName = "AK-12C (Lush)";
 scope = 2;
 scopeCurator = 2;
 vehicleClass = "WeaponsPrimary";
@@ -481,7 +481,7 @@ vehicleClass = "WeaponsPrimary";
 };
 
 // Creating TR3 .223 Items
-class Weapon_arifle_TR3_223Rem_F : Weapon_Base_F
+class Weapon_arifle_TR3_223REM_F : Weapon_Base_F
 {
 displayName = "TR3 .223";
 scope = 2;
@@ -489,22 +489,22 @@ scopeCurator = 2;
 vehicleClass = "WeaponsPrimary";
 	class TransportWeapons
 	{
-		class arifle_TR3_223Rem_F
+		class arifle_TR3_223REM_F
 		{
-		weapon = "arifle_TR3_223Rem_F";
+		weapon = "arifle_TR3_223REM_F";
 		count = 1;
 		};
 	};
 	class TransportMagazines
 	{
-		class 30Rnd_223Rem_AK_Mag_NT_F
+		class 30Rnd_223REM_AK_Mag_NT_F
 		{
-		magazine = "30Rnd_223Rem_AK_Mag_NT_F";
+		magazine = "30Rnd_223REM_AK_Mag_NT_F";
 		count = 1;
 		};
 	};	
 };
-class Weapon_arifle_TR3_223Rem_arid_F : Weapon_Base_F
+class Weapon_arifle_TR3_223REM_arid_F : Weapon_Base_F
 {
 displayName = "TR3 .223 (Arid)";
 scope = 2;
@@ -512,22 +512,22 @@ scopeCurator = 2;
 vehicleClass = "WeaponsPrimary";
 	class TransportWeapons
 	{
-		class arifle_TR3_223Rem_arid_F
+		class arifle_TR3_223REM_arid_F
 		{
-		weapon = "arifle_TR3_223Rem_arid_F";
+		weapon = "arifle_TR3_223REM_arid_F";
 		count = 1;
 		};
 	};
 	class TransportMagazines
 	{
-		class 30Rnd_223Rem_AK_Mag_NT_F
+		class 30Rnd_223REM_AK_Mag_NT_F
 		{
-		magazine = "30Rnd_223Rem_AK_Mag_NT_F";
+		magazine = "30Rnd_223REM_AK_Mag_NT_F";
 		count = 1;
 		};
 	};	
 };
-class Weapon_arifle_TR3_223Rem_lush_F : Weapon_Base_F
+class Weapon_arifle_TR3_223REM_lush_F : Weapon_Base_F
 {
 displayName = "TR3 .223 (Lush)";
 scope = 2;
@@ -535,17 +535,17 @@ scopeCurator = 2;
 vehicleClass = "WeaponsPrimary";
 	class TransportWeapons
 	{
-		class arifle_TR3_223Rem_lush_F
+		class arifle_TR3_223REM_lush_F
 		{
-		weapon = "arifle_TR3_223Rem_lush_F";
+		weapon = "arifle_TR3_223REM_lush_F";
 		count = 1;
 		};
 	};
 	class TransportMagazines
 	{
-		class 30Rnd_223Rem_AK_Mag_NT_F
+		class 30Rnd_223REM_AK_Mag_NT_F
 		{
-		magazine = "30Rnd_223Rem_AK_Mag_NT_F";
+		magazine = "30Rnd_223REM_AK_Mag_NT_F";
 		count = 1;
 		};
 	};
@@ -662,9 +662,9 @@ vehicleClass = "WeaponsPrimary";
 	};
 	class TransportMagazines
 	{
-		class 30rnd_762x39_AK12_NT_Arid_Mag_F
+		class 30Rnd_762x39_AK12_NT_Arid_Mag_F
 		{
-		magazine = "30rnd_762x39_AK12_NT_Arid_Mag_F";
+		magazine = "30Rnd_762x39_AK12_NT_Arid_Mag_F";
 		count = 1;
 		};
 	};	
@@ -685,9 +685,9 @@ vehicleClass = "WeaponsPrimary";
 	};
 	class TransportMagazines
 	{
-		class 30rnd_762x39_AK12_NT_Lush_Mag_F
+		class 30Rnd_762x39_AK12_NT_Lush_Mag_F
 		{
-		magazine = "30rnd_762x39_AK12_NT_Lush_Mag_F";
+		magazine = "30Rnd_762x39_AK12_NT_Lush_Mag_F";
 		count = 1;
 		};
 	};	
@@ -710,9 +710,9 @@ vehicleClass = "WeaponsPrimary";
 	};
 	class TransportMagazines
 	{
-		class 20Rnd_762x51_AK_Mag_NT_F
+		class 20Rnd_762x51_AK_Mag_RT_F
 		{
-		magazine = "20Rnd_762x51_AK_Mag_NT_F";
+		magazine = "20Rnd_762x51_AK_Mag_RT_F";
 		count = 1;
 		};
 	};	

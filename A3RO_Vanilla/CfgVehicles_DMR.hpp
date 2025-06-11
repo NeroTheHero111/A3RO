@@ -32,7 +32,7 @@ displayName = "SVDK Magpul";
 class Weapon_srifle_DMR_05_hex_F: Weapon_Base_F
 {
 displayName = "SVDK Magpul (Hex)";
-};	
+};
 class Weapon_srifle_DMR_05_tan_f: Weapon_Base_F
 {
 displayName = "SVDK Magpul (Tan)";
@@ -200,10 +200,10 @@ vehicleClass = "WeaponsPrimary";
 	};	
 };
 
-// Creating XRG-20 Mk. II
+// Creating ZRG-20 Mk. I
 class Weapon_srifle_DMR_02_Railgun_F : Weapon_Base_F
 {
-displayName = "XRG-20 Mk. II";
+displayName = "ZRG-20 Mk. I";
 editorSubcategory = "EdSubcat_SniperRifles";
 scope = 2;
 scopeCurator = 2;

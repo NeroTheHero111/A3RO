@@ -1,7 +1,7 @@
 class a3ro_arifle_AK12U_545
 {
     options[] = { "camo" }; // Always computed, do not edit
-    label="AK-12K";
+    label="AK-12C";
     class camo
     {
         values[] = { "BLK", "BISPNZ_A", "BISPNZ_L" }; // Always computed, do not edit

@@ -3,9 +3,9 @@ class LMG_03_base_F : Rifle_Long_Base_F
 {
 descriptionShort = "Light Machine Gun<br />Calibre: 5.56x45mm NATO";
 displayName = "M249 Para Base Class";
-initSpeed = 915;
+initSpeed = 845.45;
 magazines[] = {"200Rnd_556x45_Box_T4_F"};
-magazineWell[] = {"CBA_556x45_MINIMI","M249_556x45","M249_223Rem"};
+magazineWell[] = {"CBA_556x45_MINIMI","M249_556x45","M249_223REM"};
 };
 
 // LIM-85. Changing: Name.
@@ -24,14 +24,14 @@ descriptionShort = "Semi-Automatic Light Machine Gun<br />Calibre: 5.56x45mm NAT
 magazines[] = {"200Rnd_556x45_Box_NT_F"};
 };
 
-// Mk200. Changing: Name. Description. Removing Semi Auto. Adding .223 Remington Belts
+// Mk200. Changing: Name. Description. Removing Semi Auto. Adding .223 Remington Boxes
 class LMG_Mk200_F : Rifle_Long_Base_F
 {
 descriptionShort = "Light Machine Gun<br />Calibre: 5.56x45mm NATO";
 displayName = "Stoner 96 (Sand)";
-initSpeed = 846.7199;
+initSpeed = 815.27;
 magazines[] = {"200Rnd_65x39_cased_Box_T4"};
-magazineWell[] = {"Mk200_65x39","CBA_65x39_Mk200","Stoner_223Rem"};
+magazineWell[] = {"Mk200_65x39","CBA_65x39_Mk200","Stoner_223REM"};
 };
 class LMG_Mk200_black_F : LMG_Mk200_F
 {
@@ -43,7 +43,7 @@ class MMG_01_base_F : Rifle_Long_Base_F
 {
 descriptionShort = "General-Purpose Machine Gun<br />Calibre: 7.62x51mm NATO";	
 displayName = "MG5 A2 Base Class";
-initSpeed = 810;
+initSpeed = 785;
 magazines[] = {"150Rnd_93x64_Mag_T4"};
 magazineWell[] = {"Navid_762x51"};
 };
@@ -52,10 +52,11 @@ magazineWell[] = {"Navid_762x51"};
 class MMG_01_hex_F : MMG_01_base_F
 {
 displayName = "MG5 A2 (Hex)";
+initSpeed = 785;
 };
 class MMG_01_tan_F : MMG_01_hex_F
 {
-displayName = "MG5 A2";	
+displayName = "MG5 A2";
 };
 
 // SPMG Base Class. Changing: Name. Description.
@@ -69,7 +70,8 @@ magazines[] = {"130Rnd_338_Mag_T4"};
 // SPMG. Changing: Name.
 class MMG_02_camo_F : MMG_02_base_F
 {
-displayName = "RM338 (MTP)";	
+displayName = "RM338 (MTP)";
+initSpeed = 823;
 };
 class MMG_02_sand_F : MMG_02_camo_F
 {
@@ -85,8 +87,8 @@ class LMG_Zafir_F : Rifle_Long_Base_F
 {
 descriptionShort = "Light Machine Gun<br />Calibre: 7.62x51mm NATO";
 displayName = "Negev NG-7 SF";
-initSpeed = 810;
-magazines[] = {"150Rnd_762x54_Box_T4"};
+initSpeed = 780.59;
+magazines[] = {"100Rnd_762x51_NG7_Box_GT4"};
 magazineWell[] = {"Zafir_762x51"};
 };
 

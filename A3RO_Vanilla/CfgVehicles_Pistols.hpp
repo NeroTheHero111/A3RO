@@ -257,7 +257,7 @@ vehicleClass = "WeaponsPrimary";
 // PM. Changing: Name
 class Weapon_hgun_Pistol_01_F : Pistol_Base_F
 {
-displayname = "PM";
+displayname = "PMM";
 };
 
 // Creating IJ-70
@@ -290,6 +290,14 @@ vehicleClass = "WeaponsPrimary";
 class Weapon_hgun_Rook40_F : Pistol_Base_F
 {
 displayname = "MP-443 Grach";
+	class TransportMagazines
+	{
+		class 17Rnd_9x19_MP433_Mag
+		{
+		magazine = "17Rnd_9x19_MP433_Mag";
+		count = 1;
+		};
+	};	
 };
 
 // Creating Judge Magnum

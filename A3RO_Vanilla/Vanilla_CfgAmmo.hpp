@@ -1,18 +1,24 @@
 class BulletBase;
+class GrenadeBase;
+class FlareBase;
 class SmokeShell;
-
-// Creating ANM8 Smoke Grenade Ammo
-class SmokeShellANM8 : SmokeShell
+class ammo_Penetrator_Base;
+class B_12Gauge_Pellets_Submunition_Deploy;
+class SubmunitionBase;
+class MissileCore;
+class MissileBase : MissileCore
 {
-effectsSmoke = "SmokeShellWhiteEffect";
-model = "\A3\Weapons_f\ammo\ANM8_white_throw";
-timeToLive = 120;
+class Components;
 };
-
-class SmokeShellANM8_Infinite : SmokeShellANM8
+class RocketBase;
+class B_12Gauge_Pellets_Submunition : BulletBase // Federal #00 Buck
 {
-timeToLive = 1e+010;
+submunitionConeType[] = {"poissondisc",9};
+submunitionInitSpeed = 403.86;
+timeToLive = 6.5;
+typicalSpeed = 403.86;
 };
+class SubmunitionBullet;
 
 #include "\A3RO_Vanilla\CfgAmmo_223.hpp"
 
@@ -23,3 +29,5 @@ timeToLive = 1e+010;
 #include "\A3RO_Vanilla\CfgAmmo_Pistols.hpp"
 
 #include "\A3RO_Vanilla\CfgAmmo_SMG.hpp"
+
+#include "\A3RO_Vanilla\CfgAmmo_Explosives.hpp"

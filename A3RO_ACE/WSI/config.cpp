@@ -5,21 +5,35 @@ class CfgPatches
     name = "Arma 3 Realism Overhaul - ACE Compat #2";
     author = "NeroTheHero111";
     url = "";
-    version="1.0";
+    version="1.1";
 	requiredAddons[] = 
 	{
-	"ace_advanced_ballistics",
+    "ace_advanced_ballistics",
 	"ace_common",
+	"ace_csw",
+//	"ace_dagr",
+	"ace_disposable",
+	"ace_dragon",
+	"ace_explosives",
 	"ace_flashlights",
-	"ace_ai",
 	"ace_flashsuppressors",
+	"ace_grenades",
+//	"ace_hellfire",
+//	"ace_hot",
+	"ace_huntir",
+	"ace_javelin",
+//	"ace_maverick",
+	"ace_metis",
+	"ace_ai",
+	"ace_nightvision",
+//	"ace_overheating",
 	"ace_realisticnames",
 	"ace_realisticweights",
 	"ace_scopes",
 	"ace_smallarms",
 	"ace_optics",
-	"A3RO_ACE_Overwrite",
 	"A3RO_Vanilla_WSI",
+	"A3RO_ACE_Overwrite",
 	};
     units[] = {};
     weapons[] = {};

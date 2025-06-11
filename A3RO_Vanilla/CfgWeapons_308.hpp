@@ -1,9 +1,9 @@
 // Mk18 EBR Base. Changing: Name. Description. Adding Magwells. Fixing Mode Order
 class EBR_base_F : Rifle_Long_Base_F
 {
-descriptionShort = "Marksman Rifle<br />Calibre: 7.62x51mm NATO";
+descriptionShort = "Battle Rifle<br />Calibre: 7.62x51mm NATO";
 displayName = "Mk 14 Mod 0 EBR Base Class";
-initSpeed = 790.956;
+initSpeed = 790.95;
 magazineWell[] = {"M14_762x51","CBA_762x51_M14","CBA_762x51_M14_L","CBA_762x51_M14_XL"};
 };
 
@@ -11,16 +11,16 @@ magazineWell[] = {"M14_762x51","CBA_762x51_M14","CBA_762x51_M14_L","CBA_762x51_M
 class srifle_EBR_F : EBR_base_F
 {
 displayName = "Mk 14 Mod 0 EBR";
-descriptionShort = "Marksman Rifle<br />Calibre: 7.62x51mm NATO";
-initSpeed = 790.956;
+descriptionShort = "Battle Rifle<br />Calibre: 7.62x51mm NATO";
+initSpeed = 790.95;
 };
 
 // Mk 14 Base Classes. Adding Magwells. Removing Full Auto. Changing: Name. Description
 class DMR_06_base_F : Rifle_Long_Base_F
 {
-descriptionShort = "Marksman Rifle<br />Calibre: 7.62x51mm NATO";
+descriptionShort = "Sniper Rifle<br />Calibre: 7.62x51mm NATO";
 displayName = "M21 SWS Base Class";
-initSpeed = 853;
+initSpeed = 828.44;
 magazineWell[] = {"M14_762x51","CBA_762x51_M14","CBA_762x51_M14_L","CBA_762x51_M14_XL"};
 };
 class DMR_06_hunter_base_F : DMR_06_base_F
@@ -64,9 +64,9 @@ baseWeapon = "arifle_RFB_F";
 descriptionShort = "Sporting Rifle<br />Calibre: .308 Winchester";
 displayName="RFB";
 hiddenSelectionsTextures[] = {"A3RO_Vanilla\Textures\rfb_co","A3\Weapons_F\Rifles\SDAR\data\rfb_uw_co"};
-initSpeed = 819.912;
-magazines[] = {"20Rnd_308WIN_Mag"};
-magazineWell[] = {"MR308_308WIN","CBA_762x51_MkI_EMR","CBA_762x51_M14_L","CBA_762x51_M14_XL"};
+initSpeed = 819.91;
+magazines[] = {"20Rnd_762x51_slr_lxWS"}; // RFB Uses Fal Mags = Not compatible with existing Magazine Classes. However, creating new FAL Mags would cause duplicates when WS is loaded
+magazineWell[] = {"CBA_762x51_FAL"}; // UNLESS you're a genius like me and just use the exact same classname so they get overwritten when the DLC is loaded.
 scope = 2;
 };
 
@@ -76,9 +76,9 @@ class arifle_SPAR_03_base_F : Rifle_Base_F
 _generalMacro = "arifle_SPAR_03_base_F";
 descriptionShort = "Sporting Rifle<br />Calibre: .308 Winchester";
 displayName = "MR308 A3-28 20'' Base Class";
-magazines[] = {"20Rnd_308WIN_Mag"};
-magazineWell[] = {"MR308_308WIN","CBA_762x51_MkI_EMR","CBA_762x51_M14_L","CBA_762x51_M14_XL"};
-initSpeed = 750;
+magazines[] = {"20Rnd_308WIN_HK_Mag"};
+magazineWell[] = {"MR308_308WIN","CBA_762x51_HK417"};
+initSpeed = 817.47;
 };
 
 // SPAR-17 Patterns. Changing: Name.
@@ -130,13 +130,21 @@ scope = 1;
 };
 
 // Creating M1A ALCS
-class srifle_M1A_ACLS_F : srifle_EBR_F
+class srifle_M1A_ACLS_F : EBR_base_F
 {
-_generalMacro = "srifle_M1A_ACLS_F";	
+_generalMacro = "srifle_M1A_ACLS_F";
+aimTransitionSpeed = 0.8;
 baseWeapon = "srifle_M1A_ACLS_F";
+dexterity = 1.3;
 displayName = "M1A ACLS";
 descriptionShort = "Sporting Rifle<br />Calibre: .308 Winchester";
-initSpeed = 834.8472;
+hiddenSelectionsTextures[] = {"\a3\weapons_f\longrangerifles\ebr\data\m14_ebr01_co.paa","\a3\weapons_f\longrangerifles\ebr\data\m14_ebr02_co.paa"};
+inertia = 0.7;
+initSpeed = 834.84;
 magazines[] = {"20Rnd_308WIN_Mag"};
-magazineWell[] = {"MR308_308WIN","CBA_762x51_MkI_EMR","M14_762x51","CBA_762x51_M14","CBA_762x51_M14_L","CBA_762x51_M14_XL","M14_308WIN_S"};
+magazineWell[] = {"M14_762x51","CBA_762x51_M14","CBA_762x51_M14_L","CBA_762x51_M14_XL","M14_308WIN_S","M14_308WIN_L"};
+model = "\A3\weapons_F\LongRangeRifles\EBR\EBR_F.p3d";
+picture = "\A3\weapons_F\LongRangeRifles\EBR\Data\UI\gear_EBR_X_CA.paa";
+scope = 2;
+UiPicture = "\A3\weapons_f\data\UI\icon_regular_CA.paa";
 };

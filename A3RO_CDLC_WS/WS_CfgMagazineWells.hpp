@@ -1,0 +1,1 @@
+#include "\A3RO_CDLC_WS\CfgMagazineWells_762_WS.hpp"

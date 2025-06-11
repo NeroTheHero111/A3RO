@@ -212,9 +212,9 @@ vehicleClass = "WeaponsPrimary";
 	};
 	class TransportMagazines
 	{
-		class 30Rnd_460x30_RT_Yellow_Mag
+		class 30Rnd_460x30_Mag
 		{
-		magazine = "30Rnd_460x30_RT_Yellow_Mag";
+		magazine = "30Rnd_460x30_Mag";
 		count = 1;
 		};
 	};	
@@ -344,9 +344,9 @@ vehicleClass = "WeaponsPrimary";
 	};
 	class TransportMagazines
 	{
-		class 40Rnd_9x19_Vector_RT_Red_Mag
+		class 40Rnd_9x19_Vector_RT_Green_Mag
 		{
-		magazine = "40Rnd_9x19_Vector_RT_Red_Mag";
+		magazine = "40Rnd_9x19_Vector_RT_Green_Mag";
 		count = 1;
 		};
 	};	
