@@ -820,23 +820,12 @@ displayName = "PRS-1 (Snake)";
 
 // Creating Items for new Weapons
 
-// AKM Weathered
+// AKM Weathered. Changing Magazine
 class Weapon_arifle_AKM_Rusty_F: Weapon_Base_F
 {
-displayName = "AKM (Weathered)";
-scope = 2;
-scopeCurator = 2;
-vehicleClass = "WeaponsPrimary";
-	class TransportWeapons
-	{
-		class arifle_AKM_Rusty_F
-		{
-		weapon = "arifle_AKM_Rusty_F";
-		count = 1;
-		};
-	};
 	class TransportMagazines
 	{
+		delete 30Rnd_762x39_Mag_F;
 		class 30Rnd_762x39_Mag_worn_RT_lxWS
 		{
 		magazine = "30Rnd_762x39_Mag_worn_RT_lxWS";

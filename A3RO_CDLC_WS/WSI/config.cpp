@@ -8,8 +8,8 @@ class CfgPatches
     version="1.1";
 	requiredAddons[] = 
 	{
-    "Weapons_F_lxWS",
-	"Weapons_1_F_lxWS",
+	"data_f_lxWS_Loadorder",
+	"cba_main",
 	"A3RO_CDLC_WS",
 	};
     units[] = {};

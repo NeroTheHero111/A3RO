@@ -8,9 +8,9 @@ class CfgPatches
     version="1.1";
 	requiredAddons[] = 
 	{
-	"Vehicles_F_lxWS",
+	"data_f_lxWS_Loadorder",
     "ace_tracers",
-    "A3RO_ACE_Edits",
+    "A3RO_ACE_Tracers_Compat",
 	};
     units[] = {};
     weapons[] = {};

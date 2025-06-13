@@ -96,7 +96,7 @@ typicalSpeed = 345;
 // .50 Beowulf (12.7x42) Adjusting Stats
 class B_50BW_Ball_F : BulletBase // Alexander Arms Hawk 400 Gr JSP. Its supposed to be a Rifle Cartridge used on the AR-15 Platform
 {
-airFriction = -0.00225913 // Using Pistol Values as Reference
+airFriction = -0.00225913; // Using Pistol Values as Reference
 audibleFire = 46.22;
 caliber = 2.2334;
 hit = 7.7046;

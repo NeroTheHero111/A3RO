@@ -8,23 +8,13 @@ class CfgPatches
     version="1.1";
 	requiredAddons[] = 
 	{
+	"A3_Data_F_Loadorder",
+	"A3_Data_F_Enoch_Loadorder",
+	"A3_Data_F_Kart_Loadorder",
+	"A3_Data_F_Exp_Loadorder",
+	"A3_Data_F_Mark_Loadorder",
+	"A3_Data_F_Mod_Loadorder",
 	"cba_main",
-	"A3_Characters_F",
-	"A3_Characters_F_Enoch",
-	"A3_Characters_F_Exp",
-	"A3_Characters_F_Mark",
-	"A3_Sounds_F",
-	"A3_Sounds_F_Enoch",
-	"A3_Sounds_F_Exp",
-	"A3_Sounds_F_Mark",
-    "A3_Weapons_F",
-	"A3_Weapons_F_Acc",
-	"A3_Weapons_F_Ammoboxes",
-	"A3_Weapons_F_Enoch",
-	"A3_Weapons_F_Exp",
-	"A3_Weapons_F_Kart",
-	"A3_Weapons_F_Mark",
-	"A3_Weapons_F_Mod",
 	};
     units[] = {};
     weapons[] = {};

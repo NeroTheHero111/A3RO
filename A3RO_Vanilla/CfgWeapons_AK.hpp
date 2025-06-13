@@ -81,7 +81,6 @@ class arifle_AKM_Rusty_F : arifle_AKM_F
 baseWeapon = "arifle_AKM_Rusty_F";
 displayName = "AKM (Weathered)";
 hiddenSelectionsTextures[] = {"A3RO_Vanilla\Textures\akm_rust_co.paa","\A3\Weapons_F_Exp\Rifles\AKM\Data\akm_wood_co.paa","\A3\Weapons_F_Exp\Rifles\AKM\Data\akm_steel_mag_co.paa"};
-magazines[] = {"30Rnd_762x39_Mag_worn_RT_lxWS"};
 	class FullAuto : FullAuto // 5.5 from 4.5 MOA
 	{
 	dispersion = 0.001599884;

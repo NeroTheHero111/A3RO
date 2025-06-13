@@ -47,7 +47,7 @@ displayName = "9x19 30Rnd CPW Mag";
 displayNameShort = "";
 initSpeed = 360;
 mass = 10.40582;
-picture = "\A3RO_Vanilla\Textures\UI\icon_30Rnd_57x28_CPW_Mag.paa"
+picture = "\A3RO_Vanilla\Textures\UI\icon_30Rnd_57x28_CPW_Mag.paa";
 scope = 2; // Unhiding after Parent gone
 };
 

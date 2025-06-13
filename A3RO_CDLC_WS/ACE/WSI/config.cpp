@@ -8,32 +8,17 @@ class CfgPatches
     version="1.1";
 	requiredAddons[] = 
 	{
-	"ace_advanced_ballistics",
+	"data_f_lxWS_Loadorder",
+	"cba_main",
+	"A3RO_CDLC_WS",
+	"A3RO_CDLC_WS_WSI",
 	"ace_common",
-	"ace_csw",
-//	"ace_dagr",
-	"ace_disposable",
-	"ace_dragon",
-	"ace_explosives",
-	"ace_flashlights",
-	"ace_flashsuppressors",
-	"ace_grenades",
-//	"ace_hellfire",
-//	"ace_hot",
-	"ace_huntir",
-	"ace_javelin",
-//	"ace_maverick",
-	"ace_metis",
-	"ace_ai",
-	"ace_nightvision",
-//	"ace_overheating",
+	"ace_compat_ws",
 	"ace_realisticnames",
-	"ace_realisticweights",
-	"ace_scopes",
-	"ace_smallarms",
-	"ace_optics",
-    "A3RO_CDLC_WS_WSI",
-    "A3RO_CDLC_WS_ACE_Overwrite",
+	"ace_compat_ws_realisticnames",	
+	"ace_vehicles",
+	"ace_compat_ws_vehicles",
+	"A3RO_CDLC_WS_ACE_Overwrite",
 	};
     units[] = {};
     weapons[] = {};
@@ -74,7 +59,7 @@ class MuzzleSlot_408;
 class MuzzleSlot_57;
 class MuzzleSlot_762R;
 class RscStructuredText;
-
+/*
 class CfgWeapons
 {	
 #include "\A3RO_CDLC_WS\WSI\CfgWeapons_WSI_WS.hpp"

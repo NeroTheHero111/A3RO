@@ -61,6 +61,11 @@ class XtdGearModels
 			label="Blued";
 			image="\z\aceax\addons\gearinfo\data\camo\blk.paa";
 		};
+		class A3RO_WEATHERED
+		{
+			label="Weathered";
+			image="\A3RO_ACEAX\Edits\A3RO_WEATHERED.paa";
+		};		
 	};
 	class CfgWeapons // Changing Weapon Labels to the Names from A3RO_Vanilla. Adding new Camos to ACEAX Models
 	{

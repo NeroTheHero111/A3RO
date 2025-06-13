@@ -3,6 +3,7 @@ class XtdGearModels {
          #include "XtdGearModels\config\CfgWeapons\a3ro_arifle_AK12_545.hpp"
          #include "XtdGearModels\config\CfgWeapons\a3ro_arifle_AK12_GL_545.hpp"
          #include "XtdGearModels\config\CfgWeapons\a3ro_arifle_AK12U_545.hpp"
+         #include "XtdGearModels\config\CfgWeapons\a3ro_arifle_AKM_Rusty.hpp"
          #include "XtdGearModels\config\CfgWeapons\a3ro_arifle_MR223_01.hpp"
          #include "XtdGearModels\config\CfgWeapons\a3ro_arifle_MR223_02.hpp"
          #include "XtdGearModels\config\CfgWeapons\a3ro_arifle_QBZ97.hpp"

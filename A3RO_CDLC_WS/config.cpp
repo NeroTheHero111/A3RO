@@ -8,8 +8,8 @@ class CfgPatches
     version="1.1";
 	requiredAddons[] = 
 	{
-	"Weapons_F_lxWS", // SUPER DUPER IMPORTANT TO LIST THIS BEFORE Weapons_1_F_lxWS FIRST OTHERWISE ARMA SHITS ITSELF
-	"Weapons_1_F_lxWS", // Weapons_1_F_lxWS lists Weapons_F_lxWS as a dependeny so requiring both...means I get a circular Addon dependency (0 Addons) (?) I had to track down for 5 FUCKING HOURS WITH 0 CLUES.
+	"data_f_lxWS_Loadorder",
+	"cba_main",
 	};
     units[] = {};
     weapons[] = {};

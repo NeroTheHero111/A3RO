@@ -760,7 +760,7 @@ discreteDistance[] = {400,100,200,300,400,500,600,700,800};
 	};
 	class WeaponSlotsInfo : WeaponSlotsInfo
 	{
-	mass = 111.9948
+	mass = 111.9948;
 		class MuzzleSlot : asdg_MuzzleSlot_556
 		{
 		iconPosition[] = {0.025,0.34};

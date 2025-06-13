@@ -1,11 +1,3 @@
-class arifle_AKM_F {
-  model = "arifle_AKM";
-  camo = "A3RO_BLUED";
-};
-class arifle_AKM_Rusty_F {
-  model = "arifle_AKM";
-  camo = "A3RO_WEATHERED";
-};
 class launch_RPG32_tan_lxWS {
   model = "acebi_rpg32";
   camo = "A3RO_MSBS_SAND";

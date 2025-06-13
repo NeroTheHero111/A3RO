@@ -863,3 +863,28 @@ vehicleClass = "WeaponsPrimary";
 		};
 	};	
 };
+
+// Creating AKM Weathered
+class Weapon_arifle_AKM_Rusty_F: Weapon_Base_F
+{
+displayName = "AKM (Weathered)";
+scope = 2;
+scopeCurator = 2;
+vehicleClass = "WeaponsPrimary";
+	class TransportWeapons
+	{
+		class arifle_AKM_Rusty_F
+		{
+		weapon = "arifle_AKM_Rusty_F";
+		count = 1;
+		};
+	};
+	class TransportMagazines
+	{
+		class 30Rnd_762x39_Mag_F
+		{
+		magazine = "30Rnd_762x39_Mag_F";
+		count = 1;
+		};
+	};	
+};

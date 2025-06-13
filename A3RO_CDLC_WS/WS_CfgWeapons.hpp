@@ -14,6 +14,7 @@ class srifle_GM6_F;
 class srifle_GM6_50BMG_F;
 class hgun_cpw_ParaB_F;
 class launch_RPG32_F;
+class arifle_AKM_F;
 class optic_DMS;
 class optic_ACO_grn;
 class optic_Aco;

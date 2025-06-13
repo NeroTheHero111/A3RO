@@ -514,6 +514,12 @@ class launch_RPG32_tan_lxWS : launch_RPG32_F
 displayName = "RPG-32 (Sand)";
 };
 
+// Changing AKM (Weathered) to use Rusty Magazine
+class arifle_AKM_Rusty_F : arifle_AKM_F
+{
+magazines[] = {"30Rnd_762x39_Mag_worn_RT_lxWS"};
+};
+
 // Creating TAR-21 variants with hidden Black skin. Renaming Original
 class arifle_TRG20_blk_F : arifle_TRG20_F
 {
