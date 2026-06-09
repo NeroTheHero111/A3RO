@@ -86,8 +86,8 @@ The CBA_A3 Team - Whose Shared Classes allow my Magazine and Attachment Changes 
 The ACE3 Team - For their vast and useful Documentation that made it possible for me to create my own Calibres and so much more.
 All Contributors to the Arma Wiki - Without whom I would've missed countless useful game trivia that assisted my artistic direction.  
 
-[![20241002042741-1.jpg](https://i.postimg.cc/yY4JkKtR/20241002042741-1.jpg)]
+![20241002042741-1.jpg](https://i.postimg.cc/yY4JkKtR/20241002042741-1.jpg)
 
 ## License
-![xYLYGUm.png](https://i.imgur.com/xYLYGUm.png)
+![xYLYGUm.png](https://i.imgur.com/xYLYGUm.png)  
 'A3RO - Arma 3 Realism Overhaul' is licensed under [APL-SA](https://www.bohemia.net/community/licenses/arma-public-license-share-alike)
