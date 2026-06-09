@@ -5,7 +5,7 @@ class CfgPatches
     name = "Arma 3 Realism Overhaul - ACE3 Arsenal Extended - Western Sahara CDLC Compat - 3rd Party Compat Compat"; // Yes Really
     author = "NeroTheHero111";
     url = "";
-    version="1.1";
+    version="1.1.5";
 	requiredAddons[] = 
 	{
 	"aceax_WS_config_compat", // ACEAX WS Compat Mod. Given I would have to edit most of it anyway as it was either insufficient or didn't match my naming convention, I elected to just make my own Compat (Big Gang Move, I know). However, my Compat only covers A3RO affected Content. This ensures Uniforms etc are still sorted by the 3rd Party Compat.
@@ -17,6 +17,7 @@ class CfgPatches
 	"ace_common",
 	"A3RO_CDLC_WS",
 	"A3RO_CDLC_WS_WSI",
+	"A3RO_CDLC_WS_WSI_2",
 	"ace_realisticnames",
 	"ace_vehicles",
 	"ace_compat_ws",

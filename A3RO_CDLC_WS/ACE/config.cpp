@@ -2,22 +2,48 @@ class CfgPatches
 {
     class A3RO_CDLC_WS_ACE_Overwrite
     {
-    name = "Arma 3 Realism Overhaul - Western Sahara ACE Compat #1";
+    name = "Arma 3 Realism Overhaul - Western Sahara ACE Compat #1 - Overwrites";
     author = "NeroTheHero111";
     url = "";
-    version="1.1";
+    version="1.1.5";
 	requiredAddons[] = 
 	{
 	"data_f_lxWS_Loadorder",
 	"cba_main",
 	"A3RO_CDLC_WS",
 	"A3RO_CDLC_WS_WSI",
+	"A3RO_CDLC_WS_WSI_2",
+	"ace_ballistics",
+	"ace_advanced_ballistics",
 	"ace_common",
-	"ace_compat_ws",
+	"ace_disposable",
+	"ace_flashsuppressors",	
+	"ace_grenades",	
+	"ace_huntir",
+	"ace_irlight",
+	"ace_nightvision",
+	"ace_missileguidance",
+	"ace_javelin",	
+	"ace_metis",
+	"ace_optics",
+	"ace_scopes",
+	"ace_smallarms",
 	"ace_realisticnames",
+	"ace_realisticweights",
+	"ace_csw",
+	"ace_dragon",
+	"ace_interaction",
+	"ace_explosives",
+	"ace_flashlights",
+	"ace_spike",
+	"ace_quickmount",
+	"ace_rearm",
+	"ace_reload",
+	"ace_captives",
+	"ace_compat_ws",
 	"ace_compat_ws_realisticnames",	
-	"ace_vehicles",
 	"ace_compat_ws_vehicles",
+	"A3RO_ACE_Edits" // In order to apply minor tweaks to Weapons already edited by the Vanilla ACE Compat
 	};
     units[] = {};
     weapons[] = {};

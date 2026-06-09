@@ -5,11 +5,11 @@ class CfgPatches
     name = "Arma 3 Realism Overhaul -  Arma 3 Aegis Compat";
     author = "NeroTheHero111";
     url = "";
-    version="1.1";
+    version="1.1.5";
 	requiredAddons[] = 
 	{
 	"A3_Aegis_Data_F_Aegis_Loadorder",
-	"A3RO_Vanilla_WSI",
+	"A3RO_A3_WSI",
 	};
     units[] = {};
     weapons[] = {};

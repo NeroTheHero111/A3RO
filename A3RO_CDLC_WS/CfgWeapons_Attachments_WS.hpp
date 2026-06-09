@@ -40,7 +40,7 @@ class optic_r1_high_snake_lxWS : optic_r1_high_lxWS
 {
 displayName = "Micro R-1 (4 MOA, Snake, LEAP/03)";
 };
-class optic_r1_low_lxWS : optic_r1_high_lxWS // I ought not to mess with the Inheritance, but redefining all subclasses seems silly.
+class optic_r1_low_lxWS : optic_r1_high_lxWS // With no Baseclass edits must contain the entire content
 {
 displayName = "Micro R-1 (4 MOA)";
 	class ItemInfo : InventoryOpticsItem_Base_F
@@ -69,25 +69,150 @@ displayName = "Micro R-1 (4 MOA)";
 		};
 	};
 };
-class optic_r1_low_arid_lxWS : optic_r1_low_lxWS
+class optic_r1_low_arid_lxWS : optic_r1_high_lxWS
 {
 displayName = "Micro R-1 (4 MOA, Arid)";
+	class ItemInfo : InventoryOpticsItem_Base_F
+	{
+	mass = 1.852;
+	modelOptics = "\A3\Weapons_F\empty";
+	optics = 1;
+		class OpticsModes
+		{
+			class RDS
+			{
+			cameraDir = "";
+			distanceZoomMax = 100;
+			distanceZoomMin = 100;
+			memoryPointCamera = "eye";
+			opticsDisablePeripherialVision = 0;
+			opticsFlare = 0;
+			opticsID = 1;
+			opticsPPEffects[] = {"Default"};
+			opticsZoomInit = 0.75;
+			opticsZoomMax = 1.25;
+			opticsZoomMin = 0.25;
+			useModelOptics = 0;
+			visionMode[] = {};
+			};
+		};
+	};
 };
-class optic_r1_low_khaki_lxWS : optic_r1_low_lxWS
+class optic_r1_low_khaki_lxWS : optic_r1_high_lxWS
 {
 displayName = "Micro R-1 (4 MOA, Khaki)";
+	class ItemInfo : InventoryOpticsItem_Base_F
+	{
+	mass = 1.852;
+	modelOptics = "\A3\Weapons_F\empty";
+	optics = 1;
+		class OpticsModes
+		{
+			class RDS
+			{
+			cameraDir = "";
+			distanceZoomMax = 100;
+			distanceZoomMin = 100;
+			memoryPointCamera = "eye";
+			opticsDisablePeripherialVision = 0;
+			opticsFlare = 0;
+			opticsID = 1;
+			opticsPPEffects[] = {"Default"};
+			opticsZoomInit = 0.75;
+			opticsZoomMax = 1.25;
+			opticsZoomMin = 0.25;
+			useModelOptics = 0;
+			visionMode[] = {};
+			};
+		};
+	};
 };
-class optic_r1_low_lush_lxWS : optic_r1_low_lxWS
+class optic_r1_low_lush_lxWS : optic_r1_high_lxWS
 {
 displayName = "Micro R-1 (4 MOA, Lush)";
+	class ItemInfo : InventoryOpticsItem_Base_F
+	{
+	mass = 1.852;
+	modelOptics = "\A3\Weapons_F\empty";
+	optics = 1;
+		class OpticsModes
+		{
+			class RDS
+			{
+			cameraDir = "";
+			distanceZoomMax = 100;
+			distanceZoomMin = 100;
+			memoryPointCamera = "eye";
+			opticsDisablePeripherialVision = 0;
+			opticsFlare = 0;
+			opticsID = 1;
+			opticsPPEffects[] = {"Default"};
+			opticsZoomInit = 0.75;
+			opticsZoomMax = 1.25;
+			opticsZoomMin = 0.25;
+			useModelOptics = 0;
+			visionMode[] = {};
+			};
+		};
+	};
 };
-class optic_r1_low_sand_lxWS : optic_r1_low_lxWS
+class optic_r1_low_sand_lxWS : optic_r1_high_lxWS
 {
 displayName = "Micro R-1 (4 MOA, Sand)";
+	class ItemInfo : InventoryOpticsItem_Base_F
+	{
+	mass = 1.852;
+	modelOptics = "\A3\Weapons_F\empty";
+	optics = 1;
+		class OpticsModes
+		{
+			class RDS
+			{
+			cameraDir = "";
+			distanceZoomMax = 100;
+			distanceZoomMin = 100;
+			memoryPointCamera = "eye";
+			opticsDisablePeripherialVision = 0;
+			opticsFlare = 0;
+			opticsID = 1;
+			opticsPPEffects[] = {"Default"};
+			opticsZoomInit = 0.75;
+			opticsZoomMax = 1.25;
+			opticsZoomMin = 0.25;
+			useModelOptics = 0;
+			visionMode[] = {};
+			};
+		};
+	};
 };
-class optic_r1_low_snake_lxWS : optic_r1_low_lxWS
+class optic_r1_low_snake_lxWS : optic_r1_high_lxWS
 {
 displayName = "Micro R-1 (4 MOA, Snake)";
+	class ItemInfo : InventoryOpticsItem_Base_F
+	{
+	mass = 1.852;
+	modelOptics = "\A3\Weapons_F\empty";
+	optics = 1;
+		class OpticsModes
+		{
+			class RDS
+			{
+			cameraDir = "";
+			distanceZoomMax = 100;
+			distanceZoomMin = 100;
+			memoryPointCamera = "eye";
+			opticsDisablePeripherialVision = 0;
+			opticsFlare = 0;
+			opticsID = 1;
+			opticsPPEffects[] = {"Default"};
+			opticsZoomInit = 0.75;
+			opticsZoomMax = 1.25;
+			opticsZoomMin = 0.25;
+			useModelOptics = 0;
+			visionMode[] = {};
+			};
+		};
+	};
 };
 class optic_DMS_snake_lxWS : optic_DMS
 {
@@ -131,81 +256,957 @@ displayName = "Mark 4® HAMR® 4x24 (Snake, Deltapoint Pro NV)";
 };
 
 // Western Sahara Siderail Attachments. Changing: Name. Mass. Adding Description
+// DBAL-A2 Red Arid
 class acc_pointer_IR_arid_lxWS : acc_pointer_IR
 {
-displayName = "DBAL-A2 (IR, Arid)";
+displayName = "DBAL-A2 Red (LO IR Laser, Arid)";
+MRT_SwitchItemHintText = "LO IR Laser";
+MRT_SwitchItemNextClass = "acc_pointer_IR_arid_lxWS_HI_L_Red";
+MRT_SwitchItemPrevClass = "acc_pointer_IR_arid_lxWS_LO_ILL_Red";
 };
+class acc_pointer_IR_arid_lxWS_LO_ILL_Red : acc_pointer_IR_LO_ILL_Red
+{
+displayName = "DBAL-A2 Red (LO IR Illuminator/Laser, Arid)";
+DLC = "ws";
+model = "\lxws\weapons_1_f_lxWS\acc\accv_pointer_arid_lxWS.p3d";
+picture = "\lxWS\weapons_1_f_lxws\Acc\data\UI\icon_gear_accv_pointer_arid_CA.paa";
+MRT_SwitchItemHintText = "LO IR Illuminator/Laser";
+MRT_SwitchItemNextClass = "acc_pointer_IR_arid_lxWS";
+MRT_SwitchItemPrevClass = "acc_pointer_IR_arid_lxWS_LO_IL_Red";
+};
+class acc_pointer_IR_arid_lxWS_HI_L_Red : acc_pointer_IR_HI_L_Red
+{
+displayName = "DBAL-A2 Red (HI IR Laser, Arid)";
+DLC = "ws";
+model = "\lxws\weapons_1_f_lxWS\acc\accv_pointer_arid_lxWS.p3d";
+picture = "\lxWS\weapons_1_f_lxws\Acc\data\UI\icon_gear_accv_pointer_arid_CA.paa";
+MRT_SwitchItemHintText = "HI IR Laser";
+MRT_SwitchItemNextClass = "acc_pointer_IR_arid_lxWS_HI_ILL_Red";
+MRT_SwitchItemPrevClass = "acc_pointer_IR_arid_lxWS";
+};
+class acc_pointer_IR_arid_lxWS_LO_IL_Red : acc_pointer_IR_LO_IL_Red
+{
+displayName = "DBAL-A2 Red (LO IR Illuminator, Arid)";
+DLC = "ws";
+model = "\lxws\weapons_1_f_lxWS\acc\accv_pointer_arid_lxWS.p3d";
+picture = "\lxWS\weapons_1_f_lxws\Acc\data\UI\icon_gear_accv_pointer_arid_CA.paa";
+MRT_SwitchItemHintText = "LO IR Illuminator";
+MRT_SwitchItemNextClass = "acc_pointer_IR_arid_lxWS_LO_ILL_Red";
+MRT_SwitchItemPrevClass = "acc_pointer_IR_arid_lxWS_VIS_L_Red";
+};
+class acc_pointer_IR_arid_lxWS_HI_IL_Red : acc_pointer_IR_HI_IL_Red
+{
+displayName = "DBAL-A2 Red (HI IR Illuminator, Arid)";
+DLC = "ws";
+model = "\lxws\weapons_1_f_lxWS\acc\accv_pointer_arid_lxWS.p3d";
+picture = "\lxWS\weapons_1_f_lxws\Acc\data\UI\icon_gear_accv_pointer_arid_CA.paa";
+MRT_SwitchItemHintText = "HI IR Illuminator";
+MRT_SwitchItemNextClass = "acc_pointer_IR_arid_lxWS_VIS_L_Red";
+MRT_SwitchItemPrevClass = "acc_pointer_IR_arid_lxWS_HI_ILL_Red";
+};
+class acc_pointer_IR_arid_lxWS_HI_ILL_Red : acc_pointer_IR_HI_ILL_Red
+{
+displayName = "DBAL-A2 Red (HI IR Illuminator/Laser, Arid)";
+DLC = "ws";
+model = "\lxws\weapons_1_f_lxWS\acc\accv_pointer_arid_lxWS.p3d";
+picture = "\lxWS\weapons_1_f_lxws\Acc\data\UI\icon_gear_accv_pointer_arid_CA.paa";
+MRT_SwitchItemHintText = "HI IR Illuminator/Laser";
+MRT_SwitchItemNextClass = "acc_pointer_IR_arid_lxWS_HI_IL_Red";
+MRT_SwitchItemPrevClass = "acc_pointer_IR_arid_lxWS_HI_L_Red";
+};
+class acc_pointer_IR_arid_lxWS_VIS_L_Red : acc_pointer_IR_VIS_L_Red
+{
+displayName = "DBAL-A2 Red (VIS Laser, Arid)";
+DLC = "ws";
+model = "\lxws\weapons_1_f_lxWS\acc\accv_pointer_arid_lxWS.p3d";
+picture = "\lxWS\weapons_1_f_lxws\Acc\data\UI\icon_gear_accv_pointer_arid_CA.paa";
+MRT_SwitchItemHintText = "VIS Laser";
+MRT_SwitchItemNextClass = "acc_pointer_IR_arid_lxWS_LO_IL_Red";
+MRT_SwitchItemPrevClass = "acc_pointer_IR_arid_lxWS_HI_IL_Red";
+};
+// DBAL-A2 Green Arid
+class acc_pointer_IR_arid_lxWS_LO_L_Green : acc_pointer_IR
+{
+displayName = "DBAL-A2 Green (LO IR Laser, Arid)";
+DLC = "ws";
+model = "\lxws\weapons_1_f_lxWS\acc\accv_pointer_arid_lxWS.p3d";
+picture = "\lxWS\weapons_1_f_lxws\Acc\data\UI\icon_gear_accv_pointer_arid_CA.paa";
+MRT_SwitchItemHintText = "LO IR Laser";
+MRT_SwitchItemNextClass = "acc_pointer_IR_arid_lxWS_HI_L_Green";
+MRT_SwitchItemPrevClass = "acc_pointer_IR_arid_lxWS_LO_ILL_Green";
+};
+class acc_pointer_IR_arid_lxWS_LO_ILL_Green : acc_pointer_IR_LO_ILL_Green
+{
+displayName = "DBAL-A2 Green (LO IR Illuminator/Laser, Arid)";
+DLC = "ws";
+model = "\lxws\weapons_1_f_lxWS\acc\accv_pointer_arid_lxWS.p3d";
+picture = "\lxWS\weapons_1_f_lxws\Acc\data\UI\icon_gear_accv_pointer_arid_CA.paa";
+MRT_SwitchItemHintText = "LO IR Illuminator/Laser";
+MRT_SwitchItemNextClass = "acc_pointer_IR_arid_lxWS_LO_L_Green";
+MRT_SwitchItemPrevClass = "acc_pointer_IR_arid_lxWS_LO_IL_Green";
+};
+class acc_pointer_IR_arid_lxWS_HI_L_Green : acc_pointer_IR_HI_L_Green
+{
+displayName = "DBAL-A2 Green (HI IR Laser, Arid)";
+DLC = "ws";
+model = "\lxws\weapons_1_f_lxWS\acc\accv_pointer_arid_lxWS.p3d";
+picture = "\lxWS\weapons_1_f_lxws\Acc\data\UI\icon_gear_accv_pointer_arid_CA.paa";
+MRT_SwitchItemHintText = "HI IR Laser";
+MRT_SwitchItemNextClass = "acc_pointer_IR_arid_lxWS_HI_ILL_Green";
+MRT_SwitchItemPrevClass = "acc_pointer_IR_arid_lxWS_LO_L_Green";
+};
+class acc_pointer_IR_arid_lxWS_LO_IL_Green : acc_pointer_IR_LO_IL_Green
+{
+displayName = "DBAL-A2 Green (LO IR Illuminator, Arid)";
+DLC = "ws";
+model = "\lxws\weapons_1_f_lxWS\acc\accv_pointer_arid_lxWS.p3d";
+picture = "\lxWS\weapons_1_f_lxws\Acc\data\UI\icon_gear_accv_pointer_arid_CA.paa";
+MRT_SwitchItemHintText = "LO IR Illuminator";
+MRT_SwitchItemNextClass = "acc_pointer_IR_arid_lxWS_LO_ILL_Green";
+MRT_SwitchItemPrevClass = "acc_pointer_IR_arid_lxWS_VIS_L_Green";
+};
+class acc_pointer_IR_arid_lxWS_HI_IL_Green : acc_pointer_IR_HI_IL_Green
+{
+displayName = "DBAL-A2 Green (HI IR Illuminator, Arid)";
+DLC = "ws";
+model = "\lxws\weapons_1_f_lxWS\acc\accv_pointer_arid_lxWS.p3d";
+picture = "\lxWS\weapons_1_f_lxws\Acc\data\UI\icon_gear_accv_pointer_arid_CA.paa";
+MRT_SwitchItemHintText = "HI IR Illuminator";
+MRT_SwitchItemNextClass = "acc_pointer_IR_arid_lxWS_VIS_L_Green";
+MRT_SwitchItemPrevClass = "acc_pointer_IR_arid_lxWS_HI_ILL_Green";
+};
+class acc_pointer_IR_arid_lxWS_HI_ILL_Green : acc_pointer_IR_HI_ILL_Green
+{
+displayName = "DBAL-A2 Green (HI IR Illuminator/Laser, Arid)";
+DLC = "ws";
+model = "\lxws\weapons_1_f_lxWS\acc\accv_pointer_arid_lxWS.p3d";
+picture = "\lxWS\weapons_1_f_lxws\Acc\data\UI\icon_gear_accv_pointer_arid_CA.paa";
+MRT_SwitchItemHintText = "HI IR Illuminator/Laser";
+MRT_SwitchItemNextClass = "acc_pointer_IR_arid_lxWS_HI_IL_Green";
+MRT_SwitchItemPrevClass = "acc_pointer_IR_arid_lxWS_HI_L_Green";
+};
+class acc_pointer_IR_arid_lxWS_VIS_L_Green : acc_pointer_IR_VIS_L_Green
+{
+displayName = "DBAL-A2 Green (VIS Laser, Arid)";
+DLC = "ws";
+model = "\lxws\weapons_1_f_lxWS\acc\accv_pointer_arid_lxWS.p3d";
+picture = "\lxWS\weapons_1_f_lxws\Acc\data\UI\icon_gear_accv_pointer_arid_CA.paa";
+MRT_SwitchItemHintText = "VIS Laser";
+MRT_SwitchItemNextClass = "acc_pointer_IR_arid_lxWS_LO_IL_Green";
+MRT_SwitchItemPrevClass = "acc_pointer_IR_arid_lxWS_HI_IL_Green";
+};
+// DBAL-A2 Red Lush
 class acc_pointer_IR_lush_lxWS : acc_pointer_IR
 {
-displayName = "DBAL-A2 (IR, Lush)";
+displayName = "DBAL-A2 Red (LO IR Laser, Lush)";
+DLC = "ws";
+MRT_SwitchItemHintText = "LO IR Laser";
+MRT_SwitchItemNextClass = "acc_pointer_IR_lush_lxWS_HI_L_Red";
+MRT_SwitchItemPrevClass = "acc_pointer_IR_lush_lxWS_LO_ILL_Red";
 };
+class acc_pointer_IR_lush_lxWS_LO_ILL_Red : acc_pointer_IR_LO_ILL_Red
+{
+displayName = "DBAL-A2 Red (LO IR Illuminator/Laser, Lush)";
+DLC = "ws";
+model = "\lxws\weapons_1_f_lxWS\acc\accv_pointer_lush_lxWS.p3d";
+picture = "\lxWS\weapons_1_f_lxws\Acc\data\UI\icon_gear_accv_pointer_lush_CA.paa";
+MRT_SwitchItemHintText = "LO IR Illuminator/Laser";
+MRT_SwitchItemNextClass = "acc_pointer_IR_lush_lxWS";
+MRT_SwitchItemPrevClass = "acc_pointer_IR_lush_lxWS_LO_IL_Red";
+};
+class acc_pointer_IR_lush_lxWS_HI_L_Red : acc_pointer_IR_HI_L_Red
+{
+displayName = "DBAL-A2 Red (HI IR Laser, Lush)";
+DLC = "ws";
+model = "\lxws\weapons_1_f_lxWS\acc\accv_pointer_lush_lxWS.p3d";
+picture = "\lxWS\weapons_1_f_lxws\Acc\data\UI\icon_gear_accv_pointer_lush_CA.paa";
+MRT_SwitchItemHintText = "HI IR Laser";
+MRT_SwitchItemNextClass = "acc_pointer_IR_lush_lxWS_HI_ILL_Red";
+MRT_SwitchItemPrevClass = "acc_pointer_IR_lush_lxWS";
+};
+class acc_pointer_IR_lush_lxWS_LO_IL_Red : acc_pointer_IR_LO_IL_Red
+{
+displayName = "DBAL-A2 Red (LO IR Illuminator, Lush)";
+DLC = "ws";
+model = "\lxws\weapons_1_f_lxWS\acc\accv_pointer_lush_lxWS.p3d";
+picture = "\lxWS\weapons_1_f_lxws\Acc\data\UI\icon_gear_accv_pointer_lush_CA.paa";
+MRT_SwitchItemHintText = "LO IR Illuminator";
+MRT_SwitchItemNextClass = "acc_pointer_IR_lush_lxWS_LO_ILL_Red";
+MRT_SwitchItemPrevClass = "acc_pointer_IR_lush_lxWS_VIS_L_Red";
+};
+class acc_pointer_IR_lush_lxWS_HI_IL_Red : acc_pointer_IR_HI_IL_Red
+{
+displayName = "DBAL-A2 Red (HI IR Illuminator, Lush)";
+DLC = "ws";
+model = "\lxws\weapons_1_f_lxWS\acc\accv_pointer_lush_lxWS.p3d";
+picture = "\lxWS\weapons_1_f_lxws\Acc\data\UI\icon_gear_accv_pointer_lush_CA.paa";
+MRT_SwitchItemHintText = "HI IR Illuminator";
+MRT_SwitchItemNextClass = "acc_pointer_IR_lush_lxWS_VIS_L_Red";
+MRT_SwitchItemPrevClass = "acc_pointer_IR_lush_lxWS_HI_ILL_Red";
+};
+class acc_pointer_IR_lush_lxWS_HI_ILL_Red : acc_pointer_IR_HI_ILL_Red
+{
+displayName = "DBAL-A2 Red (HI IR Illuminator/Laser, Lush)";
+DLC = "ws";
+model = "\lxws\weapons_1_f_lxWS\acc\accv_pointer_lush_lxWS.p3d";
+picture = "\lxWS\weapons_1_f_lxws\Acc\data\UI\icon_gear_accv_pointer_lush_CA.paa";
+MRT_SwitchItemHintText = "HI IR Illuminator/Laser";
+MRT_SwitchItemNextClass = "acc_pointer_IR_lush_lxWS_HI_IL_Red";
+MRT_SwitchItemPrevClass = "acc_pointer_IR_lush_lxWS_HI_L_Red";
+};
+class acc_pointer_IR_lush_lxWS_VIS_L_Red : acc_pointer_IR_VIS_L_Red
+{
+displayName = "DBAL-A2 Red (VIS Laser, Lush)";
+DLC = "ws";
+model = "\lxws\weapons_1_f_lxWS\acc\accv_pointer_lush_lxWS.p3d";
+picture = "\lxWS\weapons_1_f_lxws\Acc\data\UI\icon_gear_accv_pointer_lush_CA.paa";
+MRT_SwitchItemHintText = "VIS Laser";
+MRT_SwitchItemNextClass = "acc_pointer_IR_lush_lxWS_LO_IL_Red";
+MRT_SwitchItemPrevClass = "acc_pointer_IR_lush_lxWS_HI_IL_Red";
+};
+// DBAL-A2 Green Lush
+class acc_pointer_IR_lush_lxWS_LO_L_Green : acc_pointer_IR
+{
+displayName = "DBAL-A2 Green (LO IR Laser, Lush)";
+DLC = "ws";
+model = "\lxws\weapons_1_f_lxWS\acc\accv_pointer_lush_lxWS.p3d";
+picture = "\lxWS\weapons_1_f_lxws\Acc\data\UI\icon_gear_accv_pointer_lush_CA.paa";
+MRT_SwitchItemHintText = "LO IR Laser";
+MRT_SwitchItemNextClass = "acc_pointer_IR_lush_lxWS_HI_L_Green";
+MRT_SwitchItemPrevClass = "acc_pointer_IR_lush_lxWS_LO_ILL_Green";
+};
+class acc_pointer_IR_lush_lxWS_LO_ILL_Green : acc_pointer_IR_LO_ILL_Green
+{
+displayName = "DBAL-A2 Green (LO IR Illuminator/Laser, Lush)";
+DLC = "ws";
+model = "\lxws\weapons_1_f_lxWS\acc\accv_pointer_lush_lxWS.p3d";
+picture = "\lxWS\weapons_1_f_lxws\Acc\data\UI\icon_gear_accv_pointer_lush_CA.paa";
+MRT_SwitchItemHintText = "LO IR Illuminator/Laser";
+MRT_SwitchItemNextClass = "acc_pointer_IR_lush_lxWS_LO_L_Green";
+MRT_SwitchItemPrevClass = "acc_pointer_IR_lush_lxWS_LO_IL_Green";
+};
+class acc_pointer_IR_lush_lxWS_HI_L_Green : acc_pointer_IR_HI_L_Green
+{
+displayName = "DBAL-A2 Green (HI IR Laser, Lush)";
+DLC = "ws";
+model = "\lxws\weapons_1_f_lxWS\acc\accv_pointer_lush_lxWS.p3d";
+picture = "\lxWS\weapons_1_f_lxws\Acc\data\UI\icon_gear_accv_pointer_lush_CA.paa";
+MRT_SwitchItemHintText = "HI IR Laser";
+MRT_SwitchItemNextClass = "acc_pointer_IR_lush_lxWS_HI_ILL_Green";
+MRT_SwitchItemPrevClass = "acc_pointer_IR_lush_lxWS_LO_L_Green";
+};
+class acc_pointer_IR_lush_lxWS_LO_IL_Green : acc_pointer_IR_LO_IL_Green
+{
+displayName = "DBAL-A2 Green (LO IR Illuminator, Lush)";
+DLC = "ws";
+model = "\lxws\weapons_1_f_lxWS\acc\accv_pointer_lush_lxWS.p3d";
+picture = "\lxWS\weapons_1_f_lxws\Acc\data\UI\icon_gear_accv_pointer_lush_CA.paa";
+MRT_SwitchItemHintText = "LO IR Illuminator";
+MRT_SwitchItemNextClass = "acc_pointer_IR_lush_lxWS_LO_ILL_Green";
+MRT_SwitchItemPrevClass = "acc_pointer_IR_lush_lxWS_VIS_L_Green";
+};
+class acc_pointer_IR_lush_lxWS_HI_IL_Green : acc_pointer_IR_HI_IL_Green
+{
+displayName = "DBAL-A2 Green (HI IR Illuminator, Lush)";
+DLC = "ws";
+model = "\lxws\weapons_1_f_lxWS\acc\accv_pointer_lush_lxWS.p3d";
+picture = "\lxWS\weapons_1_f_lxws\Acc\data\UI\icon_gear_accv_pointer_lush_CA.paa";
+MRT_SwitchItemHintText = "HI IR Illuminator";
+MRT_SwitchItemNextClass = "acc_pointer_IR_lush_lxWS_VIS_L_Green";
+MRT_SwitchItemPrevClass = "acc_pointer_IR_lush_lxWS_HI_ILL_Green";
+};
+class acc_pointer_IR_lush_lxWS_HI_ILL_Green : acc_pointer_IR_HI_ILL_Green
+{
+displayName = "DBAL-A2 Green (HI IR Illuminator/Laser, Lush)";
+DLC = "ws";
+model = "\lxws\weapons_1_f_lxWS\acc\accv_pointer_lush_lxWS.p3d";
+picture = "\lxWS\weapons_1_f_lxws\Acc\data\UI\icon_gear_accv_pointer_lush_CA.paa";
+MRT_SwitchItemHintText = "HI IR Illuminator/Laser";
+MRT_SwitchItemNextClass = "acc_pointer_IR_lush_lxWS_HI_IL_Green";
+MRT_SwitchItemPrevClass = "acc_pointer_IR_lush_lxWS_HI_L_Green";
+};
+class acc_pointer_IR_lush_lxWS_VIS_L_Green : acc_pointer_IR_VIS_L_Green
+{
+displayName = "DBAL-A2 Green (VIS Laser, Lush)";
+DLC = "ws";
+model = "\lxws\weapons_1_f_lxWS\acc\accv_pointer_lush_lxWS.p3d";
+picture = "\lxWS\weapons_1_f_lxws\Acc\data\UI\icon_gear_accv_pointer_lush_CA.paa";
+MRT_SwitchItemHintText = "VIS Laser";
+MRT_SwitchItemNextClass = "acc_pointer_IR_lush_lxWS_LO_IL_Green";
+MRT_SwitchItemPrevClass = "acc_pointer_IR_lush_lxWS_HI_IL_Green";
+};
+// DBAL-A2 Red Sand
 class acc_pointer_IR_sand_lxWS : acc_pointer_IR
 {
-displayName = "DBAL-A2 (IR, Sand)";
+displayName = "DBAL-A2 Red (LO IR Laser, Sand)";
+DLC = "ws";
+MRT_SwitchItemHintText = "LO IR Laser";
+MRT_SwitchItemNextClass = "acc_pointer_IR_sand_lxWS_HI_L_Red";
+MRT_SwitchItemPrevClass = "acc_pointer_IR_sand_lxWS_LO_ILL_Red";
 };
+class acc_pointer_IR_sand_lxWS_LO_ILL_Red : acc_pointer_IR_LO_ILL_Red
+{
+displayName = "DBAL-A2 Red (LO IR Illuminator/Laser, Sand)";
+DLC = "ws";
+model = "\lxws\weapons_1_f_lxWS\acc\accv_pointer_sand_lxWS.p3d";
+picture = "\lxWS\weapons_1_f_lxws\Acc\data\UI\icon_gear_accv_pointer_sand_CA.paa";
+MRT_SwitchItemHintText = "LO IR Illuminator/Laser";
+MRT_SwitchItemNextClass = "acc_pointer_IR_sand_lxWS";
+MRT_SwitchItemPrevClass = "acc_pointer_IR_sand_lxWS_LO_IL_Red";
+};
+class acc_pointer_IR_sand_lxWS_HI_L_Red : acc_pointer_IR_HI_L_Red
+{
+displayName = "DBAL-A2 Red (HI IR Laser, Sand)";
+DLC = "ws";
+model = "\lxws\weapons_1_f_lxWS\acc\accv_pointer_sand_lxWS.p3d";
+picture = "\lxWS\weapons_1_f_lxws\Acc\data\UI\icon_gear_accv_pointer_sand_CA.paa";
+MRT_SwitchItemHintText = "HI IR Laser";
+MRT_SwitchItemNextClass = "acc_pointer_IR_sand_lxWS_HI_ILL_Red";
+MRT_SwitchItemPrevClass = "acc_pointer_IR_sand_lxWS";
+};
+class acc_pointer_IR_sand_lxWS_LO_IL_Red : acc_pointer_IR_LO_IL_Red
+{
+displayName = "DBAL-A2 Red (LO IR Illuminator, Sand)";
+DLC = "ws";
+model = "\lxws\weapons_1_f_lxWS\acc\accv_pointer_sand_lxWS.p3d";
+picture = "\lxWS\weapons_1_f_lxws\Acc\data\UI\icon_gear_accv_pointer_sand_CA.paa";
+MRT_SwitchItemHintText = "LO IR Illuminator";
+MRT_SwitchItemNextClass = "acc_pointer_IR_sand_lxWS_LO_ILL_Red";
+MRT_SwitchItemPrevClass = "acc_pointer_IR_sand_lxWS_VIS_L_Red";
+};
+class acc_pointer_IR_sand_lxWS_HI_IL_Red : acc_pointer_IR_HI_IL_Red
+{
+displayName = "DBAL-A2 Red (HI IR Illuminator, Sand)";
+DLC = "ws";
+model = "\lxws\weapons_1_f_lxWS\acc\accv_pointer_sand_lxWS.p3d";
+picture = "\lxWS\weapons_1_f_lxws\Acc\data\UI\icon_gear_accv_pointer_sand_CA.paa";
+MRT_SwitchItemHintText = "HI IR Illuminator";
+MRT_SwitchItemNextClass = "acc_pointer_IR_sand_lxWS_VIS_L_Red";
+MRT_SwitchItemPrevClass = "acc_pointer_IR_sand_lxWS_HI_ILL_Red";
+};
+class acc_pointer_IR_sand_lxWS_HI_ILL_Red : acc_pointer_IR_HI_ILL_Red
+{
+displayName = "DBAL-A2 Red (HI IR Illuminator/Laser, Sand)";
+DLC = "ws";
+model = "\lxws\weapons_1_f_lxWS\acc\accv_pointer_sand_lxWS.p3d";
+picture = "\lxWS\weapons_1_f_lxws\Acc\data\UI\icon_gear_accv_pointer_sand_CA.paa";
+MRT_SwitchItemHintText = "HI IR Illuminator/Laser";
+MRT_SwitchItemNextClass = "acc_pointer_IR_sand_lxWS_HI_IL_Red";
+MRT_SwitchItemPrevClass = "acc_pointer_IR_sand_lxWS_HI_L_Red";
+};
+class acc_pointer_IR_sand_lxWS_VIS_L_Red : acc_pointer_IR_VIS_L_Red
+{
+displayName = "DBAL-A2 Red (VIS Laser, Sand)";
+DLC = "ws";
+model = "\lxws\weapons_1_f_lxWS\acc\accv_pointer_sand_lxWS.p3d";
+picture = "\lxWS\weapons_1_f_lxws\Acc\data\UI\icon_gear_accv_pointer_sand_CA.paa";
+MRT_SwitchItemHintText = "VIS Laser";
+MRT_SwitchItemNextClass = "acc_pointer_IR_sand_lxWS_LO_IL_Red";
+MRT_SwitchItemPrevClass = "acc_pointer_IR_sand_lxWS_HI_IL_Red";
+};
+// DBAL-A2 Green Sand
+class acc_pointer_IR_sand_lxWS_LO_L_Green : acc_pointer_IR
+{
+displayName = "DBAL-A2 Green (LO IR Laser, Sand)";
+DLC = "ws";
+model = "\lxws\weapons_1_f_lxWS\acc\accv_pointer_sand_lxWS.p3d";
+picture = "\lxWS\weapons_1_f_lxws\Acc\data\UI\icon_gear_accv_pointer_sand_CA.paa";
+MRT_SwitchItemHintText = "LO IR Laser";
+MRT_SwitchItemNextClass = "acc_pointer_IR_sand_lxWS_HI_L_Green";
+MRT_SwitchItemPrevClass = "acc_pointer_IR_sand_lxWS_LO_ILL_Green";
+};
+class acc_pointer_IR_sand_lxWS_LO_ILL_Green : acc_pointer_IR_LO_ILL_Green
+{
+displayName = "DBAL-A2 Green (LO IR Illuminator/Laser, Sand)";
+DLC = "ws";
+model = "\lxws\weapons_1_f_lxWS\acc\accv_pointer_sand_lxWS.p3d";
+picture = "\lxWS\weapons_1_f_lxws\Acc\data\UI\icon_gear_accv_pointer_sand_CA.paa";
+MRT_SwitchItemHintText = "LO IR Illuminator/Laser";
+MRT_SwitchItemNextClass = "acc_pointer_IR_sand_lxWS_LO_L_Green";
+MRT_SwitchItemPrevClass = "acc_pointer_IR_sand_lxWS_LO_IL_Green";
+};
+class acc_pointer_IR_sand_lxWS_HI_L_Green : acc_pointer_IR_HI_L_Green
+{
+displayName = "DBAL-A2 Green (HI IR Laser, Sand)";
+DLC = "ws";
+model = "\lxws\weapons_1_f_lxWS\acc\accv_pointer_sand_lxWS.p3d";
+picture = "\lxWS\weapons_1_f_lxws\Acc\data\UI\icon_gear_accv_pointer_sand_CA.paa";
+MRT_SwitchItemHintText = "HI IR Laser";
+MRT_SwitchItemNextClass = "acc_pointer_IR_sand_lxWS_HI_ILL_Green";
+MRT_SwitchItemPrevClass = "acc_pointer_IR_sand_lxWS_LO_L_Green";
+};
+class acc_pointer_IR_sand_lxWS_LO_IL_Green : acc_pointer_IR_LO_IL_Green
+{
+displayName = "DBAL-A2 Green (LO IR Illuminator, Sand)";
+DLC = "ws";
+model = "\lxws\weapons_1_f_lxWS\acc\accv_pointer_sand_lxWS.p3d";
+picture = "\lxWS\weapons_1_f_lxws\Acc\data\UI\icon_gear_accv_pointer_sand_CA.paa";
+MRT_SwitchItemHintText = "LO IR Illuminator";
+MRT_SwitchItemNextClass = "acc_pointer_IR_sand_lxWS_LO_ILL_Green";
+MRT_SwitchItemPrevClass = "acc_pointer_IR_sand_lxWS_VIS_L_Green";
+};
+class acc_pointer_IR_sand_lxWS_HI_IL_Green : acc_pointer_IR_HI_IL_Green
+{
+displayName = "DBAL-A2 Green (HI IR Illuminator, Sand)";
+DLC = "ws";
+model = "\lxws\weapons_1_f_lxWS\acc\accv_pointer_sand_lxWS.p3d";
+picture = "\lxWS\weapons_1_f_lxws\Acc\data\UI\icon_gear_accv_pointer_sand_CA.paa";
+MRT_SwitchItemHintText = "HI IR Illuminator";
+MRT_SwitchItemNextClass = "acc_pointer_IR_sand_lxWS_VIS_L_Green";
+MRT_SwitchItemPrevClass = "acc_pointer_IR_sand_lxWS_HI_ILL_Green";
+};
+class acc_pointer_IR_sand_lxWS_HI_ILL_Green : acc_pointer_IR_HI_ILL_Green
+{
+displayName = "DBAL-A2 Green (HI IR Illuminator/Laser, Sand)";
+DLC = "ws";
+model = "\lxws\weapons_1_f_lxWS\acc\accv_pointer_sand_lxWS.p3d";
+picture = "\lxWS\weapons_1_f_lxws\Acc\data\UI\icon_gear_accv_pointer_sand_CA.paa";
+MRT_SwitchItemHintText = "HI IR Illuminator/Laser";
+MRT_SwitchItemNextClass = "acc_pointer_IR_sand_lxWS_HI_IL_Green";
+MRT_SwitchItemPrevClass = "acc_pointer_IR_sand_lxWS_HI_L_Green";
+};
+class acc_pointer_IR_sand_lxWS_VIS_L_Green : acc_pointer_IR_VIS_L_Green
+{
+displayName = "DBAL-A2 Green (VIS Laser, Sand)";
+DLC = "ws";
+model = "\lxws\weapons_1_f_lxWS\acc\accv_pointer_sand_lxWS.p3d";
+picture = "\lxWS\weapons_1_f_lxws\Acc\data\UI\icon_gear_accv_pointer_sand_CA.paa";
+MRT_SwitchItemHintText = "VIS Laser";
+MRT_SwitchItemNextClass = "acc_pointer_IR_sand_lxWS_LO_IL_Green";
+MRT_SwitchItemPrevClass = "acc_pointer_IR_sand_lxWS_HI_IL_Green";
+};
+// DBAL-A2 Red Snake
 class acc_pointer_IR_snake_lxWS : acc_pointer_IR
 {
-displayName = "DBAL-A2 (IR, Snake)";
+displayName = "DBAL-A2 Red (LO IR Laser, Snake)";
+DLC = "ws";
+MRT_SwitchItemHintText = "LO IR Laser";
+MRT_SwitchItemNextClass = "acc_pointer_IR_snake_lxWS_HI_L_Red";
+MRT_SwitchItemPrevClass = "acc_pointer_IR_snake_lxWS_LO_ILL_Red";
 };
-
-class saber_light_lxWS : acc_flashlight // Night Evolution M600W KM2-A LED Tactical Scout Light Flashlight
+class acc_pointer_IR_snake_lxWS_LO_ILL_Red : acc_pointer_IR_LO_ILL_Red
 {
-descriptionShort = "200 Lumen Flashlight";
-displayName = "M600W";
+displayName = "DBAL-A2 Red (LO IR Illuminator/Laser, Snake)";
+DLC = "ws";
+model = "\lxws\weapons_1_f_lxWS\acc\accv_pointer_snake_lxWS.p3d";
+picture = "\lxWS\weapons_1_f_lxws\Acc\data\UI\icon_gear_accv_pointer_snake_CA.paa";
+MRT_SwitchItemHintText = "LO IR Illuminator/Laser";
+MRT_SwitchItemNextClass = "acc_pointer_IR_snake_lxWS";
+MRT_SwitchItemPrevClass = "acc_pointer_IR_snake_lxWS_LO_IL_Red";
+};
+class acc_pointer_IR_snake_lxWS_HI_L_Red : acc_pointer_IR_HI_L_Red
+{
+displayName = "DBAL-A2 Red (HI IR Laser, Snake)";
+DLC = "ws";
+model = "\lxws\weapons_1_f_lxWS\acc\accv_pointer_snake_lxWS.p3d";
+picture = "\lxWS\weapons_1_f_lxws\Acc\data\UI\icon_gear_accv_pointer_snake_CA.paa";
+MRT_SwitchItemHintText = "HI IR Laser";
+MRT_SwitchItemNextClass = "acc_pointer_IR_snake_lxWS_HI_ILL_Red";
+MRT_SwitchItemPrevClass = "acc_pointer_IR_snake_lxWS";
+};
+class acc_pointer_IR_snake_lxWS_LO_IL_Red : acc_pointer_IR_LO_IL_Red
+{
+displayName = "DBAL-A2 Red (LO IR Illuminator, Snake)";
+DLC = "ws";
+model = "\lxws\weapons_1_f_lxWS\acc\accv_pointer_snake_lxWS.p3d";
+picture = "\lxWS\weapons_1_f_lxws\Acc\data\UI\icon_gear_accv_pointer_snake_CA.paa";
+MRT_SwitchItemHintText = "LO IR Illuminator";
+MRT_SwitchItemNextClass = "acc_pointer_IR_snake_lxWS_LO_ILL_Red";
+MRT_SwitchItemPrevClass = "acc_pointer_IR_snake_lxWS_VIS_L_Red";
+};
+class acc_pointer_IR_snake_lxWS_HI_IL_Red : acc_pointer_IR_HI_IL_Red
+{
+displayName = "DBAL-A2 Red (HI IR Illuminator, Snake)";
+DLC = "ws";
+model = "\lxws\weapons_1_f_lxWS\acc\accv_pointer_snake_lxWS.p3d";
+picture = "\lxWS\weapons_1_f_lxws\Acc\data\UI\icon_gear_accv_pointer_snake_CA.paa";
+MRT_SwitchItemHintText = "HI IR Illuminator";
+MRT_SwitchItemNextClass = "acc_pointer_IR_snake_lxWS_VIS_L_Red";
+MRT_SwitchItemPrevClass = "acc_pointer_IR_snake_lxWS_HI_ILL_Red";
+};
+class acc_pointer_IR_snake_lxWS_HI_ILL_Red : acc_pointer_IR_HI_ILL_Red
+{
+displayName = "DBAL-A2 Red (HI IR Illuminator/Laser, Snake)";
+DLC = "ws";
+model = "\lxws\weapons_1_f_lxWS\acc\accv_pointer_snake_lxWS.p3d";
+picture = "\lxWS\weapons_1_f_lxws\Acc\data\UI\icon_gear_accv_pointer_snake_CA.paa";
+MRT_SwitchItemHintText = "HI IR Illuminator/Laser";
+MRT_SwitchItemNextClass = "acc_pointer_IR_snake_lxWS_HI_IL_Red";
+MRT_SwitchItemPrevClass = "acc_pointer_IR_snake_lxWS_HI_L_Red";
+};
+class acc_pointer_IR_snake_lxWS_VIS_L_Red : acc_pointer_IR_VIS_L_Red
+{
+displayName = "DBAL-A2 Red (VIS Laser, Snake)";
+DLC = "ws";
+model = "\lxws\weapons_1_f_lxWS\acc\accv_pointer_snake_lxWS.p3d";
+picture = "\lxWS\weapons_1_f_lxws\Acc\data\UI\icon_gear_accv_pointer_snake_CA.paa";
+MRT_SwitchItemHintText = "VIS Laser";
+MRT_SwitchItemNextClass = "acc_pointer_IR_snake_lxWS_LO_IL_Red";
+MRT_SwitchItemPrevClass = "acc_pointer_IR_snake_lxWS_HI_IL_Red";
+};
+// DBAL-A2 Green Snake
+class acc_pointer_IR_snake_lxWS_LO_L_Green : acc_pointer_IR
+{
+displayName = "DBAL-A2 Green (LO IR Laser, Snake)";
+DLC = "ws";
+model = "\lxws\weapons_1_f_lxWS\acc\accv_pointer_snake_lxWS.p3d";
+picture = "\lxWS\weapons_1_f_lxws\Acc\data\UI\icon_gear_accv_pointer_snake_CA.paa";
+MRT_SwitchItemHintText = "LO IR Laser";
+MRT_SwitchItemNextClass = "acc_pointer_IR_snake_lxWS_HI_L_Green";
+MRT_SwitchItemPrevClass = "acc_pointer_IR_snake_lxWS_LO_ILL_Green";
+};
+class acc_pointer_IR_snake_lxWS_LO_ILL_Green : acc_pointer_IR_LO_ILL_Green
+{
+displayName = "DBAL-A2 Green (LO IR Illuminator/Laser, Snake)";
+DLC = "ws";
+model = "\lxws\weapons_1_f_lxWS\acc\accv_pointer_snake_lxWS.p3d";
+picture = "\lxWS\weapons_1_f_lxws\Acc\data\UI\icon_gear_accv_pointer_snake_CA.paa";
+MRT_SwitchItemHintText = "LO IR Illuminator/Laser";
+MRT_SwitchItemNextClass = "acc_pointer_IR_snake_lxWS_LO_L_Green";
+MRT_SwitchItemPrevClass = "acc_pointer_IR_snake_lxWS_LO_IL_Green";
+};
+class acc_pointer_IR_snake_lxWS_HI_L_Green : acc_pointer_IR_HI_L_Green
+{
+displayName = "DBAL-A2 Green (HI IR Laser, Snake)";
+DLC = "ws";
+model = "\lxws\weapons_1_f_lxWS\acc\accv_pointer_snake_lxWS.p3d";
+picture = "\lxWS\weapons_1_f_lxws\Acc\data\UI\icon_gear_accv_pointer_snake_CA.paa";
+MRT_SwitchItemHintText = "HI IR Laser";
+MRT_SwitchItemNextClass = "acc_pointer_IR_snake_lxWS_HI_ILL_Green";
+MRT_SwitchItemPrevClass = "acc_pointer_IR_snake_lxWS_LO_L_Green";
+};
+class acc_pointer_IR_snake_lxWS_LO_IL_Green : acc_pointer_IR_LO_IL_Green
+{
+displayName = "DBAL-A2 Green (LO IR Illuminator, Snake)";
+DLC = "ws";
+model = "\lxws\weapons_1_f_lxWS\acc\accv_pointer_snake_lxWS.p3d";
+picture = "\lxWS\weapons_1_f_lxws\Acc\data\UI\icon_gear_accv_pointer_snake_CA.paa";
+MRT_SwitchItemHintText = "LO IR Illuminator";
+MRT_SwitchItemNextClass = "acc_pointer_IR_snake_lxWS_LO_ILL_Green";
+MRT_SwitchItemPrevClass = "acc_pointer_IR_snake_lxWS_VIS_L_Green";
+};
+class acc_pointer_IR_snake_lxWS_HI_IL_Green : acc_pointer_IR_HI_IL_Green
+{
+displayName = "DBAL-A2 Green (HI IR Illuminator, Snake)";
+DLC = "ws";
+model = "\lxws\weapons_1_f_lxWS\acc\accv_pointer_snake_lxWS.p3d";
+picture = "\lxWS\weapons_1_f_lxws\Acc\data\UI\icon_gear_accv_pointer_snake_CA.paa";
+MRT_SwitchItemHintText = "HI IR Illuminator";
+MRT_SwitchItemNextClass = "acc_pointer_IR_snake_lxWS_VIS_L_Green";
+MRT_SwitchItemPrevClass = "acc_pointer_IR_snake_lxWS_HI_ILL_Green";
+};
+class acc_pointer_IR_snake_lxWS_HI_ILL_Green : acc_pointer_IR_HI_ILL_Green
+{
+displayName = "DBAL-A2 Green (HI IR Illuminator/Laser, Snake)";
+DLC = "ws";
+model = "\lxws\weapons_1_f_lxWS\acc\accv_pointer_snake_lxWS.p3d";
+picture = "\lxWS\weapons_1_f_lxws\Acc\data\UI\icon_gear_accv_pointer_snake_CA.paa";
+MRT_SwitchItemHintText = "HI IR Illuminator/Laser";
+MRT_SwitchItemNextClass = "acc_pointer_IR_snake_lxWS_HI_IL_Green";
+MRT_SwitchItemPrevClass = "acc_pointer_IR_snake_lxWS_HI_L_Green";
+};
+class acc_pointer_IR_snake_lxWS_VIS_L_Green : acc_pointer_IR_VIS_L_Green
+{
+displayName = "DBAL-A2 Green (VIS Laser, Snake)";
+DLC = "ws";
+model = "\lxws\weapons_1_f_lxWS\acc\accv_pointer_snake_lxWS.p3d";
+picture = "\lxWS\weapons_1_f_lxws\Acc\data\UI\icon_gear_accv_pointer_snake_CA.paa";
+MRT_SwitchItemHintText = "VIS Laser";
+MRT_SwitchItemNextClass = "acc_pointer_IR_snake_lxWS_LO_IL_Green";
+MRT_SwitchItemPrevClass = "acc_pointer_IR_snake_lxWS_HI_IL_Green";
+};
+// Scout Light Pro
+class saber_light_lxWS : acc_flashlight // Surefire Scout Light Pro Scout Light
+{
+descriptionShort = "1000 Lumen LED Flashlight";
+displayName = "Scout Light Pro";
 	class ItemInfo : InventoryFlashLightItem_Base_F
 	{
-	mass = 2.646;
+	mass = 2.7337;
+		class FlashLight
+		{
+		ACE_Flashlight_Beam = "\z\ace\addons\flashlights\UI\Flashlight_beam_white_ca.paa";
+		ACE_Flashlight_Colour = "White";
+		ACE_Flashlight_Size = 2.5;
+		ACE_Flashlight_Sound = 1;
+		ambient[] = {1,1,1}; // Makes whatever light you use whiter/more saturated. Reduces effect of coneFadeCoef.
+		color[] = {850,900,950}; // 100%, 85%, 70% for Yellow-ish light. To have some form of Consistency, basing this value off of Lumen and adjusting everything else down the line to work with it. % Total should be 270. Blue light eg 85, 90, 95 % of lumen for Blue light
+		coneFadeCoef = 16; // Creates diffusion.
+		dayLight = 1; // To work during the day, regardless of intensity
+		direction = "flash";
+		flareMaxDistance = 213;
+		flareSize = 1.2;
+		innerAngle = 32; // Size of the Circle that should have 100% brightness on its entire area. Also increases Total size when there is a large coneFadeCoef
+		intensity = 64; // Intense enough to be visible in daytime.
+		outerAngle = 64; // Needs big enough coneFadeCoef and small enough innerAngle to achieve a smooth fadeout. 
+		position = "flash dir";
+		scale[] = {1,1,1}; // Unsure if this does anything
+		size = 1;
+		useFlare = 1;
+		volumeShape = "a3\data_f\VolumeLightFlashlight.p3d";
+			class Attenuation
+			{
+			constant = 1; // Was 0.5. Almost no effect at this value. Okay.
+			hardLimitEnd = 213; // Datasheet
+			hardLimitStart = 177.5;
+			linear = 32; // Was 0.1. Linked to Intensity. 64 to 8, 128 to 16
+			quadratic = 0; // From 0.2.
+			start = 0; // Starting Distance. 0 just looks best.
+			};
+		};
 	};
 };
 class saber_light_arid_lxWS : saber_light_lxWS
 {
-displayName = "M600W (Arid)";
+displayName = "Scout Light Pro (Arid)";
 };
 class saber_light_khaki_lxWS : saber_light_lxWS
 {
-displayName = "M600W (Khaki)";
+displayName = "Scout Light Pro (Khaki)";
 };
 class saber_light_lush_lxWS : saber_light_lxWS
 {
-displayName = "M600W (Lush)";
+displayName = "Scout Light Pro (Lush)";
 };
 class saber_light_sand_lxWS : saber_light_lxWS
 {
-displayName = "M600W (Sand)";
+displayName = "Scout Light Pro (Sand)";
 };
 class saber_light_snake_lxWS : saber_light_lxWS
 {
-displayName = "M600W (Snake)";
+displayName = "Scout Light Pro (Snake)";
 };
+// Scout Light Pro Infrared
 class saber_light_ir_lxWS : saber_light_lxWS
 {
-descriptionShort = "Fictional 200 Lumen Infrared Flashlight";
-displayName = "M600IR";
+descriptionShort = "120 mW / 350 Lumen Dual-Spectrum LED Flashlight";
+displayName = "Scout Light Pro Infrared (IR Light)";
+MRT_SwitchItemHintText = "IR Light";
+MRT_SwitchItemNextClass = "saber_light_ir_lxWS_VIS";
+MRT_SwitchItemPrevClass = "saber_light_ir_lxWS_VIS";
+	class ItemInfo : InventoryFlashLightItem_Base_F
+	{
+	mass = 2.7337;
+		class FlashLight
+		{
+		ambient[] = {1,1,1};
+		color[] = {120,120,120}; // For IR, basing this off of mW Value
+		coneFadeCoef = 16;
+		dayLight = 1;
+		direction = "flash";
+		flareMaxDistance = 214;
+		flareSize = 1.0;
+		innerAngle = 32;
+		intensity = 64;
+		irLight = 1;
+		outerAngle = 64;
+		position = "flash dir";
+		scale[] = {1,1,1};
+		size = 1;
+		useFlare = 1;
+		volumeShape = "a3\data_f\VolumeLightFlashlight.p3d";
+			class Attenuation
+			{
+			constant = 1;
+			hardLimitEnd = 214; // Datasheet
+			hardLimitStart = 178.3333;
+			linear = 32;
+			quadratic = 0;
+			start = 0;
+			};
+		};
+	};
 };
+class saber_light_ir_lxWS_VIS : saber_light_ir_lxWS // New Class to use Dual-Bank capability
+{
+displayName = "Scout Light Pro Infrared (VIS Light)";
+scope = 1;
+MRT_SwitchItemHintText = "VIS Light";
+MRT_SwitchItemNextClass = "saber_light_ir_lxWS";
+MRT_SwitchItemPrevClass = "saber_light_ir_lxWS";
+	class ItemInfo : InventoryFlashLightItem_Base_F
+	{
+	mass = 2.7337;
+		class FlashLight // Different Variants (IR, VIS) Must be explicitly re-defined and not inherited+altered for whatever reason, else the light wont show up
+		{
+		ACE_Flashlight_Beam = "\z\ace\addons\flashlights\UI\Flashlight_beam_white_ca.paa";
+		ACE_Flashlight_Colour = "White";
+		ACE_Flashlight_Size = 2.5;
+		ACE_Flashlight_Sound = 1;
+		ambient[] = {1,1,1};
+		color[] = {297.5,315,332.5};
+		coneFadeCoef = 16;
+		dayLight = 1;
+		direction = "flash";
+		flareMaxDistance = 214;
+		flareSize = 1.0;
+		innerAngle = 32;
+		intensity = 64;
+		irLight = 0;
+		outerAngle = 64;
+		position = "flash dir";
+		scale[] = {1,1,1};
+		size = 1;
+		useFlare = 1;
+		volumeShape = "a3\data_f\VolumeLightFlashlight.p3d";
+			class Attenuation
+			{
+			constant = 1;
+			hardLimitEnd = 214;
+			hardLimitStart = 178.3333;
+			linear = 32;
+			quadratic = 0;
+			start = 0;
+			};
+		};
+	};
+};
+// Changing Inheritance of Sabers to cut down duplication of Flashlights would be possible, but I may run into incompatiblity.
+// Since Attachments cant be reskinned easily anyway I will just redefine it and be done with it...
 class saber_light_ir_arid_lxWS : saber_light_arid_lxWS
 {
-descriptionShort = "Fictional 200 Lumen Infrared Flashlight";
-displayName = "M600IR (Arid)";
+descriptionShort = "120mW / 350 Lumen Dual-Spectrum Flashlight";
+displayName = "Scout Light Pro Infrared (IR Light, Arid)";
+MRT_SwitchItemHintText = "IR Light";
+MRT_SwitchItemNextClass = "saber_light_ir_arid_lxWS_VIS";
+MRT_SwitchItemPrevClass = "saber_light_ir_arid_lxWS_VIS";
+	class ItemInfo : InventoryFlashLightItem_Base_F
+	{
+	mass = 2.7337;
+		class FlashLight
+		{
+		ambient[] = {1,1,1};
+		color[] = {120,120,120};
+		coneFadeCoef = 16;
+		dayLight = 1;
+		direction = "flash";
+		flareMaxDistance = 214;
+		flareSize = 1.0;
+		innerAngle = 32;
+		intensity = 64;
+		irLight = 1;
+		outerAngle = 64;
+		position = "flash dir";
+		scale[] = {1,1,1};
+		size = 1;
+		useFlare = 1;
+		volumeShape = "a3\data_f\VolumeLightFlashlight.p3d";
+			class Attenuation
+			{
+			constant = 1;
+			hardLimitEnd = 214;
+			hardLimitStart = 178.3333;
+			linear = 32;
+			quadratic = 0;
+			start = 0;
+			};
+		};
+	};
+};
+class saber_light_ir_arid_lxWS_VIS : saber_light_ir_lxWS_VIS
+{
+displayName = "Scout Light Pro Infrared (VIS Light, Arid)";
+model = "\lxws\weapons_1_f_lxWS\acc\saber_light_arid_lxWS.p3d";
+picture = "\lxWS\weapons_1_f_lxws\Acc\data\UI\icon_gear_saber_flashlight_arid_CA.paa";
+MRT_SwitchItemHintText = "VIS Light";
+MRT_SwitchItemNextClass = "saber_light_ir_arid_lxWS";
+MRT_SwitchItemPrevClass = "saber_light_ir_arid_lxWS";
 };
 class saber_light_ir_khaki_lxWS : saber_light_khaki_lxWS
 {
-descriptionShort = "Fictional 200 Lumen Infrared Flashlight";
-displayName = "M600IR (Khaki)";
+descriptionShort = "120mW / 350 Lumen Dual-Spectrum Flashlight";
+displayName = "Scout Light Pro Infrared (IR Light, Khaki)";
+MRT_SwitchItemHintText = "IR Light";
+MRT_SwitchItemNextClass = "saber_light_ir_khaki_lxWS_VIS";
+MRT_SwitchItemPrevClass = "saber_light_ir_khaki_lxWS_VIS";
+	class ItemInfo : InventoryFlashLightItem_Base_F
+	{
+	mass = 2.7337;
+		class FlashLight
+		{
+		ambient[] = {1,1,1};
+		color[] = {120,120,120};
+		coneFadeCoef = 16;
+		dayLight = 1;
+		direction = "flash";
+		flareMaxDistance = 214;
+		flareSize = 1.0;
+		innerAngle = 32;
+		intensity = 64;
+		irLight = 1;
+		outerAngle = 64;
+		position = "flash dir";
+		scale[] = {1,1,1};
+		size = 1;
+		useFlare = 1;
+		volumeShape = "a3\data_f\VolumeLightFlashlight.p3d";
+			class Attenuation
+			{
+			constant = 1;
+			hardLimitEnd = 214;
+			hardLimitStart = 178.3333;
+			linear = 32;
+			quadratic = 0;
+			start = 0;
+			};
+		};
+	};
+};
+class saber_light_ir_khaki_lxWS_VIS : saber_light_ir_lxWS_VIS
+{
+displayName = "Scout Light Pro Infrared (VIS Light, Khaki)";
+model = "\lxws\weapons_1_f_lxWS\acc\saber_light_khaki_lxWS.p3d";
+picture = "\lxWS\weapons_1_f_lxws\Acc\data\UI\icon_gear_saber_flashlight_khk_CA.paa";
+MRT_SwitchItemHintText = "VIS Light";
+MRT_SwitchItemNextClass = "saber_light_ir_khaki_lxWS";
+MRT_SwitchItemPrevClass = "saber_light_ir_khaki_lxWS";
 };
 class saber_light_ir_lush_lxWS : saber_light_lush_lxWS
 {
-descriptionShort = "Fictional 200 Lumen Infrared Flashlight";
-displayName = "M600IR (Lush)";
+descriptionShort = "120mW / 350 Lumen Dual-Spectrum Flashlight";
+displayName = "Scout Light Pro Infrared (IR Light, Lush)";
+MRT_SwitchItemHintText = "IR Light";
+MRT_SwitchItemNextClass = "saber_light_ir_lush_lxWS_VIS";
+MRT_SwitchItemPrevClass = "saber_light_ir_lush_lxWS_VIS";
+	class ItemInfo : InventoryFlashLightItem_Base_F
+	{
+	mass = 2.7337;
+		class FlashLight
+		{
+		ambient[] = {1,1,1};
+		color[] = {120,120,120};
+		coneFadeCoef = 16;
+		dayLight = 1;
+		direction = "flash";
+		flareMaxDistance = 214;
+		flareSize = 1.0;
+		innerAngle = 32;
+		intensity = 64;
+		irLight = 1;
+		outerAngle = 64;
+		position = "flash dir";
+		scale[] = {1,1,1};
+		size = 1;
+		useFlare = 1;
+		volumeShape = "a3\data_f\VolumeLightFlashlight.p3d";
+			class Attenuation
+			{
+			constant = 1;
+			hardLimitEnd = 214;
+			hardLimitStart = 178.3333;
+			linear = 32;
+			quadratic = 0;
+			start = 0;
+			};
+		};
+	};
+};
+class saber_light_ir_lush_lxWS_VIS : saber_light_ir_lxWS_VIS
+{
+displayName = "Scout Light Pro Infrared (VIS Light, Lush)";
+model = "\lxws\weapons_1_f_lxWS\acc\saber_light_lush_lxWS.p3d";
+picture = "\lxWS\weapons_1_f_lxws\Acc\data\UI\icon_gear_saber_flashlight_lush_CA.paa";
+MRT_SwitchItemHintText = "VIS Light";
+MRT_SwitchItemNextClass = "saber_light_ir_lush_lxWS";
+MRT_SwitchItemPrevClass = "saber_light_ir_lush_lxWS";
 };
 class saber_light_ir_sand_lxWS : saber_light_sand_lxWS
 {
-descriptionShort = "Fictional 200 Lumen Infrared Flashlight";
-displayName = "M600IR (Sand)";
+descriptionShort = "120mW / 350 Lumen Dual-Spectrum Flashlight";
+displayName = "Scout Light Pro Infrared (IR Light, Sand)";
+MRT_SwitchItemHintText = "IR Light";
+MRT_SwitchItemNextClass = "saber_light_ir_sand_lxWS_VIS";
+MRT_SwitchItemPrevClass = "saber_light_ir_sand_lxWS_VIS";
+	class ItemInfo : InventoryFlashLightItem_Base_F
+	{
+	mass = 2.7337;
+		class FlashLight
+		{
+		ambient[] = {1,1,1};
+		color[] = {120,120,120};
+		coneFadeCoef = 16;
+		dayLight = 1;
+		direction = "flash";
+		flareMaxDistance = 214;
+		flareSize = 1.0;
+		innerAngle = 32;
+		intensity = 64;
+		irLight = 1;
+		outerAngle = 64;
+		position = "flash dir";
+		scale[] = {1,1,1};
+		size = 1;
+		useFlare = 1;
+		volumeShape = "a3\data_f\VolumeLightFlashlight.p3d";
+			class Attenuation
+			{
+			constant = 1;
+			hardLimitEnd = 214;
+			hardLimitStart = 178.3333;
+			linear = 32;
+			quadratic = 0;
+			start = 0;
+			};
+		};
+	};
+};
+class saber_light_ir_sand_lxWS_VIS : saber_light_ir_lxWS_VIS
+{
+displayName = "Scout Light Pro Infrared (VIS Light, Sand)";
+model = "\lxws\weapons_1_f_lxWS\acc\saber_light_sand_lxWS.p3d";
+picture = "\lxWS\weapons_1_f_lxws\Acc\data\UI\icon_gear_saber_flashlight_snd_CA.paa";
+MRT_SwitchItemHintText = "VIS Light";
+MRT_SwitchItemNextClass = "saber_light_ir_sand_lxWS";
+MRT_SwitchItemPrevClass = "saber_light_ir_sand_lxWS";
 };
 class saber_light_ir_snake_lxWS : saber_light_snake_lxWS
 {
-descriptionShort = "Fictional 200 Lumen Infrared Flashlight";
-displayName = "M600IR (Snake)";
+descriptionShort = "120mW / 350 Lumen Dual-Spectrum Flashlight";
+displayName = "Scout Light Pro Infrared (IR Light, Snake)";
+MRT_SwitchItemHintText = "IR Light";
+MRT_SwitchItemNextClass = "saber_light_ir_snake_lxWS_VIS";
+MRT_SwitchItemPrevClass = "saber_light_ir_snake_lxWS_VIS";
+	class ItemInfo : InventoryFlashLightItem_Base_F
+	{
+	mass = 2.7337;
+		class FlashLight
+		{
+		ambient[] = {1,1,1};
+		color[] = {120,120,120};
+		coneFadeCoef = 16;
+		dayLight = 1;
+		direction = "flash";
+		flareMaxDistance = 214;
+		flareSize = 1.0;
+		innerAngle = 32;
+		intensity = 64;
+		irLight = 1;
+		outerAngle = 64;
+		position = "flash dir";
+		scale[] = {1,1,1};
+		size = 1;
+		useFlare = 1;
+		volumeShape = "a3\data_f\VolumeLightFlashlight.p3d";
+			class Attenuation
+			{
+			constant = 1;
+			hardLimitEnd = 214;
+			hardLimitStart = 178.3333;
+			linear = 32;
+			quadratic = 0;
+			start = 0;
+			};
+		};
+	};
+};
+class saber_light_ir_snake_lxWS_VIS : saber_light_ir_lxWS_VIS
+{
+displayName = "Scout Light Pro Infrared (VIS Light, Snake)";
+model = "\lxws\weapons_1_f_lxWS\acc\saber_light_snake_lxWS.p3d";
+picture = "\lxWS\weapons_1_f_lxws\Acc\data\UI\icon_gear_saber_flashlight_sks_CA.paa";
+MRT_SwitchItemHintText = "VIS Light";
+MRT_SwitchItemNextClass = "saber_light_ir_snake_lxWS";
+MRT_SwitchItemPrevClass = "saber_light_ir_snake_lxWS";
 };
 
 // Western Sahara Muzzle Attachments. Changing: Name. Mass. Adding Description 

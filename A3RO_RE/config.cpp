@@ -5,15 +5,16 @@ class CfgPatches
     name = "Arma 3 Realism Overhaul - Real Engine Compat";
     author = "NeroTheHero111";
     url = "";
-    version="1.1";
+    version="1.1.5";
 	requiredAddons[] = 
 	{
 	"real_fix_flare_lights",
-	// "real_fix_grenade_deflection", For when I get around to Handhelds
+	"real_fix_grenade_deflection",
 	"real_fix_scopes",
 	"real_slots_to_rails",
 	"real_fix_weapons",
-	"A3RO_Vanilla_WSI",
+	"A3RO_A3_WSI",
+	"A3RO_A3_WSI_2",
 	};
     units[] = {};
     weapons[] = {};
@@ -24,7 +25,6 @@ class CfgPatches
 class asdg_OpticRail1913;
 class asdg_OpticRail1913_long;
 class asdg_OpticRail1913_short;
-class asdg_OpticRail1913_short_MG;
 class asdg_FrontSideRail;
 class asdg_UnderSlot;
 class asdg_MuzzleSlot_556;
@@ -265,7 +265,7 @@ class CfgWeapons
 	{
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
-			class CowsSlot: asdg_OpticRail1913_short_MG {};
+			class CowsSlot: asdg_OpticRail1913_short {};
 			class PointerSlot: asdg_FrontSideRail {};
 			class UnderBarrelSlot: asdg_UnderSlot {};
 		};
@@ -274,7 +274,7 @@ class CfgWeapons
 	{
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
-			class CowsSlot: asdg_OpticRail1913_short_MG {};
+			class CowsSlot: asdg_OpticRail1913_short {};
 			class PointerSlot: asdg_FrontSideRail {};
 		};
 	};
@@ -282,7 +282,7 @@ class CfgWeapons
 	{
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
-			class CowsSlot: asdg_OpticRail1913_short_MG {};
+			class CowsSlot: asdg_OpticRail1913_short {};
 			class MuzzleSlot: asdg_MuzzleSlot_556 {};
 			class PointerSlot: asdg_FrontSideRail {};
 		};
@@ -538,7 +538,7 @@ class CfgWeapons
 	{
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
-			class CowsSlot: asdg_OpticRail1913_short_MG {};
+			class CowsSlot: asdg_OpticRail1913_short {};
 			class PointerSlot: asdg_FrontSideRail {};
 			class UnderBarrelSlot: asdg_UnderSlot {};
 		};

@@ -5,7 +5,7 @@ class CfgPatches
     name = "Arma 3 Realism Overhaul - Creator DLC Compat - Western Sahara";
     author = "NeroTheHero111";
     url = "";
-    version="1.1";
+    version="1.1.5";
 	requiredAddons[] = 
 	{
 	"data_f_lxWS_Loadorder",
@@ -15,6 +15,203 @@ class CfgPatches
     weapons[] = {};
 	skipWhenMissingDependencies = 1;
     };
+};
+
+class asdg_SlotInfo;
+class asdg_FrontSideRail : asdg_SlotInfo
+{
+	class compatibleItems
+	{
+	acc_pointer_IR_arid_lxWS_LO_IL_Red = 1;
+	acc_pointer_IR_arid_lxWS_LO_ILL_Red = 1;
+	acc_pointer_IR_arid_lxWS_HI_L_Red = 1;
+	acc_pointer_IR_arid_lxWS_HI_IL_Red = 1;
+	acc_pointer_IR_arid_lxWS_HI_ILL_Red = 1;
+	acc_pointer_IR_arid_lxWS_VIS_L_Red = 1;
+	acc_pointer_IR_arid_lxWS_LO_L_Green = 1;
+	acc_pointer_IR_arid_lxWS_LO_IL_Green = 1;
+	acc_pointer_IR_arid_lxWS_LO_ILL_Green = 1;
+	acc_pointer_IR_arid_lxWS_HI_L_Green = 1;
+	acc_pointer_IR_arid_lxWS_HI_IL_Green = 1;
+	acc_pointer_IR_arid_lxWS_HI_ILL_Green = 1;
+	acc_pointer_IR_arid_lxWS_VIS_L_Green = 1;
+	acc_pointer_IR_lush_lxWS_LO_IL_Red = 1;
+	acc_pointer_IR_lush_lxWS_LO_ILL_Red = 1;
+	acc_pointer_IR_lush_lxWS_HI_L_Red = 1;
+	acc_pointer_IR_lush_lxWS_HI_IL_Red = 1;
+	acc_pointer_IR_lush_lxWS_HI_ILL_Red = 1;
+	acc_pointer_IR_lush_lxWS_VIS_L_Red = 1;
+	acc_pointer_IR_lush_lxWS_LO_L_Green = 1;
+	acc_pointer_IR_lush_lxWS_LO_IL_Green = 1;
+	acc_pointer_IR_lush_lxWS_LO_ILL_Green = 1;
+	acc_pointer_IR_lush_lxWS_HI_L_Green = 1;
+	acc_pointer_IR_lush_lxWS_HI_IL_Green = 1;
+	acc_pointer_IR_lush_lxWS_HI_ILL_Green = 1;
+	acc_pointer_IR_lush_lxWS_VIS_L_Green = 1;
+	acc_pointer_IR_sand_lxWS_LO_IL_Red = 1;
+	acc_pointer_IR_sand_lxWS_LO_ILL_Red = 1;
+	acc_pointer_IR_sand_lxWS_HI_L_Red = 1;
+	acc_pointer_IR_sand_lxWS_HI_IL_Red = 1;
+	acc_pointer_IR_sand_lxWS_HI_ILL_Red = 1;
+	acc_pointer_IR_sand_lxWS_VIS_L_Red = 1;
+	acc_pointer_IR_sand_lxWS_LO_L_Green = 1;
+	acc_pointer_IR_sand_lxWS_LO_IL_Green = 1;
+	acc_pointer_IR_sand_lxWS_LO_ILL_Green = 1;
+	acc_pointer_IR_sand_lxWS_HI_L_Green = 1;
+	acc_pointer_IR_sand_lxWS_HI_IL_Green = 1;
+	acc_pointer_IR_sand_lxWS_HI_ILL_Green = 1;
+	acc_pointer_IR_sand_lxWS_VIS_L_Green = 1;
+	acc_pointer_IR_snake_lxWS_LO_IL_Red = 1;
+	acc_pointer_IR_snake_lxWS_LO_ILL_Red = 1;
+	acc_pointer_IR_snake_lxWS_HI_L_Red = 1;
+	acc_pointer_IR_snake_lxWS_HI_IL_Red = 1;
+	acc_pointer_IR_snake_lxWS_HI_ILL_Red = 1;
+	acc_pointer_IR_snake_lxWS_VIS_L_Red = 1;
+	acc_pointer_IR_snake_lxWS_LO_L_Green = 1;
+	acc_pointer_IR_snake_lxWS_LO_IL_Green = 1;
+	acc_pointer_IR_snake_lxWS_LO_ILL_Green = 1;
+	acc_pointer_IR_snake_lxWS_HI_L_Green = 1;
+	acc_pointer_IR_snake_lxWS_HI_IL_Green = 1;
+	acc_pointer_IR_snake_lxWS_HI_ILL_Green = 1;
+	acc_pointer_IR_snake_lxWS_VIS_L_Green = 1;
+	saber_light_ir_lxWS_VIS = 1;
+	saber_light_ir_arid_lxWS_VIS = 1;
+	saber_light_ir_khaki_lxWS_VIS = 1;
+	saber_light_ir_lush_lxWS_VIS = 1;
+	saber_light_ir_sand_lxWS_VIS = 1;
+	saber_light_ir_snake_lxWS_VIS = 1;
+	};
+};
+
+// Adding New Attachments from WS Rail Classes to account for edge cases
+class PointerSlot;
+class PointerSlot_Rail : PointerSlot
+{
+	class compatibleItems
+	{
+	acc_pointer_IR_arid_lxWS_LO_IL_Red = 1;
+	acc_pointer_IR_arid_lxWS_LO_ILL_Red = 1;
+	acc_pointer_IR_arid_lxWS_HI_L_Red = 1;
+	acc_pointer_IR_arid_lxWS_HI_IL_Red = 1;
+	acc_pointer_IR_arid_lxWS_HI_ILL_Red = 1;
+	acc_pointer_IR_arid_lxWS_VIS_L_Red = 1;
+	acc_pointer_IR_arid_lxWS_LO_L_Green = 1;
+	acc_pointer_IR_arid_lxWS_LO_IL_Green = 1;
+	acc_pointer_IR_arid_lxWS_LO_ILL_Green = 1;
+	acc_pointer_IR_arid_lxWS_HI_L_Green = 1;
+	acc_pointer_IR_arid_lxWS_HI_IL_Green = 1;
+	acc_pointer_IR_arid_lxWS_HI_ILL_Green = 1;
+	acc_pointer_IR_arid_lxWS_VIS_L_Green = 1;
+	acc_pointer_IR_lush_lxWS_LO_IL_Red = 1;
+	acc_pointer_IR_lush_lxWS_LO_ILL_Red = 1;
+	acc_pointer_IR_lush_lxWS_HI_L_Red = 1;
+	acc_pointer_IR_lush_lxWS_HI_IL_Red = 1;
+	acc_pointer_IR_lush_lxWS_HI_ILL_Red = 1;
+	acc_pointer_IR_lush_lxWS_VIS_L_Red = 1;
+	acc_pointer_IR_lush_lxWS_LO_L_Green = 1;
+	acc_pointer_IR_lush_lxWS_LO_IL_Green = 1;
+	acc_pointer_IR_lush_lxWS_LO_ILL_Green = 1;
+	acc_pointer_IR_lush_lxWS_HI_L_Green = 1;
+	acc_pointer_IR_lush_lxWS_HI_IL_Green = 1;
+	acc_pointer_IR_lush_lxWS_HI_ILL_Green = 1;
+	acc_pointer_IR_lush_lxWS_VIS_L_Green = 1;
+	acc_pointer_IR_sand_lxWS_LO_IL_Red = 1;
+	acc_pointer_IR_sand_lxWS_LO_ILL_Red = 1;
+	acc_pointer_IR_sand_lxWS_HI_L_Red = 1;
+	acc_pointer_IR_sand_lxWS_HI_IL_Red = 1;
+	acc_pointer_IR_sand_lxWS_HI_ILL_Red = 1;
+	acc_pointer_IR_sand_lxWS_VIS_L_Red = 1;
+	acc_pointer_IR_sand_lxWS_LO_L_Green = 1;
+	acc_pointer_IR_sand_lxWS_LO_IL_Green = 1;
+	acc_pointer_IR_sand_lxWS_LO_ILL_Green = 1;
+	acc_pointer_IR_sand_lxWS_HI_L_Green = 1;
+	acc_pointer_IR_sand_lxWS_HI_IL_Green = 1;
+	acc_pointer_IR_sand_lxWS_HI_ILL_Green = 1;
+	acc_pointer_IR_sand_lxWS_VIS_L_Green = 1;
+	acc_pointer_IR_snake_lxWS_LO_IL_Red = 1;
+	acc_pointer_IR_snake_lxWS_LO_ILL_Red = 1;
+	acc_pointer_IR_snake_lxWS_HI_L_Red = 1;
+	acc_pointer_IR_snake_lxWS_HI_IL_Red = 1;
+	acc_pointer_IR_snake_lxWS_HI_ILL_Red = 1;
+	acc_pointer_IR_snake_lxWS_VIS_L_Red = 1;
+	acc_pointer_IR_snake_lxWS_LO_L_Green = 1;
+	acc_pointer_IR_snake_lxWS_LO_IL_Green = 1;
+	acc_pointer_IR_snake_lxWS_LO_ILL_Green = 1;
+	acc_pointer_IR_snake_lxWS_HI_L_Green = 1;
+	acc_pointer_IR_snake_lxWS_HI_IL_Green = 1;
+	acc_pointer_IR_snake_lxWS_HI_ILL_Green = 1;
+	acc_pointer_IR_snake_lxWS_VIS_L_Green = 1;
+	saber_light_ir_lxWS_VIS = 1;
+	saber_light_ir_arid_lxWS_VIS = 1;
+	saber_light_ir_khaki_lxWS_VIS = 1;
+	saber_light_ir_lush_lxWS_VIS = 1;
+	saber_light_ir_sand_lxWS_VIS = 1;
+	saber_light_ir_snake_lxWS_VIS = 1;
+	};
+};
+class PointerSlot_Launcher : PointerSlot
+{
+	class compatibleItems
+	{
+	acc_pointer_IR_arid_lxWS_LO_IL_Red = 1;
+	acc_pointer_IR_arid_lxWS_LO_ILL_Red = 1;
+	acc_pointer_IR_arid_lxWS_HI_L_Red = 1;
+	acc_pointer_IR_arid_lxWS_HI_IL_Red = 1;
+	acc_pointer_IR_arid_lxWS_HI_ILL_Red = 1;
+	acc_pointer_IR_arid_lxWS_VIS_L_Red = 1;
+	acc_pointer_IR_arid_lxWS_LO_L_Green = 1;
+	acc_pointer_IR_arid_lxWS_LO_IL_Green = 1;
+	acc_pointer_IR_arid_lxWS_LO_ILL_Green = 1;
+	acc_pointer_IR_arid_lxWS_HI_L_Green = 1;
+	acc_pointer_IR_arid_lxWS_HI_IL_Green = 1;
+	acc_pointer_IR_arid_lxWS_HI_ILL_Green = 1;
+	acc_pointer_IR_arid_lxWS_VIS_L_Green = 1;
+	acc_pointer_IR_lush_lxWS_LO_IL_Red = 1;
+	acc_pointer_IR_lush_lxWS_LO_ILL_Red = 1;
+	acc_pointer_IR_lush_lxWS_HI_L_Red = 1;
+	acc_pointer_IR_lush_lxWS_HI_IL_Red = 1;
+	acc_pointer_IR_lush_lxWS_HI_ILL_Red = 1;
+	acc_pointer_IR_lush_lxWS_VIS_L_Red = 1;
+	acc_pointer_IR_lush_lxWS_LO_L_Green = 1;
+	acc_pointer_IR_lush_lxWS_LO_IL_Green = 1;
+	acc_pointer_IR_lush_lxWS_LO_ILL_Green = 1;
+	acc_pointer_IR_lush_lxWS_HI_L_Green = 1;
+	acc_pointer_IR_lush_lxWS_HI_IL_Green = 1;
+	acc_pointer_IR_lush_lxWS_HI_ILL_Green = 1;
+	acc_pointer_IR_lush_lxWS_VIS_L_Green = 1;
+	acc_pointer_IR_sand_lxWS_LO_IL_Red = 1;
+	acc_pointer_IR_sand_lxWS_LO_ILL_Red = 1;
+	acc_pointer_IR_sand_lxWS_HI_L_Red = 1;
+	acc_pointer_IR_sand_lxWS_HI_IL_Red = 1;
+	acc_pointer_IR_sand_lxWS_HI_ILL_Red = 1;
+	acc_pointer_IR_sand_lxWS_VIS_L_Red = 1;
+	acc_pointer_IR_sand_lxWS_LO_L_Green = 1;
+	acc_pointer_IR_sand_lxWS_LO_IL_Green = 1;
+	acc_pointer_IR_sand_lxWS_LO_ILL_Green = 1;
+	acc_pointer_IR_sand_lxWS_HI_L_Green = 1;
+	acc_pointer_IR_sand_lxWS_HI_IL_Green = 1;
+	acc_pointer_IR_sand_lxWS_HI_ILL_Green = 1;
+	acc_pointer_IR_sand_lxWS_VIS_L_Green = 1;
+	acc_pointer_IR_snake_lxWS_LO_IL_Red = 1;
+	acc_pointer_IR_snake_lxWS_LO_ILL_Red = 1;
+	acc_pointer_IR_snake_lxWS_HI_L_Red = 1;
+	acc_pointer_IR_snake_lxWS_HI_IL_Red = 1;
+	acc_pointer_IR_snake_lxWS_HI_ILL_Red = 1;
+	acc_pointer_IR_snake_lxWS_VIS_L_Red = 1;
+	acc_pointer_IR_snake_lxWS_LO_L_Green = 1;
+	acc_pointer_IR_snake_lxWS_LO_IL_Green = 1;
+	acc_pointer_IR_snake_lxWS_LO_ILL_Green = 1;
+	acc_pointer_IR_snake_lxWS_HI_L_Green = 1;
+	acc_pointer_IR_snake_lxWS_HI_IL_Green = 1;
+	acc_pointer_IR_snake_lxWS_HI_ILL_Green = 1;
+	acc_pointer_IR_snake_lxWS_VIS_L_Green = 1;
+	saber_light_ir_lxWS_VIS = 1;
+	saber_light_ir_arid_lxWS_VIS = 1;
+	saber_light_ir_khaki_lxWS_VIS = 1;
+	saber_light_ir_lush_lxWS_VIS = 1;
+	saber_light_ir_sand_lxWS_VIS = 1;
+	saber_light_ir_snake_lxWS_VIS = 1;
+	};
 };
 
 // Adding new Muzzle Attachments to Slots for Compatibility

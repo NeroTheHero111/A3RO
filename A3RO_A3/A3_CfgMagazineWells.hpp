@@ -1,0 +1,7 @@
+#include "\A3RO_A3\CfgMagazineWells_DMR_A3.hpp"
+#include "\A3RO_A3\CfgMagazineWells_Explosive_A3.hpp"
+#include "\A3RO_A3\CfgMagazineWells_MG_A3.hpp"
+#include "\A3RO_A3\CfgMagazineWells_Rifle_A3.hpp"
+#include "\A3RO_A3\CfgMagazineWells_Secondary_A3.hpp"
+#include "\A3RO_A3\CfgMagazineWells_SMG_A3.hpp"
+#include "\A3RO_A3\CfgMagazineWells_Sniper_A3.hpp"

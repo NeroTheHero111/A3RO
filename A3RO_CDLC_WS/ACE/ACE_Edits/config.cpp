@@ -2,22 +2,50 @@ class CfgPatches
 {
     class A3RO_CDLC_WS_ACE_Edits
     {
-    name = "Arma 3 Realism Overhaul - Western Sahara ACE Compat #3";
+    name = "Arma 3 Realism Overhaul - Western Sahara ACE Compat #3 - Edits";
     author = "NeroTheHero111";
     url = "";
-    version="1.1";
+    version="1.1.5";
 	requiredAddons[] = 
 	{
 	"data_f_lxWS_Loadorder",
 	"cba_main",
-	"ace_common",
 	"A3RO_CDLC_WS",
 	"A3RO_CDLC_WS_WSI",
+	"A3RO_CDLC_WS_WSI_2",
+	"ace_ballistics",
+	"ace_advanced_ballistics",
+	"ace_common",
+	"ace_disposable",
+	"ace_flashsuppressors",	
+	"ace_grenades",	
+	"ace_huntir",
+	"ace_irlight",
+	"ace_nightvision",
+	"ace_missileguidance",
+	"ace_javelin",	
+	"ace_metis",
+	"ace_optics",
+	"ace_scopes",
+	"ace_smallarms",
 	"ace_realisticnames",
-	"ace_vehicles",
+	"ace_realisticweights",
+	"ace_csw",
+	"ace_dragon",
+	"ace_interaction",
+	"ace_explosives",
+	"ace_flashlights",
+	"ace_spike",
+	"ace_quickmount",
+	"ace_rearm",
+	"ace_reload",
+	"ace_captives",
 	"ace_compat_ws",
-	"ace_compat_ws_realisticnames",
+	"ace_compat_ws_realisticnames",	
 	"ace_compat_ws_vehicles",
+	"A3RO_ACE_Edits",
+	"A3RO_CDLC_WS_ACE_Overwrite",
+	"A3RO_CDLC_WS_ACE_Overwrite_WSI",
 	};
     units[] = {};
     weapons[] = {};
@@ -63,62 +91,7 @@ class CowsSlot_Rail: CowsSlot
 };
 
 // Adding new Laser Modules to Slots for Compatibility
-class asdg_SlotInfo;
-class asdg_FrontSideRail : asdg_SlotInfo
-{
-	class compatibleItems
-	{
-	ACE_DBAL_A3_Arid_Red = 1;
-	ACE_DBAL_A3_Arid_Red_II = 1;
-	ACE_DBAL_A3_Arid_Red_IP = 1;
-	ACE_DBAL_A3_Arid_Red_VP = 1;
-	ACE_DBAL_A3_Arid_Red_LR = 1;
-	ACE_DBAL_A3_Arid_Red_LR_II = 1;
-	ACE_DBAL_A3_Arid_Green = 1;
-	ACE_DBAL_A3_Arid_Green_II = 1;
-	ACE_DBAL_A3_Arid_Green_IP = 1;
-	ACE_DBAL_A3_Arid_Green_VP = 1;
-	ACE_DBAL_A3_Arid_Green_LR = 1;
-	ACE_DBAL_A3_Arid_Green_LR_II = 1;
-	ACE_DBAL_A3_Lush_Red = 1;
-	ACE_DBAL_A3_Lush_Red_II = 1;
-	ACE_DBAL_A3_Lush_Red_IP = 1;
-	ACE_DBAL_A3_Lush_Red_VP = 1;
-	ACE_DBAL_A3_Lush_Red_LR = 1;
-	ACE_DBAL_A3_Lush_Red_LR_II = 1;
-	ACE_DBAL_A3_Lush_Green = 1;
-	ACE_DBAL_A3_Lush_Green_II = 1;
-	ACE_DBAL_A3_Lush_Green_IP = 1;
-	ACE_DBAL_A3_Lush_Green_VP = 1;
-	ACE_DBAL_A3_Lush_Green_LR = 1;
-	ACE_DBAL_A3_Lush_Green_LR_II = 1;
-	ACE_DBAL_A3_Sand_Red = 1;
-	ACE_DBAL_A3_Sand_Red_II = 1;
-	ACE_DBAL_A3_Sand_Red_IP = 1;
-	ACE_DBAL_A3_Sand_Red_VP = 1;
-	ACE_DBAL_A3_Sand_Red_LR = 1;
-	ACE_DBAL_A3_Sand_Red_LR_II = 1;
-	ACE_DBAL_A3_Sand_Green = 1;
-	ACE_DBAL_A3_Sand_Green_II = 1;
-	ACE_DBAL_A3_Sand_Green_IP = 1;
-	ACE_DBAL_A3_Sand_Green_VP = 1;
-	ACE_DBAL_A3_Sand_Green_LR = 1;
-	ACE_DBAL_A3_Sand_Green_LR_II = 1;	
-	ACE_DBAL_A3_Snake_Red = 1;
-	ACE_DBAL_A3_Snake_Red_II = 1;
-	ACE_DBAL_A3_Snake_Red_IP = 1;
-	ACE_DBAL_A3_Snake_Red_VP = 1;
-	ACE_DBAL_A3_Snake_Red_LR = 1;
-	ACE_DBAL_A3_Snake_Red_LR_II = 1;
-	ACE_DBAL_A3_Snake_Green = 1;
-	ACE_DBAL_A3_Snake_Green_II = 1;
-	ACE_DBAL_A3_Snake_Green_IP = 1;
-	ACE_DBAL_A3_Snake_Green_VP = 1;
-	ACE_DBAL_A3_Snake_Green_LR = 1;
-	ACE_DBAL_A3_Snake_Green_LR_II = 1;
-	};
-};
-
+class asdg_FrontSideRail;
 class asdg_PistolUnderRail;
 class InventoryFlashLightItem_Base_F;
 class InventoryOpticsItem_Base_F;
@@ -126,23 +99,23 @@ class InventoryOpticsItem_Base_F;
 class CfgAmmo
 {
 class BulletBase;	
-#include "ACE_CfgAmmo_WS.hpp"
+#include "WS_ACE_CfgAmmo.hpp"
 };
 
 class CfgMagazines
 {
-#include "ACE_CfgMagazines_WS.hpp"	
+#include "WS_ACE_CfgMagazines.hpp"	
 };
 
 class CfgMagazineWells
 {
-#include "ACE_CfgMagazineWells_WS.hpp"	
+#include "WS_ACE_CfgMagazineWells.hpp"	
 };
 
 class CfgVehicles
 {
 class Item_Base_F;
-#include "ACE_CfgVehicles_WS.hpp"
+#include "WS_ACE_CfgVehicles.hpp"
 };
 
 class CfgWeapons
@@ -153,19 +126,6 @@ class ACE_optic_Hamr_2D;
 //class ACE_optic_Hamr_PIP;
 class ACE_optic_Arco_2D;
 //class ACE_optic_Arco_PIP;
-class acc_pointer_IR;
-class ACE_DBAL_A3_Red;
-class ACE_DBAL_A3_Red_II;
-class ACE_DBAL_A3_Red_IP;
-class ACE_DBAL_A3_Red_VP;
-class ACE_DBAL_A3_Red_LR;
-class ACE_DBAL_A3_Red_LR_II;
-class ACE_DBAL_A3_Green;
-class ACE_DBAL_A3_Green_II;
-class ACE_DBAL_A3_Green_IP;
-class ACE_DBAL_A3_Green_VP;
-class ACE_DBAL_A3_Green_LR;
-class ACE_DBAL_A3_Green_LR_II;
 class UGL_F;
-#include "ACE_CfgWeapons_WS.hpp"
+#include "WS_ACE_CfgWeapons.hpp"
 };

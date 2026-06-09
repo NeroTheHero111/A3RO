@@ -5,7 +5,7 @@ class CfgPatches
     name = "Arma 3 Realism Overhaul - ACE3 Arsenal Extended - Western Sahara CDLC Compat - Part 2";
     author = "NeroTheHero111";
     url = "";
-    version="1.1";
+    version="1.1.5";
 	requiredAddons[] = 
 	{
 	"aceax_gearinfo",
@@ -16,6 +16,7 @@ class CfgPatches
 	"ace_common",
 	"A3RO_CDLC_WS",
 	"A3RO_CDLC_WS_WSI",
+	"A3RO_CDLC_WS_WSI_2",
 	"ace_realisticnames",
 	"ace_vehicles",
 	"ace_compat_ws",
