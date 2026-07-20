@@ -185,7 +185,6 @@ displayName = "NXS 5.5-22x56 (2D)";
 			{
 			discreteDistance[] = {100};
 			discreteDistanceInitIndex = 0;
-			discreteFov[] = {0.045454,0.0113636};
 			discreteFov[] = {0.045454,0.022727,0.015151,0.011363};
 			opticsZoomInit = 0.045454;
 			opticsZoomMax = 0.045454;
