@@ -2788,32 +2788,11 @@ class arifle_MSBS65_base_F : Rifle_Base_F
 {
 discreteDistance[] = {300};	
 maxZeroing = 1800;
-modes[] = {"Single","Burst","FullAuto","single_medium_optics1","single_medium_optics2","fullauto_medium"};
+modes[] = {"Single","FullAuto","single_medium_optics1","single_medium_optics2","fullauto_medium"};
 	class FullAuto : Mode_FullAuto
 	{
 	dispersion = 0.0007380455;	
 	reloadTime = "60/800";
-	};
-	class Burst : FullAuto
-	{
-	aiDispersionCoefX = 1.9;
-	aiDispersionCoefY = 2.4;
-	aiRateOfFire = 2;
-	autoFire = 0;
-	burst = 3;
-	dispersion = 0.0007380455;
-	displayName = "Burst";
-	maxRange = 150;
-	maxRangeProbab = 0.04;
-	midRange = 60;
-	midRangeProbab = 0.58;
-	minRange = 10;
-	minRangeProbab = 0.3;
-	recoil = "recoil_auto_primary_3outof10";
-	recoilProne = "recoil_auto_primary_prone_3outof10";
-	reloadTime = "60/1000";
-	soundLoop[] = {"sound",1};
-	textureType = "burst";	
 	};
 	class Single : Mode_SemiAuto
 	{

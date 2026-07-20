@@ -124,6 +124,13 @@ displayName = "SpecterOS 4x32 (Tan, NV sight II plus)";
 			};
 			class ARCO2scope : ARCO2collimator
 			{
+			opticsZoomInit = 0.25;
+			opticsZoomMax = 0.75;
+			opticsZoomMin = 0.0625; // New. For all 3D scopes allow User to Zoom w/ RMB. Add previous Implementation as additional Mode.
+			};
+			class ARCO2scope4x : ARCO2scope // Like so
+			{
+			opticsID = 3;
 			opticsZoomInit = 0.0625;
 			opticsZoomMax = 0.0625;
 			opticsZoomMin = 0.0625;
@@ -293,6 +300,13 @@ displayName = "Mark 4® HAMR® 4x24 (Deltapoint Pro NV)";
 			};
 			class Hamr2Scope
 			{
+			opticsZoomInit = 0.25;
+			opticsZoomMax = 0.75;
+			opticsZoomMin = 0.0625;
+			};
+			class Hamr2Scope4x : Hamr2Scope
+			{
+			opticsID = 3;
 			opticsZoomInit = 0.0625;
 			opticsZoomMax = 0.0625;
 			opticsZoomMin = 0.0625;
@@ -499,6 +513,16 @@ displayName = "Pitbull 2 QR-TS 1/4x32";
 	mass = 20.54;			
 		class OpticsModes
 		{
+			class MRCOcq // Unique setup for MRCO due to lack of Backup Sight
+			{
+			memoryPointCamera = "opticView";
+			opticsDisablePeripherialVision = 1;
+			opticsFlare = 1;
+			opticsPPEffects[] = {"OpticsRadialBlur1","OpticsBlur1"};
+			opticsZoomInit = 0.25;
+			opticsZoomMax = 0.75;
+			opticsZoomMin = 0.0625;			
+			};
 			class MRCOscope
 			{
 			opticsZoomInit = 0.0625;
@@ -735,8 +759,8 @@ scope = 2;
 			distanceZoomMax = 100;
 			distanceZoomMin = 100;
 			memoryPointCamera = "eye";
-			opticsDisablePeripherialVision = 1;
-			opticsFlare = 1;
+			opticsDisablePeripherialVision = 0;
+			opticsFlare = 0;
 			opticsID = 1;
 			opticsPPEffects[] = {"CBA_OpticsRadBlur3"};
 			opticsZoomInit = 0.75;

@@ -1338,104 +1338,72 @@ descriptionShort = "Assault Rifle<br />Calibre: 5.56x45mm NATO<br />Underbarrel 
 class arifle_MSBS65_F : arifle_MSBS65_base_F
 {
 displayName = "MSBS Grot B16 (Khaki)";
-hiddenSelectionsMaterials[] = {"A3RO_A3\Textures\MSBS_01.rvmat","A3\Weapons_F_Enoch\Rifles\MSBS\Data\MSBS_02.rvmat","A3\Weapons_F_Enoch\Rifles\MSBS\Data\MSBS_03.rvmat"};
-hiddenSelectionsTextures[] = {"A3RO_A3\Textures\MSBS_01_CO.paa","A3\Weapons_F_Enoch\Rifles\MSBS\Data\MSBS_02_CO.paa","A3\Weapons_F_Enoch\Rifles\MSBS\Data\MSBS_03_CO.paa"};
 };
 class arifle_MSBS65_black_F : arifle_MSBS65_base_black_F
 {
 displayName = "MSBS Grot B16";
-hiddenSelectionsMaterials[] = {"A3RO_A3\Textures\MSBS_01.rvmat","A3\Weapons_F_Enoch\Rifles\MSBS\Data\MSBS_02.rvmat","A3\Weapons_F_Enoch\Rifles\MSBS\Data\MSBS_03.rvmat"};
-hiddenSelectionsTextures[] = {"A3RO_A3\Textures\MSBS_01_black_CO.paa","A3\Weapons_F_Enoch\Rifles\MSBS\Data\MSBS_02_black_CO.paa","A3\Weapons_F_Enoch\Rifles\MSBS\Data\MSBS_03_black_CO.paa"};
 };
 class arifle_MSBS65_camo_F : arifle_MSBS65_base_camo_F
 {
 displayName = "MSBS Grot B16 (Camo)";
-hiddenSelectionsMaterials[] = {"A3RO_A3\Textures\MSBS_01.rvmat","A3\Weapons_F_Enoch\Rifles\MSBS\Data\MSBS_02.rvmat","A3\Weapons_F_Enoch\Rifles\MSBS\Data\MSBS_03.rvmat"};
-hiddenSelectionsTextures[] = {"A3RO_A3\Textures\MSBS_01_camo_CO.paa","A3\Weapons_F_Enoch\Rifles\MSBS\Data\MSBS_02_camo_CO.paa","A3\Weapons_F_Enoch\Rifles\MSBS\Data\MSBS_03_camo_CO.paa"};
 };
 class arifle_MSBS65_sand_F : arifle_MSBS65_base_sand_F
 {
 displayName = "MSBS Grot B16 (Sand)";
-hiddenSelectionsMaterials[] = {"A3RO_A3\Textures\MSBS_01.rvmat","A3\Weapons_F_Enoch\Rifles\MSBS\Data\MSBS_02.rvmat","A3\Weapons_F_Enoch\Rifles\MSBS\Data\MSBS_03.rvmat"};
-hiddenSelectionsTextures[] = {"A3RO_A3\Textures\MSBS_01_sand_CO.paa","A3\Weapons_F_Enoch\Rifles\MSBS\Data\MSBS_02_sand_CO.paa","A3\Weapons_F_Enoch\Rifles\MSBS\Data\MSBS_03_sand_CO.paa"};
 };
 
 // Promet GL. Changing: Name
 class arifle_MSBS65_GL_F : arifle_MSBS65_GL_base_F
 {
 displayName = "MSBS Grot B16 GP (Khaki)";
-hiddenSelectionsMaterials[] = {"A3RO_A3\Textures\MSBS_01.rvmat","A3\Weapons_F_Enoch\Rifles\MSBS\Data\MSBS_02.rvmat","A3\Weapons_F_Enoch\Rifles\MSBS\Data\MSBS_03.rvmat"};
-hiddenSelectionsTextures[] = {"A3RO_A3\Textures\MSBS_01_CO.paa","A3\Weapons_F_Enoch\Rifles\MSBS\Data\MSBS_02_CO.paa","A3\Weapons_F_Enoch\Rifles\MSBS\Data\MSBS_03_CO.paa"};
 };
 class arifle_MSBS65_GL_black_F : arifle_MSBS65_GL_base_black_F
 {
 displayName = "MSBS Grot B16 GP";
-hiddenSelectionsMaterials[] = {"A3RO_A3\Textures\MSBS_01.rvmat","A3\Weapons_F_Enoch\Rifles\MSBS\Data\MSBS_02.rvmat","A3\Weapons_F_Enoch\Rifles\MSBS\Data\MSBS_03.rvmat"};
-hiddenSelectionsTextures[] = {"A3RO_A3\Textures\MSBS_01_black_CO.paa","A3\Weapons_F_Enoch\Rifles\MSBS\Data\MSBS_02_black_CO.paa","A3\Weapons_F_Enoch\Rifles\MSBS\Data\MSBS_03_black_CO.paa"};
 };
 class arifle_MSBS65_GL_camo_F : arifle_MSBS65_GL_base_camo_F
 {
 displayName = "MSBS Grot B16 GP (Camo)";
-hiddenSelectionsMaterials[] = {"A3RO_A3\Textures\MSBS_01.rvmat","A3\Weapons_F_Enoch\Rifles\MSBS\Data\MSBS_02.rvmat","A3\Weapons_F_Enoch\Rifles\MSBS\Data\MSBS_03.rvmat"};
-hiddenSelectionsTextures[] = {"A3RO_A3\Textures\MSBS_01_camo_CO.paa","A3\Weapons_F_Enoch\Rifles\MSBS\Data\MSBS_02_camo_CO.paa","A3\Weapons_F_Enoch\Rifles\MSBS\Data\MSBS_03_camo_CO.paa"};
 };
 class arifle_MSBS65_GL_sand_F : arifle_MSBS65_GL_base_sand_F
 {
 displayName = "MSBS Grot B16 GP (Sand)";
-hiddenSelectionsMaterials[] = {"A3RO_A3\Textures\MSBS_01.rvmat","A3\Weapons_F_Enoch\Rifles\MSBS\Data\MSBS_02.rvmat","A3\Weapons_F_Enoch\Rifles\MSBS\Data\MSBS_03.rvmat"};
-hiddenSelectionsTextures[] = {"A3RO_A3\Textures\MSBS_01_sand_CO.paa","A3\Weapons_F_Enoch\Rifles\MSBS\Data\MSBS_02_sand_CO.paa","A3\Weapons_F_Enoch\Rifles\MSBS\Data\MSBS_03_sand_CO.paa"};
 };
 
 // Promet MR. Changing: Name
 class arifle_MSBS65_Mark_F : arifle_MSBS65_Mark_base_F
 {
 displayName = "MSBS Grot B26 (Khaki)";
-hiddenSelectionsMaterials[] = {"A3RO_A3\Textures\MSBS_01.rvmat","A3\Weapons_F_Enoch\Rifles\MSBS\Data\MSBS_02.rvmat","A3\Weapons_F_Enoch\Rifles\MSBS\Data\MSBS_03.rvmat"};
-hiddenSelectionsTextures[] = {"A3RO_A3\Textures\MSBS_01_CO.paa","A3\Weapons_F_Enoch\Rifles\MSBS\Data\MSBS_02_CO.paa","A3\Weapons_F_Enoch\Rifles\MSBS\Data\MSBS_03_CO.paa"};
 };
 class arifle_MSBS65_Mark_black_F : arifle_MSBS65_Mark_base_black_F
 {
 displayName = "MSBS Grot B26";
-hiddenSelectionsMaterials[] = {"A3RO_A3\Textures\MSBS_01.rvmat","A3\Weapons_F_Enoch\Rifles\MSBS\Data\MSBS_02.rvmat","A3\Weapons_F_Enoch\Rifles\MSBS\Data\MSBS_03.rvmat"};
-hiddenSelectionsTextures[] = {"A3RO_A3\Textures\MSBS_01_black_CO.paa","A3\Weapons_F_Enoch\Rifles\MSBS\Data\MSBS_02_black_CO.paa","A3\Weapons_F_Enoch\Rifles\MSBS\Data\MSBS_03_black_CO.paa"};
 };
 class arifle_MSBS65_Mark_camo_F : arifle_MSBS65_Mark_base_camo_F
 {
 displayName = "MSBS Grot B26 (Camo)";
-hiddenSelectionsMaterials[] = {"A3RO_A3\Textures\MSBS_01.rvmat","A3\Weapons_F_Enoch\Rifles\MSBS\Data\MSBS_02.rvmat","A3\Weapons_F_Enoch\Rifles\MSBS\Data\MSBS_03.rvmat"};
-hiddenSelectionsTextures[] = {"A3RO_A3\Textures\MSBS_01_camo_CO.paa","A3\Weapons_F_Enoch\Rifles\MSBS\Data\MSBS_02_camo_CO.paa","A3\Weapons_F_Enoch\Rifles\MSBS\Data\MSBS_03_camo_CO.paa"};
 };
 class arifle_MSBS65_Mark_sand_F : arifle_MSBS65_Mark_base_sand_F
 {
 displayName = "MSBS Grot B26 (Sand)";
-hiddenSelectionsMaterials[] = {"A3RO_A3\Textures\MSBS_01.rvmat","A3\Weapons_F_Enoch\Rifles\MSBS\Data\MSBS_02.rvmat","A3\Weapons_F_Enoch\Rifles\MSBS\Data\MSBS_03.rvmat"};
-hiddenSelectionsTextures[] = {"A3RO_A3\Textures\MSBS_01_sand_CO.paa","A3\Weapons_F_Enoch\Rifles\MSBS\Data\MSBS_02_sand_CO.paa","A3\Weapons_F_Enoch\Rifles\MSBS\Data\MSBS_03_sand_CO.paa"};
 };
 
 // Promet SG. Changing: Name. Underbarrel Shotgun Name
 class arifle_MSBS65_UBS_F : arifle_MSBS65_UBS_base_F
 {
 displayName = "MSBS Grot B16 SIX12 (Khaki)";
-hiddenSelectionsMaterials[] = {"A3RO_A3\Textures\MSBS_01.rvmat","A3\Weapons_F_Enoch\Rifles\MSBS\Data\MSBS_02.rvmat","A3\Weapons_F_Enoch\Rifles\MSBS\Data\MSBS_03.rvmat"};
-hiddenSelectionsTextures[] = {"A3RO_A3\Textures\MSBS_01_CO.paa","A3\Weapons_F_Enoch\Rifles\MSBS\Data\MSBS_02_CO.paa","A3\Weapons_F_Enoch\Rifles\MSBS\Data\MSBS_03_CO.paa"};
 };
 class arifle_MSBS65_UBS_black_F : arifle_MSBS65_UBS_base_black_F
 {
 displayName = "MSBS Grot B16 SIX12";
-hiddenSelectionsMaterials[] = {"A3RO_A3\Textures\MSBS_01.rvmat","A3\Weapons_F_Enoch\Rifles\MSBS\Data\MSBS_02.rvmat","A3\Weapons_F_Enoch\Rifles\MSBS\Data\MSBS_03.rvmat"};
-hiddenSelectionsTextures[] = {"A3RO_A3\Textures\MSBS_01_black_CO.paa","A3\Weapons_F_Enoch\Rifles\MSBS\Data\MSBS_02_black_CO.paa","A3\Weapons_F_Enoch\Rifles\MSBS\Data\MSBS_03_black_CO.paa"};
 };
 class arifle_MSBS65_UBS_camo_F : arifle_MSBS65_UBS_base_camo_F
 {
 displayName = "MSBS Grot B16 SIX12 (Camo)";
-hiddenSelectionsMaterials[] = {"A3RO_A3\Textures\MSBS_01.rvmat","A3\Weapons_F_Enoch\Rifles\MSBS\Data\MSBS_02.rvmat","A3\Weapons_F_Enoch\Rifles\MSBS\Data\MSBS_03.rvmat"};
-hiddenSelectionsTextures[] = {"A3RO_A3\Textures\MSBS_01_camo_CO.paa","A3\Weapons_F_Enoch\Rifles\MSBS\Data\MSBS_02_camo_CO.paa","A3\Weapons_F_Enoch\Rifles\MSBS\Data\MSBS_03_camo_CO.paa"};
 };
 class arifle_MSBS65_UBS_sand_F : arifle_MSBS65_UBS_base_sand_F
 {
 displayName = "MSBS Grot B16 SIX12 (Sand)";
-hiddenSelectionsMaterials[] = {"A3RO_A3\Textures\MSBS_01.rvmat","A3\Weapons_F_Enoch\Rifles\MSBS\Data\MSBS_02.rvmat","A3\Weapons_F_Enoch\Rifles\MSBS\Data\MSBS_03.rvmat"};
-hiddenSelectionsTextures[] = {"A3RO_A3\Textures\MSBS_01_sand_CO.paa","A3\Weapons_F_Enoch\Rifles\MSBS\Data\MSBS_02_sand_CO.paa","A3\Weapons_F_Enoch\Rifles\MSBS\Data\MSBS_03_sand_CO.paa"};
 };
 
 // SPAR-16 Base Class. Changing: Name. Description. Fixing Mode Order. Adding .223 Remington Magwell

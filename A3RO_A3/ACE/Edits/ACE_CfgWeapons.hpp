@@ -186,9 +186,10 @@ displayName = "NXS 5.5-22x56 (2D)";
 			discreteDistance[] = {100};
 			discreteDistanceInitIndex = 0;
 			discreteFov[] = {0.045454,0.0113636};
+			discreteFov[] = {0.045454,0.022727,0.015151,0.011363};
 			opticsZoomInit = 0.045454;
 			opticsZoomMax = 0.045454;
-			opticsZoomMin = 0.0113636;
+			opticsZoomMin = 0.011363;
 			};
 		};
 	};	
@@ -298,7 +299,7 @@ displayName = "MOS 2,5-5x32 (2D)";
 			{
 			discreteDistance[] = {100};
 			discreteDistanceInitIndex = 0;
-			discretefov[] = {0.10,0.05};
+			discretefov[] = {0.10,0.0666667,0.05}; // +1 Increment for <10x Zoom. +2 for 10-20, +3 for 20-30
 			opticsZoomInit = 0.10;
 			opticsZoomMax = 0.10;
 			opticsZoomMin = 0.05;
@@ -1108,9 +1109,6 @@ class ACE_acc_pointer_green : ACE_acc_pointer_red
 displayName = "[ A3RO INCOMPATIBLE ] DBAL-A2 Green (VIS Laser)";
 scope = 1;
 };
-
-descriptionShort = "[ ONLY REPORT IF THIS ITEM MISSING BREAKS YOUR LOADOUT, ELSE JUST REMOVE ] Calibre: 7.62x54mmR<br />Rounds: 10<br />Tracers: None<br />Used in: ?";
-displayName = "[ A3RO INCOMPATIBLE ] 7.62x54R 10Rnd 7N14 Mag";
 
 // Muzzle Devices
 class ACE_muzzle_mzls_H : ItemCore
